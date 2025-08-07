@@ -483,7 +483,11 @@
       ],
       "name": "Collection list: Carousel",
       "settings": {
-        "collection_list": [],
+        "collection_list": [
+          "女装",
+          "男装",
+          "童装"
+        ],
         "layout_type": "carousel",
         "carousel_on_mobile": true,
         "columns": 3,
