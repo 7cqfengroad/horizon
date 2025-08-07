@@ -754,7 +754,7 @@
       },
       "name": "Product list: Carousel",
       "settings": {
-        "collection": "",
+        "collection": "童装",
         "layout_type": "carousel",
         "carousel_on_mobile": false,
         "max_products": 16,
