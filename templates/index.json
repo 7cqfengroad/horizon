@@ -346,7 +346,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h2>Collections</h2>",
+            "text": "<h2>本店产品系列</h2>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
