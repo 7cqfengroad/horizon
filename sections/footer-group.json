@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "type": "footer",
   "name": "t:names.footer",
@@ -14,17 +5,17 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "group_wErUQf": {
+        "brand_section": {
           "type": "group",
-          "name": "Join the club",
+          "name": "Verdura Brand",
           "settings": {
-            "content_direction": "row",
+            "content_direction": "column",
             "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "flex-end",
-            "horizontal_alignment_flex_direction_column": "flex-start",
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "horizontal_alignment_flex_direction_column": "center",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 24,
+            "gap": 32,
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
@@ -41,22 +32,43 @@
             "border_opacity": 100,
             "border_radius": 0,
             "padding-block-start": 0,
-            "padding-block-end": 0,
+            "padding-block-end": 24,
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
           "blocks": {
-            "group_TwfRJd": {
-              "type": "group",
-              "name": "t:names.group",
+            "brand_logo": {
+              "type": "text",
+              "name": "Brand Logo",
               "settings": {
-                "content_direction": "column",
+                "text": "<h2 style=\"font-size: 2rem; font-weight: 300; letter-spacing: 0.3em; color: #d4af37; margin: 0;\">VERDURA</h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "rte",
+                "font": "var(--font-heading--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "padding-block-start": 0,
+                "padding-block-end": 16,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            },
+            "newsletter_section": {
+              "type": "group",
+              "name": "Newsletter Section",
+              "settings": {
+                "content_direction": "row",
                 "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "horizontal_alignment_flex_direction_column": "flex-start",
+                "horizontal_alignment": "center",
+                "vertical_alignment": "flex-end",
+                "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 8,
+                "gap": 24,
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
@@ -78,42 +90,103 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "text_pF6rVi": {
-                  "type": "text",
-                  "name": "Heading",
+                "newsletter_content": {
+                  "type": "group",
+                  "name": "Newsletter Text",
                   "settings": {
-                    "text": "<h2>Join the club</h2>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "h3",
-                    "font": "var(--font-body--family)",
-                    "font_size": "",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "center",
+                    "vertical_alignment": "center",
+                    "horizontal_alignment_flex_direction_column": "center",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 8,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
-                  }
+                  },
+                  "blocks": {
+                    "newsletter_heading": {
+                      "type": "text",
+                      "name": "Newsletter Heading",
+                      "settings": {
+                        "text": "<h3 style=\"font-size: 1.25rem; font-weight: 400; margin: 0;\">Join Our Circle</h3>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "center",
+                        "type_preset": "rte",
+                        "font": "var(--font-heading--family)",
+                        "font_size": "",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      }
+                    },
+                    "newsletter_text": {
+                      "type": "text",
+                      "name": "Newsletter Text",
+                      "settings": {
+                        "text": "<p style=\"margin: 0; opacity: 0.8;\">Be the first to discover new collections and exclusive events from our atelier.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "center",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "newsletter_heading",
+                    "newsletter_text"
+                  ]
                 },
-                "text_HafH7P": {
-                  "type": "text",
-                  "name": "Text",
+                "email_signup_form": {
+                  "type": "email-signup",
+                  "name": "Email Signup",
                   "settings": {
-                    "text": "<p>Sign up for exclusive deals and early access to new products.</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
+                    "width": "custom",
+                    "custom_width": 50,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "scheme-1",
+                    "border_style": "all",
+                    "border_width": 1,
+                    "border_radius": 24,
+                    "input_type_preset": "paragraph",
+                    "style_class": "button-primary",
+                    "display_type": "text",
+                    "label": "Subscribe",
+                    "integrated_button": true,
+                    "button_type_preset": "paragraph",
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
@@ -122,37 +195,14 @@
                 }
               },
               "block_order": [
-                "text_pF6rVi",
-                "text_HafH7P"
+                "newsletter_content",
+                "email_signup_form"
               ]
-            },
-            "email_signup_C94MfE": {
-              "type": "email-signup",
-              "name": "t:names.email_signup",
-              "settings": {
-                "width": "custom",
-                "custom_width": 50,
-                "inherit_color_scheme": true,
-                "color_scheme": "scheme-1",
-                "border_style": "all",
-                "border_width": 1,
-                "border_radius": 39,
-                "input_type_preset": "paragraph",
-                "style_class": "button-secondary",
-                "display_type": "arrow",
-                "label": "Sign up",
-                "integrated_button": true,
-                "button_type_preset": "paragraph",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              }
             }
           },
           "block_order": [
-            "group_TwfRJd",
-            "email_signup_C94MfE"
+            "brand_logo",
+            "newsletter_section"
           ]
         },
         "footer_utilities_zVWazC": {
@@ -217,7 +267,7 @@
         }
       },
       "block_order": [
-        "group_wErUQf",
+        "brand_section",
         "footer_utilities_zVWazC"
       ],
       "name": "t:names.footer",
