@@ -1,26 +1,33 @@
 {%- comment -%}
-  Homepage Template - Verdura Style
+  Homepage Template - Verdura Style Replica
 {%- endcomment -%}
 
-<!-- Hero Section -->
+<!-- Hero Section with Pearl Necklace Background -->
 <section class="hero-section">
+  <div class="hero-background">
+    <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=1920&h=800&fit=crop&crop=center" 
+         alt="Pearl Necklace Heritage" 
+         class="hero-bg-image"
+         loading="eager">
+  </div>
+  <div class="hero-overlay"></div>
   <div class="hero-content">
-    <h1 class="hero-title">Welcome to our store</h1>
-    <h2 class="hero-subtitle">Heritage of Style</h2>
-    <p class="hero-description">Explore the Collection</p>
-    <a href="/collections" class="hero-cta">Discover More</a>
+    <p class="hero-welcome">WELCOME TO OUR STORE</p>
+    <h1 class="hero-title">Heritage of Style</h1>
+    <p class="hero-subtitle">Explore the Collection</p>
+    <a href="/collections" class="hero-cta">DISCOVER MORE</a>
   </div>
 </section>
 
-<!-- Product Categories -->
+<!-- Product Categories Grid -->
 <section class="product-categories">
   <div class="container">
     <div class="categories-grid">
       <div class="category-item">
-        <a href="/collections/bracelets-watches">
+        <a href="/collections/bracelets">
           <div class="category-image">
-            <!-- Placeholder for bracelet image -->
-            <div class="category-placeholder"></div>
+            <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=400&fit=crop" 
+                 alt="Bracelets" loading="lazy">
           </div>
           <h3 class="category-title">Bracelets</h3>
         </a>
@@ -29,8 +36,8 @@
       <div class="category-item">
         <a href="/collections/earclips">
           <div class="category-image">
-            <!-- Placeholder for earclip image -->
-            <div class="category-placeholder"></div>
+            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=400&fit=crop" 
+                 alt="Earclips" loading="lazy">
           </div>
           <h3 class="category-title">Earclips</h3>
         </a>
@@ -39,8 +46,8 @@
       <div class="category-item">
         <a href="/collections/cuffs">
           <div class="category-image">
-            <!-- Placeholder for cuff image -->
-            <div class="category-placeholder"></div>
+            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&h=400&fit=crop&crop=center" 
+                 alt="Cuffs" loading="lazy">
           </div>
           <h3 class="category-title">Cuffs</h3>
         </a>
@@ -49,8 +56,8 @@
       <div class="category-item">
         <a href="/collections/rings">
           <div class="category-image">
-            <!-- Placeholder for ring image -->
-            <div class="category-placeholder"></div>
+            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=400&fit=crop" 
+                 alt="Rings" loading="lazy">
           </div>
           <h3 class="category-title">Rings</h3>
         </a>
@@ -59,8 +66,8 @@
       <div class="category-item">
         <a href="/collections/necklaces">
           <div class="category-image">
-            <!-- Placeholder for necklace image -->
-            <div class="category-placeholder"></div>
+            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&h=400&fit=crop" 
+                 alt="Necklaces" loading="lazy">
           </div>
           <h3 class="category-title">Necklaces</h3>
         </a>
@@ -73,51 +80,52 @@
   </div>
 </section>
 
-<!-- Featured Collections -->
-<section class="featured-collections">
+<!-- Zodiac Collection Feature -->
+<section class="zodiac-section">
   <div class="container">
-    <!-- Zodiac Collection -->
-    <div class="collection-feature">
-      <div class="collection-content">
-        <h2 class="collection-title">Zodiac</h2>
-        <h3 class="collection-subtitle">Pendant Necklaces</h3>
-        <p class="collection-description">
-          Using archival postcards Fulco di Verdura purchased at the Museum of Natural History, 
-          Verdura sets diamonds as stars and engraves constellations in gold
-        </p>
-        <a href="/collections/zodiac-pendant-necklaces" class="btn btn-primary">View Collection</a>
-      </div>
-    </div>
-
-    <!-- Off-Season Collection -->
-    <div class="collection-feature reverse">
-      <div class="collection-content">
-        <h2 class="collection-title">The Off-Season Collection</h2>
-        <p class="collection-description">
-          We are delighted to introduce the Off-Season Collection - over a dozen new archival pieces 
-          that we feel captures this paradox of American style. These bangles, lariats, hoops and 
-          pendants are meant to be as relevant to your wardrobe in high season as well as off season, 
-          whether you don them for an audience or a solo stroll down an empty beach.
-        </p>
-        <a href="/collections/off-season-collection" class="btn btn-primary">View</a>
-      </div>
-    </div>
-
-    <!-- Very Verdura -->
-    <div class="collection-feature">
-      <div class="collection-content">
-        <h2 class="collection-title">Very Verdura</h2>
-        <h3 class="collection-subtitle">Gifts Under $20,000</h3>
-        <p class="collection-description">
-          A collection of pieces perfect for gifting and receiving
-        </p>
-        <a href="/collections/very-verdura-gifts-under-20000" class="btn btn-primary">Shop</a>
-      </div>
+    <div class="zodiac-content">
+      <h2 class="zodiac-title">Zodiac</h2>
+      <h3 class="zodiac-subtitle">Pendant Necklaces</h3>
+      <p class="zodiac-description">
+        Using archival postcards Fulco di Verdura purchased at the Museum of Natural History, 
+        Verdura sets diamonds as stars and engraves constellations in gold
+      </p>
+      <a href="/collections/zodiac-pendant-necklaces" class="btn btn-primary">View Collection</a>
     </div>
   </div>
 </section>
 
-<!-- Visit Section -->
+<!-- Off-Season Collection -->
+<section class="off-season-section">
+  <div class="container">
+    <div class="off-season-content">
+      <h2 class="off-season-title">The Off-Season Collection</h2>
+      <p class="off-season-description">
+        We are delighted to introduce the Off-Season Collection - over a dozen new archival pieces 
+        that we feel captures this paradox of American style. These bangles, lariats, hoops and 
+        pendants are meant to be as relevant to your wardrobe in high season as well as off season, 
+        whether you don them for an audience or a solo stroll down an empty beach.
+      </p>
+      <a href="/collections/off-season-collection" class="btn btn-primary">View</a>
+    </div>
+  </div>
+</section>
+
+<!-- Very Verdura Gifts -->
+<section class="gifts-section">
+  <div class="container">
+    <div class="gifts-content">
+      <h2 class="gifts-title">Very Verdura</h2>
+      <h3 class="gifts-subtitle">Gifts Under $20,000</h3>
+      <p class="gifts-description">
+        A collection of pieces perfect for gifting and receiving
+      </p>
+      <a href="/collections/very-verdura-gifts-under-20000" class="btn btn-primary">Shop</a>
+    </div>
+  </div>
+</section>
+
+<!-- Visit The Gallery -->
 <section class="visit-section">
   <div class="container">
     <div class="visit-content">
@@ -146,7 +154,9 @@
                      alt="{{ product.title }}" 
                      loading="lazy">
               {% else %}
-                <div class="product-placeholder"></div>
+                <div class="product-placeholder">
+                  <span>{{ product.title | slice: 0, 2 | upcase }}</span>
+                </div>
               {% endif %}
             </div>
             <h3 class="product-title">{{ product.title }}</h3>
@@ -174,7 +184,7 @@
   </div>
 </section>
 
-<!-- Newsletter Section -->
+<!-- Newsletter Signup -->
 <section class="newsletter-section">
   <div class="container">
     <div class="newsletter-content">
@@ -197,123 +207,178 @@
           <button type="submit" class="newsletter-submit">Submit</button>
         </div>
       </form>
+      
+      <div class="newsletter-success" style="display: none;">
+        <p>Thank you!</p>
+      </div>
     </div>
   </div>
 </section>
 
 <style>
-  /* Hero Section */
+  /* Reset and Base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Hero Section - Full Width Background */
   .hero-section {
-    min-height: 60vh;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-                url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3') center/cover;
+    position: relative;
+    height: 60vh;
+    min-height: 500px;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    color: white;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .hero-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
   }
 
   .hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: white;
     max-width: 600px;
-    padding: 2rem;
+    padding: 0 2rem;
   }
 
-  .hero-title {
+  .hero-welcome {
     font-size: 1.2rem;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.2rem;
     text-transform: uppercase;
     margin-bottom: 1rem;
     font-weight: 300;
+    opacity: 0.9;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+    font-family: var(--font-heading-family, 'Georgia', serif);
+    font-weight: 400;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05rem;
+    line-height: 1.2;
   }
 
   .hero-subtitle {
-    font-size: 3.5rem;
-    font-family: var(--font-heading-family);
-    font-weight: var(--font-heading-weight);
-    margin-bottom: 1rem;
-    letter-spacing: 0.05rem;
-  }
-
-  .hero-description {
     font-size: 1.4rem;
-    margin-bottom: 2rem;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
   }
 
   .hero-cta {
     display: inline-block;
-    padding: 1.2rem 2.5rem;
+    padding: 1.2rem 3rem;
     background: transparent;
     border: 2px solid white;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    font-size: 1.2rem;
+    letter-spacing: 0.15rem;
+    font-size: 1.1rem;
+    font-weight: 500;
     transition: all 0.3s ease;
   }
 
   .hero-cta:hover {
     background: white;
-    color: black;
+    color: #000;
   }
 
   /* Container */
   .container {
-    max-width: var(--page-width);
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
   }
 
-  /* Product Categories */
+  /* Product Categories - Horizontal Layout */
   .product-categories {
-    padding: 6rem 0;
-    background: rgb(var(--color-base-background-1));
+    padding: 8rem 0;
+    background: #fafafa;
   }
 
   .categories-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 3rem;
-    margin-bottom: 4rem;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4rem;
+    margin-bottom: 5rem;
+  }
+
+  .category-item {
+    text-align: center;
   }
 
   .category-item a {
     text-decoration: none;
-    color: rgb(var(--color-base-text));
-    text-align: center;
+    color: #333;
     display: block;
     transition: transform 0.3s ease;
   }
 
   .category-item a:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
   }
 
   .category-image {
+    width: 100%;
     aspect-ratio: 1;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 50%;
+    border: 3px solid #e0e0e0;
+    transition: border-color 0.3s ease;
   }
 
-  .category-placeholder, .product-placeholder {
+  .category-item a:hover .category-image {
+    border-color: #8B4513;
+  }
+
+  .category-image img {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #999;
-    font-size: 1.2rem;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .category-item a:hover .category-image img {
+    transform: scale(1.05);
   }
 
   .category-title {
-    font-size: 1.8rem;
-    font-family: var(--font-heading-family);
-    font-weight: var(--font-heading-weight);
+    font-size: 1.6rem;
+    font-family: var(--font-heading-family, 'Georgia', serif);
+    font-weight: 400;
     margin: 0;
+    letter-spacing: 0.05rem;
   }
 
   .view-collection-btn {
@@ -323,214 +388,216 @@
   /* Buttons */
   .btn {
     display: inline-block;
-    padding: 1.2rem 2.5rem;
+    padding: 1.2rem 3rem;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    font-size: 1.2rem;
+    letter-spacing: 0.15rem;
+    font-size: 1.1rem;
+    font-weight: 500;
     transition: all 0.3s ease;
     border: 2px solid;
     cursor: pointer;
   }
 
   .btn-primary {
-    background: rgb(var(--color-base-accent-1));
-    color: rgb(var(--color-base-background-1));
-    border-color: rgb(var(--color-base-accent-1));
+    background: #8B4513;
+    color: white;
+    border-color: #8B4513;
   }
 
   .btn-primary:hover {
     background: transparent;
-    color: rgb(var(--color-base-accent-1));
+    color: #8B4513;
   }
 
   .btn-outline {
     background: transparent;
-    color: rgb(var(--color-base-text));
-    border-color: rgb(var(--color-base-text));
+    color: #333;
+    border-color: #333;
   }
 
   .btn-outline:hover {
-    background: rgb(var(--color-base-text));
-    color: rgb(var(--color-base-background-1));
+    background: #333;
+    color: white;
   }
 
-  /* Featured Collections */
-  .featured-collections {
-    padding: 6rem 0;
-    background: rgb(var(--color-base-background-2));
-  }
-
-  .collection-feature {
-    padding: 4rem 0;
+  /* Feature Sections */
+  .zodiac-section,
+  .off-season-section,
+  .gifts-section,
+  .visit-section,
+  .heritage-section {
+    padding: 8rem 0;
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
   }
 
-  .collection-title {
-    font-size: 3rem;
-    font-family: var(--font-heading-family);
-    font-weight: var(--font-heading-weight);
-    margin-bottom: 1rem;
+  .zodiac-section {
+    background: white;
   }
 
-  .collection-subtitle {
-    font-size: 2.2rem;
-    font-family: var(--font-heading-family);
-    margin-bottom: 2rem;
-    font-weight: 300;
+  .off-season-section {
+    background: #f8f8f8;
   }
 
-  .collection-description {
-    font-size: 1.6rem;
-    line-height: 1.6;
-    margin-bottom: 3rem;
-    color: rgba(var(--color-base-text), 0.8);
+  .gifts-section {
+    background: white;
   }
 
-  /* Visit Section */
   .visit-section {
-    padding: 6rem 0;
-    background: rgb(var(--color-base-background-1));
-    text-align: center;
+    background: #f8f8f8;
   }
 
-  .visit-title {
-    font-size: 3rem;
-    font-family: var(--font-heading-family);
-    font-weight: var(--font-heading-weight);
+  .heritage-section {
+    background: white;
+  }
+
+  .zodiac-title,
+  .off-season-title,
+  .gifts-title,
+  .visit-title,
+  .heritage-title {
+    font-size: 3.5rem;
+    font-family: var(--font-heading-family, 'Georgia', serif);
+    font-weight: 400;
     margin-bottom: 1rem;
+    color: #333;
+    letter-spacing: 0.05rem;
   }
 
-  .visit-subtitle {
+  .zodiac-subtitle,
+  .gifts-subtitle,
+  .visit-subtitle,
+  .heritage-subtitle {
     font-size: 2.2rem;
-    font-family: var(--font-heading-family);
-    margin-bottom: 2rem;
+    font-family: var(--font-heading-family, 'Georgia', serif);
     font-weight: 300;
+    margin-bottom: 2.5rem;
+    color: #666;
   }
 
-  .visit-description {
+  .zodiac-description,
+  .off-season-description,
+  .gifts-description,
+  .visit-description,
+  .heritage-description {
     font-size: 1.6rem;
-    line-height: 1.6;
-    margin-bottom: 3rem;
-    color: rgba(var(--color-base-text), 0.8);
-    max-width: 600px;
+    line-height: 1.7;
+    margin-bottom: 3.5rem;
+    color: #555;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
   }
 
   /* New Arrivals */
   .new-arrivals {
-    padding: 6rem 0;
-    background: rgb(var(--color-base-background-2));
+    padding: 8rem 0;
+    background: #f8f8f8;
   }
 
   .section-title {
-    font-size: 3rem;
-    font-family: var(--font-heading-family);
-    font-weight: var(--font-heading-weight);
+    font-size: 3.5rem;
+    font-family: var(--font-heading-family, 'Georgia', serif);
+    font-weight: 400;
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
+    color: #333;
+    letter-spacing: 0.05rem;
   }
 
   .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 3rem;
   }
 
   .product-card {
     text-align: center;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
   }
 
   .product-card a {
     text-decoration: none;
-    color: rgb(var(--color-base-text));
+    color: #333;
     display: block;
-    transition: transform 0.3s ease;
-  }
-
-  .product-card a:hover {
-    transform: translateY(-5px);
   }
 
   .product-image {
+    width: 100%;
     aspect-ratio: 1;
-    margin-bottom: 1.5rem;
     overflow: hidden;
-    border-radius: 8px;
   }
 
   .product-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .product-card:hover .product-image img {
+    transform: scale(1.05);
+  }
+
+  .product-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 2rem;
+    font-weight: bold;
   }
 
   .product-title {
-    font-size: 1.6rem;
-    font-family: var(--font-heading-family);
+    font-size: 1.4rem;
+    font-family: var(--font-heading-family, 'Georgia', serif);
     margin: 0;
-  }
-
-  /* Heritage Section */
-  .heritage-section {
-    padding: 6rem 0;
-    background: rgb(var(--color-base-background-1));
-    text-align: center;
-  }
-
-  .heritage-title {
-    font-size: 3rem;
-    font-family: var(--font-heading-family);
-    font-weight: var(--font-heading-weight);
-    margin-bottom: 1rem;
-  }
-
-  .heritage-subtitle {
-    font-size: 2.2rem;
-    font-family: var(--font-heading-family);
-    margin-bottom: 2rem;
-    font-weight: 300;
-  }
-
-  .heritage-description {
-    font-size: 1.6rem;
-    line-height: 1.6;
-    margin-bottom: 3rem;
-    color: rgba(var(--color-base-text), 0.8);
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
   }
 
   /* Newsletter Section */
   .newsletter-section {
-    padding: 6rem 0;
-    background: rgb(var(--color-base-background-2));
+    padding: 8rem 0;
+    background: #333;
+    color: white;
     text-align: center;
   }
 
   .newsletter-title {
-    font-size: 3rem;
-    font-family: var(--font-heading-family);
-    font-weight: var(--font-heading-weight);
+    font-size: 3.5rem;
+    font-family: var(--font-heading-family, 'Georgia', serif);
+    font-weight: 400;
     margin-bottom: 1rem;
+    letter-spacing: 0.05rem;
   }
 
   .newsletter-subtitle {
     font-size: 2.2rem;
-    font-family: var(--font-heading-family);
-    margin-bottom: 2rem;
+    font-family: var(--font-heading-family, 'Georgia', serif);
     font-weight: 300;
+    margin-bottom: 2.5rem;
+    color: #ccc;
   }
 
   .newsletter-description {
     font-size: 1.6rem;
-    line-height: 1.6;
-    margin-bottom: 3rem;
-    color: rgba(var(--color-base-text), 0.8);
+    line-height: 1.7;
+    margin-bottom: 3.5rem;
+    color: #aaa;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -543,38 +610,58 @@
 
   .newsletter-input-group {
     display: flex;
-    gap: 1rem;
+    gap: 0;
+    border-radius: 4px;
+    overflow: hidden;
   }
 
   .newsletter-input {
     flex: 1;
-    padding: 1.2rem;
-    border: 2px solid rgba(var(--color-base-text), 0.3);
+    padding: 1.5rem 2rem;
+    border: none;
     font-size: 1.4rem;
-    border-radius: 4px;
+    background: white;
+    color: #333;
+  }
+
+  .newsletter-input::placeholder {
+    color: #999;
   }
 
   .newsletter-submit {
-    padding: 1.2rem 2rem;
-    background: rgb(var(--color-base-accent-1));
-    color: rgb(var(--color-base-background-1));
+    padding: 1.5rem 2.5rem;
+    background: #8B4513;
+    color: white;
     border: none;
     font-size: 1.4rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     cursor: pointer;
-    border-radius: 4px;
+    font-weight: 500;
     transition: background-color 0.3s ease;
   }
 
   .newsletter-submit:hover {
-    background: rgba(var(--color-base-accent-1), 0.8);
+    background: #a0501a;
+  }
+
+  .newsletter-success {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    color: #4CAF50;
   }
 
   /* Mobile Responsiveness */
+  @media screen and (max-width: 1024px) {
+    .categories-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+    }
+  }
+
   @media screen and (max-width: 768px) {
-    .hero-subtitle {
-      font-size: 2.5rem;
+    .hero-title {
+      font-size: 3rem;
     }
 
     .categories-grid {
@@ -582,11 +669,21 @@
       gap: 2rem;
     }
 
-    .collection-title, .section-title, .visit-title, .heritage-title, .newsletter-title {
-      font-size: 2.5rem;
+    .zodiac-title,
+    .off-season-title,
+    .gifts-title,
+    .visit-title,
+    .heritage-title,
+    .section-title,
+    .newsletter-title {
+      font-size: 2.8rem;
     }
 
-    .collection-subtitle, .visit-subtitle, .heritage-subtitle, .newsletter-subtitle {
+    .zodiac-subtitle,
+    .gifts-subtitle,
+    .visit-subtitle,
+    .heritage-subtitle,
+    .newsletter-subtitle {
       font-size: 1.8rem;
     }
 
@@ -598,9 +695,18 @@
     .newsletter-input-group {
       flex-direction: column;
     }
+
+    .newsletter-input,
+    .newsletter-submit {
+      border-radius: 4px;
+    }
   }
 
   @media screen and (max-width: 480px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
     .categories-grid {
       grid-template-columns: 1fr;
     }
@@ -608,5 +714,36 @@
     .products-grid {
       grid-template-columns: 1fr;
     }
+
+    .product-categories,
+    .zodiac-section,
+    .off-season-section,
+    .gifts-section,
+    .visit-section,
+    .heritage-section,
+    .new-arrivals,
+    .newsletter-section {
+      padding: 4rem 0;
+    }
   }
-</style> 
+</style>
+
+<script>
+  // Newsletter form handling
+  document.addEventListener('DOMContentLoaded', function() {
+    const newsletterForm = document.getElementById('contact_form');
+    const successMessage = document.querySelector('.newsletter-success');
+    
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Simulate form submission
+        setTimeout(function() {
+          newsletterForm.style.display = 'none';
+          successMessage.style.display = 'block';
+        }, 500);
+      });
+    }
+  });
+</script> 
