@@ -1,372 +1,482 @@
-<div class="section-background color-{{ section.settings.color_scheme }}"></div>
-<div
-  class="
-    section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}
-    {% if section.settings.section_height != "" %} {{ section.settings.section_height | prepend: "section--height-" }}{% endif %}
-  "
->
-  {% render 'background-media',
-    background_media: section.settings.background_media,
-    background_video: section.settings.video,
-    background_video_position: section.settings.video_position,
-    background_image: section.settings.background_image,
-    background_image_position: section.settings.background_image_position
-  %}
+{%- comment -%}
+  Footer Section - Verdura Style
+{%- endcomment -%}
 
-  <div
-    class="
-      spacing-style
-      layout-panel-flex
-      layout-panel-flex--{{ section.settings.content_direction }}
-      section-content-wrapper
-      {% if section.settings.vertical_on_mobile %} mobile-column{% endif %}
-    "
-    style="
-      {% render 'layout-panel-style', settings: section.settings %}
-      {%  render 'spacing-style', settings: section.settings %}
-    "
-  >
-    {% content_for 'blocks' %}
+<footer class="footer">
+  <div class="footer__content">
+    <div class="container">
+      <!-- Footer Main Content -->
+      <div class="footer__main">
+        <!-- Contact Information -->
+        <div class="footer__section">
+          <h3 class="footer__title">Contact</h3>
+          <div class="footer__contact">
+            <address class="footer__address">
+              745 Fifth Avenue, Suite 1205<br>
+              New York, NY 10151
+            </address>
+            <p class="footer__phone">
+              <a href="tel:+12127583388">+1 (212) 758-3388</a>
+            </p>
+            <p class="footer__email">
+              <a href="mailto:info@verdura.com">info@verdura.com</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer__section">
+          <h3 class="footer__title">Quick Links</h3>
+          <ul class="footer__links">
+            <li><a href="/collections">Collections</a></li>
+            <li><a href="/pages/the-story">The Story</a></li>
+            <li><a href="/pages/visit">Visit</a></li>
+            <li><a href="/pages/contact">Contact</a></li>
+            <li><a href="/pages/customer-service">Customer Service / FAQ</a></li>
+            <li><a href="/pages/catalogues">Catalogues</a></li>
+          </ul>
+        </div>
+
+        <!-- Collections -->
+        <div class="footer__section">
+          <h3 class="footer__title">Collections</h3>
+          <ul class="footer__links">
+            <li><a href="/collections/bracelets-watches">Bracelets & Watches</a></li>
+            <li><a href="/collections/cuffs">Cuffs</a></li>
+            <li><a href="/collections/earclips">Earclips</a></li>
+            <li><a href="/collections/rings">Rings</a></li>
+            <li><a href="/collections/necklaces">Necklaces</a></li>
+            <li><a href="/collections/brooches">Brooches</a></li>
+            <li><a href="/collections/mens">Men's</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer__section">
+          <h3 class="footer__title">Stay Connected</h3>
+          <p class="footer__newsletter-text">
+            Join our email list for updates about new collections and special events
+          </p>
+          
+          <form action="/contact#contact_form" method="post" class="footer__newsletter-form" id="footer_contact_form">
+            <input type="hidden" name="form_type" value="customer">
+            <input type="hidden" name="utf8" value="✓">
+            
+            <div class="footer__newsletter-input-group">
+              <input type="email" 
+                     name="contact[email]" 
+                     placeholder="Enter your email"
+                     required
+                     class="footer__newsletter-input"
+                     aria-label="Email address">
+              <button type="submit" class="footer__newsletter-submit" aria-label="Subscribe to newsletter">
+                Subscribe
+              </button>
+            </div>
+          </form>
+
+          <!-- Social Media -->
+          {% if settings.social_instagram_link != blank or settings.social_facebook_link != blank or settings.social_twitter_link != blank %}
+            <div class="footer__social">
+              <h4 class="footer__social-title">Find us on Instagram</h4>
+              <div class="footer__social-links">
+                {% if settings.social_instagram_link != blank %}
+                  <a href="{{ settings.social_instagram_link }}" 
+                     class="footer__social-link" 
+                     target="_blank" 
+                     rel="noopener noreferrer"
+                     aria-label="Instagram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                  </a>
+                {% endif %}
+                
+                {% if settings.social_facebook_link != blank %}
+                  <a href="{{ settings.social_facebook_link }}" 
+                     class="footer__social-link" 
+                     target="_blank" 
+                     rel="noopener noreferrer"
+                     aria-label="Facebook">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                  </a>
+                {% endif %}
+                
+                {% if settings.social_twitter_link != blank %}
+                  <a href="{{ settings.social_twitter_link }}" 
+                     class="footer__social-link" 
+                     target="_blank" 
+                     rel="noopener noreferrer"
+                     aria-label="Twitter">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                    </svg>
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer__bottom">
+        <div class="footer__bottom-content">
+          <p class="footer__copyright">
+            Copyright © {{ 'now' | date: '%Y' }} {{ shop.name }}
+          </p>
+          
+          <div class="footer__bottom-links">
+            <a href="/pages/online-accessibility-statement">Online Accessibility Statement</a>
+            <span class="footer__separator">|</span>
+            <a href="/pages/privacy-policy">Privacy Policy</a>
+            <span class="footer__separator">|</span>
+            <a href="/pages/terms-of-service">Terms of Service</a>
+          </div>
+          
+          <p class="footer__credits">
+            Website by <a href="https://www.beauxarts.com" target="_blank" rel="noopener">The Beaux Arts</a>
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</footer>
+
+<style>
+  .footer {
+    background: rgb(var(--color-base-background-2));
+    margin-top: auto;
+  }
+
+  .footer__content {
+    padding: 6rem 0 2rem;
+  }
+
+  .container {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .footer__main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .footer__section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__title {
+    font-size: 1.8rem;
+    font-family: var(--font-heading-family);
+    font-weight: var(--font-heading-weight);
+    margin-bottom: 2rem;
+    color: rgb(var(--color-base-text));
+  }
+
+  .footer__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer__address {
+    font-style: normal;
+    line-height: 1.6;
+    color: rgba(var(--color-base-text), 0.8);
+    font-size: 1.4rem;
+  }
+
+  .footer__phone a,
+  .footer__email a {
+    color: rgba(var(--color-base-text), 0.8);
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: color 0.3s ease;
+  }
+
+  .footer__phone a:hover,
+  .footer__email a:hover {
+    color: rgb(var(--color-base-accent-1));
+  }
+
+  .footer__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer__links a {
+    color: rgba(var(--color-base-text), 0.8);
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: color 0.3s ease;
+  }
+
+  .footer__links a:hover {
+    color: rgb(var(--color-base-accent-1));
+  }
+
+  .footer__newsletter-text {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: rgba(var(--color-base-text), 0.8);
+    margin-bottom: 2rem;
+  }
+
+  .footer__newsletter-form {
+    margin-bottom: 3rem;
+  }
+
+  .footer__newsletter-input-group {
+    display: flex;
+    gap: 0;
+    border: 2px solid rgba(var(--color-base-text), 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .footer__newsletter-input {
+    flex: 1;
+    padding: 1.2rem;
+    border: none;
+    font-size: 1.4rem;
+    background: rgb(var(--color-base-background-1));
+    color: rgb(var(--color-base-text));
+    outline: none;
+  }
+
+  .footer__newsletter-submit {
+    padding: 1.2rem 2rem;
+    background: rgb(var(--color-base-accent-1));
+    color: rgb(var(--color-base-background-1));
+    border: none;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .footer__newsletter-submit:hover {
+    background: rgba(var(--color-base-accent-1), 0.8);
+  }
+
+  .footer__social {
+    margin-top: 2rem;
+  }
+
+  .footer__social-title {
+    font-size: 1.6rem;
+    font-family: var(--font-heading-family);
+    margin-bottom: 1.5rem;
+    color: rgb(var(--color-base-text));
+  }
+
+  .footer__social-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .footer__social-link {
+    color: rgba(var(--color-base-text), 0.7);
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .footer__social-link:hover {
+    color: rgb(var(--color-base-accent-1));
+    transform: translateY(-2px);
+  }
+
+  .footer__bottom {
+    border-top: 1px solid rgba(var(--color-base-text), 0.1);
+    padding-top: 2rem;
+  }
+
+  .footer__bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .footer__copyright,
+  .footer__credits {
+    font-size: 1.3rem;
+    color: rgba(var(--color-base-text), 0.6);
+    margin: 0;
+  }
+
+  .footer__bottom-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.3rem;
+  }
+
+  .footer__bottom-links a {
+    color: rgba(var(--color-base-text), 0.6);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer__bottom-links a:hover {
+    color: rgb(var(--color-base-accent-1));
+  }
+
+  .footer__separator {
+    color: rgba(var(--color-base-text), 0.3);
+  }
+
+  .footer__credits a {
+    color: rgba(var(--color-base-text), 0.6);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer__credits a:hover {
+    color: rgb(var(--color-base-accent-1));
+  }
+
+  /* Mobile Responsiveness */
+  @media screen and (max-width: 768px) {
+    .footer__content {
+      padding: 4rem 0 2rem;
+    }
+
+    .footer__main {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer__bottom-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 1.5rem;
+    }
+
+    .footer__newsletter-input-group {
+      flex-direction: column;
+    }
+
+    .footer__newsletter-submit {
+      border-radius: 0 0 4px 4px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .footer__bottom-links {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .footer__separator {
+      display: none;
+    }
+  }
+</style>
 
 {% schema %}
 {
-  "name": "t:names.footer",
-  "class": "section-wrapper",
-  "tag": "footer",
-  "blocks": [
-    {
-      "type": "_divider"
-    },
-    {
-      "type": "@app"
-    },
-    {
-      "type": "button"
-    },
-    {
-      "type": "email-signup"
-    },
-    {
-      "type": "follow-on-shop"
-    },
-    {
-      "type": "footer-utilities"
-    },
-    {
-      "type": "group"
-    },
-    {
-      "type": "icon"
-    },
-    {
-      "type": "image"
-    },
-    {
-      "type": "menu"
-    },
-    {
-      "type": "payment-icons"
-    },
-    {
-      "type": "text"
-    },
-    {
-      "type": "logo"
-    },
-    {
-      "type": "jumbo-text"
-    }
-  ],
-  "enabled_on": {
-    "groups": ["footer"]
-  },
+  "name": "Footer",
   "settings": [
     {
       "type": "header",
-      "content": "t:content.layout"
+      "content": "Newsletter"
     },
     {
-      "type": "select",
-      "id": "content_direction",
-      "label": "t:settings.direction",
-      "options": [
-        {
-          "value": "column",
-          "label": "t:options.vertical"
-        },
-        {
-          "value": "row",
-          "label": "t:options.horizontal"
-        }
-      ],
-      "default": "column"
+      "type": "paragraph",
+      "content": "Customers who subscribe will have their email address added to your customer list."
     },
     {
       "type": "checkbox",
-      "id": "vertical_on_mobile",
-      "label": "t:settings.vertical_on_mobile",
+      "id": "newsletter_enable",
       "default": true,
-      "visible_if": "{{ section.settings.content_direction == 'row' }}"
+      "label": "Show newsletter signup"
     },
     {
-      "type": "select",
-      "id": "horizontal_alignment",
-      "label": "t:settings.alignment",
-      "options": [
-        {
-          "value": "flex-start",
-          "label": "t:options.left"
-        },
-        {
-          "value": "center",
-          "label": "t:options.center"
-        },
-        {
-          "value": "flex-end",
-          "label": "t:options.right"
-        },
-        {
-          "value": "space-between",
-          "label": "t:options.space_between"
-        }
-      ],
-      "default": "flex-start",
-      "visible_if": "{{ section.settings.content_direction == 'row' }}"
+      "type": "text",
+      "id": "newsletter_heading",
+      "default": "Stay Connected",
+      "label": "Heading"
     },
     {
-      "type": "select",
-      "id": "vertical_alignment",
-      "label": "t:settings.position",
-      "options": [
-        {
-          "value": "flex-start",
-          "label": "t:options.top"
-        },
-        {
-          "value": "center",
-          "label": "t:options.center"
-        },
-        {
-          "value": "flex-end",
-          "label": "t:options.bottom"
-        }
-      ],
-      "default": "center",
-      "visible_if": "{{ section.settings.content_direction == 'row' }}"
-    },
-    {
-      "type": "checkbox",
-      "id": "align_baseline",
-      "label": "t:settings.align_baseline",
-      "default": false,
-      "visible_if": "{{ section.settings.vertical_alignment == 'flex-end' }}"
-    },
-    {
-      "type": "select",
-      "id": "horizontal_alignment_flex_direction_column",
-      "label": "t:settings.alignment",
-      "options": [
-        {
-          "value": "flex-start",
-          "label": "t:options.left"
-        },
-        {
-          "value": "center",
-          "label": "t:options.center"
-        },
-        {
-          "value": "flex-end",
-          "label": "t:options.right"
-        }
-      ],
-      "default": "flex-start",
-      "visible_if": "{{ section.settings.content_direction != 'row' }}"
-    },
-    {
-      "type": "select",
-      "id": "vertical_alignment_flex_direction_column",
-      "label": "t:settings.position",
-      "options": [
-        {
-          "value": "flex-start",
-          "label": "t:options.top"
-        },
-        {
-          "value": "center",
-          "label": "t:options.center"
-        },
-        {
-          "value": "flex-end",
-          "label": "t:options.bottom"
-        },
-        {
-          "value": "space-between",
-          "label": "t:options.space_between"
-        }
-      ],
-      "default": "center",
-      "visible_if": "{{ section.settings.content_direction == 'column' }}"
-    },
-    {
-      "type": "range",
-      "id": "gap",
-      "label": "t:settings.gap",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 12
+      "type": "richtext",
+      "id": "newsletter_text",
+      "default": "<p>Join our email list for updates about new collections and special events</p>",
+      "label": "Text"
     },
     {
       "type": "header",
-      "content": "t:content.size"
-    },
-    {
-      "type": "select",
-      "id": "section_width",
-      "label": "t:settings.width",
-      "options": [
-        {
-          "value": "page-width",
-          "label": "t:options.page"
-        },
-        {
-          "value": "full-width",
-          "label": "t:options.full"
-        }
-      ],
-      "default": "page-width"
-    },
-    {
-      "type": "select",
-      "id": "section_height",
-      "label": "t:settings.height",
-      "options": [
-        {
-          "value": "",
-          "label": "t:options.auto"
-        },
-        {
-          "value": "small",
-          "label": "t:options.small"
-        },
-        {
-          "value": "medium",
-          "label": "t:options.medium"
-        },
-        {
-          "value": "large",
-          "label": "t:options.large"
-        },
-        {
-          "value": "full-screen",
-          "label": "t:options.full_screen"
-        }
-      ],
-      "default": ""
-    },
-    {
-      "type": "header",
-      "content": "t:content.appearance"
+      "content": "Colors"
     },
     {
       "type": "color_scheme",
       "id": "color_scheme",
-      "label": "t:settings.color_scheme",
-      "default": "scheme-1"
-    },
-    {
-      "type": "select",
-      "id": "background_media",
-      "label": "t:settings.background_media",
-      "options": [
-        {
-          "value": "none",
-          "label": "t:options.none"
-        },
-        {
-          "value": "image",
-          "label": "t:options.image"
-        },
-        {
-          "value": "video",
-          "label": "t:options.video"
-        }
-      ],
-      "default": "none"
-    },
-    {
-      "type": "video",
-      "id": "video",
-      "label": "t:settings.video",
-      "visible_if": "{{ section.settings.background_media == 'video' }}"
-    },
-    {
-      "type": "select",
-      "id": "video_position",
-      "label": "t:settings.video_position",
-      "options": [
-        {
-          "value": "cover",
-          "label": "t:options.cover"
-        },
-        {
-          "value": "contain",
-          "label": "t:options.contain"
-        }
-      ],
-      "default": "cover",
-      "visible_if": "{{ section.settings.background_media == 'video' }}"
-    },
-    {
-      "type": "image_picker",
-      "id": "background_image",
-      "label": "t:settings.image",
-      "visible_if": "{{ section.settings.background_media == 'image' }}"
-    },
-    {
-      "type": "select",
-      "id": "background_image_position",
-      "label": "t:settings.image_position",
-      "options": [
-        {
-          "value": "cover",
-          "label": "t:options.cover"
-        },
-        {
-          "value": "fit",
-          "label": "t:options.fit"
-        }
-      ],
-      "default": "cover",
-      "visible_if": "{{ section.settings.background_media == 'image' }}"
-    },
-    {
-      "type": "header",
-      "content": "t:content.padding"
-    },
-    {
-      "type": "range",
-      "id": "padding-block-start",
-      "label": "t:settings.top",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 0
-    },
-    {
-      "type": "range",
-      "id": "padding-block-end",
-      "label": "t:settings.bottom",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 0
+      "label": "Color scheme",
+      "default": "background-1"
     }
-  ]
+  ],
+  "blocks": [
+    {
+      "type": "link_list",
+      "name": "Footer menu",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Quick links",
+          "label": "Heading"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "default": "footer",
+          "label": "Menu"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Heading",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "subtext",
+          "default": "<p>Share contact information, store details, and brand content with your customers.</p>",
+          "label": "Subtext"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "link_list"
+      },
+      {
+        "type": "text"
+      }
+    ]
+  }
 }
-{% endschema %}
+{% endschema %} 

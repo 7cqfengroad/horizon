@@ -1,0 +1,612 @@
+{%- comment -%}
+  Homepage Template - Verdura Style
+{%- endcomment -%}
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-content">
+    <h1 class="hero-title">Welcome to our store</h1>
+    <h2 class="hero-subtitle">Heritage of Style</h2>
+    <p class="hero-description">Explore the Collection</p>
+    <a href="/collections" class="hero-cta">Discover More</a>
+  </div>
+</section>
+
+<!-- Product Categories -->
+<section class="product-categories">
+  <div class="container">
+    <div class="categories-grid">
+      <div class="category-item">
+        <a href="/collections/bracelets-watches">
+          <div class="category-image">
+            <!-- Placeholder for bracelet image -->
+            <div class="category-placeholder"></div>
+          </div>
+          <h3 class="category-title">Bracelets</h3>
+        </a>
+      </div>
+      
+      <div class="category-item">
+        <a href="/collections/earclips">
+          <div class="category-image">
+            <!-- Placeholder for earclip image -->
+            <div class="category-placeholder"></div>
+          </div>
+          <h3 class="category-title">Earclips</h3>
+        </a>
+      </div>
+      
+      <div class="category-item">
+        <a href="/collections/cuffs">
+          <div class="category-image">
+            <!-- Placeholder for cuff image -->
+            <div class="category-placeholder"></div>
+          </div>
+          <h3 class="category-title">Cuffs</h3>
+        </a>
+      </div>
+      
+      <div class="category-item">
+        <a href="/collections/rings">
+          <div class="category-image">
+            <!-- Placeholder for ring image -->
+            <div class="category-placeholder"></div>
+          </div>
+          <h3 class="category-title">Rings</h3>
+        </a>
+      </div>
+      
+      <div class="category-item">
+        <a href="/collections/necklaces">
+          <div class="category-image">
+            <!-- Placeholder for necklace image -->
+            <div class="category-placeholder"></div>
+          </div>
+          <h3 class="category-title">Necklaces</h3>
+        </a>
+      </div>
+    </div>
+    
+    <div class="view-collection-btn">
+      <a href="/collections" class="btn btn-outline">View Collection</a>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Collections -->
+<section class="featured-collections">
+  <div class="container">
+    <!-- Zodiac Collection -->
+    <div class="collection-feature">
+      <div class="collection-content">
+        <h2 class="collection-title">Zodiac</h2>
+        <h3 class="collection-subtitle">Pendant Necklaces</h3>
+        <p class="collection-description">
+          Using archival postcards Fulco di Verdura purchased at the Museum of Natural History, 
+          Verdura sets diamonds as stars and engraves constellations in gold
+        </p>
+        <a href="/collections/zodiac-pendant-necklaces" class="btn btn-primary">View Collection</a>
+      </div>
+    </div>
+
+    <!-- Off-Season Collection -->
+    <div class="collection-feature reverse">
+      <div class="collection-content">
+        <h2 class="collection-title">The Off-Season Collection</h2>
+        <p class="collection-description">
+          We are delighted to introduce the Off-Season Collection - over a dozen new archival pieces 
+          that we feel captures this paradox of American style. These bangles, lariats, hoops and 
+          pendants are meant to be as relevant to your wardrobe in high season as well as off season, 
+          whether you don them for an audience or a solo stroll down an empty beach.
+        </p>
+        <a href="/collections/off-season-collection" class="btn btn-primary">View</a>
+      </div>
+    </div>
+
+    <!-- Very Verdura -->
+    <div class="collection-feature">
+      <div class="collection-content">
+        <h2 class="collection-title">Very Verdura</h2>
+        <h3 class="collection-subtitle">Gifts Under $20,000</h3>
+        <p class="collection-description">
+          A collection of pieces perfect for gifting and receiving
+        </p>
+        <a href="/collections/very-verdura-gifts-under-20000" class="btn btn-primary">Shop</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Visit Section -->
+<section class="visit-section">
+  <div class="container">
+    <div class="visit-content">
+      <h2 class="visit-title">Visit</h2>
+      <h3 class="visit-subtitle">The Gallery</h3>
+      <p class="visit-description">
+        The Verdura gallery is open 10 AM – 5 PM, Monday – Friday. Arrange your visit below
+      </p>
+      <a href="/pages/visit" class="btn btn-primary">Arrange Visit</a>
+    </div>
+  </div>
+</section>
+
+<!-- New Arrivals -->
+<section class="new-arrivals">
+  <div class="container">
+    <h2 class="section-title">New Arrivals</h2>
+    <div class="products-grid">
+      {% assign new_arrivals = collections['new-arrivals'].products | default: collections.all.products %}
+      {% for product in new_arrivals limit: 8 %}
+        <div class="product-card">
+          <a href="{{ product.url }}">
+            <div class="product-image">
+              {% if product.featured_image %}
+                <img src="{{ product.featured_image | image_url: width: 400 }}" 
+                     alt="{{ product.title }}" 
+                     loading="lazy">
+              {% else %}
+                <div class="product-placeholder"></div>
+              {% endif %}
+            </div>
+            <h3 class="product-title">{{ product.title }}</h3>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Heritage Section -->
+<section class="heritage-section">
+  <div class="container">
+    <div class="heritage-content">
+      <h2 class="heritage-title">Heritage</h2>
+      <h3 class="heritage-subtitle">About Fulco Di Verdura</h3>
+      <p class="heritage-description">
+        Born into Sicilian aristocracy in 1898, Verdura's founder, Duke Fulco di Verdura, 
+        began his extraordinary career in Paris as a designer for Coco Chanel. After eight years 
+        with Chanel where he, most notably, created the Maltese Cross cuffs that became his signature, 
+        Verdura followed his passion for design to America in 1934.
+      </p>
+      <a href="/pages/the-story" class="btn btn-outline">Discover our Heritage</a>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter-section">
+  <div class="container">
+    <div class="newsletter-content">
+      <h2 class="newsletter-title">Sign up now</h2>
+      <h3 class="newsletter-subtitle">Welcome to Verdura</h3>
+      <p class="newsletter-description">
+        Please join our email list for updates about new collections and special events
+      </p>
+      
+      <form action="/contact#contact_form" method="post" class="newsletter-form" id="contact_form">
+        <input type="hidden" name="form_type" value="customer">
+        <input type="hidden" name="utf8" value="✓">
+        
+        <div class="newsletter-input-group">
+          <input type="email" 
+                 name="contact[email]" 
+                 placeholder="Enter your email address"
+                 required
+                 class="newsletter-input">
+          <button type="submit" class="newsletter-submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Hero Section */
+  .hero-section {
+    min-height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+
+  .hero-content {
+    max-width: 600px;
+    padding: 2rem;
+  }
+
+  .hero-title {
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight: 300;
+  }
+
+  .hero-subtitle {
+    font-size: 3.5rem;
+    font-family: var(--font-heading-family);
+    font-weight: var(--font-heading-weight);
+    margin-bottom: 1rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .hero-description {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .hero-cta {
+    display: inline-block;
+    padding: 1.2rem 2.5rem;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+  }
+
+  .hero-cta:hover {
+    background: white;
+    color: black;
+  }
+
+  /* Container */
+  .container {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  /* Product Categories */
+  .product-categories {
+    padding: 6rem 0;
+    background: rgb(var(--color-base-background-1));
+  }
+
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .category-item a {
+    text-decoration: none;
+    color: rgb(var(--color-base-text));
+    text-align: center;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .category-item a:hover {
+    transform: translateY(-5px);
+  }
+
+  .category-image {
+    aspect-ratio: 1;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  .category-placeholder, .product-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 1.2rem;
+  }
+
+  .category-title {
+    font-size: 1.8rem;
+    font-family: var(--font-heading-family);
+    font-weight: var(--font-heading-weight);
+    margin: 0;
+  }
+
+  .view-collection-btn {
+    text-align: center;
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    padding: 1.2rem 2.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    border: 2px solid;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background: rgb(var(--color-base-accent-1));
+    color: rgb(var(--color-base-background-1));
+    border-color: rgb(var(--color-base-accent-1));
+  }
+
+  .btn-primary:hover {
+    background: transparent;
+    color: rgb(var(--color-base-accent-1));
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: rgb(var(--color-base-text));
+    border-color: rgb(var(--color-base-text));
+  }
+
+  .btn-outline:hover {
+    background: rgb(var(--color-base-text));
+    color: rgb(var(--color-base-background-1));
+  }
+
+  /* Featured Collections */
+  .featured-collections {
+    padding: 6rem 0;
+    background: rgb(var(--color-base-background-2));
+  }
+
+  .collection-feature {
+    padding: 4rem 0;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .collection-title {
+    font-size: 3rem;
+    font-family: var(--font-heading-family);
+    font-weight: var(--font-heading-weight);
+    margin-bottom: 1rem;
+  }
+
+  .collection-subtitle {
+    font-size: 2.2rem;
+    font-family: var(--font-heading-family);
+    margin-bottom: 2rem;
+    font-weight: 300;
+  }
+
+  .collection-description {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    color: rgba(var(--color-base-text), 0.8);
+  }
+
+  /* Visit Section */
+  .visit-section {
+    padding: 6rem 0;
+    background: rgb(var(--color-base-background-1));
+    text-align: center;
+  }
+
+  .visit-title {
+    font-size: 3rem;
+    font-family: var(--font-heading-family);
+    font-weight: var(--font-heading-weight);
+    margin-bottom: 1rem;
+  }
+
+  .visit-subtitle {
+    font-size: 2.2rem;
+    font-family: var(--font-heading-family);
+    margin-bottom: 2rem;
+    font-weight: 300;
+  }
+
+  .visit-description {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    color: rgba(var(--color-base-text), 0.8);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* New Arrivals */
+  .new-arrivals {
+    padding: 6rem 0;
+    background: rgb(var(--color-base-background-2));
+  }
+
+  .section-title {
+    font-size: 3rem;
+    font-family: var(--font-heading-family);
+    font-weight: var(--font-heading-weight);
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+  }
+
+  .product-card {
+    text-align: center;
+  }
+
+  .product-card a {
+    text-decoration: none;
+    color: rgb(var(--color-base-text));
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .product-card a:hover {
+    transform: translateY(-5px);
+  }
+
+  .product-image {
+    aspect-ratio: 1;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .product-title {
+    font-size: 1.6rem;
+    font-family: var(--font-heading-family);
+    margin: 0;
+  }
+
+  /* Heritage Section */
+  .heritage-section {
+    padding: 6rem 0;
+    background: rgb(var(--color-base-background-1));
+    text-align: center;
+  }
+
+  .heritage-title {
+    font-size: 3rem;
+    font-family: var(--font-heading-family);
+    font-weight: var(--font-heading-weight);
+    margin-bottom: 1rem;
+  }
+
+  .heritage-subtitle {
+    font-size: 2.2rem;
+    font-family: var(--font-heading-family);
+    margin-bottom: 2rem;
+    font-weight: 300;
+  }
+
+  .heritage-description {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    color: rgba(var(--color-base-text), 0.8);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Newsletter Section */
+  .newsletter-section {
+    padding: 6rem 0;
+    background: rgb(var(--color-base-background-2));
+    text-align: center;
+  }
+
+  .newsletter-title {
+    font-size: 3rem;
+    font-family: var(--font-heading-family);
+    font-weight: var(--font-heading-weight);
+    margin-bottom: 1rem;
+  }
+
+  .newsletter-subtitle {
+    font-size: 2.2rem;
+    font-family: var(--font-heading-family);
+    margin-bottom: 2rem;
+    font-weight: 300;
+  }
+
+  .newsletter-description {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    color: rgba(var(--color-base-text), 0.8);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .newsletter-form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .newsletter-input-group {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .newsletter-input {
+    flex: 1;
+    padding: 1.2rem;
+    border: 2px solid rgba(var(--color-base-text), 0.3);
+    font-size: 1.4rem;
+    border-radius: 4px;
+  }
+
+  .newsletter-submit {
+    padding: 1.2rem 2rem;
+    background: rgb(var(--color-base-accent-1));
+    color: rgb(var(--color-base-background-1));
+    border: none;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+  .newsletter-submit:hover {
+    background: rgba(var(--color-base-accent-1), 0.8);
+  }
+
+  /* Mobile Responsiveness */
+  @media screen and (max-width: 768px) {
+    .hero-subtitle {
+      font-size: 2.5rem;
+    }
+
+    .categories-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .collection-title, .section-title, .visit-title, .heritage-title, .newsletter-title {
+      font-size: 2.5rem;
+    }
+
+    .collection-subtitle, .visit-subtitle, .heritage-subtitle, .newsletter-subtitle {
+      font-size: 1.8rem;
+    }
+
+    .products-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .newsletter-input-group {
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .categories-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .products-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style> 

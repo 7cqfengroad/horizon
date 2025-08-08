@@ -1,121 +1,82 @@
-<meta charset="utf-8">
-<meta
-  http-equiv="X-UA-Compatible"
-  content="IE=edge"
->
-<meta
-  name="viewport"
-  content="width=device-width,initial-scale=1"
->
-<meta
-  name="view-transition"
-  content="same-origin"
->
-<meta
-  name="theme-color"
-  content=""
->
+{%- comment -%}
+  Meta Tags Snippet - SEO and Social Media
+{%- endcomment -%}
 
 {%- liquid
-  assign og_title = page_title | default: shop.name
-  assign og_url = canonical_url | default: request.origin
+  assign meta_description = page_description | default: shop.description | default: shop.name
+  assign meta_title = page_title
+  unless meta_title contains shop.name
+    assign meta_title = meta_title | append: ' - ' | append: shop.name
+  endunless
+  
+  assign og_title = page_title
+  unless og_title contains shop.name
+    assign og_title = og_title | append: ' - ' | append: shop.name
+  endunless
+  
+  assign og_url = canonical_url | default: shop.url
   assign og_type = 'website'
-  assign og_description = page_description | default: shop.description | default: shop.name
-
-  if request.page_type == 'product'
+  assign og_description = meta_description
+  
+  if template contains 'product'
     assign og_type = 'product'
-  elsif request.page_type == 'article'
+    if product.featured_image
+      assign og_image = product.featured_image | image_url: width: 1200
+      assign og_image_alt = product.featured_image.alt | default: product.title
+    endif
+  elsif template contains 'collection'
+    if collection.featured_image
+      assign og_image = collection.featured_image | image_url: width: 1200
+      assign og_image_alt = collection.featured_image.alt | default: collection.title
+    endif
+  elsif template contains 'article'
     assign og_type = 'article'
-  elsif request.page_type == 'password'
-    assign og_url = request.origin
+    if article.image
+      assign og_image = article.image | image_url: width: 1200
+      assign og_image_alt = article.image.alt | default: article.title
+    endif
   endif
-%}
+  
+  unless og_image
+    if settings.share_image
+      assign og_image = settings.share_image | image_url: width: 1200
+      assign og_image_alt = shop.name
+    endif
+  endunless
+-%}
 
-<meta
-  property="og:site_name"
-  content="{{ shop.name }}"
->
-<meta
-  property="og:url"
-  content="{{ og_url }}"
->
-<meta
-  property="og:title"
-  content="{{ og_title | escape }}"
->
-<meta
-  property="og:type"
-  content="{{ og_type }}"
->
-<meta
-  property="og:description"
-  content="{{ og_description | escape }}"
->
+<meta property="og:site_name" content="{{ shop.name }}">
+<meta property="og:url" content="{{ og_url }}">
+<meta property="og:title" content="{{ og_title | escape }}">
+<meta property="og:type" content="{{ og_type }}">
+<meta property="og:description" content="{{ og_description | escape }}">
 
-{%- if page_image -%}
-  <meta
-    property="og:image"
-    content="http:{{ page_image | image_url }}"
-  >
-  <meta
-    property="og:image:secure_url"
-    content="https:{{ page_image | image_url }}"
-  >
-  <meta
-    property="og:image:width"
-    content="{{ page_image.width }}"
-  >
-  <meta
-    property="og:image:height"
-    content="{{ page_image.height }}"
-  >
+{%- if og_image -%}
+  <meta property="og:image" content="http:{{ og_image }}">
+  <meta property="og:image:secure_url" content="https:{{ og_image }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  {%- if og_image_alt -%}
+    <meta property="og:image:alt" content="{{ og_image_alt | escape }}">
+  {%- endif -%}
 {%- endif -%}
 
-{%- if request.page_type == 'product' -%}
-  <meta
-    property="og:price:amount"
-    content="{{ product.price | money_without_currency | strip_html }}"
-  >
-  <meta
-    property="og:price:currency"
-    content="{{ cart.currency.iso_code }}"
-  >
+{%- if template contains 'product' -%}
+  <meta property="product:brand" content="{{ product.vendor | escape }}">
+  <meta property="product:availability" content="{% if product.available %}in stock{% else %}out of stock{% endif %}">
+  <meta property="product:condition" content="new">
+  <meta property="product:price:amount" content="{{ product.price | money_without_currency | strip }}">
+  <meta property="product:price:currency" content="{{ cart.currency.iso_code }}">
+  <meta property="product:retailer_item_id" content="{{ product.selected_or_first_available_variant.sku }}">
 {%- endif -%}
 
-{%- if settings.social_twitter_link != blank -%}
-  <meta
-    name="twitter:site"
-    content="{{ settings.social_twitter_link | split: 'twitter.com/' | last | prepend: '@' }}"
-  >
-{%- endif -%}
-<meta
-  name="twitter:card"
-  content="summary_large_image"
->
-<meta
-  name="twitter:title"
-  content="{{ og_title | escape }}"
->
-<meta
-  name="twitter:description"
-  content="{{ og_description | escape }}"
->
-
-<title>
-  {{ page_title }}
-  {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
-  {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-  {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
-</title>
-
-<link
-  rel="canonical"
-  href="{{ canonical_url }}"
->
-
-{% if page_description %}
-  <meta
-    name="description"
-    content="{{ page_description | escape }}"
-  >
-{% endif %}
+<meta name="twitter:site" content="{{ settings.social_twitter_link | split: 'twitter.com/' | last | prepend: '@' }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ og_title | escape }}">
+<meta name="twitter:description" content="{{ og_description | escape }}">
+{%- if og_image -%}
+  <meta name="twitter:image" content="https:{{ og_image }}">
+  {%- if og_image_alt -%}
+    <meta name="twitter:image:alt" content="{{ og_image_alt | escape }}">
+  {%- endif -%}
+{%- endif -%} 

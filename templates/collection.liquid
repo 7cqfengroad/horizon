@@ -1,0 +1,681 @@
+{%- comment -%}
+  Collection Template - Verdura Style
+{%- endcomment -%}
+
+{%- liquid
+  assign sort_by = collection.sort_by | default: collection.default_sort_by
+  assign terms = search.terms | escape
+  assign search_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by
+-%}
+
+<div class="collection-header">
+  <div class="container">
+    {% if collection.image %}
+      <div class="collection-hero">
+        <img src="{{ collection.image | image_url: width: 1200 }}" 
+             alt="{{ collection.title }}" 
+             class="collection-hero-image">
+        <div class="collection-hero-content">
+          <h1 class="collection-title">{{ collection.title }}</h1>
+          {% if collection.description != blank %}
+            <p class="collection-description">{{ collection.description }}</p>
+          {% endif %}
+        </div>
+      </div>
+    {% else %}
+      <div class="collection-header-simple">
+        <h1 class="collection-title">{{ collection.title }}</h1>
+        {% if collection.description != blank %}
+          <p class="collection-description">{{ collection.description }}</p>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<div class="collection-content">
+  <div class="container">
+    <!-- Collection Toolbar -->
+    <div class="collection-toolbar">
+      <div class="collection-info">
+        {% if collection.products.size > 0 %}
+          <p class="collection-count">
+            {{ collection.products.size }} 
+            {% if collection.products.size == 1 %}
+              product
+            {% else %}
+              products
+            {% endif %}
+          </p>
+        {% endif %}
+      </div>
+
+      <!-- Filters and Sort -->
+      <div class="collection-controls">
+        {% if collection.products.size > 1 %}
+          <!-- Sort Dropdown -->
+          <div class="sort-dropdown">
+            <label for="SortBy" class="sort-label">Sort by:</label>
+            <select name="sort_by" id="SortBy" class="sort-select">
+              <option value="manual" {% if sort_by == 'manual' %}selected{% endif %}>Featured</option>
+              <option value="best-selling" {% if sort_by == 'best-selling' %}selected{% endif %}>Best selling</option>
+              <option value="title-ascending" {% if sort_by == 'title-ascending' %}selected{% endif %}>Alphabetically, A-Z</option>
+              <option value="title-descending" {% if sort_by == 'title-descending' %}selected{% endif %}>Alphabetically, Z-A</option>
+              <option value="price-ascending" {% if sort_by == 'price-ascending' %}selected{% endif %}>Price, low to high</option>
+              <option value="price-descending" {% if sort_by == 'price-descending' %}selected{% endif %}>Price, high to low</option>
+              <option value="created-ascending" {% if sort_by == 'created-ascending' %}selected{% endif %}>Date, old to new</option>
+              <option value="created-descending" {% if sort_by == 'created-descending' %}selected{% endif %}>Date, new to old</option>
+            </select>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Products Grid -->
+    {% if collection.products.size > 0 %}
+      <div class="products-grid">
+        {% for product in collection.products %}
+          <div class="product-card" data-product-id="{{ product.id }}">
+            <a href="{{ product.url }}" class="product-link">
+              <div class="product-image">
+                {% if product.featured_image %}
+                  <img src="{{ product.featured_image | image_url: width: 400 }}" 
+                       alt="{{ product.title }}" 
+                       loading="lazy"
+                       class="product-main-image">
+                  {% if product.images[1] %}
+                    <img src="{{ product.images[1] | image_url: width: 400 }}" 
+                         alt="{{ product.title }}" 
+                         loading="lazy"
+                         class="product-hover-image">
+                  {% endif %}
+                {% else %}
+                  <div class="product-placeholder">
+                    <span>No Image</span>
+                  </div>
+                {% endif %}
+                
+                {% if product.compare_at_price > product.price %}
+                  <span class="product-badge sale-badge">Sale</span>
+                {% elsif product.available == false %}
+                  <span class="product-badge sold-out-badge">Sold Out</span>
+                {% endif %}
+              </div>
+              
+              <div class="product-info">
+                <h3 class="product-title">{{ product.title }}</h3>
+                <div class="product-price">
+                  {% if product.compare_at_price > product.price %}
+                    <span class="product-price-sale">{{ product.price | money }}</span>
+                    <span class="product-price-compare">{{ product.compare_at_price | money }}</span>
+                  {% else %}
+                    <span class="product-price-regular">{{ product.price | money }}</span>
+                  {% endif %}
+                </div>
+                
+                {% if product.variants.size > 1 %}
+                  <div class="product-variants">
+                    {% for option in product.options_with_values %}
+                      {% if option.name == 'Color' or option.name == 'Colour' %}
+                        <div class="color-swatches">
+                          {% for value in option.values %}
+                            <span class="color-swatch" 
+                                  style="background-color: {{ value | handle | replace: '-', '' }};"
+                                  title="{{ value }}"></span>
+                          {% endfor %}
+                        </div>
+                        {% break %}
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                {% endif %}
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+
+      <!-- Pagination -->
+      {% if paginate.pages > 1 %}
+        <nav class="pagination" role="navigation" aria-label="Pagination">
+          {% if paginate.previous %}
+            <a href="{{ paginate.previous.url }}" class="pagination-item pagination-prev" aria-label="Previous page">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+              </svg>
+              Previous
+            </a>
+          {% endif %}
+
+          {% for part in paginate.parts %}
+            {% if part.is_link %}
+              <a href="{{ part.url }}" class="pagination-item" aria-label="Page {{ part.title }}">
+                {{ part.title }}
+              </a>
+            {% else %}
+              {% if part.title == paginate.current_page %}
+                <span class="pagination-item pagination-current" aria-current="page" aria-label="Current page {{ part.title }}">
+                  {{ part.title }}
+                </span>
+              {% else %}
+                <span class="pagination-item pagination-ellipsis">{{ part.title }}</span>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+
+          {% if paginate.next %}
+            <a href="{{ paginate.next.url }}" class="pagination-item pagination-next" aria-label="Next page">
+              Next
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+              </svg>
+            </a>
+          {% endif %}
+        </nav>
+      {% endif %}
+
+    {% else %}
+      <!-- Empty Collection -->
+      <div class="collection-empty">
+        <h2>No products found</h2>
+        <p>This collection is currently empty.</p>
+        <a href="/collections" class="btn btn-primary">Browse Collections</a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<!-- Recently Viewed Products -->
+<div class="recently-viewed" id="recently-viewed" style="display: none;">
+  <div class="container">
+    <h2 class="section-title">Recently Viewed</h2>
+    <div class="recently-viewed-grid" id="recently-viewed-grid">
+      <!-- Products will be inserted here by JavaScript -->
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Collection Header */
+  .collection-header {
+    margin-bottom: 4rem;
+  }
+
+  .collection-hero {
+    position: relative;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+  }
+
+  .collection-hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .collection-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+  }
+
+  .collection-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    padding: 2rem;
+  }
+
+  .collection-header-simple {
+    text-align: center;
+    padding: 4rem 0;
+  }
+
+  .collection-title {
+    font-size: 3.5rem;
+    font-family: var(--font-heading-family);
+    font-weight: var(--font-heading-weight);
+    margin-bottom: 1rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .collection-description {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+    color: rgba(var(--color-base-text), 0.8);
+  }
+
+  .collection-hero .collection-description {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  /* Container */
+  .container {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  /* Collection Toolbar */
+  .collection-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(var(--color-base-text), 0.1);
+  }
+
+  .collection-count {
+    font-size: 1.4rem;
+    color: rgba(var(--color-base-text), 0.7);
+    margin: 0;
+  }
+
+  .collection-controls {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .sort-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .sort-label {
+    font-size: 1.4rem;
+    color: rgb(var(--color-base-text));
+  }
+
+  .sort-select {
+    padding: 0.8rem 1rem;
+    border: 1px solid rgba(var(--color-base-text), 0.3);
+    font-size: 1.4rem;
+    background: rgb(var(--color-base-background-1));
+    color: rgb(var(--color-base-text));
+    border-radius: 4px;
+  }
+
+  /* Products Grid */
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .product-card {
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .product-link {
+    text-decoration: none;
+    color: rgb(var(--color-base-text));
+    display: block;
+  }
+
+  .product-image {
+    position: relative;
+    aspect-ratio: 1;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #f5f5f5;
+  }
+
+  .product-main-image,
+  .product-hover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+  }
+
+  .product-hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+
+  .product-card:hover .product-hover-image {
+    opacity: 1;
+  }
+
+  .product-card:hover .product-main-image {
+    opacity: 0;
+  }
+
+  .product-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 1.2rem;
+  }
+
+  .product-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    border-radius: 4px;
+    z-index: 2;
+  }
+
+  .sale-badge {
+    background: #ff4444;
+    color: white;
+  }
+
+  .sold-out-badge {
+    background: #666;
+    color: white;
+  }
+
+  .product-info {
+    text-align: center;
+  }
+
+  .product-title {
+    font-size: 1.6rem;
+    font-family: var(--font-heading-family);
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+  }
+
+  .product-price {
+    margin-bottom: 1rem;
+  }
+
+  .product-price-regular,
+  .product-price-sale {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  .product-price-compare {
+    font-size: 1.2rem;
+    color: rgba(var(--color-base-text), 0.6);
+    text-decoration: line-through;
+    margin-left: 0.5rem;
+  }
+
+  .color-swatches {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .color-swatch {
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    border: 2px solid rgba(var(--color-base-text), 0.2);
+    cursor: pointer;
+  }
+
+  /* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 4rem;
+  }
+
+  .pagination-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    color: rgb(var(--color-base-text));
+    border: 1px solid rgba(var(--color-base-text), 0.3);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+
+  .pagination-item:hover {
+    background: rgb(var(--color-base-accent-1));
+    color: rgb(var(--color-base-background-1));
+    border-color: rgb(var(--color-base-accent-1));
+  }
+
+  .pagination-current {
+    background: rgb(var(--color-base-accent-1));
+    color: rgb(var(--color-base-background-1));
+    border-color: rgb(var(--color-base-accent-1));
+  }
+
+  .pagination-ellipsis {
+    border: none;
+    background: none;
+  }
+
+  /* Empty Collection */
+  .collection-empty {
+    text-align: center;
+    padding: 6rem 2rem;
+  }
+
+  .collection-empty h2 {
+    font-size: 2.5rem;
+    font-family: var(--font-heading-family);
+    margin-bottom: 1rem;
+  }
+
+  .collection-empty p {
+    font-size: 1.6rem;
+    color: rgba(var(--color-base-text), 0.7);
+    margin-bottom: 2rem;
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    padding: 1.2rem 2.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    border: 2px solid;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .btn-primary {
+    background: rgb(var(--color-base-accent-1));
+    color: rgb(var(--color-base-background-1));
+    border-color: rgb(var(--color-base-accent-1));
+  }
+
+  .btn-primary:hover {
+    background: transparent;
+    color: rgb(var(--color-base-accent-1));
+  }
+
+  /* Recently Viewed */
+  .recently-viewed {
+    margin-top: 6rem;
+    padding: 4rem 0;
+    background: rgb(var(--color-base-background-2));
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-family: var(--font-heading-family);
+    font-weight: var(--font-heading-weight);
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .recently-viewed-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+
+  /* Mobile Responsiveness */
+  @media screen and (max-width: 768px) {
+    .collection-title {
+      font-size: 2.5rem;
+    }
+
+    .collection-toolbar {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .sort-dropdown {
+      justify-content: space-between;
+    }
+
+    .products-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .pagination {
+      flex-wrap: wrap;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .products-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .pagination-item {
+      padding: 0.8rem 1rem;
+      font-size: 1.1rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Sort functionality
+    const sortSelect = document.getElementById('SortBy');
+    if (sortSelect) {
+      sortSelect.addEventListener('change', function() {
+        const url = new URL(window.location);
+        url.searchParams.set('sort_by', this.value);
+        window.location.href = url.toString();
+      });
+    }
+
+    // Recently viewed products
+    function addToRecentlyViewed(productId, productTitle, productImage, productUrl, productPrice) {
+      let recentlyViewed = JSON.parse(localStorage.getItem('recentlyViewed') || '[]');
+      
+      // Remove if already exists
+      recentlyViewed = recentlyViewed.filter(item => item.id !== productId);
+      
+      // Add to beginning
+      recentlyViewed.unshift({
+        id: productId,
+        title: productTitle,
+        image: productImage,
+        url: productUrl,
+        price: productPrice
+      });
+      
+      // Keep only last 8 items
+      recentlyViewed = recentlyViewed.slice(0, 8);
+      
+      localStorage.setItem('recentlyViewed', JSON.stringify(recentlyViewed));
+    }
+
+    function displayRecentlyViewed() {
+      const recentlyViewed = JSON.parse(localStorage.getItem('recentlyViewed') || '[]');
+      const container = document.getElementById('recently-viewed');
+      const grid = document.getElementById('recently-viewed-grid');
+      
+      if (recentlyViewed.length > 0 && container && grid) {
+        grid.innerHTML = '';
+        
+        recentlyViewed.forEach(product => {
+          const productHTML = `
+            <div class="product-card">
+              <a href="${product.url}">
+                <div class="product-image">
+                  <img src="${product.image}" alt="${product.title}" loading="lazy">
+                </div>
+                <h3 class="product-title">${product.title}</h3>
+                <div class="product-price">
+                  <span class="product-price-regular">${product.price}</span>
+                </div>
+              </a>
+            </div>
+          `;
+          grid.insertAdjacentHTML('beforeend', productHTML);
+        });
+        
+        container.style.display = 'block';
+      }
+    }
+
+    // Track product views
+    const productCards = document.querySelectorAll('.product-card');
+    productCards.forEach(card => {
+      const link = card.querySelector('.product-link');
+      if (link) {
+        link.addEventListener('click', function() {
+          const productId = card.dataset.productId;
+          const productTitle = card.querySelector('.product-title').textContent;
+          const productImage = card.querySelector('.product-main-image');
+          const productPrice = card.querySelector('.product-price-regular, .product-price-sale');
+          
+          if (productId && productTitle && productImage && productPrice) {
+            addToRecentlyViewed(
+              productId,
+              productTitle,
+              productImage.src,
+              this.href,
+              productPrice.textContent
+            );
+          }
+        });
+      }
+    });
+
+    // Display recently viewed on page load
+    displayRecentlyViewed();
+  });
+</script>
+
+{%- paginate collection.products by 24 -%}
+  {%- comment -%} This template is wrapped with pagination {%- endcomment -%}
+{%- endpaginate -%} 
