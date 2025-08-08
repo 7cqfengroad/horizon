@@ -1,0 +1,27 @@
+{% comment %}
+  Minimal Test Section - 最小化测试
+  只包含基本HTML，无外部依赖
+{% endcomment %}
+
+<div style="padding: 100px 20px; text-align: center; background: #f0f0f0;">
+  <h1 style="font-size: 2rem; color: #333; margin-bottom: 20px;">
+    ✅ 主题加载成功！
+  </h1>
+  <p style="font-size: 1.2rem; color: #666; margin: 10px 0;">
+    如果您看到这个页面，说明Shopify主题已经正确部署。
+  </p>
+  <p style="font-size: 1rem; color: #999;">
+    测试时间：<span id="test-time"></span>
+  </p>
+</div>
+
+<script>
+  document.getElementById('test-time').textContent = new Date().toLocaleString();
+</script>
+
+{% schema %}
+{
+  "name": "最小测试",
+  "settings": []
+}
+{% endschema %} 

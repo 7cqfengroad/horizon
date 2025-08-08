@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "minimal": {
+      "type": "minimal-test",
+      "settings": {}
+    }
+  },
+  "order": [
+    "minimal"
+  ]
+} 
