@@ -1,0 +1,44 @@
+ → {% comment %}
+  Verdura Homepage Template
+  复刻 verdura.com 的主页设计和布局
+{% endcomment %}
+
+{%- liquid
+  assign hero_collection = collections['featured'] | default: collections.all
+  assign bracelets_collection = collections['bracelets-watches'] | default: collections.all
+  assign earclips_collection = collections['earclips'] | default: collections.all
+  assign cuffs_collection = collections['cuffs'] | default: collections.all
+  assign rings_collection = collections['rings'] | default: collections.all
+  assign necklaces_collection = collections['necklaces'] | default: collections.all
+  assign zodiac_collection = collections['zodiac-pendant-necklaces'] | default: collections.all
+  assign off_season_collection = collections['off-season-collection'] | default: collections.all
+  assign gifts_collection = collections['very-verdura-gifts-under-15-000'] | default: collections.all
+  assign new_arrivals = collections['new-arrivals'] | default: collections.all
+-%}
+
+{%- section 'verdura-hero' -%}
+
+{%- section 'verdura-collections' -%}
+
+{%- section 'verdura-zodiac' -%}
+
+{%- section 'verdura-off-season' -%}
+
+{%- section 'verdura-gifts' -%}
+
+{%- section 'verdura-gallery' -%}
+
+{%- section 'verdura-new-arrivals' -%}
+
+{%- section 'verdura-heritage' -%}
+
+{%- section 'verdura-newsletter' -%}
+
+{%- section 'verdura-instagram' -%}
+
+{% schema %}
+{
+  "name": "Homepage",
+  "settings": []
+}
+{% endschema %}

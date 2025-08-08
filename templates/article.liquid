@@ -1,0 +1,16 @@
+ → {% comment %}
+  Article Template
+{% endcomment %}
+
+<div class="page-width">
+  <article class="article">
+    <h1 class="h1">{{ article.title }}</h1>
+    <time>{{ article.published_at | date: '%B %d, %Y' }}</time>
+    
+    <div class="article__content">
+      {{ article.content }}
+    </div>
+    
+    <a href="{{ blog.url }}">Back to {{ blog.title }}</a>
+  </article>
+</div>

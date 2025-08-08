@@ -1,0 +1,406 @@
+ → {% comment %}
+  Verdura Zodiac Section
+  复刻十二生肖吊坠项链系列展示
+{% endcomment %}
+
+{%- liquid
+  assign zodiac_collection = collections[section.settings.zodiac_collection] | default: collections['zodiac-pendant-necklaces'] | default: collections.all
+-%}
+
+<section class="zodiac-section" id="zodiac">
+  <div class="page-width">
+    <div class="zodiac-section__wrapper">
+      
+      <div class="zodiac-section__content">
+        <!-- Left Zodiac Pendant -->
+        <div class="zodiac-section__pendant zodiac-section__pendant--left">
+          {% if zodiac_collection.products.size > 0 %}
+            {% assign left_product = zodiac_collection.products[0] %}
+            <div class="zodiac-pendant">
+              <a href="{{ left_product.url }}" class="zodiac-pendant__link">
+                {% if left_product.featured_image %}
+                  <img src="{{ left_product.featured_image | image_url: width: 300 }}" 
+                       alt="{{ left_product.title | escape }}"
+                       class="zodiac-pendant__image"
+                       loading="lazy">
+                {% endif %}
+              </a>
+            </div>
+          {% else %}
+            <div class="zodiac-pendant">
+              <img src="https://ext.same-assets.com/3425221127/1039815253.jpeg" 
+                   alt="Zodiac Pendant"
+                   class="zodiac-pendant__image"
+                   loading="lazy">
+            </div>
+          {% endif %}
+        </div>
+
+        <!-- Center Content -->
+        <div class="zodiac-section__center">
+          <div class="zodiac-section__text">
+            <h2 class="zodiac-section__title h2">
+              {% if section.settings.zodiac_title != blank %}
+                {{ section.settings.zodiac_title }}
+              {% else %}
+                Zodiac
+              {% endif %}
+            </h2>
+            
+            <h3 class="zodiac-section__subtitle h3">
+              {% if section.settings.zodiac_subtitle != blank %}
+                {{ section.settings.zodiac_subtitle }}
+              {% else %}
+                PENDANT NECKLACES
+              {% endif %}
+            </h3>
+            
+            <div class="zodiac-section__description">
+              {% if section.settings.zodiac_description != blank %}
+                <p>{{ section.settings.zodiac_description }}</p>
+              {% else %}
+                <p>Using archival postcards Fulco di Verdura purchased at the Museum of Natural History, Verdura sets diamonds as stars and engraves constellations in gold</p>
+              {% endif %}
+            </div>
+            
+            <a href="{{ zodiac_collection.url }}" class="zodiac-section__link">
+              {% if section.settings.zodiac_link_text != blank %}
+                {{ section.settings.zodiac_link_text }}
+              {% else %}
+                VIEW COLLECTION
+              {% endif %}
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Zodiac Pendant -->
+        <div class="zodiac-section__pendant zodiac-section__pendant--right">
+          {% if zodiac_collection.products.size > 1 %}
+            {% assign right_product = zodiac_collection.products[1] %}
+            <div class="zodiac-pendant">
+              <a href="{{ right_product.url }}" class="zodiac-pendant__link">
+                {% if right_product.featured_image %}
+                  <img src="{{ right_product.featured_image | image_url: width: 300 }}" 
+                       alt="{{ right_product.title | escape }}"
+                       class="zodiac-pendant__image"
+                       loading="lazy">
+                {% endif %}
+              </a>
+            </div>
+          {% else %}
+            <div class="zodiac-pendant">
+              <img src="https://ext.same-assets.com/3425221127/778416306.jpeg" 
+                   alt="Zodiac Pendant"
+                   class="zodiac-pendant__image"
+                   loading="lazy">
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  .zodiac-section {
+    padding: 100px 0;
+    background: var(--color-base-background-1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .zodiac-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+      rgba(248, 246, 245, 0.8) 0%, 
+      rgba(255, 255, 255, 0.9) 50%, 
+      rgba(248, 246, 245, 0.8) 100%);
+    pointer-events: none;
+  }
+
+  .zodiac-section__wrapper {
+    position: relative;
+    z-index: 2;
+  }
+
+  .zodiac-section__content {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .zodiac-section__pendant {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .zodiac-pendant {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .zodiac-pendant:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  }
+
+  .zodiac-pendant__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .zodiac-pendant__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .zodiac-pendant:hover .zodiac-pendant__image {
+    transform: scale(1.1);
+  }
+
+  .zodiac-section__center {
+    text-align: center;
+    max-width: 400px;
+    padding: 40px 0;
+  }
+
+  .zodiac-section__title {
+    font-family: var(--font-heading-family);
+    font-size: 4rem;
+    font-weight: 400;
+    color: var(--color-base-text);
+    margin-bottom: 10px;
+    letter-spacing: 0.02em;
+  }
+
+  .zodiac-section__subtitle {
+    font-family: var(--font-body-family);
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-base-text);
+    margin-bottom: 30px;
+    opacity: 0.8;
+  }
+
+  .zodiac-section__description {
+    margin-bottom: 40px;
+  }
+
+  .zodiac-section__description p {
+    font-family: var(--font-body-family);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--color-base-text);
+    margin: 0;
+  }
+
+  .zodiac-section__link {
+    font-family: var(--font-body-family);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    color: var(--color-base-text);
+    transition: color 0.3s ease;
+    display: inline-block;
+  }
+
+  .zodiac-section__link:hover {
+    color: var(--color-accent-gold);
+  }
+
+  /* Animation for pendants */
+  .zodiac-section__pendant--left {
+    animation: floatLeft 6s ease-in-out infinite;
+  }
+
+  .zodiac-section__pendant--right {
+    animation: floatRight 6s ease-in-out infinite;
+    animation-delay: 3s;
+  }
+
+  @keyframes floatLeft {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(2deg);
+    }
+  }
+
+  @keyframes floatRight {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(-2deg);
+    }
+  }
+
+  /* Mobile Responsive */
+  @media screen and (max-width: 1024px) {
+    .zodiac-section__content {
+      gap: 40px;
+    }
+
+    .zodiac-pendant {
+      width: 160px;
+      height: 160px;
+    }
+
+    .zodiac-section__title {
+      font-size: 3rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .zodiac-section {
+      padding: 80px 0;
+    }
+
+    .zodiac-section__content {
+      display: block;
+      text-align: center;
+    }
+
+    .zodiac-section__center {
+      max-width: 100%;
+      margin: 40px 0;
+      order: 1;
+    }
+
+    .zodiac-section__pendant--left {
+      order: 2;
+      margin-bottom: 30px;
+    }
+
+    .zodiac-section__pendant--right {
+      order: 3;
+    }
+
+    .zodiac-pendant {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto;
+    }
+
+    .zodiac-section__title {
+      font-size: 2.5rem;
+    }
+
+    .zodiac-section__subtitle {
+      font-size: 1.2rem;
+    }
+
+    .zodiac-section__description p {
+      font-size: 15px;
+    }
+
+    /* Disable animations on mobile */
+    .zodiac-section__pendant--left,
+    .zodiac-section__pendant--right {
+      animation: none;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .zodiac-section__title {
+      font-size: 2rem;
+    }
+
+    .zodiac-section__subtitle {
+      font-size: 1rem;
+    }
+
+    .zodiac-pendant {
+      width: 120px;
+      height: 120px;
+    }
+
+    .zodiac-section__description p {
+      font-size: 14px;
+    }
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .zodiac-section__pendant--left,
+    .zodiac-section__pendant--right {
+      animation: none;
+    }
+
+    .zodiac-pendant {
+      transition: none;
+    }
+
+    .zodiac-pendant__image {
+      transition: none;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Zodiac Section",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "zodiac_collection",
+      "label": "Zodiac Collection",
+      "info": "Select the zodiac pendant necklaces collection"
+    },
+    {
+      "type": "text",
+      "id": "zodiac_title",
+      "label": "Section Title",
+      "default": "Zodiac"
+    },
+    {
+      "type": "text",
+      "id": "zodiac_subtitle",
+      "label": "Section Subtitle",
+      "default": "PENDANT NECKLACES"
+    },
+    {
+      "type": "textarea",
+      "id": "zodiac_description",
+      "label": "Section Description",
+      "default": "Using archival postcards Fulco di Verdura purchased at the Museum of Natural History, Verdura sets diamonds as stars and engraves constellations in gold"
+    },
+    {
+      "type": "text",
+      "id": "zodiac_link_text",
+      "label": "Link Text",
+      "default": "VIEW COLLECTION"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Zodiac Section"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,327 @@
+ → {% comment %}
+  Verdura Hero Section
+  复刻 "Heritage of Style" 主视觉区域
+{% endcomment %}
+
+<section class="hero" id="hero">
+  <div class="hero__container">
+    <div class="hero__background">
+      {% if section.settings.hero_image != blank %}
+        <img src="{{ section.settings.hero_image | image_url: width: 1920 }}" 
+             alt="{{ section.settings.hero_title | escape }}"
+             class="hero__image"
+             loading="lazy">
+      {% else %}
+        <!-- 使用原网站的背景图片 -->
+        <img src="https://ext.same-assets.com/3425221127/4023401890.jpeg" 
+             alt="Heritage of Style"
+             class="hero__image"
+             loading="lazy">
+      {% endif %}
+      
+      <div class="hero__overlay"></div>
+    </div>
+    
+    <div class="hero__content">
+      <div class="hero__text">
+        <h1 class="hero__title">
+          {% if section.settings.hero_title != blank %}
+            {{ section.settings.hero_title }}
+          {% else %}
+            Heritage of Style
+          {% endif %}
+        </h1>
+        
+        {% if section.settings.hero_subtitle != blank or section.settings.hero_link_text != blank %}
+          <div class="hero__subtitle">
+            {% if section.settings.hero_subtitle != blank %}
+              <p>{{ section.settings.hero_subtitle }}</p>
+            {% else %}
+              <p>EXPLORE THE COLLECTION</p>
+            {% endif %}
+            
+            {% if section.settings.hero_link_url != blank and section.settings.hero_link_text != blank %}
+              <a href="{{ section.settings.hero_link_url }}" class="hero__cta">
+                {{ section.settings.hero_link_text }}
+              </a>
+            {% elsif collections.all %}
+              <a href="{{ collections.all.url }}" class="hero__cta">
+                EXPLORE THE COLLECTION
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 900px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.1) 50%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+    z-index: 2;
+  }
+
+  .hero__content {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .hero__text {
+    max-width: 600px;
+    color: #ffffff;
+  }
+
+  .hero__title {
+    font-family: var(--font-heading-family);
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .hero__subtitle {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease 0.5s forwards;
+  }
+
+  .hero__subtitle p {
+    font-family: var(--font-body-family);
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    opacity: 0.9;
+  }
+
+  .hero__cta {
+    display: inline-block;
+    font-family: var(--font-body-family);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 15px 35px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero__cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    transition: left 0.4s ease;
+    z-index: -1;
+  }
+
+  .hero__cta:hover::before {
+    left: 0;
+  }
+
+  .hero__cta:hover {
+    color: var(--color-base-text);
+  }
+
+  /* Animations */
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero__title {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease 0.2s forwards;
+  }
+
+  /* Mobile Responsive */
+  @media screen and (max-width: 768px) {
+    .hero {
+      min-height: 500px;
+      max-height: 600px;
+    }
+
+    .hero__content {
+      padding: 0 20px;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .hero__text {
+      max-width: 100%;
+    }
+
+    .hero__title {
+      font-size: clamp(2.5rem, 10vw, 4rem);
+      margin-bottom: 20px;
+    }
+
+    .hero__subtitle p {
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    .hero__cta {
+      font-size: 12px;
+      padding: 12px 25px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .hero__title {
+      font-size: clamp(2rem, 12vw, 3rem);
+    }
+    
+    .hero__subtitle p {
+      font-size: 12px;
+      letter-spacing: 0.15em;
+    }
+  }
+
+  /* Parallax effect for hero image */
+  @media (prefers-reduced-motion: no-preference) {
+    .hero__image {
+      transform: scale(1.1);
+      transition: transform 0.1s ease-out;
+    }
+
+    .hero[data-scroll] .hero__image {
+      transform: scale(1.1) translateY(var(--scroll-speed, 0));
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Parallax effect for hero section
+    const hero = document.querySelector('.hero');
+    const heroImage = document.querySelector('.hero__image');
+    
+    if (hero && heroImage && window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+      let ticking = false;
+      
+      function updateParallax() {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -0.3;
+        heroImage.style.setProperty('--scroll-speed', rate + 'px');
+        ticking = false;
+      }
+      
+      function requestParallaxUpdate() {
+        if (!ticking) {
+          requestAnimationFrame(updateParallax);
+          ticking = true;
+        }
+      }
+      
+      window.addEventListener('scroll', requestParallaxUpdate);
+      hero.setAttribute('data-scroll', '');
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Hero Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Background Image",
+      "info": "推荐尺寸: 1920x1080px"
+    },
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Hero Title",
+      "default": "Heritage of Style"
+    },
+    {
+      "type": "text",
+      "id": "hero_subtitle",
+      "label": "Hero Subtitle",
+      "default": "EXPLORE THE COLLECTION"
+    },
+    {
+      "type": "url",
+      "id": "hero_link_url",
+      "label": "Hero Link URL"
+    },
+    {
+      "type": "text",
+      "id": "hero_link_text",
+      "label": "Hero Link Text",
+      "default": "EXPLORE THE COLLECTION"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Section"
+    }
+  ]
+}
+{% endschema %}

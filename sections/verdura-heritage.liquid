@@ -1,0 +1,115 @@
+ → {% comment %}
+  Verdura Heritage Section
+  复刻品牌故事区域 - About Fulco Di Verdura
+{% endcomment %}
+
+<section class="heritage-section" id="heritage">
+  <div class="page-width">
+    <div class="heritage-section__wrapper">
+      
+      <div class="heritage-section__content">
+        <!-- Left Heritage Image -->
+        <div class="heritage-section__image">
+          {% if section.settings.heritage_image != blank %}
+            <img src="{{ section.settings.heritage_image | image_url: width: 600 }}" 
+                 alt="{{ section.settings.heritage_title | escape }}"
+                 class="heritage__image"
+                 loading="lazy">
+          {% else %}
+            <img src="https://ext.same-assets.com/3425221127/3859852625.jpeg" 
+                 alt="Heritage - Fulco di Verdura"
+                 class="heritage__image"
+                 loading="lazy">
+          {% endif %}
+        </div>
+
+        <!-- Right Text Content -->
+        <div class="heritage-section__text">
+          <div class="heritage-text__content">
+            <h2 class="heritage-section__title h2">
+              {% if section.settings.heritage_title != blank %}
+                {{ section.settings.heritage_title }}
+              {% else %}
+                Heritage
+              {% endif %}
+            </h2>
+            
+            <h3 class="heritage-section__subtitle h3">
+              {% if section.settings.heritage_subtitle != blank %}
+                {{ section.settings.heritage_subtitle }}
+              {% else %}
+                About Fulco Di Verdura
+              {% endif %}
+            </h3>
+            
+            <div class="heritage-section__description">
+              {% if section.settings.heritage_description != blank %}
+                <p>{{ section.settings.heritage_description }}</p>
+              {% else %}
+                <p>Born into Sicilian aristocracy in 1898, Verdura's founder, Duke Fulco di Verdura, began his extraordinary career in Paris as a designer for Coco Chanel. After eight years with Chanel where he, most notably, created the Maltese Cross cuffs that became his signature, Verdura followed his passion for design to America in 1934.</p>
+              {% endif %}
+            </div>
+            
+            <a href="{{ section.settings.heritage_link_url | default: '/pages/the-story' }}" class="heritage-section__link">
+              {% if section.settings.heritage_link_text != blank %}
+                {{ section.settings.heritage_link_text }}
+              {% else %}
+                DISCOVER OUR HERITAGE
+              {% endif %}
+            </a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Heritage Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "heritage_image",
+      "label": "Heritage Image",
+      "info": "推荐尺寸: 600x800px"
+    },
+    {
+      "type": "text",
+      "id": "heritage_title",
+      "label": "Section Title",
+      "default": "Heritage"
+    },
+    {
+      "type": "text",
+      "id": "heritage_subtitle",
+      "label": "Section Subtitle",
+      "default": "About Fulco Di Verdura"
+    },
+    {
+      "type": "textarea",
+      "id": "heritage_description",
+      "label": "Section Description",
+      "default": "Born into Sicilian aristocracy in 1898, Verdura's founder, Duke Fulco di Verdura, began his extraordinary career in Paris as a designer for Coco Chanel. After eight years with Chanel where he, most notably, created the Maltese Cross cuffs that became his signature, Verdura followed his passion for design to America in 1934."
+    },
+    {
+      "type": "url",
+      "id": "heritage_link_url",
+      "label": "Link URL",
+      "default": "/pages/the-story"
+    },
+    {
+      "type": "text",
+      "id": "heritage_link_text",
+      "label": "Link Text",
+      "default": "DISCOVER OUR HERITAGE"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Heritage Section"
+    }
+  ]
+}
+{% endschema %}

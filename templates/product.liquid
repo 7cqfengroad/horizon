@@ -1,0 +1,33 @@
+ → {% comment %}
+  Product Template
+{% endcomment %}
+
+<div class="page-width">
+  <div class="product">
+    <div class="product__media">
+      {% for image in product.images %}
+        <img src="{{ image | image_url: width: 600 }}" alt="{{ image.alt | escape }}">
+      {% endfor %}
+    </div>
+    
+    <div class="product__info">
+      <h1 class="h1">{{ product.title }}</h1>
+      <div class="product__price">
+        <span class="price">{{ product.price | money }}</span>
+      </div>
+      
+      <form action="/cart/add" method="post" enctype="multipart/form-data">
+        <select name="id">
+          {% for variant in product.variants %}
+            <option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+          {% endfor %}
+        </select>
+        <button type="submit" class="button">Add to cart</button>
+      </form>
+      
+      <div class="product__description">
+        {{ product.description }}
+      </div>
+    </div>
+  </div>
+</div>

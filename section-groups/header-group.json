@@ -1,0 +1,5 @@
+{
+  "name": "Header group",
+  "type": "header",
+  "sections": ["header"]
+}

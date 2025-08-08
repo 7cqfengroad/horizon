@@ -1,0 +1,426 @@
+ → {% comment %}
+  Verdura Off-Season Collection Section
+  复刻 Off-Season Collection 展示区域
+{% endcomment %}
+
+{%- liquid
+  assign off_season_collection = collections[section.settings.off_season_collection] | default: collections['off-season-collection'] | default: collections.all
+-%}
+
+<section class="off-season-section" id="off-season">
+  <div class="page-width">
+    <div class="off-season-section__wrapper">
+      
+      <div class="off-season-section__content">
+        <!-- Left Image -->
+        <div class="off-season-section__image">
+          {% if section.settings.off_season_image != blank %}
+            <img src="{{ section.settings.off_season_image | image_url: width: 600 }}" 
+                 alt="{{ section.settings.off_season_title | escape }}"
+                 class="off-season__image"
+                 loading="lazy">
+          {% else %}
+            <img src="https://ext.same-assets.com/3425221127/2203441943.jpeg" 
+                 alt="The Off-Season Collection"
+                 class="off-season__image"
+                 loading="lazy">
+          {% endif %}
+          
+          <!-- Circular overlay decoration -->
+          <div class="off-season__decoration"></div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="off-season-section__text">
+          <div class="off-season-text__content">
+            <h2 class="off-season-section__title h2">
+              {% if section.settings.off_season_title != blank %}
+                {{ section.settings.off_season_title }}
+              {% else %}
+                THE OFF-SEASON COLLECTION
+              {% endif %}
+            </h2>
+            
+            <div class="off-season-section__description">
+              {% if section.settings.off_season_description != blank %}
+                <p>{{ section.settings.off_season_description }}</p>
+              {% else %}
+                <p>We are delighted to introduce the Off-Season Collection - over a dozen new archival pieces that we feel captures this paradox of American style. These bangles, lariats, hoops and pendants are meant to be as relevant to your wardrobe in high season as well as off season, whether you don them for an audience or a solo stroll down an empty beach.</p>
+              {% endif %}
+            </div>
+            
+            <a href="{{ off_season_collection.url }}" class="off-season-section__link">
+              {% if section.settings.off_season_link_text != blank %}
+                {{ section.settings.off_season_link_text }}
+              {% else %}
+                VIEW
+              {% endif %}
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Small Images -->
+        <div class="off-season-section__gallery">
+          <div class="off-season-gallery__grid">
+            {% if section.settings.gallery_image_1 != blank %}
+              <div class="gallery-item gallery-item--1">
+                <img src="{{ section.settings.gallery_image_1 | image_url: width: 300 }}" 
+                     alt="Off-Season Collection"
+                     loading="lazy">
+              </div>
+            {% else %}
+              <div class="gallery-item gallery-item--1">
+                <img src="https://ext.same-assets.com/3425221127/1449727131.jpeg" 
+                     alt="Off-Season Collection"
+                     loading="lazy">
+              </div>
+            {% endif %}
+            
+            {% if section.settings.gallery_image_2 != blank %}
+              <div class="gallery-item gallery-item--2">
+                <img src="{{ section.settings.gallery_image_2 | image_url: width: 300 }}" 
+                     alt="Off-Season Collection"
+                     loading="lazy">
+              </div>
+            {% else %}
+              <div class="gallery-item gallery-item--2">
+                <img src="https://ext.same-assets.com/3425221127/990459728.jpeg" 
+                     alt="Off-Season Collection"
+                     loading="lazy">
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  .off-season-section {
+    padding: 120px 0;
+    background: var(--color-base-background-2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .off-season-section__wrapper {
+    position: relative;
+  }
+
+  .off-season-section__content {
+    display: grid;
+    grid-template-columns: 1fr 400px 300px;
+    gap: 60px;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .off-season-section__image {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  }
+
+  .off-season__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  .off-season-section__image:hover .off-season__image {
+    transform: scale(1.05);
+  }
+
+  .off-season__decoration {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    border: 2px solid rgba(196, 157, 87, 0.3);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: rotate 20s linear infinite;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .off-season-section__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+  }
+
+  .off-season-text__content {
+    max-width: 100%;
+  }
+
+  .off-season-section__title {
+    font-family: var(--font-heading-family);
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: var(--color-base-text);
+    margin-bottom: 30px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+
+  .off-season-section__description {
+    margin-bottom: 40px;
+  }
+
+  .off-season-section__description p {
+    font-family: var(--font-body-family);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--color-base-text);
+    margin: 0;
+  }
+
+  .off-season-section__link {
+    font-family: var(--font-body-family);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    color: var(--color-base-text);
+    transition: color 0.3s ease;
+    display: inline-block;
+  }
+
+  .off-season-section__link:hover {
+    color: var(--color-accent-gold);
+  }
+
+  .off-season-section__gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .off-season-gallery__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-item:hover {
+    transform: translateY(-4px);
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.05);
+  }
+
+  .gallery-item--1 {
+    width: 180px;
+  }
+
+  .gallery-item--2 {
+    width: 200px;
+    margin-left: 40px;
+  }
+
+  /* Mobile Responsive */
+  @media screen and (max-width: 1200px) {
+    .off-season-section__content {
+      grid-template-columns: 1fr 350px 250px;
+      gap: 40px;
+    }
+
+    .off-season-section__title {
+      font-size: 2.4rem;
+    }
+
+    .gallery-item--1 {
+      width: 140px;
+    }
+
+    .gallery-item--2 {
+      width: 160px;
+      margin-left: 30px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .off-season-section__content {
+      grid-template-columns: 1fr 300px;
+      gap: 40px;
+    }
+
+    .off-season-section__gallery {
+      grid-column: 1 / -1;
+      margin-top: 40px;
+    }
+
+    .off-season-gallery__grid {
+      flex-direction: row;
+      justify-content: center;
+      gap: 30px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .off-season-section {
+      padding: 80px 0;
+    }
+
+    .off-season-section__content {
+      display: block;
+    }
+
+    .off-season-section__image {
+      margin-bottom: 40px;
+    }
+
+    .off-season-section__text {
+      padding: 0;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .off-season-section__title {
+      font-size: 2rem;
+    }
+
+    .off-season-section__description p {
+      font-size: 15px;
+    }
+
+    .off-season-gallery__grid {
+      gap: 20px;
+    }
+
+    .gallery-item--1,
+    .gallery-item--2 {
+      width: 120px;
+      margin-left: 0;
+    }
+
+    /* Disable animations on mobile */
+    .off-season__decoration {
+      animation: none;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .off-season-section__title {
+      font-size: 1.8rem;
+    }
+
+    .off-season-section__description p {
+      font-size: 14px;
+    }
+
+    .gallery-item--1,
+    .gallery-item--2 {
+      width: 100px;
+    }
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .off-season__decoration {
+      animation: none;
+    }
+
+    .off-season__image {
+      transition: none;
+    }
+
+    .gallery-item img {
+      transition: none;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Off-Season Collection",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "off_season_collection",
+      "label": "Off-Season Collection",
+      "info": "Select the off-season collection to link to"
+    },
+    {
+      "type": "image_picker",
+      "id": "off_season_image",
+      "label": "Main Image",
+      "info": "推荐尺寸: 600x750px"
+    },
+    {
+      "type": "text",
+      "id": "off_season_title",
+      "label": "Section Title",
+      "default": "THE OFF-SEASON COLLECTION"
+    },
+    {
+      "type": "textarea",
+      "id": "off_season_description",
+      "label": "Section Description",
+      "default": "We are delighted to introduce the Off-Season Collection - over a dozen new archival pieces that we feel captures this paradox of American style. These bangles, lariats, hoops and pendants are meant to be as relevant to your wardrobe in high season as well as off season, whether you don them for an audience or a solo stroll down an empty beach."
+    },
+    {
+      "type": "text",
+      "id": "off_season_link_text",
+      "label": "Link Text",
+      "default": "VIEW"
+    },
+    {
+      "type": "header",
+      "content": "Gallery Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "gallery_image_1",
+      "label": "Gallery Image 1",
+      "info": "推荐尺寸: 300x300px"
+    },
+    {
+      "type": "image_picker",
+      "id": "gallery_image_2",
+      "label": "Gallery Image 2",
+      "info": "推荐尺寸: 300x300px"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Off-Season Collection"
+    }
+  ]
+}
+{% endschema %}

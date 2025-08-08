@@ -1,0 +1,129 @@
+ → {% comment %}
+  Verdura Newsletter Section
+  复刻邮件订阅区域 - "Sign up now"
+{% endcomment %}
+
+<section class="newsletter-section" id="newsletter">
+  <div class="page-width">
+    <div class="newsletter-section__wrapper">
+      
+      <div class="newsletter-section__content">
+        <!-- Left Text Content -->
+        <div class="newsletter-section__text">
+          <h2 class="newsletter-section__title">
+            {% if section.settings.newsletter_title_line1 != blank %}
+              <span class="title-line title-line--1">{{ section.settings.newsletter_title_line1 }}</span>
+            {% else %}
+              <span class="title-line title-line--1">Sign up</span>
+            {% endif %}
+            
+            {% if section.settings.newsletter_title_line2 != blank %}
+              <span class="title-line title-line--2">{{ section.settings.newsletter_title_line2 }}</span>
+            {% else %}
+              <span class="title-line title-line--2">now</span>
+            {% endif %}
+          </h2>
+        </div>
+
+        <!-- Right Form Content -->
+        <div class="newsletter-section__form">
+          <div class="newsletter-form__content">
+            <h3 class="newsletter-form__title h3">
+              {% if section.settings.newsletter_form_title != blank %}
+                {{ section.settings.newsletter_form_title }}
+              {% else %}
+                WELCOME TO VERDURA
+              {% endif %}
+            </h3>
+            
+            <div class="newsletter-form__description">
+              {% if section.settings.newsletter_description != blank %}
+                <p>{{ section.settings.newsletter_description }}</p>
+              {% else %}
+                <p>Please join our email list for updates about new collections and special events</p>
+              {% endif %}
+            </div>
+            
+            <form action="/contact#contact_form" method="post" id="contact_form" accept-charset="UTF-8" class="newsletter-form">
+              <input type="hidden" name="form_type" value="customer">
+              <input type="hidden" name="utf8" value="✓">
+              <input type="hidden" name="contact[tags]" value="newsletter">
+              
+              <div class="newsletter-form__field">
+                <input type="email" 
+                       name="contact[email]" 
+                       id="newsletter-email"
+                       class="newsletter-form__input"
+                       placeholder="{% if section.settings.newsletter_placeholder != blank %}{{ section.settings.newsletter_placeholder }}{% else %}Enter Email Address Here{% endif %}"
+                       required
+                       autocomplete="email">
+                       
+                <button type="submit" class="newsletter-form__submit" aria-label="Subscribe to newsletter">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M4 10H16M16 10L12 6M16 10L12 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+              
+              {% if form.errors %}
+                <div class="newsletter-form__error">
+                  {{ form.errors | default_errors }}
+                </div>
+              {% endif %}
+              
+              {% if form.posted_successfully? %}
+                <div class="newsletter-form__success">
+                  <p>Thank you for subscribing!</p>
+                </div>
+              {% endif %}
+            </form>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Newsletter Signup",
+  "settings": [
+    {
+      "type": "text",
+      "id": "newsletter_title_line1",
+      "label": "Title Line 1",
+      "default": "Sign up"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_title_line2",
+      "label": "Title Line 2",
+      "default": "now"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_form_title",
+      "label": "Form Title",
+      "default": "WELCOME TO VERDURA"
+    },
+    {
+      "type": "textarea",
+      "id": "newsletter_description",
+      "label": "Form Description",
+      "default": "Please join our email list for updates about new collections and special events"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_placeholder",
+      "label": "Email Placeholder Text",
+      "default": "Enter Email Address Here"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Newsletter Signup"
+    }
+  ]
+}
+{% endschema %}

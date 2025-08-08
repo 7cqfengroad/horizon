@@ -1,0 +1,485 @@
+ → {% comment %}
+  Verdura Collections Section
+  复刻产品系列展示区域 (Bracelets, Earclips, Cuffs, Rings, Necklaces)
+{% endcomment %}
+
+{%- liquid
+  assign bracelets_collection = collections['bracelets-watches'] | default: collections.all
+  assign earclips_collection = collections['earclips'] | default: collections.all
+  assign cuffs_collection = collections['cuffs'] | default: collections.all
+  assign rings_collection = collections['rings'] | default: collections.all
+  assign necklaces_collection = collections['necklaces'] | default: collections.all
+-%}
+
+<section class="collections-showcase" id="collections">
+  <div class="page-width">
+    <div class="collections-showcase__wrapper">
+      
+      <!-- Bracelets Section -->
+      <div class="collection-section collection-section--bracelets">
+        <div class="collection-section__content">
+          <div class="collection-section__text">
+            <h2 class="collection-section__title h2">Bracelets</h2>
+            <div class="collection-section__nav">
+              <ul class="collection-nav">
+                <li><a href="{{ collections['earclips'].url }}">EARCLIPS</a></li>
+                <li><a href="{{ collections['cuffs'].url }}">CUFFS</a></li>
+                <li><a href="{{ collections['rings'].url }}">RINGS</a></li>
+                <li><a href="{{ collections['necklaces'].url }}">NECKLACES</a></li>
+              </ul>
+            </div>
+            <a href="{{ bracelets_collection.url }}" class="collection-section__link">VIEW COLLECTION</a>
+          </div>
+          
+          <div class="collection-section__products">
+            <div class="product-carousel">
+              <button class="carousel-nav carousel-nav--prev" aria-label="Previous">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              
+              <div class="carousel-container">
+                <div class="carousel-track" data-collection="bracelets">
+                  {% for product in bracelets_collection.products limit: 8 %}
+                    <div class="carousel-slide">
+                      <div class="product-card">
+                        <a href="{{ product.url }}" class="product-card__link">
+                          {% if product.featured_image %}
+                            <div class="product-card__image">
+                              <img src="{{ product.featured_image | image_url: width: 400 }}" 
+                                   alt="{{ product.title | escape }}"
+                                   loading="lazy">
+                            </div>
+                          {% endif %}
+                          <div class="product-card__info">
+                            <h4 class="product-card__title h4">{{ product.title }}</h4>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  {% else %}
+                    <!-- Fallback content when no products -->
+                    <div class="carousel-slide">
+                      <div class="product-card">
+                        <div class="product-card__image">
+                          <img src="https://ext.same-assets.com/3425221127/1870478412.jpeg" 
+                               alt="Twenty Buck Bracelet"
+                               loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                          <h4 class="product-card__title h4">"Twenty Buck" Bracelet</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-slide">
+                      <div class="product-card">
+                        <div class="product-card__image">
+                          <img src="https://ext.same-assets.com/3425221127/2199413315.png" 
+                               alt="Curb-Link Bracelet"
+                               loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                          <h4 class="product-card__title h4">Curb-Link Bracelet</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-slide">
+                      <div class="product-card">
+                        <div class="product-card__image">
+                          <img src="https://ext.same-assets.com/3425221127/80837603.png" 
+                               alt="Oval Link Bracelet"
+                               loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                          <h4 class="product-card__title h4">Oval Link Bracelet</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-slide">
+                      <div class="product-card">
+                        <div class="product-card__image">
+                          <img src="https://ext.same-assets.com/3425221127/2450892180.png" 
+                               alt="Stirrup Bracelet"
+                               loading="lazy">
+                        </div>
+                        <div class="product-card__info">
+                          <h4 class="product-card__title h4">Stirrup Bracelet</h4>
+                        </div>
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+              
+              <button class="carousel-nav carousel-nav--next" aria-label="Next">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  .collections-showcase {
+    padding: 80px 0;
+    background: var(--color-base-background-2);
+  }
+
+  .collection-section {
+    margin-bottom: 120px;
+  }
+
+  .collection-section:last-child {
+    margin-bottom: 0;
+  }
+
+  .collection-section__content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .collection-section__text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .collection-section__title {
+    font-family: var(--font-heading-family);
+    font-size: 4rem;
+    font-weight: 400;
+    color: var(--color-base-text);
+    line-height: 1.1;
+  }
+
+  .collection-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .collection-nav a {
+    font-family: var(--font-body-family);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    color: var(--color-base-text);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+
+  .collection-nav a:hover {
+    opacity: 1;
+  }
+
+  .collection-section__link {
+    font-family: var(--font-body-family);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    color: var(--color-base-text);
+    transition: color 0.3s ease;
+    align-self: flex-start;
+  }
+
+  .collection-section__link:hover {
+    color: var(--color-accent-gold);
+  }
+
+  .collection-section__products {
+    position: relative;
+  }
+
+  .product-carousel {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .carousel-container {
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+  }
+
+  .carousel-slide {
+    flex: 0 0 280px;
+  }
+
+  .product-card {
+    background: var(--color-base-background-1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .product-card__link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .product-card__image {
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: var(--color-base-background-1);
+  }
+
+  .product-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .product-card:hover .product-card__image img {
+    transform: scale(1.05);
+  }
+
+  .product-card__info {
+    padding: 25px 20px;
+    text-align: center;
+  }
+
+  .product-card__title {
+    font-family: var(--font-heading-family);
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--color-base-text);
+    line-height: 1.3;
+  }
+
+  .carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+  }
+
+  .carousel-nav:hover {
+    background: var(--color-base-text);
+    color: white;
+  }
+
+  .carousel-nav--prev {
+    left: -25px;
+  }
+
+  .carousel-nav--next {
+    right: -25px;
+  }
+
+  /* Mobile Responsive */
+  @media screen and (max-width: 1024px) {
+    .collection-section__content {
+      grid-template-columns: 250px 1fr;
+      gap: 40px;
+    }
+
+    .collection-section__title {
+      font-size: 3rem;
+    }
+
+    .carousel-slide {
+      flex: 0 0 240px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .collections-showcase {
+      padding: 60px 0;
+    }
+
+    .collection-section {
+      margin-bottom: 80px;
+    }
+
+    .collection-section__content {
+      display: block;
+    }
+
+    .collection-section__text {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .collection-section__title {
+      font-size: 2.5rem;
+    }
+
+    .collection-nav {
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px 30px;
+    }
+
+    .carousel-slide {
+      flex: 0 0 200px;
+    }
+
+    .carousel-nav {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .collection-section__title {
+      font-size: 2rem;
+    }
+
+    .carousel-slide {
+      flex: 0 0 160px;
+    }
+
+    .carousel-track {
+      gap: 15px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Product carousel functionality
+    const carousels = document.querySelectorAll('.product-carousel');
+    
+    carousels.forEach(carousel => {
+      const track = carousel.querySelector('.carousel-track');
+      const prevBtn = carousel.querySelector('.carousel-nav--prev');
+      const nextBtn = carousel.querySelector('.carousel-nav--next');
+      const slides = carousel.querySelectorAll('.carousel-slide');
+      
+      if (!track || slides.length === 0) return;
+      
+      let currentIndex = 0;
+      const slidesToShow = window.innerWidth > 768 ? 3 : window.innerWidth > 480 ? 2 : 1;
+      const maxIndex = Math.max(0, slides.length - slidesToShow);
+      
+      function updateCarousel() {
+        const slideWidth = slides[0].offsetWidth + 20; // including gap
+        const translateX = currentIndex * slideWidth;
+        track.style.transform = `translateX(-${translateX}px)`;
+        
+        // Update button states
+        prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
+        nextBtn.style.opacity = currentIndex >= maxIndex ? '0.5' : '1';
+      }
+      
+      prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateCarousel();
+        }
+      });
+      
+      nextBtn.addEventListener('click', () => {
+        if (currentIndex < maxIndex) {
+          currentIndex++;
+          updateCarousel();
+        }
+      });
+      
+      // Initialize
+      updateCarousel();
+      
+      // Handle resize
+      window.addEventListener('resize', () => {
+        const newSlidesToShow = window.innerWidth > 768 ? 3 : window.innerWidth > 480 ? 2 : 1;
+        const newMaxIndex = Math.max(0, slides.length - newSlidesToShow);
+        
+        if (currentIndex > newMaxIndex) {
+          currentIndex = newMaxIndex;
+        }
+        
+        updateCarousel();
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Collections Showcase",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Collection Settings"
+    },
+    {
+      "type": "collection",
+      "id": "bracelets_collection",
+      "label": "Bracelets Collection",
+      "info": "Select the bracelets collection to display"
+    },
+    {
+      "type": "collection",
+      "id": "earclips_collection",
+      "label": "Earclips Collection"
+    },
+    {
+      "type": "collection",
+      "id": "cuffs_collection",
+      "label": "Cuffs Collection"
+    },
+    {
+      "type": "collection",
+      "id": "rings_collection",
+      "label": "Rings Collection"
+    },
+    {
+      "type": "collection",
+      "id": "necklaces_collection",
+      "label": "Necklaces Collection"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 4,
+      "max": 12,
+      "step": 1,
+      "label": "Products to show per collection",
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collections Showcase"
+    }
+  ]
+}
+{% endschema %}

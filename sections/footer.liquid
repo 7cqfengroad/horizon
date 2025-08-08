@@ -1,371 +1,284 @@
-<div class="section-background color-{{ section.settings.color_scheme }}"></div>
-<div
-  class="
-    section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}
-    {% if section.settings.section_height != "" %} {{ section.settings.section_height | prepend: "section--height-" }}{% endif %}
-  "
->
-  {% render 'background-media',
-    background_media: section.settings.background_media,
-    background_video: section.settings.video,
-    background_video_position: section.settings.video_position,
-    background_image: section.settings.background_image,
-    background_image_position: section.settings.background_image_position
-  %}
+ → {% comment %}
+  Verdura Footer Section
+  复刻页脚区域
+{% endcomment %}
 
-  <div
-    class="
-      spacing-style
-      layout-panel-flex
-      layout-panel-flex--{{ section.settings.content_direction }}
-      section-content-wrapper
-      {% if section.settings.vertical_on_mobile %} mobile-column{% endif %}
-    "
-    style="
-      {% render 'layout-panel-style', settings: section.settings %}
-      {%  render 'spacing-style', settings: section.settings %}
-    "
-  >
-    {% content_for 'blocks' %}
+<footer class="footer" id="footer">
+  <div class="page-width">
+    <div class="footer__wrapper">
+      
+      <!-- Main Footer Content -->
+      <div class="footer__content">
+        <!-- Left: Logo and Contact Info -->
+        <div class="footer__brand">
+          <div class="footer__logo">
+            {% if section.settings.footer_logo != blank %}
+              <img src="{{ section.settings.footer_logo | image_url: width: 150 }}" 
+                   alt="{{ shop.name }}" 
+                   width="150" 
+                   height="auto"
+                   class="footer__logo-image">
+            {% else %}
+              <div class="footer__logo-text">
+                <span class="logo__name">VERDURA</span>
+                <span class="logo__tagline">EST 1939</span>
+              </div>
+            {% endif %}
+          </div>
+          
+          <!-- Social Links -->
+          <div class="footer__social">
+            {% if section.settings.facebook_url != blank %}
+              <a href="{{ section.settings.facebook_url }}" 
+                 class="footer__social-link"
+                 target="_blank"
+                 rel="noopener"
+                 aria-label="Facebook">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+            {% endif %}
+            
+            {% if section.settings.instagram_url != blank %}
+              <a href="{{ section.settings.instagram_url }}" 
+                 class="footer__social-link"
+                 target="_blank"
+                 rel="noopener"
+                 aria-label="Instagram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+            {% endif %}
+            
+            {% if section.settings.youtube_url != blank %}
+              <a href="{{ section.settings.youtube_url }}" 
+                 class="footer__social-link"
+                 target="_blank"
+                 rel="noopener"
+                 aria-label="YouTube">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+            {% endif %}
+          </div>
+          
+          <!-- Contact Information -->
+          <div class="footer__contact">
+            <div class="footer__address">
+              {% if section.settings.address != blank %}
+                <p>{{ section.settings.address }}</p>
+              {% else %}
+                <p>745 Fifth Avenue, Suite 1205 New York, NY 10151</p>
+              {% endif %}
+            </div>
+            
+            {% if section.settings.phone != blank %}
+              <div class="footer__phone">
+                <a href="tel:{{ section.settings.phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' | replace: '-', '' }}">
+                  Call us: {{ section.settings.phone }}
+                </a>
+              </div>
+            {% else %}
+              <div class="footer__phone">
+                <a href="tel:+12127583388">Call us: +1 (212) 758-3388</a>
+              </div>
+            {% endif %}
+            
+            {% if section.settings.email != blank %}
+              <div class="footer__email">
+                <a href="mailto:{{ section.settings.email }}">
+                  Email us: {{ section.settings.email }}
+                </a>
+              </div>
+            {% else %}
+              <div class="footer__email">
+                <a href="mailto:info@verdura.com">Email us: info@verdura.com</a>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+
+        <!-- Right: Footer Links -->
+        <div class="footer__links">
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'footer_link' %}
+                <div class="footer__link-item" {{ block.shopify_attributes }}>
+                  {% if block.settings.link_url != blank and block.settings.link_text != blank %}
+                    <a href="{{ block.settings.link_url }}" class="footer__link">
+                      {{ block.settings.link_text }}
+                    </a>
+                  {% endif %}
+                </div>
+            {% endcase %}
+          {% endfor %}
+          
+          <!-- Fallback links when no blocks are added -->
+          {% if section.blocks.size == 0 %}
+            <div class="footer__link-item">
+              <a href="/pages/online-accessibility-statement" class="footer__link">
+                Online Accessibility Statement
+              </a>
+            </div>
+            <div class="footer__link-item">
+              <a href="/pages/catalogues" class="footer__link">
+                Catalogues
+              </a>
+            </div>
+            <div class="footer__link-item">
+              <a href="/pages/customer-service" class="footer__link">
+                Customer Service / FAQ
+              </a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer__bottom">
+        <div class="footer__copyright">
+          <p>
+            {% if section.settings.copyright_text != blank %}
+              {{ section.settings.copyright_text }}
+            {% else %}
+              Copyright © {{ 'now' | date: '%Y' }} {{ shop.name }}
+            {% endif %}
+          </p>
+        </div>
+        
+        {% if section.settings.website_credit != blank %}
+          <div class="footer__credit">
+            <p>{{ section.settings.website_credit }}</p>
+          </div>
+        {% else %}
+          <div class="footer__credit">
+            <p>Website by The Beaux Arts</p>
+          </div>
+        {% endif %}
+      </div>
+      
+    </div>
   </div>
-</div>
+</footer>
 
 {% schema %}
 {
-  "name": "t:names.footer",
-  "class": "section-wrapper",
-  "tag": "footer",
-  "blocks": [
-    {
-      "type": "_divider"
-    },
-    {
-      "type": "@app"
-    },
-    {
-      "type": "button"
-    },
-    {
-      "type": "email-signup"
-    },
-    {
-      "type": "follow-on-shop"
-    },
-    {
-      "type": "footer-utilities"
-    },
-    {
-      "type": "group"
-    },
-    {
-      "type": "icon"
-    },
-    {
-      "type": "image"
-    },
-    {
-      "type": "menu"
-    },
-    {
-      "type": "payment-icons"
-    },
-    {
-      "type": "text"
-    },
-    {
-      "type": "logo"
-    },
-    {
-      "type": "jumbo-text"
-    }
-  ],
-  "enabled_on": {
-    "groups": ["footer"]
-  },
+  "name": "Footer",
   "settings": [
     {
       "type": "header",
-      "content": "t:content.layout"
-    },
-    {
-      "type": "select",
-      "id": "content_direction",
-      "label": "t:settings.direction",
-      "options": [
-        {
-          "value": "column",
-          "label": "t:options.vertical"
-        },
-        {
-          "value": "row",
-          "label": "t:options.horizontal"
-        }
-      ],
-      "default": "column"
-    },
-    {
-      "type": "checkbox",
-      "id": "vertical_on_mobile",
-      "label": "t:settings.vertical_on_mobile",
-      "default": true,
-      "visible_if": "{{ section.settings.content_direction == 'row' }}"
-    },
-    {
-      "type": "select",
-      "id": "horizontal_alignment",
-      "label": "t:settings.alignment",
-      "options": [
-        {
-          "value": "flex-start",
-          "label": "t:options.left"
-        },
-        {
-          "value": "center",
-          "label": "t:options.center"
-        },
-        {
-          "value": "flex-end",
-          "label": "t:options.right"
-        },
-        {
-          "value": "space-between",
-          "label": "t:options.space_between"
-        }
-      ],
-      "default": "flex-start",
-      "visible_if": "{{ section.settings.content_direction == 'row' }}"
-    },
-    {
-      "type": "select",
-      "id": "vertical_alignment",
-      "label": "t:settings.position",
-      "options": [
-        {
-          "value": "flex-start",
-          "label": "t:options.top"
-        },
-        {
-          "value": "center",
-          "label": "t:options.center"
-        },
-        {
-          "value": "flex-end",
-          "label": "t:options.bottom"
-        }
-      ],
-      "default": "center",
-      "visible_if": "{{ section.settings.content_direction == 'row' }}"
-    },
-    {
-      "type": "checkbox",
-      "id": "align_baseline",
-      "label": "t:settings.align_baseline",
-      "default": false,
-      "visible_if": "{{ section.settings.vertical_alignment == 'flex-end' }}"
-    },
-    {
-      "type": "select",
-      "id": "horizontal_alignment_flex_direction_column",
-      "label": "t:settings.alignment",
-      "options": [
-        {
-          "value": "flex-start",
-          "label": "t:options.left"
-        },
-        {
-          "value": "center",
-          "label": "t:options.center"
-        },
-        {
-          "value": "flex-end",
-          "label": "t:options.right"
-        }
-      ],
-      "default": "flex-start",
-      "visible_if": "{{ section.settings.content_direction != 'row' }}"
-    },
-    {
-      "type": "select",
-      "id": "vertical_alignment_flex_direction_column",
-      "label": "t:settings.position",
-      "options": [
-        {
-          "value": "flex-start",
-          "label": "t:options.top"
-        },
-        {
-          "value": "center",
-          "label": "t:options.center"
-        },
-        {
-          "value": "flex-end",
-          "label": "t:options.bottom"
-        },
-        {
-          "value": "space-between",
-          "label": "t:options.space_between"
-        }
-      ],
-      "default": "center",
-      "visible_if": "{{ section.settings.content_direction == 'column' }}"
-    },
-    {
-      "type": "range",
-      "id": "gap",
-      "label": "t:settings.gap",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 12
-    },
-    {
-      "type": "header",
-      "content": "t:content.size"
-    },
-    {
-      "type": "select",
-      "id": "section_width",
-      "label": "t:settings.width",
-      "options": [
-        {
-          "value": "page-width",
-          "label": "t:options.page"
-        },
-        {
-          "value": "full-width",
-          "label": "t:options.full"
-        }
-      ],
-      "default": "page-width"
-    },
-    {
-      "type": "select",
-      "id": "section_height",
-      "label": "t:settings.height",
-      "options": [
-        {
-          "value": "",
-          "label": "t:options.auto"
-        },
-        {
-          "value": "small",
-          "label": "t:options.small"
-        },
-        {
-          "value": "medium",
-          "label": "t:options.medium"
-        },
-        {
-          "value": "large",
-          "label": "t:options.large"
-        },
-        {
-          "value": "full-screen",
-          "label": "t:options.full_screen"
-        }
-      ],
-      "default": ""
-    },
-    {
-      "type": "header",
-      "content": "t:content.appearance"
-    },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:settings.color_scheme",
-      "default": "scheme-1"
-    },
-    {
-      "type": "select",
-      "id": "background_media",
-      "label": "t:settings.background_media",
-      "options": [
-        {
-          "value": "none",
-          "label": "t:options.none"
-        },
-        {
-          "value": "image",
-          "label": "t:options.image"
-        },
-        {
-          "value": "video",
-          "label": "t:options.video"
-        }
-      ],
-      "default": "none"
-    },
-    {
-      "type": "video",
-      "id": "video",
-      "label": "t:settings.video",
-      "visible_if": "{{ section.settings.background_media == 'video' }}"
-    },
-    {
-      "type": "select",
-      "id": "video_position",
-      "label": "t:settings.video_position",
-      "options": [
-        {
-          "value": "cover",
-          "label": "t:options.cover"
-        },
-        {
-          "value": "contain",
-          "label": "t:options.contain"
-        }
-      ],
-      "default": "cover",
-      "visible_if": "{{ section.settings.background_media == 'video' }}"
+      "content": "Logo"
     },
     {
       "type": "image_picker",
-      "id": "background_image",
-      "label": "t:settings.image",
-      "visible_if": "{{ section.settings.background_media == 'image' }}"
-    },
-    {
-      "type": "select",
-      "id": "background_image_position",
-      "label": "t:settings.image_position",
-      "options": [
-        {
-          "value": "cover",
-          "label": "t:options.cover"
-        },
-        {
-          "value": "fit",
-          "label": "t:options.fit"
-        }
-      ],
-      "default": "cover",
-      "visible_if": "{{ section.settings.background_media == 'image' }}"
+      "id": "footer_logo",
+      "label": "Footer Logo"
     },
     {
       "type": "header",
-      "content": "t:content.padding"
+      "content": "Contact Information"
     },
     {
-      "type": "range",
-      "id": "padding-block-start",
-      "label": "t:settings.top",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 0
+      "type": "textarea",
+      "id": "address",
+      "label": "Address",
+      "default": "745 Fifth Avenue, Suite 1205 New York, NY 10151"
     },
     {
-      "type": "range",
-      "id": "padding-block-end",
-      "label": "t:settings.bottom",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 0
+      "type": "text",
+      "id": "phone",
+      "label": "Phone Number",
+      "default": "+1 (212) 758-3388"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Email Address",
+      "default": "info@verdura.com"
+    },
+    {
+      "type": "header",
+      "content": "Social Media"
+    },
+    {
+      "type": "url",
+      "id": "facebook_url",
+      "label": "Facebook URL"
+    },
+    {
+      "type": "url",
+      "id": "instagram_url",
+      "label": "Instagram URL"
+    },
+    {
+      "type": "url",
+      "id": "youtube_url",
+      "label": "YouTube URL"
+    },
+    {
+      "type": "header",
+      "content": "Footer Text"
+    },
+    {
+      "type": "text",
+      "id": "copyright_text",
+      "label": "Copyright Text",
+      "default": "Copyright © 2025 Verdura"
+    },
+    {
+      "type": "text",
+      "id": "website_credit",
+      "label": "Website Credit",
+      "default": "Website by The Beaux Arts"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "footer_link",
+      "name": "Footer Link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Footer",
+      "blocks": [
+        {
+          "type": "footer_link",
+          "settings": {
+            "link_text": "Online Accessibility Statement",
+            "link_url": "/pages/online-accessibility-statement"
+          }
+        },
+        {
+          "type": "footer_link",
+          "settings": {
+            "link_text": "Catalogues",
+            "link_url": "/pages/catalogues"
+          }
+        },
+        {
+          "type": "footer_link",
+          "settings": {
+            "link_text": "Customer Service / FAQ",
+            "link_url": "/pages/customer-service"
+          }
+        }
+      ]
     }
   ]
 }

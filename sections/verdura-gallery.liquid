@@ -1,0 +1,385 @@
+ → {% comment %}
+  Verdura Gallery Visit Section
+  复刻 "Visit The Gallery" 展示区域
+{% endcomment %}
+
+<section class="gallery-section" id="gallery">
+  <div class="page-width">
+    <div class="gallery-section__wrapper">
+      
+      <div class="gallery-section__content">
+        <!-- Left Text Content -->
+        <div class="gallery-section__text">
+          <div class="gallery-text__content">
+            <h2 class="gallery-section__title h2">
+              {% if section.settings.gallery_title != blank %}
+                {{ section.settings.gallery_title }}
+              {% else %}
+                Visit
+              {% endif %}
+            </h2>
+            
+            <h3 class="gallery-section__subtitle h3">
+              {% if section.settings.gallery_subtitle != blank %}
+                {{ section.settings.gallery_subtitle }}
+              {% else %}
+                THE GALLERY
+              {% endif %}
+            </h3>
+            
+            <div class="gallery-section__description">
+              {% if section.settings.gallery_description != blank %}
+                <p>{{ section.settings.gallery_description }}</p>
+              {% else %}
+                <p>The Verdura gallery is open 10 AM – 5 PM, Monday – Friday. Arrange your visit below</p>
+              {% endif %}
+            </div>
+            
+            <a href="{{ section.settings.gallery_link_url | default: '/pages/contact' }}" class="gallery-section__link">
+              {% if section.settings.gallery_link_text != blank %}
+                {{ section.settings.gallery_link_text }}
+              {% else %}
+                ARRANGE VISIT
+              {% endif %}
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Gallery Image -->
+        <div class="gallery-section__image">
+          {% if section.settings.gallery_image != blank %}
+            <img src="{{ section.settings.gallery_image | image_url: width: 800 }}" 
+                 alt="{{ section.settings.gallery_title | escape }}"
+                 class="gallery__image"
+                 loading="lazy">
+          {% else %}
+            <img src="https://ext.same-assets.com/3425221127/990459728.jpeg" 
+                 alt="The Verdura Gallery"
+                 class="gallery__image"
+                 loading="lazy">
+          {% endif %}
+          
+          <!-- Decorative circular overlay -->
+          <div class="gallery__decoration gallery__decoration--1"></div>
+          <div class="gallery__decoration gallery__decoration--2"></div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  .gallery-section {
+    padding: 120px 0;
+    background: var(--color-base-background-1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .gallery-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+      transparent 0%, 
+      rgba(248, 246, 245, 0.8) 50%, 
+      rgba(255, 255, 255, 0.9) 100%);
+    pointer-events: none;
+  }
+
+  .gallery-section__wrapper {
+    position: relative;
+    z-index: 2;
+  }
+
+  .gallery-section__content {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    gap: 80px;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .gallery-section__text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px 0;
+  }
+
+  .gallery-text__content {
+    max-width: 100%;
+  }
+
+  .gallery-section__title {
+    font-family: var(--font-heading-family);
+    font-size: 4rem;
+    font-weight: 400;
+    color: var(--color-base-text);
+    margin-bottom: 10px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+  }
+
+  .gallery-section__subtitle {
+    font-family: var(--font-body-family);
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-base-text);
+    margin-bottom: 30px;
+    opacity: 0.8;
+  }
+
+  .gallery-section__description {
+    margin-bottom: 40px;
+  }
+
+  .gallery-section__description p {
+    font-family: var(--font-body-family);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--color-base-text);
+    margin: 0;
+  }
+
+  .gallery-section__link {
+    font-family: var(--font-body-family);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    color: var(--color-base-text);
+    transition: color 0.3s ease;
+    display: inline-block;
+  }
+
+  .gallery-section__link:hover {
+    color: var(--color-accent-gold);
+  }
+
+  .gallery-section__image {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease;
+  }
+
+  .gallery-section__image:hover {
+    transform: translateY(-8px);
+  }
+
+  .gallery__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  .gallery-section__image:hover .gallery__image {
+    transform: scale(1.05);
+  }
+
+  .gallery__decoration {
+    position: absolute;
+    border: 2px solid rgba(196, 157, 87, 0.4);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .gallery__decoration--1 {
+    top: -30px;
+    right: -30px;
+    width: 120px;
+    height: 120px;
+    animation: rotateClockwise 15s linear infinite;
+  }
+
+  .gallery__decoration--2 {
+    bottom: -40px;
+    left: -40px;
+    width: 160px;
+    height: 160px;
+    animation: rotateCounterClockwise 20s linear infinite;
+    opacity: 0.6;
+  }
+
+  @keyframes rotateClockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes rotateCounterClockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+
+  /* Mobile Responsive */
+  @media screen and (max-width: 1200px) {
+    .gallery-section__content {
+      grid-template-columns: 400px 1fr;
+      gap: 60px;
+    }
+
+    .gallery-section__title {
+      font-size: 3.5rem;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .gallery-section__content {
+      grid-template-columns: 350px 1fr;
+      gap: 40px;
+    }
+
+    .gallery-section__title {
+      font-size: 3rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .gallery-section {
+      padding: 80px 0;
+    }
+
+    .gallery-section__content {
+      display: block;
+    }
+
+    .gallery-section__text {
+      padding: 0;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .gallery-section__title {
+      font-size: 2.5rem;
+    }
+
+    .gallery-section__subtitle {
+      font-size: 1.2rem;
+    }
+
+    .gallery-section__description p {
+      font-size: 15px;
+    }
+
+    /* Disable animations on mobile */
+    .gallery__decoration--1,
+    .gallery__decoration--2 {
+      animation: none;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .gallery-section__title {
+      font-size: 2rem;
+    }
+
+    .gallery-section__subtitle {
+      font-size: 1rem;
+    }
+
+    .gallery-section__description p {
+      font-size: 14px;
+    }
+
+    .gallery__decoration--1 {
+      width: 80px;
+      height: 80px;
+      top: -20px;
+      right: -20px;
+    }
+
+    .gallery__decoration--2 {
+      width: 100px;
+      height: 100px;
+      bottom: -30px;
+      left: -30px;
+    }
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .gallery__decoration--1,
+    .gallery__decoration--2 {
+      animation: none;
+    }
+
+    .gallery-section__image {
+      transition: none;
+    }
+
+    .gallery__image {
+      transition: none;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Gallery Visit",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "gallery_image",
+      "label": "Gallery Image",
+      "info": "推荐尺寸: 800x600px"
+    },
+    {
+      "type": "text",
+      "id": "gallery_title",
+      "label": "Section Title",
+      "default": "Visit"
+    },
+    {
+      "type": "text",
+      "id": "gallery_subtitle",
+      "label": "Section Subtitle",
+      "default": "THE GALLERY"
+    },
+    {
+      "type": "textarea",
+      "id": "gallery_description",
+      "label": "Section Description",
+      "default": "The Verdura gallery is open 10 AM – 5 PM, Monday – Friday. Arrange your visit below"
+    },
+    {
+      "type": "url",
+      "id": "gallery_link_url",
+      "label": "Link URL",
+      "default": "/pages/contact"
+    },
+    {
+      "type": "text",
+      "id": "gallery_link_text",
+      "label": "Link Text",
+      "default": "ARRANGE VISIT"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gallery Visit"
+    }
+  ]
+}
+{% endschema %}

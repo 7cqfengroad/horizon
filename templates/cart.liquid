@@ -1,0 +1,34 @@
+ → {% comment %}
+  Cart Template
+{% endcomment %}
+
+<div class="page-width">
+  <div class="cart">
+    <h1 class="h1">Cart</h1>
+    
+    {% if cart.item_count == 0 %}
+      <p>Your cart is empty.</p>
+      <a href="{{ routes.root_url }}" class="button">Continue shopping</a>
+    {% else %}
+      <form action="/cart" method="post" novalidate>
+        {% for item in cart.items %}
+          <div class="cart__item">
+            <img src="{{ item.image | image_url: width: 100 }}" alt="{{ item.title | escape }}">
+            <div class="cart__item-details">
+              <h3>{{ item.product.title }}</h3>
+              <p>{{ item.variant.title }}</p>
+              <p>{{ item.price | money }}</p>
+              <input type="number" name="updates[]" value="{{ item.quantity }}" min="0">
+            </div>
+          </div>
+        {% endfor %}
+        
+        <div class="cart__footer">
+          <p>Subtotal: {{ cart.total_price | money }}</p>
+          <button type="submit" class="button">Update cart</button>
+          <button type="submit" name="add" class="button" formaction="/cart">Checkout</button>
+        </div>
+      </form>
+    {% endif %}
+  </div>
+</div>

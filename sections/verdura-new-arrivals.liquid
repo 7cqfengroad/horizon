@@ -1,0 +1,532 @@
+ → {% comment %}
+  Verdura New Arrivals Section
+  复刻新品展示区域
+{% endcomment %}
+
+{%- liquid
+  assign new_arrivals = collections[section.settings.new_arrivals_collection] | default: collections['new-arrivals'] | default: collections.all
+-%}
+
+<section class="new-arrivals-section" id="new-arrivals">
+  <div class="page-width">
+    <div class="new-arrivals-section__wrapper">
+      
+      <!-- Section Header -->
+      <div class="new-arrivals-section__header">
+        <h2 class="new-arrivals-section__title h2">
+          {% if section.settings.new_arrivals_title != blank %}
+            {{ section.settings.new_arrivals_title }}
+          {% else %}
+            New Arrivals
+          {% endif %}
+        </h2>
+      </div>
+
+      <!-- Products Carousel -->
+      <div class="new-arrivals-section__products">
+        <div class="new-arrivals-carousel">
+          <button class="carousel-nav carousel-nav--prev" aria-label="Previous products">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          
+          <div class="carousel-container">
+            <div class="carousel-track" data-collection="new-arrivals">
+              {% for product in new_arrivals.products limit: 12 %}
+                <div class="carousel-slide">
+                  <div class="product-card">
+                    <a href="{{ product.url }}" class="product-card__link">
+                      {% if product.featured_image %}
+                        <div class="product-card__image">
+                          <img src="{{ product.featured_image | image_url: width: 400 }}" 
+                               alt="{{ product.title | escape }}"
+                               loading="lazy">
+                        </div>
+                      {% endif %}
+                      <div class="product-card__info">
+                        <h4 class="product-card__title h4">{{ product.title }}</h4>
+                        {% if product.price %}
+                          <div class="product-card__price">
+                            {% if product.compare_at_price > product.price %}
+                              <span class="price price--sale">{{ product.price | money }}</span>
+                              <span class="price price--compare">{{ product.compare_at_price | money }}</span>
+                            {% else %}
+                              <span class="price">{{ product.price | money }}</span>
+                            {% endif %}
+                          </div>
+                        {% endif %}
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              {% else %}
+                <!-- Fallback content when no products -->
+                <div class="carousel-slide">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <img src="https://ext.same-assets.com/3425221127/3815648614.jpeg" 
+                           alt="Mondello Bangle"
+                           loading="lazy">
+                    </div>
+                    <div class="product-card__info">
+                      <h4 class="product-card__title h4">Mondello Bangle</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-slide">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <img src="https://ext.same-assets.com/3425221127/3857349032.jpeg" 
+                           alt="Sun Cuff in Diamond"
+                           loading="lazy">
+                    </div>
+                    <div class="product-card__info">
+                      <h4 class="product-card__title h4">Sun Cuff in Diamond</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-slide">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <img src="https://ext.same-assets.com/3425221127/2625188474.jpeg" 
+                           alt="Whisk Ring in Topaz"
+                           loading="lazy">
+                    </div>
+                    <div class="product-card__info">
+                      <h4 class="product-card__title h4">Whisk Ring in Topaz</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-slide">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <img src="https://ext.same-assets.com/3425221127/1122959255.jpeg" 
+                           alt="Midas Fleuron Bangle"
+                           loading="lazy">
+                    </div>
+                    <div class="product-card__info">
+                      <h4 class="product-card__title h4">Midas Fleuron Bangle</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-slide">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <img src="https://ext.same-assets.com/3425221127/658935762.jpeg" 
+                           alt="Bubbles Cuff"
+                           loading="lazy">
+                    </div>
+                    <div class="product-card__info">
+                      <h4 class="product-card__title h4">Bubbles Cuff</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-slide">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <img src="https://ext.same-assets.com/3425221127/1662775482.png" 
+                           alt="Candy Lariat Necklace"
+                           loading="lazy">
+                    </div>
+                    <div class="product-card__info">
+                      <h4 class="product-card__title h4">Candy Lariat Necklace</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-slide">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <img src="https://ext.same-assets.com/3425221127/134886435.jpeg" 
+                           alt="Whisk Ring in Amethyst"
+                           loading="lazy">
+                    </div>
+                    <div class="product-card__info">
+                      <h4 class="product-card__title h4">Whisk Ring in Amethyst</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-slide">
+                  <div class="product-card">
+                    <div class="product-card__image">
+                      <img src="https://ext.same-assets.com/3425221127/1662775482.png" 
+                           alt="South Sea Pearl Lariat Necklace"
+                           loading="lazy">
+                    </div>
+                    <div class="product-card__info">
+                      <h4 class="product-card__title h4">South Sea Pearl Lariat Necklace</h4>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+          
+          <button class="carousel-nav carousel-nav--next" aria-label="Next products">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  .new-arrivals-section {
+    padding: 120px 0;
+    background: var(--color-base-background-2);
+    position: relative;
+  }
+
+  .new-arrivals-section__header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .new-arrivals-section__title {
+    font-family: var(--font-heading-family);
+    font-size: 4rem;
+    font-weight: 400;
+    color: var(--color-base-text);
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    position: relative;
+    display: inline-block;
+  }
+
+  .new-arrivals-section__title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: var(--color-accent-gold);
+  }
+
+  .new-arrivals-section__products {
+    position: relative;
+  }
+
+  .new-arrivals-carousel {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .carousel-container {
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 30px;
+  }
+
+  .carousel-slide {
+    flex: 0 0 280px;
+  }
+
+  .product-card {
+    background: var(--color-base-background-1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .product-card__link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .product-card__image {
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: var(--color-base-background-1);
+  }
+
+  .product-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .product-card:hover .product-card__image img {
+    transform: scale(1.08);
+  }
+
+  .product-card__info {
+    padding: 25px 20px;
+    text-align: center;
+  }
+
+  .product-card__title {
+    font-family: var(--font-heading-family);
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--color-base-text);
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+
+  .product-card__price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .price {
+    font-family: var(--font-body-family);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-base-text);
+  }
+
+  .price--sale {
+    color: var(--color-accent-gold);
+    font-weight: 500;
+  }
+
+  .price--compare {
+    text-decoration: line-through;
+    opacity: 0.6;
+  }
+
+  .carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+    backdrop-filter: blur(8px);
+  }
+
+  .carousel-nav:hover {
+    background: var(--color-base-text);
+    color: white;
+    transform: translateY(-50%) scale(1.05);
+  }
+
+  .carousel-nav--prev {
+    left: -28px;
+  }
+
+  .carousel-nav--next {
+    right: -28px;
+  }
+
+  .carousel-nav:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  .carousel-nav:disabled:hover {
+    background: rgba(255, 255, 255, 0.95);
+    color: inherit;
+    transform: translateY(-50%) scale(1);
+  }
+
+  /* Mobile Responsive */
+  @media screen and (max-width: 1024px) {
+    .new-arrivals-section__title {
+      font-size: 3.5rem;
+    }
+
+    .carousel-slide {
+      flex: 0 0 240px;
+    }
+
+    .carousel-track {
+      gap: 20px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .new-arrivals-section {
+      padding: 80px 0;
+    }
+
+    .new-arrivals-section__header {
+      margin-bottom: 60px;
+    }
+
+    .new-arrivals-section__title {
+      font-size: 2.8rem;
+    }
+
+    .carousel-slide {
+      flex: 0 0 200px;
+    }
+
+    .carousel-nav {
+      display: none;
+    }
+
+    .product-card__info {
+      padding: 20px 15px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .new-arrivals-section__title {
+      font-size: 2.2rem;
+    }
+
+    .carousel-slide {
+      flex: 0 0 160px;
+    }
+
+    .carousel-track {
+      gap: 15px;
+    }
+
+    .product-card__title {
+      font-size: 1.2rem;
+    }
+
+    .price {
+      font-size: 12px;
+    }
+  }
+
+  /* Touch scrolling for mobile */
+  @media screen and (max-width: 768px) {
+    .carousel-container {
+      overflow-x: auto;
+      overflow-y: hidden;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .carousel-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .carousel-track {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // New arrivals carousel functionality
+    const carousel = document.querySelector('.new-arrivals-carousel');
+    if (!carousel) return;
+    
+    const track = carousel.querySelector('.carousel-track');
+    const prevBtn = carousel.querySelector('.carousel-nav--prev');
+    const nextBtn = carousel.querySelector('.carousel-nav--next');
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    
+    if (!track || slides.length === 0) return;
+    
+    let currentIndex = 0;
+    const slidesToShow = window.innerWidth > 768 ? 4 : window.innerWidth > 480 ? 3 : 2;
+    const maxIndex = Math.max(0, slides.length - slidesToShow);
+    
+    function updateCarousel() {
+      const slideWidth = slides[0].offsetWidth + 30; // including gap
+      const translateX = currentIndex * slideWidth;
+      track.style.transform = `translateX(-${translateX}px)`;
+      
+      // Update button states
+      prevBtn.disabled = currentIndex === 0;
+      nextBtn.disabled = currentIndex >= maxIndex;
+      
+      prevBtn.style.opacity = currentIndex === 0 ? '0.4' : '1';
+      nextBtn.style.opacity = currentIndex >= maxIndex ? '0.4' : '1';
+    }
+    
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+      }
+    });
+    
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < maxIndex) {
+        currentIndex++;
+        updateCarousel();
+      }
+    });
+    
+    // Initialize
+    updateCarousel();
+    
+    // Handle resize
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        const newSlidesToShow = window.innerWidth > 768 ? 4 : window.innerWidth > 480 ? 3 : 2;
+        const newMaxIndex = Math.max(0, slides.length - newSlidesToShow);
+        
+        if (currentIndex > newMaxIndex) {
+          currentIndex = newMaxIndex;
+        }
+        
+        updateCarousel();
+      }, 100);
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "New Arrivals",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "new_arrivals_collection",
+      "label": "New Arrivals Collection",
+      "info": "Select the new arrivals collection to display"
+    },
+    {
+      "type": "text",
+      "id": "new_arrivals_title",
+      "label": "Section Title",
+      "default": "New Arrivals"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 4,
+      "max": 16,
+      "step": 1,
+      "label": "Products to show",
+      "default": 12
+    }
+  ],
+  "presets": [
+    {
+      "name": "New Arrivals"
+    }
+  ]
+}
+{% endschema %}
