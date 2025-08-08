@@ -1,0 +1,186 @@
+{{ 'featured-collections.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign heading = section.settings.heading
+  assign collections_per_row = section.settings.collections_per_row
+  assign show_description = section.settings.show_description
+-%}
+
+<section class="featured-collections section-padding">
+  <div class="container">
+    
+    {%- if heading != blank -%}
+      <div class="section-header">
+        <h2 class="section-heading h2">{{ heading | escape }}</h2>
+      </div>
+    {%- endif -%}
+
+    <div class="featured-collections__grid grid grid--{{ collections_per_row }}-col-desktop grid--1-col-mobile">
+      
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign collection = collections[block.settings.collection]
+          assign title = block.settings.title
+          assign description = block.settings.description
+          assign button_text = block.settings.button_text
+          assign featured_image = block.settings.featured_image
+        -%}
+        
+        <div class="featured-collections__item grid__item" {{ block.shopify_attributes }}>
+          <div class="collection-card">
+            
+            <div class="collection-card__media">
+              {%- if featured_image -%}
+                <img 
+                  src="{{ featured_image | image_url: width: 600 }}"
+                  alt="{{ featured_image.alt | default: title | escape }}"
+                  width="600"
+                  height="400"
+                  class="collection-card__image"
+                  loading="lazy"
+                >
+              {%- elsif collection and collection.featured_image -%}
+                <img 
+                  src="{{ collection.featured_image | image_url: width: 600 }}"
+                  alt="{{ collection.featured_image.alt | default: collection.title | escape }}"
+                  width="600"
+                  height="400"
+                  class="collection-card__image"
+                  loading="lazy"
+                >
+              {%- else -%}
+                <div class="collection-card__placeholder">
+                  {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                </div>
+              {%- endif -%}
+              
+              <div class="collection-card__overlay"></div>
+            </div>
+
+            <div class="collection-card__content">
+              
+              {%- if title != blank -%}
+                <h3 class="collection-card__title h3">
+                  {%- if collection -%}
+                    <a href="{{ collection.url }}" class="collection-card__link">
+                      {{ title | escape }}
+                    </a>
+                  {%- else -%}
+                    {{ title | escape }}
+                  {%- endif -%}
+                </h3>
+              {%- endif -%}
+
+              {%- if show_description and description != blank -%}
+                <div class="collection-card__description">
+                  {{ description | escape }}
+                </div>
+              {%- endif -%}
+
+              {%- if button_text != blank and collection -%}
+                <div class="collection-card__actions">
+                  <a href="{{ collection.url }}" class="collection-card__button btn btn--secondary">
+                    {{ button_text | escape }}
+                  </a>
+                </div>
+              {%- endif -%}
+
+            </div>
+          </div>
+        </div>
+        
+      {%- endfor -%}
+      
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Collections",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "range",
+      "id": "collections_per_row",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "label": "Collections per row",
+      "default": 2
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show collection description",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Custom title",
+          "info": "Leave blank to use collection title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Custom description",
+          "info": "Leave blank to use collection description"
+        },
+        {
+          "type": "image_picker",
+          "id": "featured_image",
+          "label": "Custom image",
+          "info": "Leave blank to use collection featured image"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text",
+          "default": "VIEW COLLECTION"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Collections",
+      "blocks": [
+        {
+          "type": "collection",
+          "settings": {
+            "title": "Bracelets",
+            "description": "Timeless elegance meets modern sophistication",
+            "button_text": "VIEW COLLECTION"
+          }
+        },
+        {
+          "type": "collection",
+          "settings": {
+            "title": "Necklaces", 
+            "description": "Exquisite pieces for every occasion",
+            "button_text": "VIEW COLLECTION"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %} 

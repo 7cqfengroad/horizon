@@ -1,0 +1,222 @@
+{{ 'lifestyle-grid.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign grid_layout = section.settings.grid_layout
+-%}
+
+<section class="lifestyle-grid section-padding">
+  <div class="container">
+    <div class="lifestyle-grid__wrapper lifestyle-grid__wrapper--{{ grid_layout }}">
+      
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign image = block.settings.image
+          assign title = block.settings.title
+          assign description = block.settings.description
+          assign button_text = block.settings.button_text
+          assign button_link = block.settings.button_link
+          assign text_position = block.settings.text_position | default: 'center'
+          assign text_color = block.settings.text_color | default: 'dark'
+        -%}
+        
+        <div class="lifestyle-grid__item lifestyle-grid__item--{{ forloop.index }}" {{ block.shopify_attributes }}>
+          <div class="lifestyle-card">
+            
+            <div class="lifestyle-card__media">
+              {%- if image -%}
+                <img 
+                  src="{{ image | image_url: width: 800 }}"
+                  alt="{{ image.alt | escape }}"
+                  width="800"
+                  height="600"
+                  class="lifestyle-card__image"
+                  loading="lazy"
+                >
+              {%- else -%}
+                <div class="lifestyle-card__placeholder">
+                  {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                </div>
+              {%- endif -%}
+              
+              {%- if title != blank or description != blank -%}
+                <div class="lifestyle-card__overlay"></div>
+              {%- endif -%}
+            </div>
+
+            {%- if title != blank or description != blank -%}
+              <div class="lifestyle-card__content lifestyle-card__content--{{ text_position }} lifestyle-card__content--{{ text_color }}">
+                <div class="lifestyle-card__text">
+                  
+                  {%- if title != blank -%}
+                    <h3 class="lifestyle-card__title h3">{{ title | escape }}</h3>
+                  {%- endif -%}
+
+                  {%- if description != blank -%}
+                    <div class="lifestyle-card__description">
+                      <p>{{ description | escape }}</p>
+                    </div>
+                  {%- endif -%}
+
+                  {%- if button_text != blank and button_link != blank -%}
+                    <div class="lifestyle-card__actions">
+                      <a href="{{ button_link }}" class="lifestyle-card__button btn btn--secondary btn--small">
+                        {{ button_text | escape }}
+                      </a>
+                    </div>
+                  {%- endif -%}
+
+                </div>
+              </div>
+            {%- endif -%}
+
+          </div>
+        </div>
+        
+      {%- endfor -%}
+      
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Lifestyle Grid",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "grid_layout",
+      "label": "Grid layout",
+      "options": [
+        {
+          "value": "symmetric",
+          "label": "Symmetric"
+        },
+        {
+          "value": "asymmetric",
+          "label": "Asymmetric"
+        }
+      ],
+      "default": "asymmetric"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        },
+        {
+          "type": "select",
+          "id": "text_position",
+          "label": "Text position",
+          "options": [
+            {
+              "value": "top-left",
+              "label": "Top left"
+            },
+            {
+              "value": "top-center",
+              "label": "Top center"
+            },
+            {
+              "value": "top-right",
+              "label": "Top right"
+            },
+            {
+              "value": "center-left",
+              "label": "Center left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "center-right",
+              "label": "Center right"
+            },
+            {
+              "value": "bottom-left",
+              "label": "Bottom left"
+            },
+            {
+              "value": "bottom-center",
+              "label": "Bottom center"
+            },
+            {
+              "value": "bottom-right",
+              "label": "Bottom right"
+            }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "select",
+          "id": "text_color",
+          "label": "Text color",
+          "options": [
+            {
+              "value": "light",
+              "label": "Light"
+            },
+            {
+              "value": "dark",
+              "label": "Dark"
+            }
+          ],
+          "default": "light"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lifestyle Grid",
+      "blocks": [
+        {
+          "type": "image",
+          "settings": {
+            "title": "THE ART OF ISLAND LIVING",
+            "description": "We are inspired by the sea and shoreline. Just as pearls, our classics are naturally bright, timeless and elegant. Each piece brings a natural sophistication that complements both casual and formal occasions.",
+            "button_text": "SHOP",
+            "button_link": "/collections/all",
+            "text_position": "center",
+            "text_color": "light"
+          }
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %} 

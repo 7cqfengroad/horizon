@@ -1,0 +1,18 @@
+{
+  "name": "verdura-jewelry-theme",
+  "version": "1.0.0",
+  "description": "Luxury jewelry Shopify theme for Verdura",
+  "main": "index.js",
+  "scripts": {
+    "dev": "shopify theme dev",
+    "build": "shopify theme build",
+    "deploy": "shopify theme push",
+    "watch": "shopify theme dev --store=verdura-jewelry.myshopify.com"
+  },
+  "keywords": ["shopify", "theme", "jewelry", "luxury"],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@shopify/cli": "^3.0.0"
+  }
+} 

@@ -1,372 +1,102 @@
-<div class="section-background color-{{ section.settings.color_scheme }}"></div>
-<div
-  class="
-    section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}
-    {% if section.settings.section_height != "" %} {{ section.settings.section_height | prepend: "section--height-" }}{% endif %}
-  "
->
-  {% render 'background-media',
-    background_media: section.settings.background_media,
-    background_video: section.settings.video,
-    background_video_position: section.settings.video_position,
-    background_image: section.settings.background_image,
-    background_image_position: section.settings.background_image_position
-  %}
+{{ 'footer.css' | asset_url | stylesheet_tag }}
 
-  <div
-    class="
-      spacing-style
-      layout-panel-flex
-      layout-panel-flex--{{ section.settings.content_direction }}
-      section-content-wrapper
-      {% if section.settings.vertical_on_mobile %} mobile-column{% endif %}
-    "
-    style="
-      {% render 'layout-panel-style', settings: section.settings %}
-      {%  render 'spacing-style', settings: section.settings %}
-    "
-  >
-    {% content_for 'blocks' %}
+<footer class="footer section-padding" role="contentinfo">
+  <div class="container">
+    <div class="footer__content">
+      
+      <!-- Logo -->
+      <div class="footer__logo">
+        <a href="{{ routes.root_url }}" class="footer__logo-link">
+          {%- if settings.logo != blank -%}
+            <img 
+              src="{{ settings.logo | image_url: width: 150 }}"
+              alt="{{ shop.name | escape }}"
+              width="auto"
+              height="30"
+              class="footer__logo-image"
+            >
+          {%- else -%}
+            <span class="footer__logo-text">{{ shop.name }}</span>
+          {%- endif -%}
+        </a>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer__social">
+        <ul class="footer__social-list" role="list">
+          {%- if settings.social_instagram_link != blank -%}
+            <li class="footer__social-item">
+              <a href="{{ settings.social_instagram_link }}" target="_blank" rel="noopener noreferrer" class="footer__social-link">
+                <svg class="icon icon-instagram" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2"/>
+                  <line x1="17.5" y1="6.5" x2="17.5" y2="6.51" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span class="visually-hidden">Instagram</span>
+              </a>
+            </li>
+          {%- endif -%}
+          
+          {%- if settings.social_facebook_link != blank -%}
+            <li class="footer__social-item">
+              <a href="{{ settings.social_facebook_link }}" target="_blank" rel="noopener noreferrer" class="footer__social-link">
+                <svg class="icon icon-facebook" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="visually-hidden">Facebook</span>
+              </a>
+            </li>
+          {%- endif -%}
+          
+          {%- if settings.social_twitter_link != blank -%}
+            <li class="footer__social-item">
+              <a href="{{ settings.social_twitter_link }}" target="_blank" rel="noopener noreferrer" class="footer__social-link">
+                <svg class="icon icon-twitter" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M23 3A10.9 10.9 0 0 1 20.1 4.8A4.48 4.48 0 0 0 22.46 2A8.91 8.91 0 0 1 20.14 3A4.48 4.48 0 0 0 15.32 1A4.52 4.52 0 0 0 10.8 5.5A12.94 12.94 0 0 1 1.64 2.16A4.48 4.48 0 0 0 3.04 8.1A4.5 4.5 0 0 1 1 7.59V7.8A4.5 4.5 0 0 0 4.6 12.1A4.5 4.5 0 0 1 1 11.44A4.5 4.5 0 0 0 5.2 15.5A9 9 0 0 1 1 17A12.9 12.9 0 0 0 8 19C16.5 19 21.17 12.5 21.17 6.8C21.17 6.6 21.17 6.4 21.16 6.21A9.18 9.18 0 0 0 23 3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="visually-hidden">Twitter</span>
+              </a>
+            </li>
+          {%- endif -%}
+          
+          {%- if settings.social_pinterest_link != blank -%}
+            <li class="footer__social-item">
+              <a href="{{ settings.social_pinterest_link }}" target="_blank" rel="noopener noreferrer" class="footer__social-link">
+                <svg class="icon icon-pinterest" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                  <path d="M9 12A3 3 0 0 1 15 9C15 7.89543 14.1046 7 13 7H11C9.89543 7 9 7.89543 9 9V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span class="visually-hidden">Pinterest</span>
+              </a>
+            </li>
+          {%- endif -%}
+        </ul>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer__copyright">
+        <p>&copy; {{ "now" | date: "%Y" }} {{ shop.name }}. All rights reserved.</p>
+      </div>
+
+    </div>
   </div>
-</div>
+</footer>
 
 {% schema %}
 {
-  "name": "t:names.footer",
-  "class": "section-wrapper",
-  "tag": "footer",
-  "blocks": [
-    {
-      "type": "_divider"
-    },
-    {
-      "type": "@app"
-    },
-    {
-      "type": "button"
-    },
-    {
-      "type": "email-signup"
-    },
-    {
-      "type": "follow-on-shop"
-    },
-    {
-      "type": "footer-utilities"
-    },
-    {
-      "type": "group"
-    },
-    {
-      "type": "icon"
-    },
-    {
-      "type": "image"
-    },
-    {
-      "type": "menu"
-    },
-    {
-      "type": "payment-icons"
-    },
-    {
-      "type": "text"
-    },
-    {
-      "type": "logo"
-    },
-    {
-      "type": "jumbo-text"
-    }
-  ],
-  "enabled_on": {
-    "groups": ["footer"]
-  },
+  "name": "Footer",
   "settings": [
     {
       "type": "header",
-      "content": "t:content.layout"
-    },
-    {
-      "type": "select",
-      "id": "content_direction",
-      "label": "t:settings.direction",
-      "options": [
-        {
-          "value": "column",
-          "label": "t:options.vertical"
-        },
-        {
-          "value": "row",
-          "label": "t:options.horizontal"
-        }
-      ],
-      "default": "column"
+      "content": "Footer settings"
     },
     {
       "type": "checkbox",
-      "id": "vertical_on_mobile",
-      "label": "t:settings.vertical_on_mobile",
+      "id": "show_social_media",
+      "label": "Show social media links",
       "default": true,
-      "visible_if": "{{ section.settings.content_direction == 'row' }}"
-    },
-    {
-      "type": "select",
-      "id": "horizontal_alignment",
-      "label": "t:settings.alignment",
-      "options": [
-        {
-          "value": "flex-start",
-          "label": "t:options.left"
-        },
-        {
-          "value": "center",
-          "label": "t:options.center"
-        },
-        {
-          "value": "flex-end",
-          "label": "t:options.right"
-        },
-        {
-          "value": "space-between",
-          "label": "t:options.space_between"
-        }
-      ],
-      "default": "flex-start",
-      "visible_if": "{{ section.settings.content_direction == 'row' }}"
-    },
-    {
-      "type": "select",
-      "id": "vertical_alignment",
-      "label": "t:settings.position",
-      "options": [
-        {
-          "value": "flex-start",
-          "label": "t:options.top"
-        },
-        {
-          "value": "center",
-          "label": "t:options.center"
-        },
-        {
-          "value": "flex-end",
-          "label": "t:options.bottom"
-        }
-      ],
-      "default": "center",
-      "visible_if": "{{ section.settings.content_direction == 'row' }}"
-    },
-    {
-      "type": "checkbox",
-      "id": "align_baseline",
-      "label": "t:settings.align_baseline",
-      "default": false,
-      "visible_if": "{{ section.settings.vertical_alignment == 'flex-end' }}"
-    },
-    {
-      "type": "select",
-      "id": "horizontal_alignment_flex_direction_column",
-      "label": "t:settings.alignment",
-      "options": [
-        {
-          "value": "flex-start",
-          "label": "t:options.left"
-        },
-        {
-          "value": "center",
-          "label": "t:options.center"
-        },
-        {
-          "value": "flex-end",
-          "label": "t:options.right"
-        }
-      ],
-      "default": "flex-start",
-      "visible_if": "{{ section.settings.content_direction != 'row' }}"
-    },
-    {
-      "type": "select",
-      "id": "vertical_alignment_flex_direction_column",
-      "label": "t:settings.position",
-      "options": [
-        {
-          "value": "flex-start",
-          "label": "t:options.top"
-        },
-        {
-          "value": "center",
-          "label": "t:options.center"
-        },
-        {
-          "value": "flex-end",
-          "label": "t:options.bottom"
-        },
-        {
-          "value": "space-between",
-          "label": "t:options.space_between"
-        }
-      ],
-      "default": "center",
-      "visible_if": "{{ section.settings.content_direction == 'column' }}"
-    },
-    {
-      "type": "range",
-      "id": "gap",
-      "label": "t:settings.gap",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 12
-    },
-    {
-      "type": "header",
-      "content": "t:content.size"
-    },
-    {
-      "type": "select",
-      "id": "section_width",
-      "label": "t:settings.width",
-      "options": [
-        {
-          "value": "page-width",
-          "label": "t:options.page"
-        },
-        {
-          "value": "full-width",
-          "label": "t:options.full"
-        }
-      ],
-      "default": "page-width"
-    },
-    {
-      "type": "select",
-      "id": "section_height",
-      "label": "t:settings.height",
-      "options": [
-        {
-          "value": "",
-          "label": "t:options.auto"
-        },
-        {
-          "value": "small",
-          "label": "t:options.small"
-        },
-        {
-          "value": "medium",
-          "label": "t:options.medium"
-        },
-        {
-          "value": "large",
-          "label": "t:options.large"
-        },
-        {
-          "value": "full-screen",
-          "label": "t:options.full_screen"
-        }
-      ],
-      "default": ""
-    },
-    {
-      "type": "header",
-      "content": "t:content.appearance"
-    },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:settings.color_scheme",
-      "default": "scheme-1"
-    },
-    {
-      "type": "select",
-      "id": "background_media",
-      "label": "t:settings.background_media",
-      "options": [
-        {
-          "value": "none",
-          "label": "t:options.none"
-        },
-        {
-          "value": "image",
-          "label": "t:options.image"
-        },
-        {
-          "value": "video",
-          "label": "t:options.video"
-        }
-      ],
-      "default": "none"
-    },
-    {
-      "type": "video",
-      "id": "video",
-      "label": "t:settings.video",
-      "visible_if": "{{ section.settings.background_media == 'video' }}"
-    },
-    {
-      "type": "select",
-      "id": "video_position",
-      "label": "t:settings.video_position",
-      "options": [
-        {
-          "value": "cover",
-          "label": "t:options.cover"
-        },
-        {
-          "value": "contain",
-          "label": "t:options.contain"
-        }
-      ],
-      "default": "cover",
-      "visible_if": "{{ section.settings.background_media == 'video' }}"
-    },
-    {
-      "type": "image_picker",
-      "id": "background_image",
-      "label": "t:settings.image",
-      "visible_if": "{{ section.settings.background_media == 'image' }}"
-    },
-    {
-      "type": "select",
-      "id": "background_image_position",
-      "label": "t:settings.image_position",
-      "options": [
-        {
-          "value": "cover",
-          "label": "t:options.cover"
-        },
-        {
-          "value": "fit",
-          "label": "t:options.fit"
-        }
-      ],
-      "default": "cover",
-      "visible_if": "{{ section.settings.background_media == 'image' }}"
-    },
-    {
-      "type": "header",
-      "content": "t:content.padding"
-    },
-    {
-      "type": "range",
-      "id": "padding-block-start",
-      "label": "t:settings.top",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 0
-    },
-    {
-      "type": "range",
-      "id": "padding-block-end",
-      "label": "t:settings.bottom",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 0
+      "info": "Social media links are configured in theme settings"
     }
   ]
 }
-{% endschema %}
+{% endschema %} 

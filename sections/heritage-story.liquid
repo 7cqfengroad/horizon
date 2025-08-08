@@ -1,0 +1,119 @@
+{{ 'heritage-story.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign heading = section.settings.heading
+  assign description = section.settings.description
+  assign image = section.settings.image
+  assign button_text = section.settings.button_text
+  assign button_link = section.settings.button_link
+  assign layout = section.settings.layout
+-%}
+
+<section class="heritage-story section-padding">
+  <div class="container">
+    <div class="heritage-story__inner heritage-story__inner--{{ layout }}">
+      
+      <!-- Image Side -->
+      <div class="heritage-story__media">
+        {%- if image -%}
+          <img 
+            src="{{ image | image_url: width: 800 }}"
+            alt="{{ image.alt | escape }}"
+            width="800"
+            height="600"
+            class="heritage-story__image"
+            loading="lazy"
+          >
+        {%- else -%}
+          <div class="heritage-story__placeholder">
+            {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+          </div>
+        {%- endif -%}
+      </div>
+
+      <!-- Content Side -->
+      <div class="heritage-story__content">
+        
+        {%- if heading != blank -%}
+          <h2 class="heritage-story__heading h2">{{ heading | escape }}</h2>
+        {%- endif -%}
+
+        {%- if description != blank -%}
+          <div class="heritage-story__description">
+            <p>{{ description | escape }}</p>
+          </div>
+        {%- endif -%}
+
+        {%- if button_text != blank and button_link != blank -%}
+          <div class="heritage-story__actions">
+            <a href="{{ button_link }}" class="heritage-story__button btn btn--primary">
+              {{ button_text | escape }}
+            </a>
+          </div>
+        {%- endif -%}
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Heritage Story",
+  "tag": "section", 
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Heritage"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Born from tradition, crafted for eternity. Since 1939, Verdura has been synonymous with timeless elegance and impeccable artistry. From our historic beginnings to today's modern atelier, each piece embodies our commitment to exceptional quality and distinctive style."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "DISCOVER OUR STORY"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link",
+      "default": "/pages/about"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "image-left",
+          "label": "Image on left"
+        },
+        {
+          "value": "image-right",
+          "label": "Image on right"
+        }
+      ],
+      "default": "image-left"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Heritage Story"
+    }
+  ]
+}
+{% endschema %} 

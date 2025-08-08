@@ -1,0 +1,191 @@
+{{ 'very-verdura.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign heading = section.settings.heading
+  assign description = section.settings.description
+  assign collection = collections[section.settings.collection]
+  assign background_color = section.settings.background_color
+  assign button_text = section.settings.button_text
+  assign max_products = section.settings.max_products | default: 2
+-%}
+
+<section class="very-verdura section-padding" 
+         style="--bg-color: {{ background_color | default: '#f5f3f0' }};">
+  <div class="container">
+    <div class="very-verdura__inner">
+      
+      <!-- Content Header -->
+      <div class="very-verdura__header">
+        
+        {%- if heading != blank -%}
+          <h2 class="very-verdura__heading h2">{{ heading | escape }}</h2>
+        {%- endif -%}
+
+        {%- if description != blank -%}
+          <div class="very-verdura__description">
+            <p>{{ description | escape }}</p>
+          </div>
+        {%- endif -%}
+
+      </div>
+
+      <!-- Products Grid -->
+      <div class="very-verdura__products">
+        
+        {%- if collection and collection.products.size > 0 -%}
+          <div class="very-verdura__grid">
+            
+            {%- for product in collection.products limit: max_products -%}
+              <div class="very-verdura__product-item">
+                <div class="product-card product-card--featured">
+                  
+                  <div class="product-card__media">
+                    <a href="{{ product.url }}" class="product-card__link">
+                      {%- if product.featured_media -%}
+                        <img 
+                          src="{{ product.featured_media | image_url: width: 600 }}"
+                          alt="{{ product.featured_media.alt | default: product.title | escape }}"
+                          width="600"
+                          height="600"
+                          class="product-card__image"
+                          loading="lazy"
+                        >
+                      {%- else -%}
+                        <div class="product-card__placeholder">
+                          {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                        </div>
+                      {%- endif -%}
+                    </a>
+                    
+                    <!-- Quick View Button -->
+                    <div class="product-card__actions">
+                      <button 
+                        type="button" 
+                        class="product-card__quick-view btn btn--secondary btn--small"
+                        data-product-url="{{ product.url }}"
+                        aria-label="Quick view {{ product.title | escape }}"
+                      >
+                        Quick View
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="product-card__info">
+                    <h3 class="product-card__title">
+                      <a href="{{ product.url }}" class="product-card__title-link">
+                        {{ product.title | escape }}
+                      </a>
+                    </h3>
+                    
+                    <div class="product-card__price">
+                      {%- render 'price', product: product, use_variant: true, show_badges: false -%}
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            {%- endfor -%}
+            
+          </div>
+        {%- else -%}
+          <!-- Placeholder when no collection is selected -->
+          <div class="very-verdura__placeholder">
+            <div class="very-verdura__grid">
+              {%- for i in (1..2) -%}
+                <div class="very-verdura__product-item">
+                  <div class="product-card product-card--featured">
+                    <div class="product-card__media">
+                      <div class="product-card__placeholder">
+                        {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                      </div>
+                    </div>
+                    <div class="product-card__info">
+                      <h3 class="product-card__title">Verdura Product {{ i }}</h3>
+                      <div class="product-card__price">$0.00</div>
+                    </div>
+                  </div>
+                </div>
+              {%- endfor -%}
+            </div>
+          </div>
+        {%- endif -%}
+
+      </div>
+
+      <!-- View Collection Button -->
+      {%- if button_text != blank and collection -%}
+        <div class="very-verdura__footer">
+          <a href="{{ collection.url }}" class="very-verdura__button btn btn--primary">
+            {{ button_text | escape }}
+          </a>
+        </div>
+      {%- endif -%}
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Very Verdura",
+  "tag": "section", 
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Very Verdura"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Bold pieces for those looking for distinctive elegance"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "SHOP"
+    },
+    {
+      "type": "header",
+      "content": "Collection"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "max_products",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "label": "Maximum products to show",
+      "default": 2
+    },
+    {
+      "type": "header",
+      "content": "Design"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#f5f3f0"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Very Verdura"
+    }
+  ]
+}
+{% endschema %} 

@@ -1,0 +1,156 @@
+{{ 'hero-banner.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign image = section.settings.image
+  assign heading = section.settings.heading
+  assign subheading = section.settings.subheading  
+  assign description = section.settings.description
+  assign button_text = section.settings.button_text
+  assign button_link = section.settings.button_link
+  assign text_alignment = section.settings.text_alignment
+  assign overlay_opacity = section.settings.overlay_opacity
+-%}
+
+<section class="hero-banner{% if image %} hero-banner--has-image{% endif %}" role="banner">
+  <div class="hero-banner__media">
+    {%- if image -%}
+      <img 
+        src="{{ image | image_url: width: 1920 }}"
+        alt="{{ image.alt | escape }}"
+        width="{{ image.width }}"
+        height="{{ image.height }}"
+        class="hero-banner__image"
+        loading="eager"
+        fetchpriority="high"
+      >
+    {%- else -%}
+      <div class="hero-banner__placeholder">
+        {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      </div>
+    {%- endif -%}
+    
+    {%- if overlay_opacity > 0 -%}
+      <div class="hero-banner__overlay" style="opacity: {{ overlay_opacity | divided_by: 100.0 }};"></div>
+    {%- endif -%}
+  </div>
+
+  <div class="hero-banner__content">
+    <div class="container">
+      <div class="hero-banner__text hero-banner__text--{{ text_alignment }}">
+        
+        {%- if subheading != blank -%}
+          <p class="hero-banner__subheading">{{ subheading | escape }}</p>
+        {%- endif -%}
+
+        {%- if heading != blank -%}
+          <h1 class="hero-banner__heading h1">
+            {{ heading | escape }}
+          </h1>
+        {%- endif -%}
+
+        {%- if description != blank -%}
+          <div class="hero-banner__description">
+            {{ description | escape }}
+          </div>
+        {%- endif -%}
+
+        {%- if button_text != blank and button_link != blank -%}
+          <div class="hero-banner__actions">
+            <a href="{{ button_link }}" class="hero-banner__button btn btn--primary">
+              {{ button_text | escape }}
+            </a>
+          </div>
+        {%- endif -%}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero Banner",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Hero image"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "%",
+      "label": "Image overlay opacity",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "EXQUISITE COLLECTION"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Heritage of Style"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Discover our finest pieces crafted with precision and timeless elegance"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "SHOP COLLECTION"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link",
+      "default": "/collections/all"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Banner"
+    }
+  ]
+}
+{% endschema %} 

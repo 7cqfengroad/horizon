@@ -1,94 +1,205 @@
-# Horizon
+# Verdura Jewelry - Shopify Theme
 
-[Getting started](#getting-started) |
-[Staying up to date with Horizon changes](#staying-up-to-date-with-horizon-changes) |
-[Developer tools](#developer-tools) |
-[Contributing](#contributing) |
-[Code of conduct](#code-of-conduct) |
-[Theme Store submission](#theme-store-submission) |
-[License](#license)
+一个专为高端珠宝品牌设计的奢华Shopify主题，具有优雅的设计和现代的功能。
 
-Horizon is the flagship of a new generation of first party Shopify themes. It incorporates the latest Liquid Storefronts features, including [theme blocks](https://shopify.dev/docs/storefronts/themes/architecture/blocks/theme-blocks/quick-start?framework=liquid).
+## 🌟 主要特性
 
-- **Web-native in its purest form:** Themes run on the [evergreen web](https://www.w3.org/2001/tag/doc/evergreen-web/). We leverage the latest web browsers to their fullest, while maintaining support for the older ones through progressive enhancement—not polyfills.
-- **Lean, fast, and reliable:** Functionality and design defaults to “no” until it meets this requirement. Code ships on quality. Themes must be built with purpose. They shouldn’t support each and every feature in Shopify.
-- **Server-rendered:** HTML must be rendered by Shopify servers using Liquid. Business logic and platform primitives such as translations and money formatting don’t belong on the client. Async and on-demand rendering of parts of the page is OK, but we do it sparingly as a progressive enhancement.
-- **Functional, not pixel-perfect:** The Web doesn’t require each page to be rendered pixel-perfect by each browser engine. Using semantic markup, progressive enhancement, and clever design, we ensure that themes remain functional regardless of the browser.
+### 设计特点
+- **奢华美学** - 简洁优雅的设计，突出产品质感
+- **完全响应式** - 在所有设备上都有完美的显示效果
+- **高端品牌感** - 专为珠宝、手表等奢侈品牌设计
+- **无障碍友好** - 符合WCAG 2.2标准
 
-## Getting started
+### 首页区块
+- **Hero Banner** - 大图背景的主要展示区域
+- **Featured Collections** - 特色产品集合展示
+- **Zodiac Collection** - 星座主题产品特殊展示
+- **Lifestyle Grid** - 品牌故事和生活方式展示
+- **Very Verdura** - 特色产品系列
+- **Visit Us** - 门店信息展示
+- **New Arrivals** - 新品到货展示
+- **Heritage Story** - 品牌历史故事
+- **Newsletter** - 邮件订阅
 
-We recommend using the Skeleton Theme as a starting point for theme development. [Learn more on Shopify.dev](https://shopify.dev/themes/getting-started/create).
+### 技术特性
+- **现代CSS Grid** - 灵活的布局系统
+- **JavaScript增强** - 流畅的交互体验
+- **SEO优化** - 搜索引擎友好
+- **性能优化** - 快速加载时间
+- **无障碍支持** - 键盘导航和屏幕阅读器支持
 
-> If you're building a theme for the Shopify Theme Store, then you can use Horizon as a starting point. However, the theme that you submit needs to be [substantively different from Horizon](https://shopify.dev/themes/store/requirements#uniqueness) so that it provides added value for merchants. Learn about the [theme developer tools](https://shopify.dev/docs/storefronts/themes/tools).
+## 🚀 安装指南
 
-Please note that the main branch may include code for features not yet released. The "stable" version of Horizon is available in the theme store.
+### 前提条件
+- Shopify开发环境
+- Shopify CLI
+- Node.js (推荐版本 16+)
 
-## Staying up to date with Horizon changes
+### 安装步骤
 
-Say you're building a new theme off Horizon but you still want to be able to pull in the latest changes, you can add a remote `upstream` pointing to this Horizon repository.
-
-1. Navigate to your local theme folder.
-2. Verify the list of remotes and validate that you have both an `origin` and `upstream`:
-
-```sh
-git remote -v
+1. **克隆项目**
+```bash
+git clone <repository-url>
+cd verdura-jewelry-theme
 ```
 
-3. If you don't see an `upstream`, you can add one that points to Shopify's Horizon repository:
-
-```sh
-git remote add upstream https://github.com/Shopify/horizon.git
+2. **安装依赖**
+```bash
+npm install
 ```
 
-4. Pull in the latest Horizon changes into your repository:
+3. **配置Shopify CLI**
+```bash
+# 复制配置文件
+cp config.example.yml config.yml
 
-```sh
-git fetch upstream
-git pull upstream main
+# 编辑config.yml，填入你的Shopify店铺信息
+# - password: Shopify私有应用密码
+# - theme_id: 主题ID（可选，留空将创建新主题）
+# - store: 你的Shopify店铺域名
 ```
 
-## Developer tools
+4. **开始开发**
+```bash
+npm run dev
+```
 
-There are a number of really useful tools that the Shopify Themes team uses during development. Horizon is already set up to work with these tools.
+## 📁 项目结构
 
-### Shopify CLI
+```
+verdura-jewelry-theme/
+├── assets/                 # CSS, JS 和图片资源
+│   ├── base.css            # 基础样式
+│   ├── theme.css           # 主题特定样式
+│   └── global.js           # 全局JavaScript
+├── config/                 # 主题配置
+│   └── settings_schema.json # 主题设置架构
+├── layout/                 # 布局模板
+│   └── theme.liquid        # 主要布局文件
+├── locales/                # 多语言文件
+│   └── en.default.json     # 英文翻译
+├── sections/               # 可重用的页面区块
+│   ├── header.liquid       # 网站头部
+│   ├── footer.liquid       # 网站页脚
+│   ├── hero-banner.liquid  # 主要横幅
+│   └── ...                 # 其他区块
+├── snippets/               # 可重用的代码片段
+│   └── price.liquid        # 价格显示组件
+├── templates/              # 页面模板
+│   └── index.json          # 首页模板
+└── README.md               # 项目说明
+```
 
-[Shopify CLI](https://shopify.dev/docs/storefronts/themes/tools/cli) helps you build Shopify themes faster and is used to automate and enhance your local development workflow. It comes bundled with a suite of commands for developing Shopify themes—everything from working with themes on a Shopify store (e.g. creating, publishing, deleting themes) or launching a development server for local theme development.
+## 🎨 自定义设置
 
-You can follow this [quick start guide for theme developers](https://shopify.dev/docs/themes/tools/cli) to get started.
+### 颜色配置
+在主题编辑器中可以设置：
+- 主色调 (Primary Color)
+- 次要颜色 (Secondary Color) 
+- 强调色 (Accent Color)
+- 文本颜色 (Text Color)
+- 背景颜色 (Background Color)
 
-### Theme Check
+### 字体设置
+- 标题字体
+- 正文字体
+- 基础字体大小
 
-We recommend using [Theme Check](https://github.com/shopify/theme-check) as a way to validate and lint your Shopify themes.
+### 布局选项
+- 最大容器宽度
+- 粘性头部开关
+- 社交媒体链接
 
-We've added Theme Check to Horizon's [list of VS Code extensions](/.vscode/extensions.json) so if you're using Visual Studio Code as your code editor of choice, you'll be prompted to install the [Theme Check VS Code](https://marketplace.visualstudio.com/items?itemName=Shopify.theme-check-vscode) extension upon opening VS Code after you've forked and cloned Horizon.
+## 📱 响应式设计
 
-You can also run it from a terminal with the following Shopify CLI command:
+主题在以下断点进行优化：
+- **桌面**: 1024px+
+- **平板**: 768px - 1023px
+- **手机**: 320px - 767px
+
+## ♿ 无障碍功能
+
+- **键盘导航** - 支持完整的键盘操作
+- **屏幕阅读器** - 完善的ARIA标签
+- **颜色对比** - 符合WCAG 2.2标准
+- **焦点管理** - 清晰的焦点指示器
+- **跳转链接** - 快速导航到主要内容
+
+## 🛠️ 开发命令
 
 ```bash
-shopify theme check
+# 启动开发环境
+npm run dev
+
+# 构建主题
+npm run build
+
+# 部署到Shopify
+npm run deploy
+
+# 监听文件变化
+npm run watch
 ```
 
-You can follow the [theme check documentation](https://shopify.dev/docs/storefronts/themes/tools/theme-check) for more details.
+## 📦 主要依赖
 
-### Continuous Integration
+- **Shopify CLI** - 主题开发工具
+- **Liquid** - Shopify模板语言
+- **Modern CSS** - Grid, Flexbox, Custom Properties
+- **Vanilla JavaScript** - 原生JavaScript，无框架依赖
 
-Horizon uses [GitHub Actions](https://github.com/features/actions) to maintain the quality of the theme. [This is a starting point](https://github.com/Shopify/horizon/blob/main/.github/workflows/ci.yml) and what we suggest to use in order to ensure you're building better themes. Feel free to build off of it!
+## 🎯 浏览器支持
 
-#### Shopify/theme-check-action
+- Chrome (最新版本)
+- Firefox (最新版本)
+- Safari (最新版本)
+- Edge (最新版本)
+- iOS Safari (最新版本)
+- Chrome Android (最新版本)
 
-Horizon runs [Theme Check](#Theme-Check) on every commit via [Shopify/theme-check-action](https://github.com/Shopify/theme-check-action).
+## 📈 性能优化
 
-## Contributing
+- **图片懒加载** - 提升页面加载速度
+- **CSS优化** - 最小化和压缩样式文件
+- **JavaScript优化** - 异步加载和代码分割
+- **字体优化** - 字体显示优化
 
-We are not accepting contributions to Horizon at this time.
+## 🔧 故障排除
 
-## Theme Store submission
+### 常见问题
 
-The [Shopify Theme Store](https://themes.shopify.com/) is the place where Shopify merchants find the themes that they'll use to showcase and support their business. As a theme partner, you can create themes for the Shopify Theme Store and reach an international audience of an ever-growing number of entrepreneurs.
+1. **样式未加载**
+   - 检查CSS文件路径
+   - 确认asset_url过滤器正确使用
 
-Ensure that you follow the list of [theme store requirements](https://shopify.dev/themes/store/requirements) if you're interested in becoming a [Shopify Theme Partner](https://themes.shopify.com/services/themes/guidelines) and building themes for the Shopify platform.
+2. **JavaScript功能异常**
+   - 检查浏览器控制台错误
+   - 确认全局变量正确初始化
 
-## License
+3. **图片显示问题**
+   - 检查图片URL格式
+   - 确认responsive image过滤器设置
 
-Copyright (c) 2025-present Shopify Inc. See [LICENSE](/LICENSE.md) for further details.
+## 🤝 贡献指南
+
+1. Fork项目
+2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 开启Pull Request
+
+## 📄 许可证
+
+该项目基于MIT许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
+
+## 📞 支持
+
+如果你在使用过程中遇到任何问题，请：
+
+1. 查看[常见问题](#故障排除)
+2. 搜索现有的Issues
+3. 创建新的Issue并详细描述问题
+
+---
+
+**Verdura Jewelry Theme** - 为奢侈品牌打造的专业Shopify主题 
