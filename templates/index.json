@@ -1,0 +1,133 @@
+→ {
+  "sections": {
+    "hero": {
+      "type": "verdura-hero",
+      "settings": {
+        "hero_title": "Heritage of Style",
+        "hero_subtitle": "EXPLORE THE COLLECTION",
+        "hero_link_text": "EXPLORE THE COLLECTION"
+      }
+    },
+    "collections": {
+      "type": "verdura-collections",
+      "settings": {
+        "products_to_show": 8
+      }
+    },
+    "zodiac": {
+      "type": "verdura-zodiac",
+      "settings": {
+        "zodiac_title": "Zodiac",
+        "zodiac_subtitle": "PENDANT NECKLACES",
+        "zodiac_description": "Using archival postcards Fulco di Verdura purchased at the Museum of Natural History, Verdura sets diamonds as stars and engraves constellations in gold",
+        "zodiac_link_text": "VIEW COLLECTION"
+      }
+    },
+    "off_season": {
+      "type": "verdura-off-season",
+      "settings": {
+        "off_season_title": "THE OFF-SEASON COLLECTION",
+        "off_season_description": "We are delighted to introduce the Off-Season Collection - over a dozen new archival pieces that we feel captures this paradox of American style. These bangles, lariats, hoops and pendants are meant to be as relevant to your wardrobe in high season as well as off season, whether you don them for an audience or a solo stroll down an empty beach.",
+        "off_season_link_text": "VIEW"
+      }
+    },
+    "gifts": {
+      "type": "verdura-gifts",
+      "settings": {
+        "gifts_title_line1": "Very",
+        "gifts_title_line2": "Verdura",
+        "gifts_subtitle": "GIFTS UNDER $20,000",
+        "gifts_description": "A collection of pieces perfect for gifting and receiving",
+        "gifts_link_text": "SHOP"
+      }
+    },
+    "gallery": {
+      "type": "verdura-gallery",
+      "settings": {
+        "gallery_title": "Visit",
+        "gallery_subtitle": "THE GALLERY",
+        "gallery_description": "The Verdura gallery is open 10 AM – 5 PM, Monday – Friday. Arrange your visit below",
+        "gallery_link_text": "ARRANGE VISIT",
+        "gallery_link_url": "/pages/contact"
+      }
+    },
+    "new_arrivals": {
+      "type": "verdura-new-arrivals",
+      "settings": {
+        "new_arrivals_title": "New Arrivals",
+        "products_to_show": 12
+      }
+    },
+    "heritage": {
+      "type": "verdura-heritage",
+      "settings": {
+        "heritage_title": "Heritage",
+        "heritage_subtitle": "About Fulco Di Verdura",
+        "heritage_description": "Born into Sicilian aristocracy in 1898, Verdura's founder, Duke Fulco di Verdura, began his extraordinary career in Paris as a designer for Coco Chanel. After eight years with Chanel where he, most notably, created the Maltese Cross cuffs that became his signature, Verdura followed his passion for design to America in 1934.",
+        "heritage_link_text": "DISCOVER OUR HERITAGE",
+        "heritage_link_url": "/pages/the-story"
+      }
+    },
+    "newsletter": {
+      "type": "verdura-newsletter",
+      "settings": {
+        "newsletter_title_line1": "Sign up",
+        "newsletter_title_line2": "now",
+        "newsletter_form_title": "WELCOME TO VERDURA",
+        "newsletter_description": "Please join our email list for updates about new collections and special events",
+        "newsletter_placeholder": "Enter Email Address Here"
+      }
+    },
+    "instagram": {
+      "type": "verdura-instagram",
+      "settings": {
+        "instagram_title": "Find us on Instagram",
+        "instagram_handle": "verdurajewelry"
+      },
+      "blocks": {
+        "instagram_post_1": {
+          "type": "instagram_post",
+          "settings": {
+            "post_link": "https://www.instagram.com/p/DNDjfrKtO-m/"
+          }
+        },
+        "instagram_post_2": {
+          "type": "instagram_post",
+          "settings": {
+            "post_link": "https://www.instagram.com/p/DM-kW1StNh6/"
+          }
+        },
+        "instagram_post_3": {
+          "type": "instagram_post",
+          "settings": {
+            "post_link": "https://www.instagram.com/p/DMxh8u5MMOk/"
+          }
+        },
+        "instagram_post_4": {
+          "type": "instagram_post",
+          "settings": {
+            "post_link": "https://www.instagram.com/reel/DMsi1BlMEUc/"
+          }
+        }
+      },
+      "block_order": [
+        "instagram_post_1",
+        "instagram_post_2", 
+        "instagram_post_3",
+        "instagram_post_4"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "collections",
+    "zodiac",
+    "off_season",
+    "gifts",
+    "gallery",
+    "new_arrivals",
+    "heritage",
+    "newsletter",
+    "instagram"
+  ]
+}
