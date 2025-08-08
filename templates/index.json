@@ -1,5 +1,9 @@
 → {
   "sections": {
+    "test": {
+      "type": "simple-test",
+      "settings": {}
+    },
     "hero": {
       "type": "verdura-hero",
       "settings": {
@@ -119,6 +123,7 @@
     }
   },
   "order": [
+    "test",
     "hero",
     "collections",
     "zodiac",

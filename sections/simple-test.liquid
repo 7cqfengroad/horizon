@@ -1,0 +1,39 @@
+{% comment %}
+  Simple Test Section
+  用于测试主题是否正常工作
+{% endcomment %}
+
+<section class="simple-test">
+  <div class="page-width">
+    <h1>主题已成功加载！</h1>
+    <p>这是一个测试页面，如果您看到这个，说明主题基本结构是正确的。</p>
+    <p>时间：{{ 'now' | date: '%Y-%m-%d %H:%M:%S' }}</p>
+  </div>
+</section>
+
+<style>
+  .simple-test {
+    padding: 60px 0;
+    text-align: center;
+    background: #f8f6f5;
+  }
+  
+  .simple-test h1 {
+    font-size: 3rem;
+    color: #272626;
+    margin-bottom: 1rem;
+  }
+  
+  .simple-test p {
+    font-size: 1.2rem;
+    color: #936451;
+    margin: 0.5rem 0;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Simple Test",
+  "settings": []
+}
+{% endschema %} 
