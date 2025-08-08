@@ -1,0 +1,155 @@
+{%- comment -%}
+  Cart Notification Snippet
+{%- endcomment -%}
+
+<div class="cart-notification-wrapper" id="cart-notification">
+  <div class="cart-notification" role="dialog" aria-labelledby="cart-notification-heading" aria-modal="true" aria-hidden="true">
+    <div class="cart-notification__header">
+      <h2 class="cart-notification__heading" id="cart-notification-heading">
+        <svg class="icon icon-checkmark" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 9" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M11.35.643a.5.5 0 01.006.707L4.56 8.355a.5.5 0 01-.707.006L.146 5.854a.5.5 0 11.708-.708L4.204 7.894 10.643.649a.5.5 0 01.707-.006z" fill="currentColor">
+        </svg>
+        Item added to your cart
+      </h2>
+      <button type="button" class="cart-notification__close modal__close-button link link--text focus-inset" aria-label="Close">
+        <svg class="icon icon-close" aria-hidden="true" focusable="false">
+          <use href="#icon-close">
+        </svg>
+      </button>
+    </div>
+    
+    <div class="cart-notification__links">
+      <a href="{{ routes.cart_url }}" class="button button--secondary button--full-width">View cart</a>
+      <form action="{{ routes.cart_url }}" method="post" id="cart-notification-form">
+        <button class="button button--primary button--full-width" name="add">
+          Continue to checkout
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<style>
+  .cart-notification-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 101;
+    max-width: 35rem;
+    padding: 0 1.5rem 0 0;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 0.3s ease;
+  }
+
+  .cart-notification-wrapper.animate {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+  }
+
+  .cart-notification {
+    background-color: rgb(var(--color-base-background-1));
+    border: 1px solid rgba(var(--color-base-text), 0.08);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 24px rgba(var(--color-base-text), 0.1);
+    max-height: 100vh;
+    overflow: auto;
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+
+  .cart-notification__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+
+  .cart-notification__heading {
+    margin: 0;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .cart-notification__heading .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #4CAF50;
+  }
+
+  .cart-notification__close {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: rgba(var(--color-base-text), 0.7);
+    transition: color 0.3s ease;
+  }
+
+  .cart-notification__close:hover {
+    color: rgb(var(--color-base-text));
+  }
+
+  .cart-notification__links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 2rem;
+    border: 2px solid;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+
+  .button--primary {
+    background: rgb(var(--color-base-accent-1));
+    color: rgb(var(--color-base-background-1));
+    border-color: rgb(var(--color-base-accent-1));
+  }
+
+  .button--primary:hover {
+    background: rgba(var(--color-base-accent-1), 0.8);
+  }
+
+  .button--secondary {
+    background: transparent;
+    color: rgb(var(--color-base-text));
+    border-color: rgb(var(--color-base-text));
+  }
+
+  .button--secondary:hover {
+    background: rgb(var(--color-base-text));
+    color: rgb(var(--color-base-background-1));
+  }
+
+  .button--full-width {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 750px) {
+    .cart-notification-wrapper {
+      padding: 0 1.5rem;
+      right: 0;
+      left: 0;
+      max-width: none;
+    }
+
+    .cart-notification {
+      margin-top: 1rem;
+    }
+  }
+</style> 
