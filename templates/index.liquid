@@ -22,60 +22,62 @@
 <!-- Product Categories Grid -->
 <section class="product-categories">
   <div class="container">
-    <div class="categories-grid">
-      <div class="category-item">
-        <a href="/collections/bracelets">
-          <div class="category-image">
-            <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=400&fit=crop" 
-                 alt="Bracelets" loading="lazy">
-          </div>
-          <h3 class="category-title">Bracelets</h3>
-        </a>
+    <div class="categories-wrapper">
+      <div class="categories-grid">
+        <div class="category-item">
+          <a href="/collections/bracelets">
+            <div class="category-image">
+              <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=300&h=300&fit=crop" 
+                   alt="Bracelets" loading="lazy">
+            </div>
+            <h3 class="category-title">Bracelets</h3>
+          </a>
+        </div>
+        
+        <div class="category-item">
+          <a href="/collections/earclips">
+            <div class="category-image">
+              <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=300&h=300&fit=crop" 
+                   alt="Earclips" loading="lazy">
+            </div>
+            <h3 class="category-title">Earclips</h3>
+          </a>
+        </div>
+        
+        <div class="category-item">
+          <a href="/collections/cuffs">
+            <div class="category-image">
+              <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=300&h=300&fit=crop&crop=center" 
+                   alt="Cuffs" loading="lazy">
+            </div>
+            <h3 class="category-title">Cuffs</h3>
+          </a>
+        </div>
+        
+        <div class="category-item">
+          <a href="/collections/rings">
+            <div class="category-image">
+              <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=300&h=300&fit=crop" 
+                   alt="Rings" loading="lazy">
+            </div>
+            <h3 class="category-title">Rings</h3>
+          </a>
+        </div>
+        
+        <div class="category-item">
+          <a href="/collections/necklaces">
+            <div class="category-image">
+              <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=300&h=300&fit=crop" 
+                   alt="Necklaces" loading="lazy">
+            </div>
+            <h3 class="category-title">Necklaces</h3>
+          </a>
+        </div>
       </div>
       
-      <div class="category-item">
-        <a href="/collections/earclips">
-          <div class="category-image">
-            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=400&fit=crop" 
-                 alt="Earclips" loading="lazy">
-          </div>
-          <h3 class="category-title">Earclips</h3>
-        </a>
+      <div class="view-collection-btn">
+        <a href="/collections" class="btn btn-outline">VIEW COLLECTION</a>
       </div>
-      
-      <div class="category-item">
-        <a href="/collections/cuffs">
-          <div class="category-image">
-            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&h=400&fit=crop&crop=center" 
-                 alt="Cuffs" loading="lazy">
-          </div>
-          <h3 class="category-title">Cuffs</h3>
-        </a>
-      </div>
-      
-      <div class="category-item">
-        <a href="/collections/rings">
-          <div class="category-image">
-            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=400&fit=crop" 
-                 alt="Rings" loading="lazy">
-          </div>
-          <h3 class="category-title">Rings</h3>
-        </a>
-      </div>
-      
-      <div class="category-item">
-        <a href="/collections/necklaces">
-          <div class="category-image">
-            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&h=400&fit=crop" 
-                 alt="Necklaces" loading="lazy">
-          </div>
-          <h3 class="category-title">Necklaces</h3>
-        </a>
-      </div>
-    </div>
-    
-    <div class="view-collection-btn">
-      <a href="/collections" class="btn btn-outline">View Collection</a>
     </div>
   </div>
 </section>
@@ -320,21 +322,30 @@
     padding: 0 2rem;
   }
 
-  /* Product Categories - Horizontal Layout */
+  /* Product Categories - Clean Layout */
   .product-categories {
-    padding: 8rem 0;
-    background: #fafafa;
+    padding: 6rem 0;
+    background: #ffffff;
+  }
+
+  .categories-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
   }
 
   .categories-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 4rem;
-    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
   }
 
   .category-item {
     text-align: center;
+    flex: 0 0 auto;
+    width: 150px;
   }
 
   .category-item a {
@@ -345,21 +356,23 @@
   }
 
   .category-item a:hover {
-    transform: translateY(-8px);
+    transform: translateY(-4px);
   }
 
   .category-image {
-    width: 100%;
-    aspect-ratio: 1;
-    margin-bottom: 2rem;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
     overflow: hidden;
     border-radius: 50%;
-    border: 3px solid #e0e0e0;
-    transition: border-color 0.3s ease;
+    border: 2px solid #e8e8e8;
+    transition: all 0.3s ease;
+    position: relative;
   }
 
   .category-item a:hover .category-image {
     border-color: #8B4513;
+    box-shadow: 0 4px 20px rgba(139, 69, 19, 0.2);
   }
 
   .category-image img {
@@ -370,19 +383,21 @@
   }
 
   .category-item a:hover .category-image img {
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
 
   .category-title {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-family: var(--font-heading-family, 'Georgia', serif);
     font-weight: 400;
     margin: 0;
     letter-spacing: 0.05rem;
+    color: #333;
   }
 
   .view-collection-btn {
     text-align: center;
+    margin-top: 2rem;
   }
 
   /* Buttons */
@@ -427,28 +442,28 @@
   .gifts-section,
   .visit-section,
   .heritage-section {
-    padding: 8rem 0;
+    padding: 6rem 0;
     text-align: center;
   }
 
   .zodiac-section {
-    background: white;
+    background: #f9f9f9;
   }
 
   .off-season-section {
-    background: #f8f8f8;
+    background: white;
   }
 
   .gifts-section {
-    background: white;
+    background: #f9f9f9;
   }
 
   .visit-section {
-    background: #f8f8f8;
+    background: white;
   }
 
   .heritage-section {
-    background: white;
+    background: #f9f9f9;
   }
 
   .zodiac-title,
@@ -491,24 +506,26 @@
 
   /* New Arrivals */
   .new-arrivals {
-    padding: 8rem 0;
-    background: #f8f8f8;
+    padding: 6rem 0;
+    background: white;
   }
 
   .section-title {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-family: var(--font-heading-family, 'Georgia', serif);
     font-weight: 400;
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     color: #333;
     letter-spacing: 0.05rem;
   }
 
   .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
   }
 
   .product-card {
@@ -571,14 +588,14 @@
 
   /* Newsletter Section */
   .newsletter-section {
-    padding: 8rem 0;
-    background: #333;
+    padding: 6rem 0;
+    background: #2a2a2a;
     color: white;
     text-align: center;
   }
 
   .newsletter-title {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-family: var(--font-heading-family, 'Georgia', serif);
     font-weight: 400;
     margin-bottom: 1rem;
@@ -586,19 +603,19 @@
   }
 
   .newsletter-subtitle {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-family: var(--font-heading-family, 'Georgia', serif);
     font-weight: 300;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     color: #ccc;
   }
 
   .newsletter-description {
-    font-size: 1.6rem;
-    line-height: 1.7;
-    margin-bottom: 3.5rem;
-    color: #aaa;
-    max-width: 600px;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    color: #bbb;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -654,8 +671,16 @@
   /* Mobile Responsiveness */
   @media screen and (max-width: 1024px) {
     .categories-grid {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 3rem;
+      gap: 2rem;
+    }
+    
+    .category-item {
+      width: 140px;
+    }
+    
+    .category-image {
+      width: 110px;
+      height: 110px;
     }
   }
 
@@ -663,10 +688,36 @@
     .hero-title {
       font-size: 3rem;
     }
+    
+    .hero-welcome {
+      font-size: 1rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.2rem;
+    }
+
+    .product-categories {
+      padding: 4rem 0;
+    }
 
     .categories-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
+      gap: 1.5rem;
+      justify-content: space-around;
+    }
+    
+    .category-item {
+      width: 120px;
+    }
+    
+    .category-image {
+      width: 90px;
+      height: 90px;
+      margin-bottom: 1rem;
+    }
+    
+    .category-title {
+      font-size: 1.2rem;
     }
 
     .zodiac-title,
@@ -706,16 +757,47 @@
     .hero-title {
       font-size: 2.5rem;
     }
+    
+    .hero-welcome {
+      font-size: 0.9rem;
+    }
+
+    .product-categories {
+      padding: 3rem 0;
+    }
 
     .categories-grid {
-      grid-template-columns: 1fr;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      max-width: 300px;
+      margin: 0 auto 3rem;
+    }
+    
+    .category-item {
+      width: 100%;
+      max-width: 200px;
+      display: flex;
+      align-items: center;
+      text-align: left;
+    }
+    
+    .category-image {
+      width: 70px;
+      height: 70px;
+      margin: 0 1rem 0 0;
+      flex-shrink: 0;
+    }
+    
+    .category-title {
+      font-size: 1.3rem;
+      margin: 0;
     }
 
     .products-grid {
       grid-template-columns: 1fr;
     }
 
-    .product-categories,
     .zodiac-section,
     .off-season-section,
     .gifts-section,
@@ -723,7 +805,11 @@
     .heritage-section,
     .new-arrivals,
     .newsletter-section {
-      padding: 4rem 0;
+      padding: 3rem 0;
+    }
+    
+    .container {
+      padding: 0 1.5rem;
     }
   }
 </style>
