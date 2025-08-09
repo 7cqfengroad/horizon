@@ -48,6 +48,7 @@
     "slide_status": "Slide {{ index }} of {{ length }}",
     "slideshow_next": "Next slide",
     "slideshow_pause": "Pause slideshow",
+    "refresh_page": "Choosing a selection results in a full page refresh.",
     "slideshow_play": "Play slideshow",
     "slideshow_previous": "Previous slide",
     "unit_price": "Unit price",
@@ -275,7 +276,55 @@
       "added_to_cart": "Added to cart",
       "add_to_cart_error": "Error adding to cart",
       "sold_out": "Sold out",
-      "unavailable": "Unavailable"
+      "unavailable": "Unavailable",
+      "price": {
+        "from_price_html": "From {{ price }}",
+        "regular_price": "Regular price",
+        "sale_price": "Sale price"
+      }
+    }
+  },
+  "sections": {
+    "collection_slider": {
+      "browse_collections": "Browse Collections",
+      "view_collection": "View Collection",
+      "no_products": "No products found",
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "product_slider": {
+      "no_products": "No products found",
+      "previous": "Previous",
+      "next": "Next",
+      "slide_indicators": "Slide indicators",
+      "go_to_slide": "Go to slide {{ number }}"
+    },
+    "instagram_feed": {
+      "view_post": "View Instagram post",
+      "follow_us": "Follow us on Instagram",
+      "no_posts": "No Instagram posts to display",
+      "visit_instagram": "Visit our Instagram"
+    }
+  },
+  "newsletter": {
+    "label": "Email",
+    "placeholder": "Enter your email address",
+    "button_label": "Subscribe",
+    "success": "Thank you for subscribing!"
+  },
+  "footer": {
+    "call_us": "Call us",
+    "email_us": "Email us",
+    "navigation": "Footer navigation"
+  },
+  "general": {
+    "navigation": {
+      "main": "Main navigation",
+      "mobile": "Mobile navigation",
+      "menu": "Menu"
+    },
+    "common": {
+      "close": "Close"
     }
   }
 }

@@ -8,72 +8,122 @@
 {%- enddoc -%}
 
 {%- liquid
-  assign show_unit_price = show_unit_price | default: false
-  assign show_sale_price_first = show_sale_price_first | default: false
-  assign selected_variant = product_resource.selected_or_first_available_variant
-  assign price = selected_variant.price
-  assign compare_at_price = selected_variant.compare_at_price
-
-  assign show_compare_price = false
-  if compare_at_price > price
-    assign show_compare_price = true
+  assign money_price = product.price | money
+  if settings.currency_code_enabled
+    assign money_price = product.price | money_with_currency
   endif
 
-  if product_resource == blank
-    assign price = 1999
+  if product.price_varies
+    assign money_price_min = product.price_min | money
+    if settings.currency_code_enabled
+      assign money_price_min = product.price_min | money_with_currency
+    endif
   endif
 
-  # Checks if product handle matches the closest product's handle (i.e. product page)
-  # and if the currency code is enabled for product pages
-  if product.handle == closest.product.handle and settings.currency_code_enabled_product_pages
-    assign price = price | money_with_currency
-    assign compare_at_price = compare_at_price | money_with_currency
+  assign money_price_max = product.price_max | money
+  if settings.currency_code_enabled
+    assign money_price_max = product.price_max | money_with_currency
+  endif
 
-    # Checks if product handle does not match the closest product's handle (i.e. product card)
-    # and if the currency code is enabled for product cards
-  elsif product.handle != closest.product.handle and settings.currency_code_enabled_product_cards
-    assign price = price | money_with_currency
-    assign compare_at_price = compare_at_price | money_with_currency
+  if product.compare_at_price > product.price
+    assign money_compare_price = product.compare_at_price | money
+    if settings.currency_code_enabled
+      assign money_compare_price = product.compare_at_price | money_with_currency
+    endif
+  endif
 
-  else
-    assign price = price | money
-    assign compare_at_price = compare_at_price | money
+  assign has_sale = false
+  if product.compare_at_price > product.price
+    assign has_sale = true
   endif
 -%}
 
-<div ref="priceContainer">
-  {% if show_sale_price_first == false and show_compare_price %}
-    <span role="group">
-      <span class="visually-hidden">{{ 'content.price_regular' | t }}&nbsp;</span>
-      <span class="compare-at-price">{{- compare_at_price -}}</span>
-    </span>
-  {% endif %}
+<div class="price">
+  {%- if product.price_varies -%}
+    <div class="price__container">
+      <span class="price__from">{{ 'products.product.price.from_price_html' | t: price: money_price_min }}</span>
+    </div>
+  {%- else -%}
+    <div class="price__container">
+      {%- if has_sale -%}
+        <span class="price__regular">
+          <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
+          <s class="price__compare">{{ money_compare_price }}</s>
+        </span>
+        <span class="price__sale">
+          <span class="visually-hidden">{{ 'products.product.price.sale_price' | t }}</span>
+          <span class="price__current">{{ money_price }}</span>
+        </span>
+      {%- else -%}
+        <span class="price__regular">
+          <span class="price__current">{{ money_price }}</span>
+        </span>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
 
-  {% if show_compare_price %}
-    <span role="group">
-      <span class="visually-hidden">{{ 'content.price_sale' | t }}&nbsp;</span>
-      <span class="price">{{ price | default: '&nbsp;' }}</span>
-    </span>
-  {% else %}
-    <span class="price">{{ price | default: '&nbsp;' }}</span>
-  {% endif %}
+  {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
+    <div class="price__unit">
+      {%- capture unit_price_base_unit -%}
+        {%- if product.selected_or_first_available_variant.unit_price_measurement.reference_value != 1 -%}
+          {{ product.selected_or_first_available_variant.unit_price_measurement.reference_value }}
+        {%- endif -%}
+        {{ product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}
+      {%- endcapture -%}
 
-  {% if show_sale_price_first == true and show_compare_price %}
-    <span role="group">
-      <span class="visually-hidden">{{ 'content.price_regular' | t }}&nbsp;</span>
-      <span class="compare-at-price">{{- compare_at_price -}}</span>
-    </span>
-  {% endif %}
-  {%- if selected_variant.unit_price and show_unit_price %}
-    {%- liquid
-      if product.handle == closest.product.handle and settings.currency_code_enabled_product_pages
-        assign unit_price = selected_variant.unit_price | money_with_currency
-      elsif product.handle != closest.product.handle and settings.currency_code_enabled_product_cards
-        assign unit_price = selected_variant.unit_price | money_with_currency
-      else
-        assign unit_price = selected_variant.unit_price | money
-      endif
-    -%}
-    {% render 'unit-price', price: unit_price, measurement: selected_variant.unit_price_measurement %}
+      {{ product.selected_or_first_available_variant.unit_price | money }}/{{ unit_price_base_unit }}
+    </div>
   {%- endif -%}
 </div>
+
+<style>
+  .price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .price__container {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .price__current {
+    font-weight: 500;
+    color: var(--color-base-text);
+  }
+
+  .price__compare {
+    color: rgba(var(--color-base-text), 0.6);
+    font-size: 0.9em;
+  }
+
+  .price__sale .price__current {
+    color: var(--color-base-accent-1);
+  }
+
+  .price__from {
+    font-weight: 400;
+    color: var(--color-base-text);
+  }
+
+  .price__unit {
+    font-size: 0.8em;
+    color: rgba(var(--color-base-text), 0.7);
+    margin-top: 0.25rem;
+  }
+
+  .visually-hidden {
+    position: absolute !important;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    word-wrap: normal !important;
+  }
+</style>

@@ -1,372 +1,613 @@
-<div class="section-background color-{{ section.settings.color_scheme }}"></div>
-<div
-  class="
-    section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}
-    {% if section.settings.section_height != "" %} {{ section.settings.section_height | prepend: "section--height-" }}{% endif %}
-  "
->
-  {% render 'background-media',
-    background_media: section.settings.background_media,
-    background_video: section.settings.video,
-    background_video_position: section.settings.video_position,
-    background_image: section.settings.background_image,
-    background_image_position: section.settings.background_image_position
-  %}
+{% doc %}
+  Footer Section
 
-  <div
-    class="
-      spacing-style
-      layout-panel-flex
-      layout-panel-flex--{{ section.settings.content_direction }}
-      section-content-wrapper
-      {% if section.settings.vertical_on_mobile %} mobile-column{% endif %}
-    "
-    style="
-      {% render 'layout-panel-style', settings: section.settings %}
-      {%  render 'spacing-style', settings: section.settings %}
-    "
-  >
-    {% content_for 'blocks' %}
+  Main site footer with logo, social links, contact info, navigation links,
+  and copyright information. Matches Verdura design with multi-column layout.
+
+  @param background_color {String} Footer background color
+  @param text_color {String} Footer text color
+  @param logo_image {Object} Footer logo image
+{% enddoc %}
+
+{% liquid
+  assign section_id = 'footer-' | append: section.id
+  assign background_color = section.settings.background_color
+  assign text_color = section.settings.text_color
+  assign logo_image = section.settings.logo_image
+  assign copyright_text = section.settings.copyright_text
+  assign website_credit_text = section.settings.website_credit_text
+  assign website_credit_url = section.settings.website_credit_url
+%}
+
+<footer id="{{ section_id }}" class="footer" role="contentinfo">
+  <div class="footer__wrapper">
+    <div class="page-width">
+      <div class="footer__inner">
+        
+        <!-- Left Content Area -->
+        <div class="footer__main-content">
+          <!-- Logo -->
+          {%- if logo_image or settings.logo -%}
+            <div class="footer__logo">
+              <a href="{{ routes.root_url }}" class="footer__logo-link">
+                {%- assign footer_logo = logo_image | default: settings.logo -%}
+                {{ footer_logo | image_url: width: 200 | image_tag:
+                   class: 'footer__logo-image',
+                   alt: shop.name,
+                   loading: 'lazy',
+                   width: footer_logo.width,
+                   height: footer_logo.height
+                }}
+              </a>
+            </div>
+          {%- else -%}
+            <div class="footer__logo">
+              <a href="{{ routes.root_url }}" class="footer__logo-link footer__logo-text">
+                {{ shop.name }}
+              </a>
+            </div>
+          {%- endif -%}
+
+          <!-- Social Links -->
+          {%- if section.blocks.size > 0 -%}
+            <div class="footer__social">
+              <ul class="footer__social-list" role="list">
+                {%- for block in section.blocks -%}
+                  {%- case block.type -%}
+                    {%- when 'social_link' -%}
+                      {%- liquid
+                        assign platform = block.settings.platform
+                        assign url = block.settings.url
+                        assign label = block.settings.label | default: platform
+                      -%}
+                      {%- if url != blank -%}
+                        <li class="footer__social-item">
+                          <a
+                            href="{{ url }}"
+                            class="footer__social-link"
+                            aria-label="{{ label | escape }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            {{ block.shopify_attributes }}
+                          >
+                            {%- render 'icon', icon: platform -%}
+                          </a>
+                        </li>
+                      {%- endif -%}
+                  {%- endcase -%}
+                {%- endfor -%}
+              </ul>
+            </div>
+          {%- endif -%}
+
+          <!-- Contact Information -->
+          {%- if section.settings.show_contact_info -%}
+            <div class="footer__contact">
+              <address class="footer__address">
+                {%- if section.settings.address != blank -%}
+                  <div class="footer__contact-item">
+                    {{ section.settings.address | newline_to_br }}
+                  </div>
+                {%- endif -%}
+                
+                {%- if section.settings.phone != blank -%}
+                  <div class="footer__contact-item">
+                    <span>{{ 'footer.call_us' | t }}: </span>
+                    <a href="tel:{{ section.settings.phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' | replace: '-', '' }}">
+                      {{ section.settings.phone }}
+                    </a>
+                  </div>
+                {%- endif -%}
+                
+                {%- if section.settings.email != blank -%}
+                  <div class="footer__contact-item">
+                    <span>{{ 'footer.email_us' | t }}: </span>
+                    <a href="mailto:{{ section.settings.email }}">
+                      {{ section.settings.email }}
+                    </a>
+                  </div>
+                {%- endif -%}
+              </address>
+            </div>
+          {%- endif -%}
+
+          <!-- Footer Links -->
+          {%- if section.settings.footer_menu != blank -%}
+            <nav class="footer__nav" aria-label="{{ 'footer.navigation' | t }}">
+              <ul class="footer__nav-list" role="list">
+                {%- for link in linklists[section.settings.footer_menu].links -%}
+                  <li class="footer__nav-item">
+                    <a href="{{ link.url }}" class="footer__nav-link">
+                      {{ link.title | escape }}
+                    </a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </nav>
+          {%- endif -%}
+        </div>
+
+        <!-- Right Content Area -->
+        <div class="footer__legal">
+          <!-- Copyright -->
+          {%- if copyright_text != blank -%}
+            <div class="footer__copyright">
+              <p>{{ copyright_text | escape }}</p>
+            </div>
+          {%- else -%}
+            <div class="footer__copyright">
+              <p>&copy; {{ 'now' | date: '%Y' }} {{ shop.name | escape }}</p>
+            </div>
+          {%- endif -%}
+
+          <!-- Website Credit -->
+          {%- if website_credit_text != blank -%}
+            <div class="footer__credit">
+              {%- if website_credit_url != blank -%}
+                <a href="{{ website_credit_url }}" target="_blank" rel="noopener noreferrer">
+                  {{ website_credit_text | escape }}
+                </a>
+              {%- else -%}
+                <span>{{ website_credit_text | escape }}</span>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        </div>
+
+      </div>
+    </div>
   </div>
-</div>
+</footer>
+
+{% style %}
+  #{{ section_id }} {
+    {%- if background_color != blank -%}
+      background-color: {{ background_color }};
+    {%- endif -%}
+    {%- if text_color != blank -%}
+      color: {{ text_color }};
+    {%- endif -%}
+  }
+
+  .footer {
+    padding: var(--spacing-sections-mobile) 0 2rem;
+    background-color: var(--color-base-background-3);
+    color: var(--color-base-text);
+    margin-top: auto;
+  }
+
+  .footer__wrapper {
+    width: 100%;
+  }
+
+  .footer__inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: flex-start;
+    min-height: 200px;
+  }
+
+  /* Left Main Content */
+  .footer__main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer__logo {
+    margin-bottom: 0;
+  }
+
+  .footer__logo-link {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .footer__logo-image {
+    max-height: 60px;
+    width: auto;
+    filter: brightness(0) invert(1);
+  }
+
+  .footer__logo-text {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: lowercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* Social Links */
+  .footer__social-list {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: inherit;
+    transition: color 0.2s ease, transform 0.2s ease;
+    text-decoration: none;
+  }
+
+  .footer__social-link svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer__social-link:hover {
+    color: var(--color-base-accent-1);
+    transform: translateY(-2px);
+  }
+
+  /* Contact Information */
+  .footer__contact {
+    font-style: normal;
+  }
+
+  .footer__address {
+    font-style: normal;
+  }
+
+  .footer__contact-item {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+
+  .footer__contact-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .footer__contact-item a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .footer__contact-item a:hover {
+    color: var(--color-base-accent-1);
+    text-decoration: underline;
+  }
+
+  /* Footer Navigation */
+  .footer__nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+  }
+
+  .footer__nav-link {
+    color: inherit;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+    display: inline-block;
+    padding: 0.25rem 0;
+  }
+
+  .footer__nav-link:hover {
+    color: var(--color-base-accent-1);
+    text-decoration: underline;
+  }
+
+  /* Right Legal Content */
+  .footer__legal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    gap: 1rem;
+    justify-self: end;
+  }
+
+  .footer__copyright,
+  .footer__credit {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .footer__copyright p {
+    margin: 0;
+  }
+
+  .footer__credit a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .footer__credit a:hover {
+    color: var(--color-base-accent-1);
+    text-decoration: underline;
+  }
+
+  /* Mobile Styles */
+  @media screen and (max-width: 749px) {
+    .footer {
+      padding: var(--spacing-sections-mobile) 0 1.5rem;
+    }
+
+    .footer__inner {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .footer__main-content {
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .footer__nav-list {
+      justify-content: center;
+    }
+
+    .footer__legal {
+      align-items: center;
+      text-align: center;
+      justify-self: auto;
+    }
+
+    .footer__social-list {
+      justify-content: center;
+    }
+  }
+
+  /* Tablet Styles */
+  @media screen and (min-width: 750px) and (max-width: 999px) {
+    .footer__inner {
+      gap: 2rem;
+    }
+  }
+
+  /* Desktop Styles */
+  @media screen and (min-width: 1000px) {
+    .footer {
+      padding: var(--spacing-sections-desktop) 0 3rem;
+    }
+
+    .footer__inner {
+      gap: 4rem;
+    }
+  }
+
+  /* Focus and accessibility */
+  .footer__logo-link:focus-visible,
+  .footer__social-link:focus-visible,
+  .footer__nav-link:focus-visible,
+  .footer__contact-item a:focus-visible,
+  .footer__credit a:focus-visible {
+    outline: 2px solid var(--color-base-accent-1);
+    outline-offset: 2px;
+  }
+
+  /* Prevent motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    .footer__social-link:hover {
+      transform: none;
+    }
+
+    .footer__social-link,
+    .footer__nav-link,
+    .footer__contact-item a,
+    .footer__credit a {
+      transition: none;
+    }
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: more) {
+    .footer {
+      border-top: 3px solid var(--color-base-text);
+    }
+  }
+
+  /* Dark mode considerations */
+  #{{ section_id }} .footer__logo-image {
+    {%- if background_color and background_color != '#000000' and background_color != '#ffffff' -%}
+      filter: none;
+    {%- endif -%}
+  }
+{% endstyle %}
 
 {% schema %}
 {
-  "name": "t:names.footer",
-  "class": "section-wrapper",
+  "name": "Footer",
   "tag": "footer",
-  "blocks": [
-    {
-      "type": "_divider"
-    },
-    {
-      "type": "@app"
-    },
-    {
-      "type": "button"
-    },
-    {
-      "type": "email-signup"
-    },
-    {
-      "type": "follow-on-shop"
-    },
-    {
-      "type": "footer-utilities"
-    },
-    {
-      "type": "group"
-    },
-    {
-      "type": "icon"
-    },
-    {
-      "type": "image"
-    },
-    {
-      "type": "menu"
-    },
-    {
-      "type": "payment-icons"
-    },
-    {
-      "type": "text"
-    },
-    {
-      "type": "logo"
-    },
-    {
-      "type": "jumbo-text"
-    }
-  ],
-  "enabled_on": {
-    "groups": ["footer"]
-  },
+  "class": "section",
   "settings": [
     {
       "type": "header",
-      "content": "t:content.layout"
-    },
-    {
-      "type": "select",
-      "id": "content_direction",
-      "label": "t:settings.direction",
-      "options": [
-        {
-          "value": "column",
-          "label": "t:options.vertical"
-        },
-        {
-          "value": "row",
-          "label": "t:options.horizontal"
-        }
-      ],
-      "default": "column"
-    },
-    {
-      "type": "checkbox",
-      "id": "vertical_on_mobile",
-      "label": "t:settings.vertical_on_mobile",
-      "default": true,
-      "visible_if": "{{ section.settings.content_direction == 'row' }}"
-    },
-    {
-      "type": "select",
-      "id": "horizontal_alignment",
-      "label": "t:settings.alignment",
-      "options": [
-        {
-          "value": "flex-start",
-          "label": "t:options.left"
-        },
-        {
-          "value": "center",
-          "label": "t:options.center"
-        },
-        {
-          "value": "flex-end",
-          "label": "t:options.right"
-        },
-        {
-          "value": "space-between",
-          "label": "t:options.space_between"
-        }
-      ],
-      "default": "flex-start",
-      "visible_if": "{{ section.settings.content_direction == 'row' }}"
-    },
-    {
-      "type": "select",
-      "id": "vertical_alignment",
-      "label": "t:settings.position",
-      "options": [
-        {
-          "value": "flex-start",
-          "label": "t:options.top"
-        },
-        {
-          "value": "center",
-          "label": "t:options.center"
-        },
-        {
-          "value": "flex-end",
-          "label": "t:options.bottom"
-        }
-      ],
-      "default": "center",
-      "visible_if": "{{ section.settings.content_direction == 'row' }}"
-    },
-    {
-      "type": "checkbox",
-      "id": "align_baseline",
-      "label": "t:settings.align_baseline",
-      "default": false,
-      "visible_if": "{{ section.settings.vertical_alignment == 'flex-end' }}"
-    },
-    {
-      "type": "select",
-      "id": "horizontal_alignment_flex_direction_column",
-      "label": "t:settings.alignment",
-      "options": [
-        {
-          "value": "flex-start",
-          "label": "t:options.left"
-        },
-        {
-          "value": "center",
-          "label": "t:options.center"
-        },
-        {
-          "value": "flex-end",
-          "label": "t:options.right"
-        }
-      ],
-      "default": "flex-start",
-      "visible_if": "{{ section.settings.content_direction != 'row' }}"
-    },
-    {
-      "type": "select",
-      "id": "vertical_alignment_flex_direction_column",
-      "label": "t:settings.position",
-      "options": [
-        {
-          "value": "flex-start",
-          "label": "t:options.top"
-        },
-        {
-          "value": "center",
-          "label": "t:options.center"
-        },
-        {
-          "value": "flex-end",
-          "label": "t:options.bottom"
-        },
-        {
-          "value": "space-between",
-          "label": "t:options.space_between"
-        }
-      ],
-      "default": "center",
-      "visible_if": "{{ section.settings.content_direction == 'column' }}"
-    },
-    {
-      "type": "range",
-      "id": "gap",
-      "label": "t:settings.gap",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 12
-    },
-    {
-      "type": "header",
-      "content": "t:content.size"
-    },
-    {
-      "type": "select",
-      "id": "section_width",
-      "label": "t:settings.width",
-      "options": [
-        {
-          "value": "page-width",
-          "label": "t:options.page"
-        },
-        {
-          "value": "full-width",
-          "label": "t:options.full"
-        }
-      ],
-      "default": "page-width"
-    },
-    {
-      "type": "select",
-      "id": "section_height",
-      "label": "t:settings.height",
-      "options": [
-        {
-          "value": "",
-          "label": "t:options.auto"
-        },
-        {
-          "value": "small",
-          "label": "t:options.small"
-        },
-        {
-          "value": "medium",
-          "label": "t:options.medium"
-        },
-        {
-          "value": "large",
-          "label": "t:options.large"
-        },
-        {
-          "value": "full-screen",
-          "label": "t:options.full_screen"
-        }
-      ],
-      "default": ""
-    },
-    {
-      "type": "header",
-      "content": "t:content.appearance"
-    },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:settings.color_scheme",
-      "default": "scheme-1"
-    },
-    {
-      "type": "select",
-      "id": "background_media",
-      "label": "t:settings.background_media",
-      "options": [
-        {
-          "value": "none",
-          "label": "t:options.none"
-        },
-        {
-          "value": "image",
-          "label": "t:options.image"
-        },
-        {
-          "value": "video",
-          "label": "t:options.video"
-        }
-      ],
-      "default": "none"
-    },
-    {
-      "type": "video",
-      "id": "video",
-      "label": "t:settings.video",
-      "visible_if": "{{ section.settings.background_media == 'video' }}"
-    },
-    {
-      "type": "select",
-      "id": "video_position",
-      "label": "t:settings.video_position",
-      "options": [
-        {
-          "value": "cover",
-          "label": "t:options.cover"
-        },
-        {
-          "value": "contain",
-          "label": "t:options.contain"
-        }
-      ],
-      "default": "cover",
-      "visible_if": "{{ section.settings.background_media == 'video' }}"
+      "content": "Logo"
     },
     {
       "type": "image_picker",
-      "id": "background_image",
-      "label": "t:settings.image",
-      "visible_if": "{{ section.settings.background_media == 'image' }}"
-    },
-    {
-      "type": "select",
-      "id": "background_image_position",
-      "label": "t:settings.image_position",
-      "options": [
-        {
-          "value": "cover",
-          "label": "t:options.cover"
-        },
-        {
-          "value": "fit",
-          "label": "t:options.fit"
-        }
-      ],
-      "default": "cover",
-      "visible_if": "{{ section.settings.background_media == 'image' }}"
+      "id": "logo_image",
+      "label": "Footer Logo",
+      "info": "Leave empty to use main site logo"
     },
     {
       "type": "header",
-      "content": "t:content.padding"
+      "content": "Contact Information"
     },
     {
-      "type": "range",
-      "id": "padding-block-start",
-      "label": "t:settings.top",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 0
+      "type": "checkbox",
+      "id": "show_contact_info",
+      "label": "Show contact information",
+      "default": true
     },
     {
-      "type": "range",
-      "id": "padding-block-end",
-      "label": "t:settings.bottom",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "px",
-      "default": 0
+      "type": "textarea",
+      "id": "address",
+      "label": "Address",
+      "default": "745 Fifth Avenue, Suite 1205\nNew York, NY 10151"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Phone Number",
+      "default": "+1 (212) 758-3388"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Email Address",
+      "default": "info@verdura.com"
+    },
+    {
+      "type": "header",
+      "content": "Navigation"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_menu",
+      "label": "Footer Menu",
+      "info": "Select a menu to display footer links"
+    },
+    {
+      "type": "header",
+      "content": "Legal"
+    },
+    {
+      "type": "text",
+      "id": "copyright_text",
+      "label": "Copyright Text",
+      "default": "Copyright © 2025 Verdura"
+    },
+    {
+      "type": "text",
+      "id": "website_credit_text",
+      "label": "Website Credit Text",
+      "default": "Website by The Beaux Arts"
+    },
+    {
+      "type": "url",
+      "id": "website_credit_url",
+      "label": "Website Credit URL",
+      "default": "https://www.thebeauxartsdigital.com/"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#262626"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
     }
-  ]
+  ],
+  "blocks": [
+    {
+      "type": "social_link",
+      "name": "Social Link",
+      "settings": [
+        {
+          "type": "select",
+          "id": "platform",
+          "label": "Platform",
+          "options": [
+            {
+              "value": "facebook",
+              "label": "Facebook"
+            },
+            {
+              "value": "instagram",
+              "label": "Instagram"
+            },
+            {
+              "value": "twitter",
+              "label": "Twitter"
+            },
+            {
+              "value": "youtube",
+              "label": "YouTube"
+            },
+            {
+              "value": "linkedin",
+              "label": "LinkedIn"
+            },
+            {
+              "value": "pinterest",
+              "label": "Pinterest"
+            },
+            {
+              "value": "tiktok",
+              "label": "TikTok"
+            }
+          ],
+          "default": "instagram"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "URL"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Aria Label",
+          "info": "Descriptive text for screen readers"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "settings": {
+      "show_contact_info": true,
+      "address": "745 Fifth Avenue, Suite 1205\nNew York, NY 10151",
+      "phone": "+1 (212) 758-3388",
+      "email": "info@verdura.com",
+      "copyright_text": "Copyright © 2025 Verdura",
+      "website_credit_text": "Website by The Beaux Arts",
+      "website_credit_url": "https://www.thebeauxartsdigital.com/",
+      "background_color": "#262626",
+      "text_color": "#ffffff"
+    },
+    "blocks": [
+      {
+        "type": "social_link",
+        "settings": {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/verdura/",
+          "label": "Follow us on Facebook"
+        }
+      },
+      {
+        "type": "social_link",
+        "settings": {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/verdurajewelry/",
+          "label": "Follow us on Instagram"
+        }
+      },
+      {
+        "type": "social_link",
+        "settings": {
+          "platform": "youtube",
+          "url": "https://youtube.com/@verdurajewelry",
+          "label": "Subscribe to our YouTube channel"
+        }
+      }
+    ]
+  }
 }
 {% endschema %}

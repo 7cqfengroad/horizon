@@ -1,0 +1,547 @@
+{% doc %}
+  Newsletter Signup Section
+
+  Newsletter subscription form with split layout design.
+  Left side: Large title, Right side: Form area.
+
+  @param shape_color {String} Decorative shape color
+  @param background_color {String} Section background color
+  @param title_color {String} Title text color
+{% enddoc %}
+
+{% liquid
+  assign section_id = 'newsletter-' | append: section.id
+  assign left_title = section.settings.left_title
+  assign form_title = section.settings.form_title
+  assign form_description = section.settings.form_description
+  assign placeholder_text = section.settings.placeholder_text
+  assign button_text = section.settings.button_text
+  assign success_message = section.settings.success_message
+  assign shape_color = section.settings.shape_color
+  assign background_color = section.settings.background_color
+  assign title_color = section.settings.title_color
+%}
+
+<section id="{{ section_id }}" class="newsletter">
+  <div class="newsletter__wrapper">
+    <div class="page-width">
+      <div class="newsletter__inner">
+        
+        <!-- Left Title Area -->
+        <div class="newsletter__title-area">
+          {%- if left_title != blank -%}
+            <h2 class="newsletter__main-title">{{ left_title | escape }}</h2>
+          {%- endif -%}
+        </div>
+
+        <!-- Right Form Area -->
+        <div class="newsletter__form-area">
+          {%- if form_title != blank -%}
+            <h3 class="newsletter__form-title">{{ form_title | escape }}</h3>
+          {%- endif -%}
+          
+          {%- if form_description != blank -%}
+            <div class="newsletter__description">
+              <p>{{ form_description | escape }}</p>
+            </div>
+          {%- endif -%}
+
+          {% form 'customer', class: 'newsletter__form', id: 'newsletter-form' %}
+            <input type="hidden" name="contact[tags]" value="newsletter">
+            
+            <div class="newsletter__form-fields">
+              <div class="newsletter__field">
+                <label for="newsletter-email-{{ section.id }}" class="visually-hidden">
+                  {{ 'newsletter.label' | t }}
+                </label>
+                <input
+                  id="newsletter-email-{{ section.id }}"
+                  type="email"
+                  name="contact[email]"
+                  class="newsletter__input"
+                  value="{{ form.email }}"
+                  placeholder="{{ placeholder_text | default: 'newsletter.placeholder' | t }}"
+                  aria-required="true"
+                  autocomplete="email"
+                  {% if form.errors %}
+                    aria-invalid="true"
+                    aria-describedby="newsletter-error-{{ section.id }}"
+                  {% endif %}
+                  required
+                >
+              </div>
+              
+              <button
+                type="submit"
+                class="btn btn--primary newsletter__submit"
+                name="commit"
+                aria-label="{{ button_text | default: 'newsletter.button_label' | t }}"
+              >
+                {{ button_text | default: 'newsletter.button_label' | t }}
+              </button>
+            </div>
+
+            {%- if form.errors -%}
+              <div id="newsletter-error-{{ section.id }}" class="newsletter__error" role="alert">
+                {{ form.errors.translated_fields.email | capitalize }}
+                {{ form.errors.messages.email }}
+              </div>
+            {%- endif -%}
+
+            {%- if form.posted_successfully? -%}
+              <div class="newsletter__success" role="status">
+                <div class="newsletter__success-content">
+                  <svg class="newsletter__success-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7.5 10L9.5 12L13 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                  <span>{{ success_message | default: 'newsletter.success' | t }}</span>
+                </div>
+              </div>
+            {%- endif -%}
+          {% endform %}
+        </div>
+
+      </div>
+    </div>
+    
+    {%- if shape_color != blank -%}
+      <div class="newsletter__shape" style="background-color: {{ shape_color }};"></div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% style %}
+  #{{ section_id }} {
+    {%- if background_color != blank -%}
+      background-color: {{ background_color }};
+    {%- endif -%}
+  }
+
+  #{{ section_id }} .newsletter__main-title {
+    {%- if title_color != blank -%}
+      color: {{ title_color }};
+    {%- endif -%}
+  }
+
+  .newsletter {
+    position: relative;
+    padding: var(--spacing-sections-mobile) 0;
+    overflow: hidden;
+  }
+
+  .newsletter__wrapper {
+    position: relative;
+  }
+
+  .newsletter__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    min-height: 400px;
+  }
+
+  /* Left Title Area */
+  .newsletter__title-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .newsletter__main-title {
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 0;
+    color: var(--color-base-text);
+    text-transform: lowercase;
+    letter-spacing: -0.02em;
+  }
+
+  /* Right Form Area */
+  .newsletter__form-area {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .newsletter__form-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: var(--color-base-text);
+  }
+
+  .newsletter__description {
+    margin-bottom: 2rem;
+    color: var(--color-base-text);
+    line-height: 1.6;
+  }
+
+  .newsletter__description p {
+    margin: 0;
+  }
+
+  /* Form Styles */
+  .newsletter__form {
+    width: 100%;
+  }
+
+  .newsletter__form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .newsletter__field {
+    flex: 1;
+  }
+
+  .newsletter__input {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border: 2px solid rgba(var(--color-base-text), 0.2);
+    border-radius: 4px;
+    background: var(--color-base-background-1);
+    color: var(--color-base-text);
+    font-size: 1rem;
+    line-height: 1.4;
+    transition: border-color 0.2s ease;
+  }
+
+  .newsletter__input:focus {
+    outline: none;
+    border-color: var(--color-base-accent-1);
+    box-shadow: 0 0 0 3px rgba(var(--color-base-accent-1), 0.1);
+  }
+
+  .newsletter__input::placeholder {
+    color: rgba(var(--color-base-text), 0.6);
+  }
+
+  .newsletter__input[aria-invalid="true"] {
+    border-color: #dc3545;
+  }
+
+  .newsletter__submit {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+  }
+
+  .newsletter__submit:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(var(--color-base-accent-1), 0.3);
+  }
+
+  /* Success and Error States */
+  .newsletter__success,
+  .newsletter__error {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+
+  .newsletter__success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+
+  .newsletter__success-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .newsletter__success-icon {
+    flex-shrink: 0;
+    color: #28a745;
+  }
+
+  .newsletter__error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  }
+
+  /* Decorative Shape */
+  .newsletter__shape {
+    position: absolute;
+    top: -20%;
+    left: -15%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    opacity: 0.05;
+    z-index: 0;
+  }
+
+  /* Mobile Styles */
+  @media screen and (max-width: 749px) {
+    .newsletter {
+      padding: var(--spacing-sections-mobile) 0;
+    }
+
+    .newsletter__inner {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      min-height: auto;
+    }
+
+    .newsletter__title-area {
+      order: 1;
+      padding: 1rem 0;
+    }
+
+    .newsletter__main-title {
+      font-size: clamp(2rem, 12vw, 3rem);
+    }
+
+    .newsletter__form-area {
+      order: 2;
+      padding: 1.5rem;
+    }
+
+    .newsletter__form-fields {
+      gap: 1rem;
+    }
+
+    .newsletter__shape {
+      width: 300px;
+      height: 300px;
+      top: -10%;
+      left: -25%;
+    }
+  }
+
+  /* Tablet Styles */
+  @media screen and (min-width: 750px) and (max-width: 999px) {
+    .newsletter__inner {
+      gap: 2rem;
+    }
+
+    .newsletter__main-title {
+      font-size: clamp(3rem, 6vw, 4rem);
+    }
+  }
+
+  /* Desktop Styles */
+  @media screen and (min-width: 1000px) {
+    .newsletter {
+      padding: var(--spacing-sections-desktop) 0;
+    }
+
+    .newsletter__inner {
+      gap: 6rem;
+    }
+
+    .newsletter__form-fields {
+      flex-direction: row;
+      align-items: flex-end;
+    }
+
+    .newsletter__submit {
+      width: auto;
+      padding: 1rem 2rem;
+      flex-shrink: 0;
+    }
+  }
+
+  /* Focus and accessibility */
+  .newsletter__input:focus-visible,
+  .newsletter__submit:focus-visible {
+    outline: 2px solid var(--color-base-accent-1);
+    outline-offset: 2px;
+  }
+
+  /* Prevent motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    .newsletter__submit:hover {
+      transform: none;
+    }
+
+    .newsletter__input,
+    .newsletter__submit {
+      transition: none;
+    }
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: more) {
+    .newsletter__input {
+      border-width: 3px;
+    }
+
+    .newsletter__form-area {
+      background: var(--color-base-background-1);
+      backdrop-filter: none;
+    }
+  }
+{% endstyle %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const newsletterForms = document.querySelectorAll('.newsletter__form');
+  
+  newsletterForms.forEach(form => {
+    const emailInput = form.querySelector('.newsletter__input');
+    const submitButton = form.querySelector('.newsletter__submit');
+    
+    if (!emailInput || !submitButton) return;
+    
+    // Real-time email validation
+    emailInput.addEventListener('input', function() {
+      const email = this.value.trim();
+      const isValid = email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      
+      this.setAttribute('aria-invalid', !isValid);
+      submitButton.disabled = !isValid;
+      
+      if (isValid) {
+        this.style.borderColor = '#28a745';
+      } else if (email) {
+        this.style.borderColor = '#dc3545';
+      } else {
+        this.style.borderColor = '';
+      }
+    });
+    
+    // Form submission handling
+    form.addEventListener('submit', function(e) {
+      const email = emailInput.value.trim();
+      
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        e.preventDefault();
+        emailInput.focus();
+        emailInput.setAttribute('aria-invalid', 'true');
+        return false;
+      }
+      
+      // Show loading state
+      submitButton.disabled = true;
+      submitButton.setAttribute('aria-busy', 'true');
+      submitButton.textContent = 'Submitting...';
+    });
+    
+    // Handle form success/error states
+    const successMessage = form.querySelector('.newsletter__success');
+    const errorMessage = form.querySelector('.newsletter__error');
+    
+    if (successMessage) {
+      // Auto-hide success message after 5 seconds
+      setTimeout(() => {
+        successMessage.style.opacity = '0';
+        setTimeout(() => successMessage.remove(), 300);
+      }, 5000);
+      
+      // Reset form
+      emailInput.value = '';
+      submitButton.disabled = false;
+      submitButton.removeAttribute('aria-busy');
+    }
+    
+    if (errorMessage) {
+      // Focus on input if there's an error
+      emailInput.focus();
+      emailInput.setAttribute('aria-invalid', 'true');
+    }
+  });
+});
+</script>
+
+{% schema %}
+{
+  "name": "Newsletter",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "left_title",
+      "label": "Main Title",
+      "default": "sign up now"
+    },
+    {
+      "type": "text",
+      "id": "form_title",
+      "label": "Form Title",
+      "default": "Welcome to Verdura"
+    },
+    {
+      "type": "textarea",
+      "id": "form_description",
+      "label": "Form Description",
+      "default": "Please join our email list for updates about new collections and special events"
+    },
+    {
+      "type": "text",
+      "id": "placeholder_text",
+      "label": "Email Placeholder",
+      "default": "Enter Email Address Here"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Submit"
+    },
+    {
+      "type": "text",
+      "id": "success_message",
+      "label": "Success Message",
+      "default": "Thank you!"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#f8f9fa"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "info": "Leave empty to use default color"
+    },
+    {
+      "type": "color",
+      "id": "shape_color",
+      "label": "Shape Color",
+      "info": "Decorative background shape",
+      "default": "#262626"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Newsletter",
+      "settings": {
+        "left_title": "sign up now",
+        "form_title": "Welcome to Verdura",
+        "form_description": "Please join our email list for updates about new collections and special events",
+        "placeholder_text": "Enter Email Address Here",
+        "button_text": "Submit",
+        "success_message": "Thank you!",
+        "background_color": "#f8f9fa",
+        "shape_color": "#262626"
+      }
+    }
+  ]
+}
+{% endschema %} 
