@@ -1,0 +1,188 @@
+/* Verdura Theme Specific Styles */
+
+/* CSS Variables for Verdura Theme */
+:root {
+  --duration-short: 100ms;
+  --duration-default: 200ms;
+  --duration-long: 500ms;
+  
+  /* Verdura specific colors */
+  --verdura-gold: #d4af37;
+  --verdura-dark-gold: #b8941f;
+  --verdura-light-gray: #f7f7f7;
+  --verdura-dark-gray: #262626;
+  --verdura-accent: #934c4c;
+}
+
+/* Typography enhancements for Verdura */
+.verdura-heading {
+  font-family: var(--font-heading-family);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: var(--font-heading-weight);
+}
+
+/* Header specific styles */
+.header {
+  position: relative;
+  z-index: 100;
+}
+
+.header__heading {
+  margin: 0;
+}
+
+.header__heading-logo {
+  max-width: 15rem;
+  height: auto;
+}
+
+.header__icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.4rem;
+  height: 4.4rem;
+  color: rgba(var(--color-base-text), 0.75);
+  text-decoration: none;
+}
+
+.header__icon:hover {
+  color: rgba(var(--color-base-text), 1);
+}
+
+.header__icon .icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Cart count bubble */
+.cart-count-bubble {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  background-color: rgb(var(--color-base-accent-1));
+  color: rgb(var(--color-base-solid-button-labels));
+  border-radius: 50%;
+  width: 1.6rem;
+  height: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* Section specific styles */
+.section-header {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+/* Card styles */
+.card {
+  position: relative;
+  border-radius: var(--media-radius);
+  text-decoration: none;
+  color: inherit;
+  border: var(--media-border-width) solid rgba(var(--color-base-text), var(--media-border-opacity));
+  box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-base-text), var(--media-shadow-opacity));
+}
+
+.card--standard {
+  background-color: transparent;
+}
+
+.card--media .card__inner {
+  border-radius: calc(var(--media-radius) - var(--media-border-width));
+}
+
+.card__content {
+  padding: 1.5rem;
+}
+
+.card__information > * + * {
+  margin-top: 0.5rem;
+}
+
+.card__heading {
+  margin: 0;
+  word-break: break-word;
+}
+
+.card__heading a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card__heading a:hover {
+  color: rgba(var(--color-base-text), 0.8);
+}
+
+/* Price styles */
+.price {
+  display: flex;
+  align-items: baseline;
+  font-weight: 400;
+}
+
+.price__regular {
+  font-size: 1.3rem;
+}
+
+.price__sale {
+  display: flex;
+  flex-direction: column;
+}
+
+.price__sale .price-item--regular {
+  font-size: 1.1rem;
+  opacity: 0.7;
+}
+
+.price-item--sale {
+  color: rgb(var(--color-base-accent-1));
+}
+
+/* Button enhancements */
+.button {
+  cursor: pointer;
+  transition: all var(--duration-default) ease;
+}
+
+.button:hover:not([disabled]) {
+  transform: translateY(-0.1rem);
+}
+
+/* Media queries for responsive design */
+@media screen and (min-width: 750px) {
+  .header__heading-logo {
+    max-width: 20rem;
+  }
+  
+  .header__icons {
+    gap: 1.5rem;
+  }
+  
+  .card__content {
+    padding: 2rem;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .header {
+    padding: 1rem 0;
+  }
+  
+  .header__heading-logo {
+    max-width: 25rem;
+  }
+} 

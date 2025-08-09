@@ -1,0 +1,391 @@
+{{ 'section-collection-slider.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'collection-slider.js' | asset_url }}" defer="defer"></script>
+
+<div class="collection-slider color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width">
+    <div class="collection-slider__wrapper">
+      {%- if section.settings.title != blank -%}
+        <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
+          <h2 id="SectionHeading-{{ section.id }}" class="collection-list-title inline-richtext {{ section.settings.heading_size }}">
+            {{ section.settings.title }}
+          </h2>
+        </div>
+      {%- endif -%}
+
+      <div class="collection-slider__content">
+        <!-- Collection Navigation -->
+        <nav class="collection-slider__nav">
+          <ul class="collection-slider__nav-list" role="tablist">
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when 'collection' -%}
+                  {%- liquid
+                    assign collection = collections[block.settings.collection]
+                    assign collection_name = block.settings.collection_name | default: collection.title
+                  -%}
+                  <li class="collection-slider__nav-item" {{ block.shopify_attributes }}>
+                    <button 
+                      class="collection-slider__nav-button{% if forloop.first %} collection-slider__nav-button--active{% endif %}"
+                      data-collection-tab="{{ forloop.index0 }}"
+                      role="tab"
+                      aria-controls="collection-panel-{{ section.id }}-{{ forloop.index0 }}"
+                      aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+                      tabindex="{% if forloop.first %}0{% else %}-1{% endif %}"
+                    >
+                      {{ collection_name }}
+                    </button>
+                  </li>
+              {%- endcase -%}
+            {%- endfor -%}
+          </ul>
+        </nav>
+
+        <!-- Collection Content -->
+        <div class="collection-slider__panels">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'collection' -%}
+                {%- liquid
+                  assign collection = collections[block.settings.collection]
+                  assign products_to_display = section.settings.products_to_show | times: 1
+                  assign more_in_collection = true
+                  assign products_to_display = section.settings.products_to_show | times: 1
+                  if collection.products_count <= section.settings.products_to_show
+                    assign more_in_collection = false
+                    assign products_to_display = collection.products_count
+                  endif
+                -%}
+                <div 
+                  class="collection-slider__panel{% if forloop.first %} collection-slider__panel--active{% endif %}"
+                  id="collection-panel-{{ section.id }}-{{ forloop.index0 }}"
+                  role="tabpanel"
+                  aria-labelledby="collection-tab-{{ forloop.index0 }}"
+                  tabindex="0"
+                  {{ block.shopify_attributes }}
+                >
+                  {%- if collection != blank and collection.products.size > 0 -%}
+                    <slider-component class="slider-mobile-gutter{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if section.settings.show_desktop_slider == false %} slider-component-desktop-columns{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+                      <ul class="collection-slider__grid contains-card contains-card--product{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if products_to_display > section.settings.columns_desktop %} grid--peek{% endif %} collection-slider__grid--mobile-slider"
+                        id="Slider-{{ section.id }}-{{ forloop.index0 }}"
+                        role="list"
+                        aria-label="{{ 'general.slider.of' | t: current: '#1', total: '#2' | replace: '#1', '1' | replace: '#2', products_to_display }}"
+                      >
+                        {%- for product in collection.products limit: products_to_display -%}
+                          <li id="Slide-{{ section.id }}-{{ forloop.index0 }}-{{ forloop.index }}" 
+                              class="collection-slider__slide grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                              {% if settings.animations_reveal_on_scroll %}
+                                data-cascade
+                                style="--animation-order: {{ forloop.index }};"
+                              {% endif %}
+                          >
+                            {% render 'card-product',
+                              card_product: product,
+                              media_aspect_ratio: section.settings.image_ratio,
+                              image_shape: section.settings.image_shape,
+                              show_secondary_image: section.settings.show_secondary_image,
+                              show_vendor: section.settings.show_vendor,
+                              show_rating: section.settings.show_rating,
+                              lazy_load: lazy_load,
+                              show_quick_add: section.settings.enable_quick_add,
+                              section_id: section.id
+                            %}
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                      {%- if section.settings.show_desktop_slider and products_to_display > section.settings.columns_desktop -%}
+                        <div class="slider-buttons no-js-hidden">
+                          <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-caret' %}</button>
+                          <div class="slider-counter caption">
+                            <span class="slider-counter--current">1</span>
+                            <span aria-hidden="true"> / </span>
+                            <span class="slider-counter--total">{{ products_to_display }}</span>
+                          </div>
+                          <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-caret' %}</button>
+                        </div>
+                      {%- endif -%}
+                    </slider-component>
+
+                    {%- if more_in_collection and block.settings.show_view_all -%}
+                      <div class="center collection-list-view-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+                        <a href="{{ collection.url }}"
+                          class="{% if block.settings.view_all_style == 'link' %}link underlined-link{% elsif block.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}"
+                          aria-label="{{ 'sections.collection_list.view_all_label' | t: collection_name: collection.title }}"
+                        >
+                          {{ 'sections.collection_list.view_all' | t }}
+                        </a>
+                      </div>
+                    {%- endif -%}
+                  {%- else -%}
+                    <div class="collection-slider__empty center">
+                      <p>{{ 'sections.collection_list.empty' | t }}</p>
+                    </div>
+                  {%- endif -%}
+                </div>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collection Slider",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "Collections",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Small"
+        },
+        {
+          "value": "h1",
+          "label": "Medium"
+        },
+        {
+          "value": "h0",
+          "label": "Large"
+        }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "Adapt to image"
+        },
+        {
+          "value": "portrait",
+          "label": "Portrait"
+        },
+        {
+          "value": "square",
+          "label": "Square"
+        }
+      ],
+      "default": "adapt",
+      "label": "Image ratio"
+    },
+    {
+      "type": "select",
+      "id": "columns_desktop",
+      "options": [
+        {
+          "value": "1",
+          "label": "1 column"
+        },
+        {
+          "value": "2",
+          "label": "2 columns"
+        },
+        {
+          "value": "3",
+          "label": "3 columns"
+        },
+        {
+          "value": "4",
+          "label": "4 columns"
+        },
+        {
+          "value": "5",
+          "label": "5 columns"
+        }
+      ],
+      "default": "4",
+      "label": "Number of columns on desktop"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "Accent 1"
+        },
+        {
+          "value": "accent-2",
+          "label": "Accent 2"
+        },
+        {
+          "value": "background-1",
+          "label": "Background 1"
+        },
+        {
+          "value": "background-2",
+          "label": "Background 2"
+        },
+        {
+          "value": "inverse",
+          "label": "Text on dark backgrounds"
+        }
+      ],
+      "default": "background-1",
+      "label": "Color scheme"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "default": false,
+      "label": "Show second product image on hover"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "default": false,
+      "label": "Show product vendor"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "default": false,
+      "label": "Show product rating",
+      "info": "To display a rating, add a product rating app. [Learn more](https://help.shopify.com/manual/online-store/themes/theme-structure/page-types#product-page)"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_quick_add",
+      "default": false,
+      "label": "Enable Quick Add"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 2,
+      "max": 25,
+      "step": 1,
+      "default": 4,
+      "label": "Maximum products to show"
+    },
+    {
+      "type": "range",
+      "id": "columns_mobile",
+      "min": 1,
+      "max": 2,
+      "step": 1,
+      "default": 2,
+      "label": "Number of columns on mobile"
+    },
+    {
+      "type": "checkbox",
+      "id": "swipe_on_mobile",
+      "default": false,
+      "label": "Enable swipe on mobile"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_desktop_slider",
+      "default": false,
+      "label": "Enable slider on desktop"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "default": false,
+      "label": "Make section full width"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "collection_name",
+          "label": "Collection name override",
+          "info": "Leave blank to use collection title"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_view_all",
+          "default": true,
+          "label": "Show 'View all' button"
+        },
+        {
+          "type": "select",
+          "id": "view_all_style",
+          "label": "'View all' button style",
+          "options": [
+            {
+              "value": "link",
+              "label": "Link"
+            },
+            {
+              "value": "outline",
+              "label": "Outline"
+            },
+            {
+              "value": "solid",
+              "label": "Solid"
+            }
+          ],
+          "default": "solid"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Slider",
+      "blocks": [
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %} 

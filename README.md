@@ -1,94 +1,217 @@
-# Horizon
+# Verdura Shopify 主题
 
-[Getting started](#getting-started) |
-[Staying up to date with Horizon changes](#staying-up-to-date-with-horizon-changes) |
-[Developer tools](#developer-tools) |
-[Contributing](#contributing) |
-[Code of conduct](#code-of-conduct) |
-[Theme Store submission](#theme-store-submission) |
-[License](#license)
+基于 Verdura.com 网站设计的 Shopify 主题实现。
 
-Horizon is the flagship of a new generation of first party Shopify themes. It incorporates the latest Liquid Storefronts features, including [theme blocks](https://shopify.dev/docs/storefronts/themes/architecture/blocks/theme-blocks/quick-start?framework=liquid).
+## 项目概述
 
-- **Web-native in its purest form:** Themes run on the [evergreen web](https://www.w3.org/2001/tag/doc/evergreen-web/). We leverage the latest web browsers to their fullest, while maintaining support for the older ones through progressive enhancement—not polyfills.
-- **Lean, fast, and reliable:** Functionality and design defaults to “no” until it meets this requirement. Code ships on quality. Themes must be built with purpose. They shouldn’t support each and every feature in Shopify.
-- **Server-rendered:** HTML must be rendered by Shopify servers using Liquid. Business logic and platform primitives such as translations and money formatting don’t belong on the client. Async and on-demand rendering of parts of the page is OK, but we do it sparingly as a progressive enhancement.
-- **Functional, not pixel-perfect:** The Web doesn’t require each page to be rendered pixel-perfect by each browser engine. Using semantic markup, progressive enhancement, and clever design, we ensure that themes remain functional regardless of the browser.
+这是一个根据 Verdura 珠宝网站（https://verdura.com）的设计和功能需求，从零开始构建的 Shopify 主题。该主题复现了原网站的主要设计元素、布局结构和用户体验。
 
-## Getting started
+## 已实现的功能
 
-We recommend using the Skeleton Theme as a starting point for theme development. [Learn more on Shopify.dev](https://shopify.dev/themes/getting-started/create).
+### 🏗️ 基础架构
+- ✅ 主题布局文件 (`layout/theme.liquid`)
+- ✅ 基础CSS样式系统 (`assets/base.css`, `assets/verdura.css`)
+- ✅ 全局JavaScript功能 (`assets/global.js`)
+- ✅ 主题设置配置 (`config/settings_schema.json`)
+- ✅ 多语言支持 (`locales/en.default.json`)
 
-> If you're building a theme for the Shopify Theme Store, then you can use Horizon as a starting point. However, the theme that you submit needs to be [substantively different from Horizon](https://shopify.dev/themes/store/requirements#uniqueness) so that it provides added value for merchants. Learn about the [theme developer tools](https://shopify.dev/docs/storefronts/themes/tools).
+### 📱 核心组件
+- ✅ **Header导航** (`sections/header.liquid`)
+  - 响应式导航菜单
+  - 购物车图标和计数
+  - 搜索功能
+  - 移动端汉堡菜单
 
-Please note that the main branch may include code for features not yet released. The "stable" version of Horizon is available in the theme store.
+- ✅ **Hero视频区** (`sections/hero-video.liquid`)
+  - 全屏视频背景
+  - 文字覆盖层
+  - 桌面/移动端不同视频支持
 
-## Staying up to date with Horizon changes
+- ✅ **产品分类滑块** (`sections/collection-slider.liquid`)
+  - 左侧分类导航
+  - 右侧产品展示滑块
+  - 支持多个collection展示
 
-Say you're building a new theme off Horizon but you still want to be able to pull in the latest changes, you can add a remote `upstream` pointing to this Horizon repository.
+- ✅ **图文组合** (`sections/image-with-text.liquid`)
+  - 灵活的图文布局
+  - 支持双图片展示
+  - 用于Zodiac、Very Verdura等区域
 
-1. Navigate to your local theme folder.
-2. Verify the list of remotes and validate that you have both an `origin` and `upstream`:
+### 🛍️ 产品展示
+- ✅ **产品卡片** (`snippets/card-product.liquid`)
+  - 产品图片展示
+  - 价格信息
+  - 悬停效果
+  - 快速添加购物车功能
 
-```sh
-git remote -v
+- ✅ **价格显示** (`snippets/price.liquid`)
+  - 常规价格和促销价格
+  - 货币格式化
+  - 促销标识
+
+### 🔧 工具组件
+- ✅ **图标系统** 
+  - 购物车图标 (`snippets/icon-cart.liquid`)
+  - 箭头图标 (`snippets/icon-caret.liquid`)
+- ✅ **Meta标签** (`snippets/meta-tags.liquid`)
+- ✅ **购物车通知** (`snippets/cart-notification.liquid`)
+
+### 📄 模板
+- ✅ **首页模板** (`templates/index.json`)
+  - 配置了所有主要sections
+  - 按Verdura网站结构排列
+
+## 技术特性
+
+### 🎨 设计系统
+- **CSS变量系统**: 统一的颜色、间距、字体管理
+- **响应式设计**: 适配桌面、平板、移动端
+- **Flexbox/Grid布局**: 现代CSS布局技术
+- **色彩方案**: 支持多种配色方案切换
+
+### ⚡ 性能优化
+- **图片优化**: 响应式图片加载
+- **延迟加载**: 图片和视频懒加载
+- **CSS压缩**: 优化样式文件大小
+- **JavaScript模块化**: 组件化JS架构
+
+### ♿ 无障碍访问
+- **语义化HTML**: 正确的HTML结构
+- **ARIA标签**: 屏幕阅读器支持
+- **键盘导航**: 完整的键盘操作支持
+- **焦点管理**: 清晰的焦点指示
+
+### 🔧 Shopify集成
+- **Liquid模板**: 完整的Shopify Liquid支持
+- **动态sections**: 可在主题编辑器中配置
+- **产品变体**: 支持产品选项和变体
+- **购物车功能**: 完整的购物车集成
+
+## 文件结构
+
+```
+horizon/
+├── layout/
+│   └── theme.liquid           # 主布局文件
+├── sections/
+│   ├── header.liquid         # 头部导航
+│   ├── hero-video.liquid     # 英雄视频区
+│   ├── collection-slider.liquid  # 产品分类滑块
+│   └── image-with-text.liquid    # 图文组合
+├── snippets/
+│   ├── card-product.liquid   # 产品卡片
+│   ├── price.liquid         # 价格组件
+│   ├── meta-tags.liquid     # SEO标签
+│   └── icon-*.liquid        # 图标组件
+├── assets/
+│   ├── base.css            # 基础样式
+│   ├── verdura.css         # 主题样式
+│   └── global.js           # 全局脚本
+├── templates/
+│   └── index.json          # 首页模板
+├── config/
+│   └── settings_schema.json # 主题设置
+└── locales/
+    └── en.default.json     # 英语翻译
 ```
 
-3. If you don't see an `upstream`, you can add one that points to Shopify's Horizon repository:
+## 部署到Shopify
 
-```sh
-git remote add upstream https://github.com/Shopify/horizon.git
-```
+### 1. 准备工作
+确保你有：
+- Shopify商店管理员权限
+- Shopify CLI工具（可选，推荐）
 
-4. Pull in the latest Horizon changes into your repository:
+### 2. 上传主题
 
-```sh
-git fetch upstream
-git pull upstream main
-```
+#### 方式一：通过Shopify管理后台
+1. 将所有文件打包为ZIP文件
+2. 登录Shopify管理后台
+3. 进入 "在线商店" > "主题"
+4. 点击 "上传主题"
+5. 选择ZIP文件上传
 
-## Developer tools
-
-There are a number of really useful tools that the Shopify Themes team uses during development. Horizon is already set up to work with these tools.
-
-### Shopify CLI
-
-[Shopify CLI](https://shopify.dev/docs/storefronts/themes/tools/cli) helps you build Shopify themes faster and is used to automate and enhance your local development workflow. It comes bundled with a suite of commands for developing Shopify themes—everything from working with themes on a Shopify store (e.g. creating, publishing, deleting themes) or launching a development server for local theme development.
-
-You can follow this [quick start guide for theme developers](https://shopify.dev/docs/themes/tools/cli) to get started.
-
-### Theme Check
-
-We recommend using [Theme Check](https://github.com/shopify/theme-check) as a way to validate and lint your Shopify themes.
-
-We've added Theme Check to Horizon's [list of VS Code extensions](/.vscode/extensions.json) so if you're using Visual Studio Code as your code editor of choice, you'll be prompted to install the [Theme Check VS Code](https://marketplace.visualstudio.com/items?itemName=Shopify.theme-check-vscode) extension upon opening VS Code after you've forked and cloned Horizon.
-
-You can also run it from a terminal with the following Shopify CLI command:
-
+#### 方式二：通过Shopify CLI（推荐）
 ```bash
-shopify theme check
+# 安装Shopify CLI
+npm install -g @shopify/cli @shopify/theme
+
+# 登录Shopify
+shopify auth login
+
+# 推送主题到商店
+shopify theme push
 ```
 
-You can follow the [theme check documentation](https://shopify.dev/docs/storefronts/themes/tools/theme-check) for more details.
+### 3. 配置主题
+1. 在主题列表中找到上传的主题
+2. 点击 "自定义" 进入主题编辑器
+3. 配置各section的内容和设置
+4. 上传产品图片和视频
+5. 设置导航菜单
+6. 发布主题
 
-### Continuous Integration
+### 4. 内容配置
 
-Horizon uses [GitHub Actions](https://github.com/features/actions) to maintain the quality of the theme. [This is a starting point](https://github.com/Shopify/horizon/blob/main/.github/workflows/ci.yml) and what we suggest to use in order to ensure you're building better themes. Feel free to build off of it!
+#### 必需设置：
+- **Logo**: 在主题设置中上传品牌Logo
+- **导航菜单**: 创建主导航菜单
+- **产品集合**: 创建对应的product collections
+- **产品**: 添加产品和产品图片
+- **页面**: 创建必要的页面（联系我们、关于我们等）
 
-#### Shopify/theme-check-action
+#### 推荐设置：
+- **颜色配色**: 调整为Verdura品牌色
+- **字体**: 选择合适的品牌字体
+- **社交媒体**: 配置社交媒体链接
+- **SEO设置**: 配置元标题和描述
 
-Horizon runs [Theme Check](#Theme-Check) on every commit via [Shopify/theme-check-action](https://github.com/Shopify/theme-check-action).
+## 后续开发计划
 
-## Contributing
+### ✅ 新增完成功能
+- ✅ **新品展示滑块** (`sections/product-slider.liquid`)
+- ✅ **Newsletter订阅** (`sections/newsletter.liquid`)
+- ✅ **Instagram展示** (`sections/instagram-feed.liquid`)
+- ✅ **Footer页脚** (`sections/footer.liquid`)
+- ✅ **三格布局** (`sections/three-square-layout.liquid`) - 用于Off-Season Collection
 
-We are not accepting contributions to Horizon at this time.
+**新增组件和功能：**
+- ✅ **社交媒体图标** (Facebook, Instagram, YouTube icons)
+- ✅ **成功图标** (Newsletter成功状态显示)
+- ✅ **表单验证** (Newsletter表单前端验证)
+- ✅ **产品滑块交互** (自动播放、导航、响应式)
+- ✅ **主题JavaScript** (`assets/verdura.js` - 工具函数和初始化)
+- ✅ **翻译支持** (Footer、Newsletter、Slider相关翻译键)
+- ✅ **首页模板更新** (包含所有新sections的配置)
 
-## Theme Store submission
+### 🎯 功能增强
+- 产品搜索和筛选
+- 用户账户页面
+- 购物车页面优化
+- 产品详情页
+- 集合页面模板
+- 博客模板
 
-The [Shopify Theme Store](https://themes.shopify.com/) is the place where Shopify merchants find the themes that they'll use to showcase and support their business. As a theme partner, you can create themes for the Shopify Theme Store and reach an international audience of an ever-growing number of entrepreneurs.
+### 📱 移动端优化
+- 移动端导航优化
+- 触摸手势支持
+- 移动端视频优化
+- 性能进一步优化
 
-Ensure that you follow the list of [theme store requirements](https://shopify.dev/themes/store/requirements) if you're interested in becoming a [Shopify Theme Partner](https://themes.shopify.com/services/themes/guidelines) and building themes for the Shopify platform.
+## 技术支持
 
-## License
+如需技术支持或有问题咨询，请查看：
+- [Shopify主题开发文档](https://shopify.dev/themes)
+- [Liquid模板语言文档](https://shopify.github.io/liquid/)
+- 项目Issues页面
 
-Copyright (c) 2025-present Shopify Inc. See [LICENSE](/LICENSE.md) for further details.
+## 版本信息
+
+- **版本**: 1.0.0
+- **创建日期**: 2024年
+- **Shopify兼容性**: Shopify 2.0主题
+- **浏览器支持**: 现代浏览器 (Chrome, Firefox, Safari, Edge)
+
+---
+
+基于 Verdura 网站分析文档构建，保持了原网站的设计精髓和用户体验。

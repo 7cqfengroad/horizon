@@ -1,0 +1,476 @@
+{
+  "sections": {
+    "hero_video": {
+      "type": "hero-video",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Heritage of Style",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Explore the Collection</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "/collections/all",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image": "",
+        "video": "",
+        "video_url": "",
+        "video_mobile": "",
+        "image_behavior": "none",
+        "full_width": true,
+        "color_scheme": "inverse",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "collection_slider": {
+      "type": "collection-slider",
+      "blocks": {
+        "bracelets": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_name": "Bracelets",
+            "show_view_all": true,
+            "view_all_style": "solid"
+          }
+        },
+        "earclips": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_name": "Earclips",
+            "show_view_all": true,
+            "view_all_style": "solid"
+          }
+        },
+        "cuffs": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_name": "Cuffs",
+            "show_view_all": true,
+            "view_all_style": "solid"
+          }
+        },
+        "rings": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_name": "Rings",
+            "show_view_all": true,
+            "view_all_style": "solid"
+          }
+        },
+        "necklaces": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_name": "Necklaces",
+            "show_view_all": true,
+            "view_all_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "bracelets",
+        "earclips",
+        "cuffs",
+        "rings",
+        "necklaces"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "products_to_show": 4,
+        "columns_mobile": 2,
+        "swipe_on_mobile": true,
+        "show_desktop_slider": false,
+        "full_width": false,
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "zodiac_section": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Zodiac",
+            "heading_size": "h1"
+          }
+        },
+        "caption": {
+          "type": "caption",
+          "settings": {
+            "caption": "Pendant Necklaces",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Using archival postcards Fulco di Verdura purchased at the Museum of Natural History, Verdura sets diamonds as stars and engraves constellations in gold</p>",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "View Collection",
+            "button_link": "/collections/zodiac-pendant-necklaces",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "caption",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image": "",
+        "image_2": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "image_behavior": "none",
+        "color_scheme": "background-2",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "very_verdura_section": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Very Verdura",
+            "heading_size": "h1"
+          }
+        },
+        "caption": {
+          "type": "caption",
+          "settings": {
+            "caption": "Gifts Under $20,000",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A collection of pieces perfect for gifting and receiving</p>",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop",
+            "button_link": "/collections/very-verdura-gifts-under-15-000",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "caption",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image": "",
+        "image_2": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "image_behavior": "none",
+        "color_scheme": "background-2",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "visit_gallery_section": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Visit",
+            "heading_size": "h1"
+          }
+        },
+        "caption": {
+          "type": "caption",
+          "settings": {
+            "caption": "The Gallery",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Verdura gallery is open 10 AM – 5 PM, Monday – Friday. Arrange your visit below</p>",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Arrange Visit",
+            "button_link": "/pages/contact",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "caption",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image": "",
+        "image_2": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "image_behavior": "none",
+        "color_scheme": "background-1",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "heritage_section": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Heritage",
+            "heading_size": "h1"
+          }
+        },
+        "caption": {
+          "type": "caption",
+          "settings": {
+            "caption": "About Fulco Di Verdura",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Born into Sicilian aristocracy in 1898, Verdura's founder, Duke Fulco di Verdura, began his extraordinary career in Paris as a designer for Coco Chanel. After eight years with Chanel where he, most notably, created the Maltese Cross cuffs that became his signature, Verdura followed his passion for design to America in 1934.</p>",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Discover our Heritage",
+            "button_link": "/pages/the-story",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "caption",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image": "",
+        "image_2": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "image_behavior": "none",
+        "color_scheme": "background-1",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "off_season_collection": {
+      "type": "three-square-layout",
+      "blocks": {
+        "off_season_heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Off-Season Collection"
+          }
+        },
+        "off_season_text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are delighted to introduce the Off-Season Collection - over a dozen new archival pieces that we feel captures this paradox of American style. These bangles, lariats, hoops and pendants are meant to be as relevant to your wardrobe in high season as well as off season, whether you don them for an audience or a solo stroll down an empty beach.</p>"
+          }
+        },
+        "off_season_button": {
+          "type": "button",
+          "settings": {
+            "button_label": "View",
+            "button_link": "/collections/off-season-collection"
+          }
+        }
+      },
+      "block_order": ["off_season_heading", "off_season_text", "off_season_button"],
+      "settings": {
+        "left_media_type": "video",
+        "left_video": "",
+        "left_video_poster": "",
+        "right_image_1": "",
+        "right_image_2": "",
+        "shape_color": "#934c4c",
+        "color_scheme": "scheme-1",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "new_arrivals": {
+      "type": "product-slider",
+      "settings": {
+        "heading": "New Arrivals",
+        "collection": "",
+        "collection_link": true,
+        "products_to_show": 8,
+        "show_vendor": false,
+        "show_price": true,
+        "show_compare_at": true,
+        "show_quick_add": false,
+        "columns_desktop": 4,
+        "columns_tablet": 3,
+        "columns_mobile": 2,
+        "autoplay": false,
+        "slide_speed": 5,
+        "show_dots": true,
+        "color_scheme": "scheme-1",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "left_title": "Sign up now",
+        "form_title": "Welcome to Verdura",
+        "form_description": "Please join our email list for updates about new collections and special events",
+        "placeholder_text": "Enter Email Address Here",
+        "button_text": "Submit",
+        "success_message": "Thank you!",
+        "shape_color": "#262626",
+        "text_color": "#ffffff",
+        "background_color": "#262626",
+        "color_scheme": "scheme-1",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "instagram_feed": {
+      "type": "instagram-feed",
+      "blocks": {
+        "instagram_1": {
+          "type": "instagram_post",
+          "settings": {
+            "image": "",
+            "alt_text": "Instagram post 1",
+            "post_url": ""
+          }
+        },
+        "instagram_2": {
+          "type": "instagram_post",
+          "settings": {
+            "image": "",
+            "alt_text": "Instagram post 2",
+            "post_url": ""
+          }
+        },
+        "instagram_3": {
+          "type": "instagram_post",
+          "settings": {
+            "image": "",
+            "alt_text": "Instagram post 3",
+            "post_url": ""
+          }
+        },
+        "instagram_4": {
+          "type": "instagram_post",
+          "settings": {
+            "image": "",
+            "alt_text": "Instagram post 4",
+            "post_url": ""
+          }
+        }
+      },
+      "block_order": ["instagram_1", "instagram_2", "instagram_3", "instagram_4"],
+      "settings": {
+        "heading": "Find us on Instagram",
+        "instagram_url": "",
+        "posts_to_show": 4,
+        "show_follow_button": false,
+        "follow_button_text": "Follow us on Instagram",
+        "color_scheme": "scheme-1",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    }
+  },
+  "order": [
+    "hero_video",
+    "collection_slider",
+    "zodiac_section",
+    "off_season_collection",
+    "very_verdura_section",
+    "visit_gallery_section",
+    "new_arrivals",
+    "heritage_section",
+    "newsletter",
+    "instagram_feed"
+  ]
+} 

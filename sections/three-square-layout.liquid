@@ -1,0 +1,484 @@
+{% comment %}
+  Three Square Layout Section
+  Used for Off-Season Collection and similar content displays
+  
+  Features:
+  - Left side: Large video/image with text overlay
+  - Right side: Two square images stacked vertically
+  - Responsive design with mobile stacking
+  - Custom shape colors and styling
+{% endcomment %}
+
+{% liquid
+  assign section_id = 'ThreeSquareLayout-' | append: section.id
+  assign shape_color = section.settings.shape_color | default: '#934c4c'
+  assign text_color = section.settings.text_color | default: '#ffffff'
+  assign background_color = section.settings.background_color | default: '#ffffff'
+%}
+
+<section
+  id="{{ section_id }}"
+  class="three-square-layout color-scheme-{{ section.settings.color_scheme }}"
+  style="
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+    --shape-color: {{ shape_color }};
+    --text-color: {{ text_color }};
+    --background-color: {{ background_color }};
+  "
+>
+  <div class="three-square-layout__container{% if section.settings.full_width %} three-square-layout__container--full-width{% else %} page-width{% endif %}">
+    <div class="three-square-layout__content">
+      
+      <!-- Left Content Area -->
+      <div class="three-square-layout__left">
+        {% if section.settings.left_media_type == 'video' and section.settings.left_video != blank %}
+          <div class="three-square-layout__media three-square-layout__media--video">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              class="three-square-layout__video"
+              {% if section.settings.left_video_poster != blank %}poster="{{ section.settings.left_video_poster | image_url: width: 1200 }}"{% endif %}
+            >
+              <source src="{{ section.settings.left_video }}" type="video/mp4">
+            </video>
+            {% if section.settings.left_video_poster != blank %}
+              <noscript>
+                {{ section.settings.left_video_poster | image_url: width: 1200 | image_tag: class: 'three-square-layout__video-fallback', alt: section.settings.left_image_alt | escape }}
+              </noscript>
+            {% endif %}
+          </div>
+        {% elsif section.settings.left_image != blank %}
+          <div class="three-square-layout__media three-square-layout__media--image">
+            {{ section.settings.left_image | image_url: width: 800 | image_tag: class: 'three-square-layout__image', alt: section.settings.left_image_alt | escape, loading: 'lazy' }}
+          </div>
+        {% endif %}
+
+        {% if section.blocks.size > 0 %}
+          <div class="three-square-layout__text-overlay">
+            <div class="three-square-layout__text-content">
+              {% for block in section.blocks %}
+                {% case block.type %}
+                  {% when 'heading' %}
+                    <h2 class="three-square-layout__heading" {{ block.shopify_attributes }}>
+                      {{ block.settings.heading | escape }}
+                    </h2>
+
+                  {% when 'text' %}
+                    <div class="three-square-layout__description rte" {{ block.shopify_attributes }}>
+                      {{ block.settings.text }}
+                    </div>
+
+                  {% when 'button' %}
+                    {% if block.settings.button_label != blank %}
+                      <a
+                        href="{{ block.settings.button_link | default: '#' }}"
+                        class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                        {{ block.shopify_attributes }}
+                      >
+                        {{ block.settings.button_label | escape }}
+                      </a>
+                    {% endif %}
+                {% endcase %}
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+
+      <!-- Right Images Area -->
+      <div class="three-square-layout__right">
+        {% if section.settings.right_image_1 != blank %}
+          <div class="three-square-layout__right-image three-square-layout__right-image--top">
+            {{ section.settings.right_image_1 | image_url: width: 600 | image_tag: class: 'three-square-layout__square-image', alt: section.settings.right_image_1_alt | escape, loading: 'lazy' }}
+          </div>
+        {% endif %}
+
+        {% if section.settings.right_image_2 != blank %}
+          <div class="three-square-layout__right-image three-square-layout__right-image--bottom">
+            {{ section.settings.right_image_2 | image_url: width: 600 | image_tag: class: 'three-square-layout__square-image', alt: section.settings.right_image_2_alt | escape, loading: 'lazy' }}
+          </div>
+        {% endif %}
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+.three-square-layout {
+  padding-top: var(--section-padding-top, 50px);
+  padding-bottom: var(--section-padding-bottom, 50px);
+  background-color: var(--background-color, #ffffff);
+}
+
+.three-square-layout__container--full-width {
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.three-square-layout__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.three-square-layout__left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+}
+
+.three-square-layout__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.three-square-layout__media--video,
+.three-square-layout__media--image {
+  overflow: hidden;
+}
+
+.three-square-layout__video,
+.three-square-layout__image,
+.three-square-layout__video-fallback {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.three-square-layout__text-overlay {
+  position: relative;
+  z-index: 2;
+  padding: 4rem;
+  text-align: center;
+}
+
+.three-square-layout__text-content {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.three-square-layout__heading {
+  color: var(--text-color, #ffffff);
+  font-size: 3.6rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.three-square-layout__description {
+  color: var(--text-color, #ffffff);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+}
+
+.three-square-layout__description p {
+  margin: 0 0 1.5rem;
+}
+
+.three-square-layout__description p:last-child {
+  margin-bottom: 0;
+}
+
+.three-square-layout__right {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 0;
+  height: 70vh;
+}
+
+.three-square-layout__right-image {
+  overflow: hidden;
+}
+
+.three-square-layout__square-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-default) ease;
+}
+
+.three-square-layout__square-image:hover {
+  transform: scale(1.05);
+}
+
+/* Shape decoration */
+.three-square-layout__left::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--shape-color, #934c4c);
+  transform: translateY(-50%) rotate(45deg);
+  z-index: 3;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 749px) {
+  .three-square-layout__content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    min-height: auto;
+  }
+
+  .three-square-layout__left {
+    min-height: 50vh;
+  }
+
+  .three-square-layout__text-overlay {
+    padding: 2rem;
+  }
+
+  .three-square-layout__heading {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .three-square-layout__description {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .three-square-layout__right {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    height: 30vh;
+  }
+
+  .three-square-layout__left::before {
+    display: none;
+  }
+}
+
+/* Tablet styles */
+@media screen and (min-width: 750px) and (max-width: 1199px) {
+  .three-square-layout__text-overlay {
+    padding: 3rem;
+  }
+
+  .three-square-layout__heading {
+    font-size: 3rem;
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Three Square Layout",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Left Content"
+    },
+    {
+      "type": "select",
+      "id": "left_media_type",
+      "label": "Media type",
+      "options": [
+        {
+          "value": "image",
+          "label": "Image"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": "video"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "left_image_alt",
+      "label": "Image alt text"
+    },
+    {
+      "type": "url",
+      "id": "left_video",
+      "label": "Video URL",
+      "info": "MP4 video file URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_video_poster",
+      "label": "Video poster image"
+    },
+    {
+      "type": "header",
+      "content": "Right Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image_1",
+      "label": "Top image"
+    },
+    {
+      "type": "text",
+      "id": "right_image_1_alt",
+      "label": "Top image alt text"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image_2",
+      "label": "Bottom image"
+    },
+    {
+      "type": "text",
+      "id": "right_image_2_alt",
+      "label": "Bottom image alt text"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "shape_color",
+      "label": "Shape color",
+      "default": "#934c4c"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 50
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "The Off-Season Collection"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Add your description text here.</p>"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "View Collection"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary",
+          "label": "Use outline button style",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Three Square Layout",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "button"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %} 

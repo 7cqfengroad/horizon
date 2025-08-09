@@ -1,0 +1,45 @@
+{%- comment -%}
+  Renders cart notification
+
+  Accepts:
+  - color_scheme: {String} color scheme of the section
+
+  Usage:
+  {% render 'cart-notification', color_scheme: section.settings.color_scheme %}
+{%- endcomment -%}
+
+<cart-notification>
+  <div class="cart-notification-wrapper page-width{% if color_scheme %} color-{{ color_scheme }} gradient{% endif %}">
+    <div class="cart-notification" id="cart-notification" aria-modal="true" aria-label="{{ 'sections.cart.cart_notification' | t }}" role="dialog" tabindex="-1" aria-hidden="true">
+      <div class="cart-notification__header">
+        <h2 class="cart-notification__heading caption-large text-body">
+          <svg class="icon icon-checkmark" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 9" fill="none">
+            <path d="M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011L10.643.649a.5.5 0 01.707-.006z" fill="currentColor"/>
+          </svg>
+          {{ 'sections.cart.cart_notification' | t }}
+        </h2>
+        <button type="button" class="cart-notification__close modal__close-button link link--text focus-inset" aria-label="{{ 'accessibility.close' | t }}">
+          <svg class="icon icon-close" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 17" fill="none">
+            <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
+          </svg>
+        </button>
+      </div>
+      <div id="cart-notification-product" class="cart-notification__product"></div>
+      <div class="cart-notification__links">
+        <a href="{{ routes.cart_url }}" id="cart-notification-button" class="button button--secondary button--full-width">{{ 'sections.cart.cart_notification_button' | t }}</a>
+        <form action="{{ routes.cart_url }}" method="post" id="cart-notification-form">
+          <button class="button button--primary button--full-width" name="add" type="submit" form="cart-notification-form">
+            {{ 'sections.cart.cart_notification_button_2' | t }}
+          </button>
+        </form>
+        <button type="button" class="link button-label">{{ 'sections.cart.cart_notification_button_3' | t }}</button>
+      </div>
+    </div>
+  </div>
+</cart-notification>
+
+<style>
+  .cart-notification {
+    display: none;
+  }
+</style> 

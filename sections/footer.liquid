@@ -1,0 +1,622 @@
+{% comment %}
+  Footer Section
+  Used for site footer with logo, social links, contact info, and copyright
+  
+  Features:
+  - Multi-column layout with logo and navigation
+  - Social media icons and links
+  - Contact information display
+  - Footer navigation links
+  - Copyright and website credit
+  - Responsive design with mobile stacking
+{% endcomment %}
+
+{% liquid
+  assign section_id = 'Footer-' | append: section.id
+%}
+
+<footer
+  id="{{ section_id }}"
+  class="footer color-scheme-{{ section.settings.color_scheme }}"
+  style="
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  <div class="footer__container page-width">
+    <div class="footer__content">
+      
+      <!-- Left Column: Logo, Social, Contact, Navigation -->
+      <div class="footer__left">
+        
+        <!-- Logo -->
+        {% if section.settings.logo != blank or shop.name %}
+          <div class="footer__logo">
+            {% if section.settings.logo != blank %}
+              {{ section.settings.logo | image_url: width: 200 | image_tag: 
+                class: 'footer__logo-image', 
+                alt: shop.name | escape,
+                loading: 'lazy'
+              }}
+            {% else %}
+              <h2 class="footer__logo-text">{{ shop.name | escape }}</h2>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        <!-- Social Media Links -->
+        {% if section.blocks.size > 0 %}
+          <div class="footer__social">
+            <div class="footer__social-list">
+              {% for block in section.blocks %}
+                {% case block.type %}
+                  {% when 'social_link' %}
+                    {% if block.settings.url != blank %}
+                      <a
+                        href="{{ block.settings.url }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="footer__social-link"
+                        aria-label="{{ block.settings.platform | escape }}"
+                        {{ block.shopify_attributes }}
+                      >
+                        {% render block.settings.platform %}
+                      </a>
+                    {% endif %}
+                {% endcase %}
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+
+        <!-- Contact Information -->
+        {% if section.settings.show_contact_info %}
+          <div class="footer__contact">
+            {% if section.settings.address != blank %}
+              <p class="footer__contact-item footer__address">{{ section.settings.address }}</p>
+            {% endif %}
+            
+            {% if section.settings.phone != blank %}
+              <p class="footer__contact-item">
+                <a href="tel:{{ section.settings.phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' | replace: '-', '' }}" class="footer__contact-link">
+                  {{ 'general.footer.call_us' | t }}: {{ section.settings.phone | escape }}
+                </a>
+              </p>
+            {% endif %}
+            
+            {% if section.settings.email != blank %}
+              <p class="footer__contact-item">
+                <a href="mailto:{{ section.settings.email }}" class="footer__contact-link">
+                  {{ 'general.footer.email_us' | t }}: {{ section.settings.email | escape }}
+                </a>
+              </p>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        <!-- Footer Navigation -->
+        {% if section.settings.show_footer_menu and linklists[section.settings.footer_menu].links.size > 0 %}
+          <nav class="footer__nav" aria-label="{{ 'general.footer.navigation' | t }}">
+            <ul class="footer__nav-list">
+              {% for link in linklists[section.settings.footer_menu].links %}
+                <li class="footer__nav-item">
+                  <a href="{{ link.url }}" class="footer__nav-link">{{ link.title | escape }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        {% endif %}
+        
+      </div>
+
+      <!-- Right Column: Copyright and Credits -->
+      <div class="footer__right">
+        
+        <!-- Copyright -->
+        {% if section.settings.show_copyright %}
+          <p class="footer__copyright">
+            {% if section.settings.copyright_text != blank %}
+              {{ section.settings.copyright_text | escape }}
+            {% else %}
+              {{ 'general.footer.copyright' | t: year: 'now' | date: '%Y', shop_name: shop.name }}
+            {% endif %}
+          </p>
+        {% endif %}
+
+        <!-- Website Credit -->
+        {% if section.settings.website_credit_text != blank %}
+          <p class="footer__credit">
+            {% if section.settings.website_credit_url != blank %}
+              <a href="{{ section.settings.website_credit_url }}" target="_blank" rel="noopener noreferrer" class="footer__credit-link">
+                {{ section.settings.website_credit_text | escape }}
+              </a>
+            {% else %}
+              {{ section.settings.website_credit_text | escape }}
+            {% endif %}
+          </p>
+        {% endif %}
+
+        <!-- Payment Icons -->
+        {% if section.settings.show_payment_icons and shop.enabled_payment_types.size > 0 %}
+          <div class="footer__payment">
+            <span class="footer__payment-label visually-hidden">{{ 'general.footer.payment_methods' | t }}</span>
+            <ul class="footer__payment-list">
+              {% for type in shop.enabled_payment_types %}
+                <li class="footer__payment-item">
+                  {{ type | payment_type_svg_tag: class: 'footer__payment-icon' }}
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+
+{% stylesheet %}
+.footer {
+  padding-top: var(--section-padding-top, 50px);
+  padding-bottom: var(--section-padding-bottom, 50px);
+  background-color: rgba(var(--color-base-accent-1), 1);
+  color: rgba(var(--color-base-accent-2), 1);
+  margin-top: auto;
+}
+
+.footer__content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.footer__left {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer__logo-image {
+  max-height: 6rem;
+  width: auto;
+}
+
+.footer__logo-text {
+  font-size: 2.4rem;
+  font-weight: var(--font-heading-weight);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin: 0;
+  color: rgba(var(--color-base-accent-2), 1);
+}
+
+.footer__social-list {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  color: rgba(var(--color-base-accent-2), 0.7);
+  transition: color var(--duration-short) ease;
+  text-decoration: none;
+}
+
+.footer__social-link:hover {
+  color: rgba(var(--color-base-accent-2), 1);
+}
+
+.footer__social-link .icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer__contact-item {
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: rgba(var(--color-base-accent-2), 0.8);
+}
+
+.footer__address {
+  font-style: normal;
+}
+
+.footer__contact-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--duration-short) ease;
+}
+
+.footer__contact-link:hover {
+  color: rgba(var(--color-base-accent-2), 1);
+}
+
+.footer__nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 3rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__nav-link {
+  font-size: 1.4rem;
+  color: rgba(var(--color-base-accent-2), 0.8);
+  text-decoration: none;
+  transition: color var(--duration-short) ease;
+}
+
+.footer__nav-link:hover {
+  color: rgba(var(--color-base-accent-2), 1);
+}
+
+.footer__right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.footer__copyright {
+  font-size: 1.3rem;
+  color: rgba(var(--color-base-accent-2), 0.7);
+  margin: 0;
+}
+
+.footer__credit {
+  font-size: 1.2rem;
+  color: rgba(var(--color-base-accent-2), 0.6);
+  margin: 0;
+}
+
+.footer__credit-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--duration-short) ease;
+}
+
+.footer__credit-link:hover {
+  color: rgba(var(--color-base-accent-2), 0.8);
+}
+
+.footer__payment {
+  margin-top: 1rem;
+}
+
+.footer__payment-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+}
+
+.footer__payment-icon {
+  height: 2.4rem;
+  width: auto;
+  opacity: 0.7;
+  transition: opacity var(--duration-short) ease;
+}
+
+.footer__payment-item:hover .footer__payment-icon {
+  opacity: 1;
+}
+
+/* Tablet styles */
+@media screen and (min-width: 750px) and (max-width: 1199px) {
+  .footer__content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .footer__right {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer__payment-list {
+    justify-content: flex-start;
+  }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 749px) {
+  .footer__content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .footer__left {
+    gap: 2rem;
+  }
+
+  .footer__logo-image {
+    max-height: 5rem;
+  }
+
+  .footer__logo-text {
+    font-size: 2rem;
+  }
+
+  .footer__social-list {
+    gap: 1.5rem;
+  }
+
+  .footer__social-link {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .footer__social-link .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .footer__nav-list {
+    gap: 0.5rem 2rem;
+  }
+
+  .footer__right {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer__payment-list {
+    justify-content: flex-start;
+  }
+
+  .footer__contact-item {
+    font-size: 1.3rem;
+  }
+
+  .footer__nav-link {
+    font-size: 1.3rem;
+  }
+}
+
+/* Visually hidden class */
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  word-wrap: normal !important;
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Footer",
+  "tag": "footer",
+  "class": "footer",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo image"
+    },
+    {
+      "type": "header",
+      "content": "Contact information"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_contact_info",
+      "label": "Show contact information",
+      "default": true
+    },
+    {
+      "type": "textarea",
+      "id": "address",
+      "label": "Address",
+      "default": "745 Fifth Avenue, Suite 1205 New York, NY 10151"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Phone number",
+      "default": "+1 (212) 758-3388"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Email address",
+      "default": "info@verdura.com"
+    },
+    {
+      "type": "header",
+      "content": "Footer navigation"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_footer_menu",
+      "label": "Show footer menu",
+      "default": true
+    },
+    {
+      "type": "link_list",
+      "id": "footer_menu",
+      "label": "Footer menu"
+    },
+    {
+      "type": "header",
+      "content": "Copyright"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_copyright",
+      "label": "Show copyright",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "copyright_text",
+      "label": "Custom copyright text",
+      "info": "Leave blank to use default"
+    },
+    {
+      "type": "header",
+      "content": "Website credit"
+    },
+    {
+      "type": "text",
+      "id": "website_credit_text",
+      "label": "Website credit text",
+      "default": "Website by The Beaux Arts"
+    },
+    {
+      "type": "url",
+      "id": "website_credit_url",
+      "label": "Website credit URL"
+    },
+    {
+      "type": "header",
+      "content": "Payment icons"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_payment_icons",
+      "label": "Show payment icons",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-accent-1"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 50
+    }
+  ],
+  "blocks": [
+    {
+      "type": "social_link",
+      "name": "Social Link",
+      "settings": [
+        {
+          "type": "select",
+          "id": "platform",
+          "label": "Platform",
+          "options": [
+            {
+              "value": "icon-facebook",
+              "label": "Facebook"
+            },
+            {
+              "value": "icon-instagram",
+              "label": "Instagram"
+            },
+            {
+              "value": "icon-twitter",
+              "label": "Twitter"
+            },
+            {
+              "value": "icon-youtube",
+              "label": "YouTube"
+            },
+            {
+              "value": "icon-linkedin",
+              "label": "LinkedIn"
+            },
+            {
+              "value": "icon-pinterest",
+              "label": "Pinterest"
+            },
+            {
+              "value": "icon-tiktok",
+              "label": "TikTok"
+            }
+          ]
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Footer",
+      "blocks": [
+        {
+          "type": "social_link",
+          "settings": {
+            "platform": "icon-facebook"
+          }
+        },
+        {
+          "type": "social_link",
+          "settings": {
+            "platform": "icon-instagram"
+          }
+        },
+        {
+          "type": "social_link",
+          "settings": {
+            "platform": "icon-youtube"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %} 
