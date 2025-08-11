@@ -59,6 +59,9 @@
       "next_products": "Next products",
       "view_collection": "View Collection",
       "no_products": "No products in this collection"
+    },
+    "image_with_text": {
+      "image_placeholder": "Image placeholder"
     }
   },
   "footer": {
