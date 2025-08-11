@@ -31,7 +31,16 @@
     }
 
     init() {
-      if (!this.header) return;
+      if (!this.header) {
+        console.warn('Header not found');
+        return;
+      }
+
+      // 检查必要的元素
+      if (!this.subnav) {
+        console.warn('Subnav not found');
+        return;
+      }
 
       this.bindEvents();
       this.setupKeyboardNavigation();
@@ -41,7 +50,12 @@
       // 标记为已初始化
       this.header.classList.add('js-initialized');
       
-      console.log('Verdura Header initialized');
+      console.log('Verdura Header initialized', {
+        header: !!this.header,
+        subnav: !!this.subnav,
+        menuToggles: this.menuToggles.length,
+        cartButton: !!this.cartButton
+      });
     }
 
     bindEvents() {
@@ -130,7 +144,9 @@
       // 更新DOM状态
       this.body.classList.add('js-menu-open');
       this.subnav.classList.add('is-open');
-      this.overlay.classList.add('is-open');
+      if (this.overlay) {
+        this.overlay.classList.add('is-open');
+      }
       
       // 更新ARIA属性
       this.menuToggles.forEach(toggle => {
@@ -138,13 +154,15 @@
       });
       
       this.subnav.setAttribute('aria-hidden', 'false');
-      this.overlay.setAttribute('aria-hidden', 'false');
+      if (this.overlay) {
+        this.overlay.setAttribute('aria-hidden', 'false');
+      }
 
       // 焦点管理
       setTimeout(() => {
-        const firstFocusable = this.subnav.querySelector('a, button');
-        if (firstFocusable) {
-          firstFocusable.focus();
+        const closeButton = this.subnav.querySelector('.close button');
+        if (closeButton) {
+          closeButton.focus();
         }
       }, 100);
 
@@ -162,7 +180,9 @@
       // 更新DOM状态
       this.body.classList.remove('js-menu-open');
       this.subnav.classList.remove('is-open');
-      this.overlay.classList.remove('is-open');
+      if (this.overlay) {
+        this.overlay.classList.remove('is-open');
+      }
       
       // 更新ARIA属性
       this.menuToggles.forEach(toggle => {
@@ -170,7 +190,9 @@
       });
       
       this.subnav.setAttribute('aria-hidden', 'true');
-      this.overlay.setAttribute('aria-hidden', 'true');
+      if (this.overlay) {
+        this.overlay.setAttribute('aria-hidden', 'true');
+      }
 
       // 恢复焦点
       if (this.lastFocusedElement) {

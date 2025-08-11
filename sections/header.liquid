@@ -4,17 +4,17 @@
 {% endcomment %}
 
 <header class="site-header" data-section-id="{{ section.id }}" data-section-type="header">
-  <nav class="header-nav" role="navigation" aria-label="Primary navigation">
-    <ul class="header-nav-list" role="list">
+  <nav class="" role="navigation" aria-label="Primary navigation">
+    <ul role="list">
       <!-- 移动端菜单按钮 -->
-      <li class="header-nav-item header-nav-item--menu">
+      <li>
         <button class="btn subnav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="打开导航菜单">
-          <span class="menu-text">{{ section.settings.menu_text | default: 'MENU' }}</span>
+          {{ section.settings.menu_text | default: 'MENU' }}
         </button>
       </li>
       
       <!-- Logo -->
-      <li class="header-nav-item header-nav-item--logo">
+      <li>
         <a class="logo btn" href="{{ routes.root_url }}" aria-label="返回首页">
           {% if section.settings.logo != blank %}
             <img 
@@ -35,9 +35,9 @@
       </li>
       
       <!-- 购物车按钮 -->
-      <li class="header-nav-item header-nav-item--cart">
+      <li>
         <button class="btn open-slideover cart-button" type="button" data-slideover="cart" aria-label="打开购物车">
-          <span class="cart-text">{{ section.settings.cart_text | default: 'CART' }} (<span class="cartQuantity">{{ cart.item_count }}</span>)</span>
+          {{ section.settings.cart_text | default: 'CART' }} (<span class="cartQuantity">{{ cart.item_count }}</span>)
         </button>
       </li>
     </ul>
@@ -45,13 +45,13 @@
 
   <!-- 移动端子导航 -->
   <div class="subnav" id="mobile-menu" aria-hidden="true">
-    <div class="subnav-close">
+    <div class="close">
       <button type="button" class="label subnav-toggle btn" aria-label="关闭导航菜单">
         <span>{{ section.settings.close_text | default: 'CLOSE' }}</span>
       </button>
     </div>
     
-    <menu class="subnav-menu" role="list">
+    <menu role="list">
       <!-- The Collection 主菜单项 -->
       <li>
         <a href="{{ section.settings.main_collection_url | default: '/collections/all' }}" class="h2 large the-collection">
