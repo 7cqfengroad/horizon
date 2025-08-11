@@ -121,7 +121,7 @@
   font-weight: 500;
 }
 
-/* 子导航覆盖层 */
+/* 子导航覆盖层 - 默认完全隐藏 */
 .subnav {
   position: fixed;
   top: 0;
@@ -135,11 +135,12 @@
   visibility: hidden;
   transform: translateX(-100%);
   transition: all 0.3s ease;
-  display: flex;
+  display: none; /* 默认完全隐藏 */
   flex-direction: column;
 }
 
 .subnav.is-open {
+  display: flex; /* 打开时显示flex布局 */
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
@@ -253,7 +254,7 @@
   display: none;
 }
 
-/* 覆盖层 */
+/* 覆盖层 - 默认隐藏 */
 .overlay {
   position: fixed;
   top: 0;
@@ -264,10 +265,12 @@
   z-index: 998;
   opacity: 0;
   visibility: hidden;
+  display: none; /* 默认完全隐藏 */
   transition: all 0.3s ease;
 }
 
 .overlay.is-open {
+  display: block; /* 打开时显示 */
   opacity: 1;
   visibility: visible;
 }
