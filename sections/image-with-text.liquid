@@ -1,20 +1,19 @@
 {% comment %}
   Image with Text Section
-  两侧图片+中间文字内容布局，支持自定义背景色和文字样式
+  图文组合区域 - 两侧图片 + 中间文字布局，可在主题编辑器中配置
+  适用于Zodiac、Very Verdura等多种用途
 {% endcomment %}
 
 <section 
   id="ImageWithText-{{ section.id }}" 
-  class="image-with-text image-with-text--{{ section.settings.layout }}"
+  class="image-with-text-section"
   style="
     background-color: {{ section.settings.background_color | default: '#f7f7f7' }};
-    padding-top: {{ section.settings.section_padding_top }}px;
-    padding-bottom: {{ section.settings.section_padding_bottom }}px;
+    padding: {{ section.settings.section_padding_top | default: 60 }}px 20px {{ section.settings.section_padding_bottom | default: 60 }}px;
   "
 >
-  <div class="image-with-text__wrapper">
-    {%- if section.settings.layout == 'two_images_center_text' -%}
-      {%- comment -%} 两侧图片 + 中间文字布局 {%- endcomment -%}
+  <div class="page-width">
+    <div class="image-with-text-wrapper">
       
       {%- comment -%} 左侧图片 {%- endcomment -%}
       <div class="image-with-text__image image-with-text__image--left">
@@ -26,7 +25,12 @@
           }}
         {%- else -%}
           <div class="image-with-text__placeholder">
-            <span class="visually-hidden">{{ 'sections.image_with_text.image_placeholder' | t }}</span>
+            <svg width="300" height="400" viewBox="0 0 300 400" fill="none">
+              <rect width="300" height="400" fill="#e5e5e5"/>
+              <text x="150" y="200" text-anchor="middle" fill="#999" font-size="14">
+                {{ 'sections.image_with_text.image_placeholder' | t }}
+              </text>
+            </svg>
           </div>
         {%- endif -%}
       </div>
@@ -73,159 +77,38 @@
           }}
         {%- else -%}
           <div class="image-with-text__placeholder">
-            <span class="visually-hidden">{{ 'sections.image_with_text.image_placeholder' | t }}</span>
+            <svg width="300" height="400" viewBox="0 0 300 400" fill="none">
+              <rect width="300" height="400" fill="#e5e5e5"/>
+              <text x="150" y="200" text-anchor="middle" fill="#999" font-size="14">
+                {{ 'sections.image_with_text.image_placeholder' | t }}
+              </text>
+            </svg>
           </div>
         {%- endif -%}
       </div>
-
-    {%- else -%}
-      {%- comment -%} 标准左右布局 {%- endcomment -%}
       
-      {%- assign image_side = section.settings.layout -%}
-      {%- if image_side == 'image_left' -%}
-        {%- comment -%} 图片在左，文字在右 {%- endcomment -%}
-        <div class="image-with-text__image image-with-text__image--standard">
-          {%- if section.settings.image != blank -%}
-            {{ section.settings.image | image_url: width: 800 | image_tag:
-              loading: 'lazy',
-              alt: section.settings.image_alt | default: section.settings.title,
-              class: 'image-with-text__img'
-            }}
-          {%- else -%}
-            <div class="image-with-text__placeholder">
-              <span class="visually-hidden">{{ 'sections.image_with_text.image_placeholder' | t }}</span>
-            </div>
-          {%- endif -%}
-        </div>
-
-        <div class="image-with-text__content image-with-text__content--standard">
-          <div class="image-with-text__content-wrapper">
-            {%- if section.settings.title != blank -%}
-              <h2 class="image-with-text__title">
-                {{ section.settings.title | escape }}
-              </h2>
-            {%- endif -%}
-
-            {%- if section.settings.subtitle != blank -%}
-              <h3 class="image-with-text__subtitle">
-                {{ section.settings.subtitle | escape }}
-              </h3>
-            {%- endif -%}
-
-            {%- if section.settings.description != blank -%}
-              <div class="image-with-text__description">
-                {{ section.settings.description }}
-              </div>
-            {%- endif -%}
-
-            {%- if section.settings.button_text != blank and section.settings.button_url != blank -%}
-              <a 
-                href="{{ section.settings.button_url }}" 
-                class="image-with-text__button btn btn--secondary"
-              >
-                {{ section.settings.button_text | escape }}
-              </a>
-            {%- endif -%}
-          </div>
-        </div>
-
-      {%- else -%}
-        {%- comment -%} 文字在左，图片在右 {%- endcomment -%}
-        <div class="image-with-text__content image-with-text__content--standard">
-          <div class="image-with-text__content-wrapper">
-            {%- if section.settings.title != blank -%}
-              <h2 class="image-with-text__title">
-                {{ section.settings.title | escape }}
-              </h2>
-            {%- endif -%}
-
-            {%- if section.settings.subtitle != blank -%}
-              <h3 class="image-with-text__subtitle">
-                {{ section.settings.subtitle | escape }}
-              </h3>
-            {%- endif -%}
-
-            {%- if section.settings.description != blank -%}
-              <div class="image-with-text__description">
-                {{ section.settings.description }}
-              </div>
-            {%- endif -%}
-
-            {%- if section.settings.button_text != blank and section.settings.button_url != blank -%}
-              <a 
-                href="{{ section.settings.button_url }}" 
-                class="image-with-text__button btn btn--secondary"
-              >
-                {{ section.settings.button_text | escape }}
-              </a>
-            {%- endif -%}
-          </div>
-        </div>
-
-        <div class="image-with-text__image image-with-text__image--standard">
-          {%- if section.settings.image != blank -%}
-            {{ section.settings.image | image_url: width: 800 | image_tag:
-              loading: 'lazy',
-              alt: section.settings.image_alt | default: section.settings.title,
-              class: 'image-with-text__img'
-            }}
-          {%- else -%}
-            <div class="image-with-text__placeholder">
-              <span class="visually-hidden">{{ 'sections.image_with_text.image_placeholder' | t }}</span>
-            </div>
-          {%- endif -%}
-        </div>
-      {%- endif -%}
-    {%- endif -%}
+    </div>
   </div>
 </section>
 
-<style>
-.image-with-text {
-  padding: 60px 20px;
+{% stylesheet %}
+.image-with-text-section {
+  background-color: #f7f7f7;
 }
 
-.image-with-text__wrapper {
+.image-with-text-wrapper {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
   gap: 40px;
   align-items: center;
-}
-
-/* 两侧图片 + 中间文字布局 */
-.image-with-text--two_images_center_text .image-with-text__wrapper {
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-areas: "left-image content right-image";
-}
-
-.image-with-text__image--left {
-  grid-area: left-image;
-}
-
-.image-with-text__content {
-  grid-area: content;
-  text-align: center;
-  padding: 0 20px;
-}
-
-.image-with-text__image--right {
-  grid-area: right-image;
-}
-
-/* 标准左右布局 */
-.image-with-text--image_left .image-with-text__wrapper,
-.image-with-text--image_right .image-with-text__wrapper {
-  grid-template-columns: 1fr 1fr;
-}
-
-.image-with-text__content--standard {
-  padding: 0 40px;
 }
 
 /* 图片样式 */
 .image-with-text__image {
   position: relative;
+  text-align: center;
 }
 
 .image-with-text__img {
@@ -240,21 +123,17 @@
 }
 
 .image-with-text__placeholder {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%),
-              linear-gradient(-45deg, #f0f0f0 25%, transparent 25%),
-              linear-gradient(45deg, transparent 75%, #f0f0f0 75%),
-              linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
-  background-size: 20px 20px;
-  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  display: inline-block;
   border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
 }
 
 /* 文字内容样式 */
+.image-with-text__content {
+  text-align: center;
+  padding: 0 20px;
+}
+
 .image-with-text__content-wrapper {
   max-width: 500px;
   margin: 0 auto;
@@ -298,35 +177,13 @@
 
 /* 响应式设计 */
 @media screen and (max-width: 768px) {
-  .image-with-text {
-    padding: 40px 15px;
-  }
-  
-  .image-with-text__wrapper {
-    gap: 30px;
-  }
-  
-  /* 两侧图片布局在移动端变为垂直 */
-  .image-with-text--two_images_center_text .image-with-text__wrapper {
+  .image-with-text-wrapper {
     grid-template-columns: 1fr;
-    grid-template-areas: 
-      "left-image"
-      "content" 
-      "right-image";
+    gap: 30px;
   }
   
   .image-with-text__content {
     padding: 0 10px;
-  }
-  
-  /* 标准布局在移动端也变为垂直 */
-  .image-with-text--image_left .image-with-text__wrapper,
-  .image-with-text--image_right .image-with-text__wrapper {
-    grid-template-columns: 1fr;
-  }
-  
-  .image-with-text__content--standard {
-    padding: 0 20px;
   }
   
   .image-with-text__title {
@@ -345,10 +202,6 @@
   
   .image-with-text__content {
     padding: 0 5px;
-  }
-  
-  .image-with-text__content--standard {
-    padding: 0 10px;
   }
 }
 
@@ -375,7 +228,7 @@
     transform: none;
   }
 }
-</style>
+{% endstylesheet %}
 
 {% schema %}
 {
@@ -385,38 +238,7 @@
   "settings": [
     {
       "type": "header",
-      "content": "布局设置"
-    },
-    {
-      "type": "select",
-      "id": "layout",
-      "label": "布局样式",
-      "options": [
-        {
-          "value": "two_images_center_text",
-          "label": "两侧图片 + 中间文字"
-        },
-        {
-          "value": "image_left",
-          "label": "图片在左，文字在右"
-        },
-        {
-          "value": "image_right",
-          "label": "文字在左，图片在右"
-        }
-      ],
-      "default": "two_images_center_text"
-    },
-    {
-      "type": "color",
-      "id": "background_color",
-      "label": "背景颜色",
-      "default": "#f7f7f7"
-    },
-    {
-      "type": "header",
-      "content": "两侧图片设置",
-      "info": "仅在"两侧图片 + 中间文字"布局中使用"
+      "content": "图片设置"
     },
     {
       "type": "image_picker",
@@ -426,32 +248,19 @@
     {
       "type": "text",
       "id": "image_left_alt",
-      "label": "左侧图片描述"
+      "label": "左侧图片描述",
+      "default": "Zodiac Pendant Capricorn"
     },
     {
-      "type": "image_picker",
+      "type": "image_picker", 
       "id": "image_right",
       "label": "右侧图片"
     },
     {
       "type": "text",
       "id": "image_right_alt",
-      "label": "右侧图片描述"
-    },
-    {
-      "type": "header",
-      "content": "标准图片设置",
-      "info": "在左右布局中使用"
-    },
-    {
-      "type": "image_picker",
-      "id": "image",
-      "label": "图片"
-    },
-    {
-      "type": "text",
-      "id": "image_alt",
-      "label": "图片描述"
+      "label": "右侧图片描述",
+      "default": "Zodiac Pendant Pisces"
     },
     {
       "type": "header",
@@ -465,7 +274,7 @@
     },
     {
       "type": "text",
-      "id": "subtitle",
+      "id": "subtitle", 
       "label": "副标题",
       "default": "Pendant Necklaces"
     },
@@ -488,11 +297,18 @@
     {
       "type": "url",
       "id": "button_url",
-      "label": "按钮链接"
+      "label": "按钮链接",
+      "default": "/collections/zodiac-pendant-necklaces"
     },
     {
       "type": "header",
-      "content": "间距设置"
+      "content": "样式设置"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "背景颜色",
+      "default": "#f7f7f7"
     },
     {
       "type": "range",
@@ -519,11 +335,11 @@
     {
       "name": "图文组合",
       "settings": {
-        "layout": "two_images_center_text",
         "title": "Zodiac",
         "subtitle": "Pendant Necklaces",
         "description": "<p>Using archival postcards Fulco di Verdura purchased at the Museum of Natural History, Verdura sets diamonds as stars and engraves constellations in gold</p>",
-        "button_text": "View Collection"
+        "button_text": "View Collection",
+        "button_url": "/collections/zodiac-pendant-necklaces"
       }
     }
   ]
