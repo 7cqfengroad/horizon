@@ -1,0 +1,222 @@
+{% comment %} Collection Selector Section {% endcomment %}
+<section class="collection-selector" style="padding: 80px 0; background: white;">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 60px; align-items: center;">
+      
+      {% comment %} Left Side - Collection Navigation {% endcomment %}
+      <div class="collection-nav">
+        <ul class="collection-list" style="list-style: none; padding: 0; margin: 0;">
+          {% for block in section.blocks %}
+            {% if block.type == 'collection' %}
+              <li class="collection-item" data-collection="{{ forloop.index0 }}" style="margin-bottom: 20px; cursor: pointer; transition: all 0.3s ease;">
+                <a href="{{ block.settings.collection_link }}" style="text-decoration: none; color: var(--color-primary); font-family: var(--font-heading-family); font-size: 1.8rem; font-weight: 400; display: block; padding: 15px 0; border-bottom: 1px solid transparent; transition: all 0.3s ease;">
+                  {{ block.settings.collection_name }}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+
+      {% comment %} Right Side - Product Slider {% endcomment %}
+      <div class="collection-content">
+        {% for block in section.blocks %}
+          {% if block.type == 'collection' %}
+            <div class="collection-slider" data-collection="{{ forloop.index0 }}" style="{% unless forloop.first %}display: none;{% endunless %}">
+              
+              {% comment %} Product Grid {% endcomment %}
+              <div class="product-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 40px;">
+                {% if block.settings.collection != blank %}
+                  {% for product in block.settings.collection.products limit: 4 %}
+                    <div class="product-item" style="text-align: center;">
+                      <a href="{{ product.url }}" style="text-decoration: none; color: var(--color-primary);">
+                        {% if product.featured_media %}
+                          <div style="position: relative; overflow: hidden; margin-bottom: 15px; aspect-ratio: 1;">
+                            <img src="{{ product.featured_media | image_url: width: 300 }}" alt="{{ product.title }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                          </div>
+                        {% endif %}
+                        <h4 style="font-family: var(--font-heading-family); font-size: 1.1rem; font-weight: 400; margin: 0;">
+                          {{ product.title }}
+                        </h4>
+                      </a>
+                    </div>
+                  {% endfor %}
+                {% else %}
+                  {% comment %} Placeholder products if no collection selected {% endcomment %}
+                  {% for i in (1..4) %}
+                    <div class="product-item" style="text-align: center;">
+                      <div style="position: relative; overflow: hidden; margin-bottom: 15px; aspect-ratio: 1; background: #f5f5f5; display: flex; align-items: center; justify-content: center;">
+                        <span style="color: #999; font-size: 14px;">Product {{ i }}</span>
+                      </div>
+                      <h4 style="font-family: var(--font-heading-family); font-size: 1.1rem; font-weight: 400; margin: 0;">
+                        {{ block.settings.collection_name }} Item {{ i }}
+                      </h4>
+                    </div>
+                  {% endfor %}
+                {% endif %}
+              </div>
+
+              {% comment %} View Collection Button {% endcomment %}
+              {% if block.settings.collection_link != blank %}
+                <div style="text-align: center;">
+                  <a href="{{ block.settings.collection_link }}" class="btn" style="display: inline-block; padding: 12px 30px; border: 1px solid var(--color-primary); color: var(--color-primary); text-decoration: none; font-weight: 500; transition: all 0.3s ease;">
+                    View Collection
+                  </a>
+                </div>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .collection-item.active a {
+    border-bottom-color: var(--color-primary);
+    font-weight: 500;
+  }
+
+  .collection-item:hover a {
+    color: var(--color-accent);
+  }
+
+  .product-item img:hover {
+    transform: scale(1.05);
+  }
+
+  .btn:hover {
+    background: var(--color-primary);
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    .collection-selector .container > div {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+    }
+    
+    .collection-list {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding-bottom: 10px;
+    }
+    
+    .collection-item {
+      margin-bottom: 0 !important;
+      white-space: nowrap;
+    }
+    
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 20px !important;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const collectionItems = document.querySelectorAll('.collection-item');
+    const collectionSliders = document.querySelectorAll('.collection-slider');
+
+    // Set first item as active by default
+    if (collectionItems.length > 0) {
+      collectionItems[0].classList.add('active');
+    }
+
+    collectionItems.forEach(function(item, index) {
+      item.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Remove active class from all items
+        collectionItems.forEach(function(item) {
+          item.classList.remove('active');
+        });
+        
+        // Add active class to clicked item
+        this.classList.add('active');
+        
+        // Hide all sliders
+        collectionSliders.forEach(function(slider) {
+          slider.style.display = 'none';
+        });
+        
+        // Show corresponding slider
+        const targetSlider = document.querySelector('.collection-slider[data-collection="' + index + '"]');
+        if (targetSlider) {
+          targetSlider.style.display = 'block';
+        }
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Collection Selector",
+  "max_blocks": 5,
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "text",
+          "id": "collection_name",
+          "label": "Collection name",
+          "default": "Bracelets"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "url",
+          "id": "collection_link",
+          "label": "Collection link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Selector",
+      "blocks": [
+        {
+          "type": "collection",
+          "settings": {
+            "collection_name": "Bracelets"
+          }
+        },
+        {
+          "type": "collection", 
+          "settings": {
+            "collection_name": "Earclips"
+          }
+        },
+        {
+          "type": "collection",
+          "settings": {
+            "collection_name": "Cuffs"
+          }
+        },
+        {
+          "type": "collection",
+          "settings": {
+            "collection_name": "Rings"
+          }
+        },
+        {
+          "type": "collection",
+          "settings": {
+            "collection_name": "Necklaces"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

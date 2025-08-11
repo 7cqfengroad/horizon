@@ -1,0 +1,183 @@
+{% comment %} Hero Video Section {% endcomment %}
+<section class="hero-section" style="position: relative; height: 100vh; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+  
+  {% comment %} Background Video or Image {% endcomment %}
+  <div class="hero-background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+    {% if section.settings.hero_video != blank %}
+      <video 
+        autoplay 
+        muted 
+        loop 
+        playsinline 
+        style="width: 100%; height: 100%; object-fit: cover;"
+      >
+        <source src="{{ section.settings.hero_video }}" type="video/mp4">
+        {% if section.settings.hero_image != blank %}
+          <img src="{{ section.settings.hero_image | image_url: width: 1920 }}" alt="{{ section.settings.hero_title }}" style="width: 100%; height: 100%; object-fit: cover;">
+        {% endif %}
+      </video>
+    {% elsif section.settings.hero_image != blank %}
+      <img src="{{ section.settings.hero_image | image_url: width: 1920 }}" alt="{{ section.settings.hero_title }}" style="width: 100%; height: 100%; object-fit: cover;">
+    {% else %}
+      <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);"></div>
+    {% endif %}
+  </div>
+
+  {% comment %} Overlay {% endcomment %}
+  {% if section.settings.overlay_opacity > 0 %}
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,{{ section.settings.overlay_opacity | divided_by: 100.0 }}); z-index: 2;"></div>
+  {% endif %}
+
+  {% comment %} Content {% endcomment %}
+  <div class="hero-content" style="position: relative; z-index: 3; text-align: center; color: {{ section.settings.text_color }}; max-width: 800px; padding: 0 20px;">
+    
+    {% if section.settings.hero_title != blank %}
+      <h1 class="hero-title" style="font-family: var(--font-heading-family); font-size: 4rem; font-weight: 400; margin-bottom: 20px; line-height: 1.2;">
+        {{ section.settings.hero_title }}
+      </h1>
+    {% endif %}
+
+    {% if section.settings.hero_subtitle != blank %}
+      <h2 class="hero-subtitle" style="font-family: var(--font-heading-family); font-size: 1.5rem; font-weight: 300; margin-bottom: 40px; opacity: 0.9;">
+        {{ section.settings.hero_subtitle }}
+      </h2>
+    {% endif %}
+
+    {% if section.settings.hero_button_text != blank and section.settings.hero_button_link != blank %}
+      <a href="{{ section.settings.hero_button_link }}" class="hero-btn" style="display: inline-block; padding: 15px 40px; border: 2px solid {{ section.settings.text_color }}; color: {{ section.settings.text_color }}; text-decoration: none; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease; background: transparent;">
+        {{ section.settings.hero_button_text }}
+      </a>
+    {% endif %}
+  </div>
+
+  {% comment %} Scroll Indicator {% endcomment %}
+  {% if section.settings.show_scroll_indicator %}
+    <div class="scroll-indicator" style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 3; color: {{ section.settings.text_color }}; text-align: center;">
+      <div style="margin-bottom: 10px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Scroll</div>
+      <div style="width: 1px; height: 30px; background: {{ section.settings.text_color }}; margin: 0 auto; animation: scrollPulse 2s infinite;"></div>
+    </div>
+  {% endif %}
+</section>
+
+<style>
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+  }
+
+  .hero-btn:hover {
+    background: {{ section.settings.text_color }} !important;
+    color: {{ section.settings.hero_button_hover_color | default: '#000000' }} !important;
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem !important;
+    }
+    .hero-subtitle {
+      font-size: 1.2rem !important;
+    }
+    .hero-section {
+      height: 80vh !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-title {
+      font-size: 2rem !important;
+    }
+    .hero-subtitle {
+      font-size: 1rem !important;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Auto-play video on mobile if needed
+    const video = document.querySelector('.hero-section video');
+    if (video && window.innerWidth < 768) {
+      video.play().catch(function(error) {
+        console.log('Video autoplay failed:', error);
+      });
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Hero Video",
+  "settings": [
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Hero title",
+      "default": "Heritage of Style"
+    },
+    {
+      "type": "text",
+      "id": "hero_subtitle", 
+      "label": "Hero subtitle",
+      "default": "Explore the Collection"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero background image"
+    },
+    {
+      "type": "url",
+      "id": "hero_video",
+      "label": "Hero background video URL"
+    },
+    {
+      "type": "text",
+      "id": "hero_button_text",
+      "label": "Button text",
+      "default": "Explore"
+    },
+    {
+      "type": "url",
+      "id": "hero_button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "hero_button_hover_color",
+      "label": "Button hover text color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay opacity",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "default": 20,
+      "unit": "%"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_scroll_indicator",
+      "label": "Show scroll indicator",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Video",
+      "settings": {
+        "hero_title": "Heritage of Style",
+        "hero_subtitle": "Explore the Collection"
+      }
+    }
+  ]
+}
+{% endschema %}

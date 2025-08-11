@@ -1,94 +1,181 @@
-# Horizon
+# Verdura Fine Jewelry - Shopify Theme
 
-[Getting started](#getting-started) |
-[Staying up to date with Horizon changes](#staying-up-to-date-with-horizon-changes) |
-[Developer tools](#developer-tools) |
-[Contributing](#contributing) |
-[Code of conduct](#code-of-conduct) |
-[Theme Store submission](#theme-store-submission) |
-[License](#license)
+A luxury jewelry Shopify theme inspired by Verdura Fine Jewelry, featuring elegant design, video backgrounds, and sophisticated product showcases.
 
-Horizon is the flagship of a new generation of first party Shopify themes. It incorporates the latest Liquid Storefronts features, including [theme blocks](https://shopify.dev/docs/storefronts/themes/architecture/blocks/theme-blocks/quick-start?framework=liquid).
+## Features
 
-- **Web-native in its purest form:** Themes run on the [evergreen web](https://www.w3.org/2001/tag/doc/evergreen-web/). We leverage the latest web browsers to their fullest, while maintaining support for the older ones through progressive enhancement—not polyfills.
-- **Lean, fast, and reliable:** Functionality and design defaults to “no” until it meets this requirement. Code ships on quality. Themes must be built with purpose. They shouldn’t support each and every feature in Shopify.
-- **Server-rendered:** HTML must be rendered by Shopify servers using Liquid. Business logic and platform primitives such as translations and money formatting don’t belong on the client. Async and on-demand rendering of parts of the page is OK, but we do it sparingly as a progressive enhancement.
-- **Functional, not pixel-perfect:** The Web doesn’t require each page to be rendered pixel-perfect by each browser engine. Using semantic markup, progressive enhancement, and clever design, we ensure that themes remain functional regardless of the browser.
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+- **Video Hero Section**: Eye-catching homepage hero with video background support
+- **Product Collection Selector**: Interactive product category navigation
+- **Elegant Typography**: Uses Playfair Display and Montserrat fonts
+- **Image Galleries**: Beautiful product and Instagram image displays
+- **Newsletter Integration**: Built-in newsletter signup functionality
+- **SEO Optimized**: Structured data and meta tags included
+- **Accessible**: WCAG compliant design elements
 
-## Getting started
+## Theme Structure
 
-We recommend using the Skeleton Theme as a starting point for theme development. [Learn more on Shopify.dev](https://shopify.dev/themes/getting-started/create).
-
-> If you're building a theme for the Shopify Theme Store, then you can use Horizon as a starting point. However, the theme that you submit needs to be [substantively different from Horizon](https://shopify.dev/themes/store/requirements#uniqueness) so that it provides added value for merchants. Learn about the [theme developer tools](https://shopify.dev/docs/storefronts/themes/tools).
-
-Please note that the main branch may include code for features not yet released. The "stable" version of Horizon is available in the theme store.
-
-## Staying up to date with Horizon changes
-
-Say you're building a new theme off Horizon but you still want to be able to pull in the latest changes, you can add a remote `upstream` pointing to this Horizon repository.
-
-1. Navigate to your local theme folder.
-2. Verify the list of remotes and validate that you have both an `origin` and `upstream`:
-
-```sh
-git remote -v
+```
+verdura-shopify-theme/
+├── assets/                 # CSS, JS, and image files
+│   ├── base.css           # Base styles and utilities
+│   └── global.js          # JavaScript functionality
+├── config/                # Theme configuration
+│   └── settings_schema.json
+├── layout/                # Layout templates
+│   └── theme.liquid       # Main layout file
+├── sections/              # Reusable sections
+│   ├── groups/           # Section groups
+│   ├── header.liquid     # Site header
+│   ├── footer.liquid     # Site footer
+│   ├── hero-video.liquid # Hero video section
+│   ├── collection-selector.liquid
+│   ├── zodiac-banner.liquid
+│   ├── new-arrivals.liquid
+│   ├── heritage-section.liquid
+│   └── visit-gallery.liquid
+├── snippets/             # Reusable code snippets
+│   └── meta-tags.liquid # SEO meta tags
+└── templates/            # Page templates
+    └── index.liquid      # Homepage template
 ```
 
-3. If you don't see an `upstream`, you can add one that points to Shopify's Horizon repository:
+## Installation
 
-```sh
-git remote add upstream https://github.com/Shopify/horizon.git
-```
+1. **Download the theme files** to your local machine
 
-4. Pull in the latest Horizon changes into your repository:
+2. **Create a ZIP file** of the theme folder:
+   ```bash
+   zip -r verdura-theme.zip verdura-shopify-theme/
+   ```
 
-```sh
-git fetch upstream
-git pull upstream main
-```
+3. **Upload to Shopify**:
+   - Go to your Shopify Admin
+   - Navigate to Online Store > Themes
+   - Click "Upload theme"
+   - Select the ZIP file
+   - Click "Upload"
 
-## Developer tools
+4. **Activate the theme**:
+   - Click "Actions" > "Publish" on the uploaded theme
 
-There are a number of really useful tools that the Shopify Themes team uses during development. Horizon is already set up to work with these tools.
+## Configuration
 
-### Shopify CLI
+### 1. Theme Settings
+Access theme settings through **Online Store > Themes > Customize**:
 
-[Shopify CLI](https://shopify.dev/docs/storefronts/themes/tools/cli) helps you build Shopify themes faster and is used to automate and enhance your local development workflow. It comes bundled with a suite of commands for developing Shopify themes—everything from working with themes on a Shopify store (e.g. creating, publishing, deleting themes) or launching a development server for local theme development.
+- **Colors**: Customize brand colors and accents
+- **Typography**: Select fonts for headings and body text
+- **Layout**: Adjust page width and spacing
+- **Product Cards**: Configure product display options
 
-You can follow this [quick start guide for theme developers](https://shopify.dev/docs/themes/tools/cli) to get started.
+### 2. Header Configuration
+- Upload your logo image
+- Configure main navigation menu
+- Set up collection and featured collection menus
+- Customize announcement bar text and colors
 
-### Theme Check
+### 3. Homepage Sections
 
-We recommend using [Theme Check](https://github.com/shopify/theme-check) as a way to validate and lint your Shopify themes.
+#### Hero Video Section
+- Upload background video (MP4 format recommended)
+- Set fallback background image
+- Configure overlay opacity
+- Add call-to-action button
 
-We've added Theme Check to Horizon's [list of VS Code extensions](/.vscode/extensions.json) so if you're using Visual Studio Code as your code editor of choice, you'll be prompted to install the [Theme Check VS Code](https://marketplace.visualstudio.com/items?itemName=Shopify.theme-check-vscode) extension upon opening VS Code after you've forked and cloned Horizon.
+#### Collection Selector
+- Add up to 5 product collections
+- Each collection shows 4 featured products
+- Automatic product grid generation
 
-You can also run it from a terminal with the following Shopify CLI command:
+#### New Arrivals
+- Select a product collection
+- Configure number of products to show (3-12)
+- Enable/disable navigation arrows
 
-```bash
-shopify theme check
-```
+### 4. Footer Configuration
+- Set up newsletter signup
+- Add Instagram feed images
+- Configure contact information
+- Set social media links
 
-You can follow the [theme check documentation](https://shopify.dev/docs/storefronts/themes/tools/theme-check) for more details.
+## Content Management
 
-### Continuous Integration
+### Product Collections
+1. Create collections in **Products > Collections**
+2. Add products to collections
+3. Use collection selector section to showcase them
 
-Horizon uses [GitHub Actions](https://github.com/features/actions) to maintain the quality of the theme. [This is a starting point](https://github.com/Shopify/horizon/blob/main/.github/workflows/ci.yml) and what we suggest to use in order to ensure you're building better themes. Feel free to build off of it!
+### Blog Articles
+1. Create blog posts in **Online Store > Blog Posts**
+2. Add featured images for better social sharing
+3. Use categories and tags for organization
 
-#### Shopify/theme-check-action
+### Pages
+Create additional pages in **Online Store > Pages**:
+- About/Heritage page
+- Contact page
+- Customer service/FAQ
+- Gallery/Visit page
 
-Horizon runs [Theme Check](#Theme-Check) on every commit via [Shopify/theme-check-action](https://github.com/Shopify/theme-check-action).
+## Customization
 
-## Contributing
+### CSS Customization
+Edit `assets/base.css` to modify:
+- Colors and fonts
+- Layout and spacing
+- Button styles
+- Animation effects
 
-We are not accepting contributions to Horizon at this time.
+### JavaScript Functionality
+Edit `assets/global.js` to modify:
+- Mobile menu behavior
+- Cart functionality
+- Form validation
+- Scroll animations
 
-## Theme Store submission
+### Adding New Sections
+1. Create new `.liquid` file in `sections/` folder
+2. Add schema configuration at the bottom
+3. Include in templates using `{% section 'section-name' %}`
 
-The [Shopify Theme Store](https://themes.shopify.com/) is the place where Shopify merchants find the themes that they'll use to showcase and support their business. As a theme partner, you can create themes for the Shopify Theme Store and reach an international audience of an ever-growing number of entrepreneurs.
+## SEO Features
 
-Ensure that you follow the list of [theme store requirements](https://shopify.dev/themes/store/requirements) if you're interested in becoming a [Shopify Theme Partner](https://themes.shopify.com/services/themes/guidelines) and building themes for the Shopify platform.
+- Structured data for products and organization
+- Open Graph and Twitter Card meta tags
+- Optimized image alt texts
+- Semantic HTML structure
+- Fast loading times
+
+## Browser Support
+
+- Chrome 60+
+- Firefox 60+
+- Safari 12+
+- Edge 79+
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## Performance
+
+- Optimized images with responsive sizing
+- Lazy loading for images
+- Minimal JavaScript bundle
+- CSS optimization
+- Font optimization
+
+## Support
+
+For theme support and customization:
+- Review Shopify's [theme development documentation](https://shopify.dev/themes)
+- Check [Liquid template language reference](https://shopify.github.io/liquid/)
+- Consult [Shopify Partner Academy](https://partners.shopify.com/academy)
 
 ## License
 
-Copyright (c) 2025-present Shopify Inc. See [LICENSE](/LICENSE.md) for further details.
+This theme is created for educational and demonstration purposes. Please ensure you have proper licensing for any commercial use.
+
+## Credits
+
+- Fonts: Google Fonts (Playfair Display, Montserrat)
+- Inspired by: Verdura Fine Jewelry website design
+- Built with: Shopify Liquid, CSS3, JavaScript ES6

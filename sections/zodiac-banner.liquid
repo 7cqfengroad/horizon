@@ -1,0 +1,157 @@
+{% comment %} Zodiac Banner Section {% endcomment %}
+<section class="zodiac-banner" style="padding: 80px 0; background: {{ section.settings.background_color }};">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+      
+      {% comment %} Images {% endcomment %}
+      <div class="zodiac-images" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+        {% if section.settings.image_1 != blank %}
+          <div style="aspect-ratio: 1; overflow: hidden;">
+            <img src="{{ section.settings.image_1 | image_url: width: 400 }}" alt="Zodiac jewelry" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        {% else %}
+          <div style="aspect-ratio: 1; background: #f5f5f5; display: flex; align-items: center; justify-content: center;">
+            <span style="color: #999;">Zodiac Image 1</span>
+          </div>
+        {% endif %}
+
+        {% if section.settings.image_2 != blank %}
+          <div style="aspect-ratio: 1; overflow: hidden;">
+            <img src="{{ section.settings.image_2 | image_url: width: 400 }}" alt="Zodiac jewelry" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        {% else %}
+          <div style="aspect-ratio: 1; background: #f5f5f5; display: flex; align-items: center; justify-content: center;">
+            <span style="color: #999;">Zodiac Image 2</span>
+          </div>
+        {% endif %}
+      </div>
+
+      {% comment %} Content {% endcomment %}
+      <div class="zodiac-content">
+        {% if section.settings.title != blank %}
+          <h2 class="h1" style="font-family: var(--font-heading-family); font-size: 3rem; font-weight: 400; margin-bottom: 20px; color: {{ section.settings.text_color }};">
+            {{ section.settings.title }}
+          </h2>
+        {% endif %}
+
+        {% if section.settings.subtitle != blank %}
+          <h3 class="h3" style="font-family: var(--font-heading-family); font-size: 1.5rem; font-weight: 400; margin-bottom: 30px; color: {{ section.settings.text_color }};">
+            {{ section.settings.subtitle }}
+          </h3>
+        {% endif %}
+
+        {% if section.settings.description != blank %}
+          <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 40px; color: {{ section.settings.text_color }};">
+            {{ section.settings.description }}
+          </p>
+        {% endif %}
+
+        {% if section.settings.button_text != blank and section.settings.button_link != blank %}
+          <a href="{{ section.settings.button_link }}" class="zodiac-btn" style="display: inline-block; padding: 15px 30px; border: 2px solid {{ section.settings.text_color }}; color: {{ section.settings.text_color }}; text-decoration: none; font-weight: 500; transition: all 0.3s ease; background: transparent;">
+            {{ section.settings.button_text }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .zodiac-btn:hover {
+    background: {{ section.settings.text_color }};
+    color: {{ section.settings.background_color }};
+  }
+
+  @media (max-width: 768px) {
+    .zodiac-banner .container > div {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+    }
+    
+    .zodiac-images {
+      order: 2;
+    }
+    
+    .zodiac-content {
+      order: 1;
+      text-align: center;
+    }
+    
+    .zodiac-content h2 {
+      font-size: 2rem !important;
+    }
+    
+    .zodiac-content h3 {
+      font-size: 1.3rem !important;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Zodiac Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Zodiac"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle", 
+      "default": "Pendant Necklaces"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Using archival postcards Fulco di Verdura purchased at the Museum of Natural History, Verdura sets diamonds as stars and engraves constellations in gold"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "First image"
+    },
+    {
+      "type": "image_picker", 
+      "id": "image_2",
+      "label": "Second image"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "View Collection"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#f7f7f7"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Zodiac Banner",
+      "settings": {
+        "title": "Zodiac",
+        "subtitle": "Pendant Necklaces",
+        "description": "Using archival postcards Fulco di Verdura purchased at the Museum of Natural History, Verdura sets diamonds as stars and engraves constellations in gold"
+      }
+    }
+  ]
+}
+{% endschema %}

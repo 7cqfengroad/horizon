@@ -1,0 +1,349 @@
+{% comment %} Newsletter Section {% endcomment %}
+<section class="newsletter" style="background: var(--color-primary); color: white; padding: 80px 0;">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+      
+      {% comment %} Left Side - Heading {% endcomment %}
+      <div>
+        {% if section.settings.newsletter_title != blank %}
+          <h2 class="h1" style="font-family: var(--font-heading-family); font-size: 3rem; font-weight: 400; margin: 0;">
+            {{ section.settings.newsletter_title }}
+          </h2>
+        {% endif %}
+      </div>
+
+      {% comment %} Right Side - Form {% endcomment %}
+      <div>
+        {% if section.settings.newsletter_subtitle != blank %}
+          <h3 style="font-family: var(--font-heading-family); font-size: 1.5rem; font-weight: 400; margin-bottom: 10px;">
+            {{ section.settings.newsletter_subtitle }}
+          </h3>
+        {% endif %}
+
+        {% if section.settings.newsletter_description != blank %}
+          <p style="margin-bottom: 30px; opacity: 0.9;">
+            {{ section.settings.newsletter_description }}
+          </p>
+        {% endif %}
+
+        {% form 'customer', class: 'newsletter-form' %}
+          <div style="display: flex; gap: 15px;">
+            <input 
+              type="email" 
+              name="contact[email]" 
+              placeholder="Enter Email Address Here" 
+              required 
+              style="flex: 1; padding: 15px; border: 1px solid rgba(255,255,255,0.3); background: transparent; color: white; font-size: 16px;"
+            >
+            <button type="submit" style="padding: 15px 30px; background: white; color: var(--color-primary); border: none; font-weight: 500; cursor: pointer; transition: all 0.3s ease;">
+              Submit
+            </button>
+          </div>
+          
+          {% if form.posted_successfully? %}
+            <p style="margin-top: 15px; color: #4CAF50;">Thank you for subscribing!</p>
+          {% endif %}
+          
+          {% if form.errors %}
+            <p style="margin-top: 15px; color: #f44336;">{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</p>
+          {% endif %}
+        {% endform %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% comment %} Instagram Feed {% endcomment %}
+<section class="instagram-feed" style="padding: 60px 0; background: white;">
+  <div class="container">
+    {% if section.settings.instagram_title != blank %}
+      <div style="text-align: center; margin-bottom: 50px;">
+        <a href="{{ section.settings.instagram_link }}" target="_blank" rel="noopener" class="btn" style="display: inline-block; padding: 12px 30px; border: 1px solid var(--color-primary); color: var(--color-primary); text-decoration: none; font-weight: 500; transition: all 0.3s ease;">
+          {{ section.settings.instagram_title }}
+        </a>
+      </div>
+    {% endif %}
+
+    {% comment %} Instagram Images Grid {% endcomment %}
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+      {% for block in section.blocks %}
+        {% if block.type == 'instagram_image' %}
+          <div style="aspect-ratio: 1; overflow: hidden;">
+            {% if block.settings.image != blank %}
+              {% if block.settings.link != blank %}
+                <a href="{{ block.settings.link }}" target="_blank" rel="noopener">
+              {% endif %}
+              <img src="{{ block.settings.image | image_url: width: 300 }}" alt="Instagram post" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+              {% if block.settings.link != blank %}
+                </a>
+              {% endif %}
+            {% else %}
+              <div style="width: 100%; height: 100%; background: #f5f5f5; display: flex; align-items: center; justify-content: center;">
+                <span style="color: #999; font-size: 14px;">Instagram Image</span>
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% comment %} Main Footer {% endcomment %}
+<footer style="background: var(--color-primary); color: white; padding: 60px 0 30px;">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 60px; margin-bottom: 40px;">
+      
+      {% comment %} Left Side {% endcomment %}
+      <div>
+        {% comment %} Logo {% endcomment %}
+        <div style="margin-bottom: 30px;">
+          {% if section.settings.footer_logo != blank %}
+            <img src="{{ section.settings.footer_logo | image_url: width: 200 }}" alt="{{ shop.name }}" style="max-height: 60px;">
+          {% else %}
+            <span class="h2" style="font-family: var(--font-heading-family); font-size: 2rem; font-weight: 400;">VERDURA</span>
+          {% endif %}
+        </div>
+
+        {% comment %} Contact Info {% endcomment %}
+        <div style="margin-bottom: 30px;">
+          {% if section.settings.address != blank %}
+            <p style="margin-bottom: 10px;">{{ section.settings.address }}</p>
+          {% endif %}
+          {% if section.settings.phone != blank %}
+            <p style="margin-bottom: 10px;">
+              <a href="tel:{{ section.settings.phone }}" style="color: white; text-decoration: none;">
+                Call us: {{ section.settings.phone }}
+              </a>
+            </p>
+          {% endif %}
+          {% if section.settings.email != blank %}
+            <p style="margin-bottom: 10px;">
+              <a href="mailto:{{ section.settings.email }}" style="color: white; text-decoration: none;">
+                Email us: {{ section.settings.email }}
+              </a>
+            </p>
+          {% endif %}
+        </div>
+
+        {% comment %} Footer Links {% endcomment %}
+        {% if section.settings.footer_menu != blank %}
+          <nav>
+            {% for link in section.settings.footer_menu.links %}
+              <a href="{{ link.url }}" style="color: white; text-decoration: none; margin-right: 30px; font-size: 14px;">
+                {{ link.title }}
+              </a>
+            {% endfor %}
+          </nav>
+        {% endif %}
+      </div>
+
+      {% comment %} Right Side - Social Icons {% endcomment %}
+      <div style="text-align: right;">
+        <div style="margin-bottom: 30px;">
+          {% if section.settings.facebook_url != blank %}
+            <a href="{{ section.settings.facebook_url }}" target="_blank" rel="noopener" style="color: white; font-size: 20px; margin-left: 20px; text-decoration: none;">
+              📘
+            </a>
+          {% endif %}
+          {% if section.settings.instagram_url != blank %}
+            <a href="{{ section.settings.instagram_url }}" target="_blank" rel="noopener" style="color: white; font-size: 20px; margin-left: 20px; text-decoration: none;">
+              📷
+            </a>
+          {% endif %}
+          {% if section.settings.youtube_url != blank %}
+            <a href="{{ section.settings.youtube_url }}" target="_blank" rel="noopener" style="color: white; font-size: 20px; margin-left: 20px; text-decoration: none;">
+              📺
+            </a>
+          {% endif %}
+        </div>
+
+        <div>
+          <p style="font-size: 14px; margin-bottom: 10px;">Copyright © {{ 'now' | date: '%Y' }} {{ shop.name }}</p>
+          {% if section.settings.website_credit != blank %}
+            <a href="{{ section.settings.website_credit_url }}" target="_blank" rel="noopener" style="color: white; font-size: 12px; text-decoration: none; opacity: 0.7;">
+              {{ section.settings.website_credit }}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .newsletter-form input::placeholder {
+    color: rgba(255,255,255,0.7);
+  }
+
+  .newsletter-form button:hover {
+    background: rgba(255,255,255,0.9);
+  }
+
+  .instagram-feed img:hover {
+    transform: scale(1.05);
+  }
+
+  .btn:hover {
+    background: var(--color-primary);
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    .newsletter .container > div,
+    footer .container > div {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+      text-align: center !important;
+    }
+    
+    .newsletter-form > div {
+      flex-direction: column !important;
+    }
+    
+    .instagram-feed > div > div {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Newsletter"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_title",
+      "label": "Newsletter title",
+      "default": "Sign up now"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_subtitle",
+      "label": "Newsletter subtitle",
+      "default": "Welcome to Verdura"
+    },
+    {
+      "type": "textarea",
+      "id": "newsletter_description",
+      "label": "Newsletter description",
+      "default": "Please join our email list for updates about new collections and special events"
+    },
+    {
+      "type": "header",
+      "content": "Instagram"
+    },
+    {
+      "type": "text",
+      "id": "instagram_title",
+      "label": "Instagram button text",
+      "default": "Find us on Instagram"
+    },
+    {
+      "type": "url",
+      "id": "instagram_link",
+      "label": "Instagram link"
+    },
+    {
+      "type": "header",
+      "content": "Footer Info"
+    },
+    {
+      "type": "image_picker",
+      "id": "footer_logo",
+      "label": "Footer logo"
+    },
+    {
+      "type": "textarea",
+      "id": "address",
+      "label": "Address",
+      "default": "745 Fifth Avenue, Suite 1205 New York, NY 10151"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Phone",
+      "default": "+1 (212) 758-3388"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Email",
+      "default": "info@verdura.com"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_menu",
+      "label": "Footer menu"
+    },
+    {
+      "type": "url",
+      "id": "facebook_url",
+      "label": "Facebook URL"
+    },
+    {
+      "type": "url",
+      "id": "instagram_url",
+      "label": "Instagram URL"
+    },
+    {
+      "type": "url",
+      "id": "youtube_url",
+      "label": "YouTube URL"
+    },
+    {
+      "type": "text",
+      "id": "website_credit",
+      "label": "Website credit text",
+      "default": "Website by The Beaux Arts"
+    },
+    {
+      "type": "url",
+      "id": "website_credit_url",
+      "label": "Website credit URL"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "instagram_image",
+      "name": "Instagram Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "Footer",
+      "blocks": [
+        {
+          "type": "instagram_image"
+        },
+        {
+          "type": "instagram_image"
+        },
+        {
+          "type": "instagram_image"
+        },
+        {
+          "type": "instagram_image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

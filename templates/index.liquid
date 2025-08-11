@@ -1,75 +1,12 @@
-<!-- Verdura Homepage Template -->
+{% comment %}
+  The homepage template for Verdura Fine Jewelry
+{% endcomment %}
 
-<div class="page-home" style="margin-top: 4rem;">
-  <!-- Placeholder content for testing header -->
-  <section style="padding: 4rem 2rem; text-align: center; background: var(--color-base-background-2); margin-top: 2rem;">
-    <div class="page-width">
-      <h1 class="h1">Verdura Fine Jewelry</h1>
-      <p style="font-size: 1.2rem; margin: 2rem 0;">Heritage of Style</p>
-      <p>This is a test page to demonstrate the header functionality. The actual homepage sections will be implemented next.</p>
-      
-      <!-- Test buttons for header interactions -->
-      <div style="margin-top: 3rem;">
-        <button onclick="window.HeaderUtils.openMenu()" class="button button--secondary" style="margin: 0.5rem;">
-          Test Menu
-        </button>
-        <button onclick="window.HeaderUtils.openCart()" class="button button--secondary" style="margin: 0.5rem;">
-          Test Cart
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Additional test content to show scrolling behavior -->
-  <section style="padding: 4rem 2rem; text-align: center;">
-    <div class="page-width">
-      <h2 class="h2">Scroll to Test Sticky Header</h2>
-      <p>Scroll down to see the header become sticky with a background.</p>
-    </div>
-  </section>
-
-  <section style="padding: 4rem 2rem; background: var(--color-base-background-2);">
-    <div class="page-width">
-      <h3 class="h3">Collections</h3>
-      <p>Future sections will include:</p>
-      <ul style="list-style: disc; margin-left: 2rem; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto;">
-        <li>Hero Video Section</li>
-        <li>Product Category Slider</li>
-        <li>Zodiac Collection Banner</li>
-        <li>Off-Season Collection</li>
-        <li>Very Verdura Section</li>
-        <li>Visit Gallery</li>
-        <li>New Arrivals</li>
-        <li>Heritage Section</li>
-        <li>Newsletter Signup</li>
-        <li>Instagram Feed</li>
-      </ul>
-    </div>
-  </section>
-
-  <section style="padding: 6rem 2rem;">
-    <div class="page-width">
-      <h2 class="h2">More Content</h2>
-      <p>This additional content helps test the scroll behavior and header interactions.</p>
-    </div>
-  </section>
-</div>
-
-<style>
-  /* Temporary styles for testing */
-  .page-home {
-    min-height: 200vh; /* Ensure scrollable content */
-  }
-  
-  .page-home section {
-    position: relative;
-  }
-  
-  .page-home section:nth-child(even) {
-    background: var(--color-base-background-1);
-  }
-  
-  .page-home section:nth-child(odd) {
-    background: var(--color-base-background-2);
-  }
-</style> 
+{% section 'hero-video' %}
+{% section 'collection-selector' %}
+{% section 'zodiac-banner' %}
+{% section 'off-season-collection' %}
+{% section 'very-verdura-banner' %}
+{% section 'visit-gallery' %}
+{% section 'new-arrivals' %}
+{% section 'heritage-section' %}

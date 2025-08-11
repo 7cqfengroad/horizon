@@ -1,0 +1,46 @@
+{
+  "name": "Footer",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "settings": {
+        "newsletter_title": "Sign up now",
+        "newsletter_subtitle": "Welcome to Verdura",
+        "newsletter_description": "Please join our email list for updates about new collections and special events",
+        "instagram_title": "Find us on Instagram",
+        "address": "745 Fifth Avenue, Suite 1205 New York, NY 10151",
+        "phone": "+1 (212) 758-3388",
+        "email": "info@verdura.com",
+        "website_credit": "Website by The Beaux Arts"
+      },
+      "blocks": {
+        "instagram_1": {
+          "type": "instagram_image",
+          "settings": {}
+        },
+        "instagram_2": {
+          "type": "instagram_image",
+          "settings": {}
+        },
+        "instagram_3": {
+          "type": "instagram_image",
+          "settings": {}
+        },
+        "instagram_4": {
+          "type": "instagram_image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "instagram_1",
+        "instagram_2",
+        "instagram_3",
+        "instagram_4"
+      ]
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

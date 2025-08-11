@@ -1,0 +1,17 @@
+{
+  "name": "Header",
+  "type": "header",
+  "sections": {
+    "header": {
+      "type": "header",
+      "settings": {
+        "announcement_text": "Welcome to our store",
+        "announcement_bg_color": "#000000",
+        "announcement_text_color": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "header"
+  ]
+}

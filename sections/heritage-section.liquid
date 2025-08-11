@@ -1,0 +1,142 @@
+{% comment %} Heritage Section {% endcomment %}
+<section class="heritage-section" style="padding: 80px 0; background: {{ section.settings.background_color }};">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+      
+      {% comment %} Left Side - Image {% endcomment %}
+      <div class="heritage-image">
+        {% if section.settings.image != blank %}
+          <div style="position: relative; overflow: hidden;">
+            <img src="{{ section.settings.image | image_url: width: 600 }}" alt="{{ section.settings.title }}" style="width: 100%; height: auto; display: block;">
+          </div>
+        {% else %}
+          <div style="aspect-ratio: 4/5; background: #f5f5f5; display: flex; align-items: center; justify-content: center;">
+            <span style="color: #999; font-size: 18px;">Heritage Image</span>
+          </div>
+        {% endif %}
+      </div>
+
+      {% comment %} Right Side - Content {% endcomment %}
+      <div class="heritage-content">
+        {% if section.settings.title != blank %}
+          <h2 class="h1" style="font-family: var(--font-heading-family); font-size: 3rem; font-weight: 400; margin-bottom: 20px; color: {{ section.settings.text_color }};">
+            {{ section.settings.title }}
+          </h2>
+        {% endif %}
+
+        {% if section.settings.subtitle != blank %}
+          <h3 class="h3" style="font-family: var(--font-heading-family); font-size: 1.5rem; font-weight: 400; margin-bottom: 30px; color: {{ section.settings.text_color }};">
+            {{ section.settings.subtitle }}
+          </h3>
+        {% endif %}
+
+        {% if section.settings.description != blank %}
+          <div style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 40px; color: {{ section.settings.text_color }};">
+            {{ section.settings.description }}
+          </div>
+        {% endif %}
+
+        {% if section.settings.button_text != blank and section.settings.button_link != blank %}
+          <a href="{{ section.settings.button_link }}" class="heritage-btn" style="display: inline-block; padding: 15px 30px; border: 2px solid {{ section.settings.text_color }}; color: {{ section.settings.text_color }}; text-decoration: none; font-weight: 500; transition: all 0.3s ease; background: transparent;">
+            {{ section.settings.button_text }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .heritage-btn:hover {
+    background: {{ section.settings.text_color }};
+    color: {{ section.settings.background_color }};
+  }
+
+  @media (max-width: 768px) {
+    .heritage-section .container > div {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+    }
+    
+    .heritage-content {
+      order: 1;
+      text-align: center;
+    }
+    
+    .heritage-image {
+      order: 2;
+    }
+    
+    .heritage-content h2 {
+      font-size: 2rem !important;
+    }
+    
+    .heritage-content h3 {
+      font-size: 1.3rem !important;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Heritage Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Heritage"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "About Fulco Di Verdura"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Born into Sicilian aristocracy in 1898, Verdura's founder, Duke Fulco di Verdura, began his extraordinary career in Paris as a designer for Coco Chanel. After eight years with Chanel where he, most notably, created the Maltese Cross cuffs that became his signature, Verdura followed his passion for design to America in 1934.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Discover our Heritage"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Heritage Section",
+      "settings": {
+        "title": "Heritage",
+        "subtitle": "About Fulco Di Verdura",
+        "description": "<p>Born into Sicilian aristocracy in 1898, Verdura's founder, Duke Fulco di Verdura, began his extraordinary career in Paris as a designer for Coco Chanel. After eight years with Chanel where he, most notably, created the Maltese Cross cuffs that became his signature, Verdura followed his passion for design to America in 1934.</p>"
+      }
+    }
+  ]
+}
+{% endschema %}
