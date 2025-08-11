@@ -1,0 +1,250 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "sections": {
+      "header": {
+        "type": "header",
+        "blocks": {
+          "header-0": {
+            "type": "category_link",
+            "settings": {
+              "title": "Bracelets & Watches",
+              "url": "/collections/bracelets-watches"
+            }
+          },
+          "header-1": {
+            "type": "category_link",
+            "settings": {
+              "title": "Cuffs",
+              "url": "/collections/cuffs"
+            }
+          },
+          "header-2": {
+            "type": "category_link",
+            "settings": {
+              "title": "Earclips",
+              "url": "/collections/earclips"
+            }
+          },
+          "header-3": {
+            "type": "category_link",
+            "settings": {
+              "title": "Rings",
+              "url": "/collections/rings"
+            }
+          },
+          "header-4": {
+            "type": "category_link",
+            "settings": {
+              "title": "Necklaces",
+              "url": "/collections/necklaces"
+            }
+          },
+          "header-5": {
+            "type": "category_link",
+            "settings": {
+              "title": "Brooches",
+              "url": "/collections/brooches"
+            }
+          },
+          "header-6": {
+            "type": "category_link",
+            "settings": {
+              "title": "Men's",
+              "url": "/collections/mens"
+            }
+          },
+          "header-7": {
+            "type": "category_link",
+            "settings": {
+              "title": "Zodiac Pendant Necklaces",
+              "url": "/collections/zodiac-pendant-necklaces"
+            }
+          },
+          "header-8": {
+            "type": "category_link",
+            "settings": {
+              "title": "All",
+              "url": "/collections/all-products"
+            }
+          },
+          "header-9": {
+            "type": "collection_link",
+            "settings": {
+              "title": "Featured in Feud",
+              "url": "/collections/featured-in-feud"
+            }
+          },
+          "header-10": {
+            "type": "collection_link",
+            "settings": {
+              "title": "Off-Season Collection",
+              "url": "/collections/off-season-collection"
+            }
+          },
+          "header-11": {
+            "type": "collection_link",
+            "settings": {
+              "title": "Byzantine Collection",
+              "url": "/collections/byzantine-collection"
+            }
+          },
+          "header-12": {
+            "type": "collection_link",
+            "settings": {
+              "title": "Caged Collection",
+              "url": "/collections/caged-collection"
+            }
+          },
+          "header-13": {
+            "type": "collection_link",
+            "settings": {
+              "title": "Constellation Collection",
+              "url": "/collections/constellation-collection"
+            }
+          },
+          "header-14": {
+            "type": "collection_link",
+            "settings": {
+              "title": "Curb-Link Collection",
+              "url": "/collections/curb-link-collection"
+            }
+          },
+          "header-15": {
+            "type": "collection_link",
+            "settings": {
+              "title": "Night & Day Collection",
+              "url": "/collections/night-day-collection"
+            }
+          },
+          "header-16": {
+            "type": "collection_link",
+            "settings": {
+              "title": "Stardust Collection",
+              "url": "/collections/stardust-collection"
+            }
+          },
+          "header-17": {
+            "type": "collection_link",
+            "settings": {
+              "title": "Vintage Verdura",
+              "url": "/collections/vintage-verdura"
+            }
+          },
+          "header-18": {
+            "type": "collection_link",
+            "settings": {
+              "title": "Very Verdura Gifts Under $20,000",
+              "url": "/collections/very-verdura-gifts-under-15-000"
+            }
+          },
+          "header-19": {
+            "type": "page_link",
+            "settings": {
+              "title": "The Story",
+              "url": "/pages/the-story"
+            }
+          },
+          "header-20": {
+            "type": "page_link",
+            "settings": {
+              "title": "Visit",
+              "url": "/pages/visit"
+            }
+          },
+          "header-21": {
+            "type": "page_link",
+            "settings": {
+              "title": "Contact",
+              "url": "/pages/contact"
+            }
+          },
+          "header-22": {
+            "type": "page_link",
+            "settings": {
+              "title": "At Your Service",
+              "url": "/pages/customer-service"
+            }
+          },
+          "header-23": {
+            "type": "page_link",
+            "settings": {
+              "title": "News",
+              "url": "/blogs/news"
+            }
+          },
+          "header-24": {
+            "type": "page_link",
+            "settings": {
+              "title": "Catalogues",
+              "url": "/pages/catalogues"
+            }
+          }
+        },
+        "block_order": [
+          "header-0",
+          "header-1",
+          "header-2",
+          "header-3",
+          "header-4",
+          "header-5",
+          "header-6",
+          "header-7",
+          "header-8",
+          "header-9",
+          "header-10",
+          "header-11",
+          "header-12",
+          "header-13",
+          "header-14",
+          "header-15",
+          "header-16",
+          "header-17",
+          "header-18",
+          "header-19",
+          "header-20",
+          "header-21",
+          "header-22",
+          "header-23",
+          "header-24"
+        ],
+        "settings": {
+          "menu_text": "MENU",
+          "cart_text": "CART",
+          "close_text": "CLOSE",
+          "main_collection_text": "The Collection",
+          "main_collection_url": "",
+          "category_label": "Shop by Category",
+          "collection_label": "Shop by Collection",
+          "desktop_category_label": "Category",
+          "desktop_collection_label": "Collection",
+          "search_placeholder": "Search"
+        }
+      },
+      "hero-video": {
+        "type": "hero-video",
+        "settings": {
+          "desktop_video": "https://pixabay.com/zh/videos/diamonds-jewels-rain-falling-3122/",
+          "mobile_video": "https://pixabay.com/zh/videos/diamonds-jewels-rain-falling-3122/",
+          "title": "Heritage of Style",
+          "subtitle": "Explore the Collection",
+          "text_color": "#f7f7f7",
+          "button_text": "",
+          "button_url": "",
+          "enable_full_click": true,
+          "link_url": "shopify://collections/all",
+          "height": "large"
+        }
+      }
+    },
+    "content_for_index": []
+  }
+}
