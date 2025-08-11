@@ -1,25 +1,202 @@
 {
-  "name": "Header group",
+  "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "announcement-bar": {
-      "type": "announcement-bar",
-      "settings": {
-        "text": "Welcome to our store",
-        "show_announcement": true,
-        "color_scheme": "background-2"
-      }
-    },
     "header": {
       "type": "header",
       "settings": {
-        "logo_width": 150,
-        "menu": "main-menu"
-      }
+        "logo": "",
+        "menu_text": "MENU",
+        "cart_text": "CART",
+        "close_text": "CLOSE",
+        "main_collection_text": "The Collection",
+        "main_collection_url": "/collections/all",
+        "category_label": "Shop by Category",
+        "collection_label": "Shop by Collection",
+        "desktop_category_label": "Category", 
+        "desktop_collection_label": "Collection",
+        "search_placeholder": "Search"
+      },
+      "blocks": [
+        {
+          "type": "category_link",
+          "settings": {
+            "title": "Bracelets & Watches",
+            "url": "/collections/bracelets-watches"
+          }
+        },
+        {
+          "type": "category_link",
+          "settings": {
+            "title": "Cuffs",
+            "url": "/collections/cuffs"
+          }
+        },
+        {
+          "type": "category_link",
+          "settings": {
+            "title": "Earclips", 
+            "url": "/collections/earclips"
+          }
+        },
+        {
+          "type": "category_link",
+          "settings": {
+            "title": "Rings",
+            "url": "/collections/rings"
+          }
+        },
+        {
+          "type": "category_link",
+          "settings": {
+            "title": "Necklaces",
+            "url": "/collections/necklaces"
+          }
+        },
+        {
+          "type": "category_link",
+          "settings": {
+            "title": "Brooches",
+            "url": "/collections/brooches"
+          }
+        },
+        {
+          "type": "category_link",
+          "settings": {
+            "title": "Men's",
+            "url": "/collections/mens"
+          }
+        },
+        {
+          "type": "category_link",
+          "settings": {
+            "title": "Zodiac Pendant Necklaces",
+            "url": "/collections/zodiac-pendant-necklaces"
+          }
+        },
+        {
+          "type": "category_link",
+          "settings": {
+            "title": "All",
+            "url": "/collections/all-products"
+          }
+        },
+        {
+          "type": "collection_link",
+          "settings": {
+            "title": "Featured in Feud",
+            "url": "/collections/featured-in-feud"
+          }
+        },
+        {
+          "type": "collection_link",
+          "settings": {
+            "title": "Off-Season Collection",
+            "url": "/collections/off-season-collection"
+          }
+        },
+        {
+          "type": "collection_link",
+          "settings": {
+            "title": "Byzantine Collection",
+            "url": "/collections/byzantine-collection"
+          }
+        },
+        {
+          "type": "collection_link",
+          "settings": {
+            "title": "Caged Collection",
+            "url": "/collections/caged-collection"
+          }
+        },
+        {
+          "type": "collection_link",
+          "settings": {
+            "title": "Constellation Collection",
+            "url": "/collections/constellation-collection"
+          }
+        },
+        {
+          "type": "collection_link",
+          "settings": {
+            "title": "Curb-Link Collection",
+            "url": "/collections/curb-link-collection"
+          }
+        },
+        {
+          "type": "collection_link",
+          "settings": {
+            "title": "Night & Day Collection",
+            "url": "/collections/night-day-collection"
+          }
+        },
+        {
+          "type": "collection_link",
+          "settings": {
+            "title": "Stardust Collection", 
+            "url": "/collections/stardust-collection"
+          }
+        },
+        {
+          "type": "collection_link",
+          "settings": {
+            "title": "Vintage Verdura",
+            "url": "/collections/vintage-verdura"
+          }
+        },
+        {
+          "type": "collection_link",
+          "settings": {
+            "title": "Very Verdura Gifts Under $20,000",
+            "url": "/collections/very-verdura-gifts-under-15-000"
+          }
+        },
+        {
+          "type": "page_link",
+          "settings": {
+            "title": "The Story",
+            "url": "/pages/the-story"
+          }
+        },
+        {
+          "type": "page_link",
+          "settings": {
+            "title": "Visit",
+            "url": "/pages/visit"
+          }
+        },
+        {
+          "type": "page_link",
+          "settings": {
+            "title": "Contact",
+            "url": "/pages/contact"
+          }
+        },
+        {
+          "type": "page_link",
+          "settings": {
+            "title": "At Your Service",
+            "url": "/pages/customer-service"
+          }
+        },
+        {
+          "type": "page_link",
+          "settings": {
+            "title": "News",
+            "url": "/blogs/news"
+          }
+        },
+        {
+          "type": "page_link",
+          "settings": {
+            "title": "Catalogues",
+            "url": "/pages/catalogues"
+          }
+        }
+      ]
     }
   },
   "order": [
-    "announcement-bar",
     "header"
   ]
 } 

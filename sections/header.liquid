@@ -1,1 +1,449 @@
- 
+{% comment %}
+  Verdura Header Section - 响应式头部导航
+  包含logo、移动端菜单、购物车和桌面端导航
+{% endcomment %}
+
+<header class="site-header" data-section-id="{{ section.id }}" data-section-type="header">
+  <nav class="header-nav" role="navigation" aria-label="Primary navigation">
+    <ul class="header-nav-list" role="list">
+      <!-- 移动端菜单按钮 -->
+      <li class="header-nav-item header-nav-item--menu">
+        <button class="btn subnav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="打开导航菜单">
+          <span class="menu-text">{{ section.settings.menu_text | default: 'MENU' }}</span>
+        </button>
+      </li>
+      
+      <!-- Logo -->
+      <li class="header-nav-item header-nav-item--logo">
+        <a class="logo btn" href="{{ routes.root_url }}" aria-label="返回首页">
+          {% if section.settings.logo != blank %}
+            <img 
+              src="{{ section.settings.logo | image_url: width: 750 }}" 
+              alt="{{ shop.name }}" 
+              srcset="{{ section.settings.logo | image_url: width: 375 }} 375w, 
+                      {{ section.settings.logo | image_url: width: 550 }} 550w, 
+                      {{ section.settings.logo | image_url: width: 750 }} 750w" 
+              width="750" 
+              height="260" 
+              sizes="100vw" 
+              fetchpriority="high"
+              loading="eager">
+          {% else %}
+            <span class="site-name">{{ shop.name }}</span>
+          {% endif %}
+        </a>
+      </li>
+      
+      <!-- 购物车按钮 -->
+      <li class="header-nav-item header-nav-item--cart">
+        <button class="btn open-slideover cart-button" type="button" data-slideover="cart" aria-label="打开购物车">
+          <span class="cart-text">{{ section.settings.cart_text | default: 'CART' }} (<span class="cartQuantity">{{ cart.item_count }}</span>)</span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- 移动端子导航 -->
+  <div class="subnav" id="mobile-menu" aria-hidden="true">
+    <div class="subnav-close">
+      <button type="button" class="label subnav-toggle btn" aria-label="关闭导航菜单">
+        <span>{{ section.settings.close_text | default: 'CLOSE' }}</span>
+      </button>
+    </div>
+    
+    <menu class="subnav-menu" role="list">
+      <!-- The Collection 主菜单项 -->
+      <li>
+        <a href="{{ section.settings.main_collection_url | default: '/collections/all' }}" class="h2 large the-collection">
+          {{ section.settings.main_collection_text | default: 'The Collection' }}
+        </a>
+        
+        <!-- 移动端分类展示 -->
+        <div class="collections mobile">
+          <!-- 按分类购买 -->
+          <ul role="list">
+            <li class="label">{{ section.settings.category_label | default: 'Shop by Category' }}</li>
+            {% for block in section.blocks %}
+              {% if block.type == 'category_link' %}
+                <li>
+                  <a href="{{ block.settings.url }}">{{ block.settings.title }}</a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+          
+          <!-- 按系列购买 -->
+          <ul role="list">
+            <li class="label">{{ section.settings.collection_label | default: 'Shop by Collection' }}</li>
+            {% for block in section.blocks %}
+              {% if block.type == 'collection_link' %}
+                <li>
+                  <a href="{{ block.settings.url }}">{{ block.settings.title }}</a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </li>
+      
+      <!-- 其他导航页面 -->
+      {% for block in section.blocks %}
+        {% if block.type == 'page_link' %}
+          <li class="label">
+            <a href="{{ block.settings.url }}">{{ block.settings.title }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </menu>
+    
+    <!-- 桌面端分类展示 -->
+    <div class="collections desktop">
+      <ul role="list">
+        <li class="label">{{ section.settings.desktop_category_label | default: 'Category' }}</li>
+        {% for block in section.blocks %}
+          {% if block.type == 'category_link' %}
+            <li>
+              <a href="{{ block.settings.url }}">{{ block.settings.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      
+      <ul role="list">
+        <li class="label">{{ section.settings.desktop_collection_label | default: 'Collection' }}</li>
+        {% for block in section.blocks %}
+          {% if block.type == 'collection_link' %}
+            <li>
+              <a href="{{ block.settings.url }}">{{ block.settings.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <!-- 搜索功能 -->
+  <div class="search is-open">
+    <button class="btn search-toggle" type="button" aria-label="打开搜索">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.966 56.966" xml:space="preserve" aria-hidden="true">
+        <path fill="currentColor" d="M55.146 51.887 41.588 37.786c3.486-4.144 5.396-9.358 5.396-14.786 0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837 1.192-1.147 1.23-3.049.083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z"></path>
+      </svg>
+    </button>
+    <form action="{{ routes.search_url }}" method="get" novalidate="" role="search">
+      <input 
+        class="p search-input" 
+        type="search" 
+        name="q" 
+        placeholder="{{ section.settings.search_placeholder | default: 'Search' }}" 
+        value="{{ search.terms | escape }}" 
+        required="" 
+        aria-label="搜索产品">
+    </form>
+  </div>
+
+  <!-- 覆盖层 -->
+  <div class="overlay" aria-hidden="true"></div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "tag": "header",
+  "class": "site-header-wrapper",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "text",
+      "id": "menu_text",
+      "label": "Menu Button Text",
+      "default": "MENU"
+    },
+    {
+      "type": "text",
+      "id": "cart_text",
+      "label": "Cart Button Text",
+      "default": "CART"
+    },
+    {
+      "type": "text",
+      "id": "close_text",
+      "label": "Close Button Text",
+      "default": "CLOSE"
+    },
+    {
+      "type": "text",
+      "id": "main_collection_text",
+      "label": "Main Collection Text",
+      "default": "The Collection"
+    },
+    {
+      "type": "url",
+      "id": "main_collection_url",
+      "label": "Main Collection URL"
+    },
+    {
+      "type": "text",
+      "id": "category_label",
+      "label": "Category Section Label",
+      "default": "Shop by Category"
+    },
+    {
+      "type": "text",
+      "id": "collection_label",
+      "label": "Collection Section Label",
+      "default": "Shop by Collection"
+    },
+    {
+      "type": "text",
+      "id": "desktop_category_label",
+      "label": "Desktop Category Label",
+      "default": "Category"
+    },
+    {
+      "type": "text",
+      "id": "desktop_collection_label",
+      "label": "Desktop Collection Label",
+      "default": "Collection"
+    },
+    {
+      "type": "text",
+      "id": "search_placeholder",
+      "label": "Search Placeholder",
+      "default": "Search"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category_link",
+      "name": "Category Link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Category Name"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Category URL"
+        }
+      ]
+    },
+    {
+      "type": "collection_link",
+      "name": "Collection Link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Collection Name"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Collection URL"
+        }
+      ]
+    },
+    {
+      "type": "page_link",
+      "name": "Page Link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Page Title"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Page URL"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "category_link",
+        "settings": {
+          "title": "Bracelets & Watches",
+          "url": "/collections/bracelets-watches"
+        }
+      },
+      {
+        "type": "category_link",
+        "settings": {
+          "title": "Cuffs",
+          "url": "/collections/cuffs"
+        }
+      },
+      {
+        "type": "category_link",
+        "settings": {
+          "title": "Earclips",
+          "url": "/collections/earclips"
+        }
+      },
+      {
+        "type": "category_link",
+        "settings": {
+          "title": "Rings",
+          "url": "/collections/rings"
+        }
+      },
+      {
+        "type": "category_link",
+        "settings": {
+          "title": "Necklaces",
+          "url": "/collections/necklaces"
+        }
+      },
+      {
+        "type": "category_link",
+        "settings": {
+          "title": "Brooches",
+          "url": "/collections/brooches"
+        }
+      },
+      {
+        "type": "category_link",
+        "settings": {
+          "title": "Men's",
+          "url": "/collections/mens"
+        }
+      },
+      {
+        "type": "category_link",
+        "settings": {
+          "title": "Zodiac Pendant Necklaces",
+          "url": "/collections/zodiac-pendant-necklaces"
+        }
+      },
+      {
+        "type": "category_link",
+        "settings": {
+          "title": "All",
+          "url": "/collections/all-products"
+        }
+      },
+      {
+        "type": "collection_link",
+        "settings": {
+          "title": "Featured in Feud",
+          "url": "/collections/featured-in-feud"
+        }
+      },
+      {
+        "type": "collection_link",
+        "settings": {
+          "title": "Off-Season Collection",
+          "url": "/collections/off-season-collection"
+        }
+      },
+      {
+        "type": "collection_link",
+        "settings": {
+          "title": "Byzantine Collection",
+          "url": "/collections/byzantine-collection"
+        }
+      },
+      {
+        "type": "collection_link",
+        "settings": {
+          "title": "Caged Collection",
+          "url": "/collections/caged-collection"
+        }
+      },
+      {
+        "type": "collection_link",
+        "settings": {
+          "title": "Constellation Collection",
+          "url": "/collections/constellation-collection"
+        }
+      },
+      {
+        "type": "collection_link",
+        "settings": {
+          "title": "Curb-Link Collection",
+          "url": "/collections/curb-link-collection"
+        }
+      },
+      {
+        "type": "collection_link",
+        "settings": {
+          "title": "Night & Day Collection",
+          "url": "/collections/night-day-collection"
+        }
+      },
+      {
+        "type": "collection_link",
+        "settings": {
+          "title": "Stardust Collection",
+          "url": "/collections/stardust-collection"
+        }
+      },
+      {
+        "type": "collection_link",
+        "settings": {
+          "title": "Vintage Verdura",
+          "url": "/collections/vintage-verdura"
+        }
+      },
+      {
+        "type": "collection_link",
+        "settings": {
+          "title": "Very Verdura Gifts Under $20,000",
+          "url": "/collections/very-verdura-gifts-under-15-000"
+        }
+      },
+      {
+        "type": "page_link",
+        "settings": {
+          "title": "The Story",
+          "url": "/pages/the-story"
+        }
+      },
+      {
+        "type": "page_link",
+        "settings": {
+          "title": "Visit",
+          "url": "/pages/visit"
+        }
+      },
+      {
+        "type": "page_link",
+        "settings": {
+          "title": "Contact",
+          "url": "/pages/contact"
+        }
+      },
+      {
+        "type": "page_link",
+        "settings": {
+          "title": "At Your Service",
+          "url": "/pages/customer-service"
+        }
+      },
+      {
+        "type": "page_link",
+        "settings": {
+          "title": "News",
+          "url": "/blogs/news"
+        }
+      },
+      {
+        "type": "page_link",
+        "settings": {
+          "title": "Catalogues",
+          "url": "/pages/catalogues"
+        }
+      }
+    ]
+  }
+}
+{% endschema %} 
