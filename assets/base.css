@@ -611,4 +611,47 @@ table {
   display: block !important;
   opacity: 1 !important;
   visibility: visible !important;
+}
+
+/* ==========================================================================
+   按钮变体样式
+   ========================================================================== */
+
+.btn--primary {
+  background: transparent;
+  border: 2px solid currentColor;
+  color: #f7f7f7;
+  padding: 12px 30px;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn--primary:hover,
+.btn--primary:focus {
+  background: currentColor;
+  color: #000;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.btn--primary:focus-visible {
+  outline: 3px solid #0056b3;
+  outline-offset: 2px;
+}
+
+/* 减少动画模式 */
+@media (prefers-reduced-motion: reduce) {
+  .btn--primary {
+    transition: none;
+  }
+  
+  .btn--primary:hover,
+  .btn--primary:focus {
+    transform: none;
+  }
 } 

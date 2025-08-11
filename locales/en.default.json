@@ -40,6 +40,9 @@
     },
     "footer": {
       "name": "Footer"
+    },
+    "hero_video": {
+      "explore_collection": "Explore the collection"
     }
   },
   "footer": {
@@ -78,14 +81,12 @@
       "other": "{{ count }} countries/regions found"
     }
   },
-  "sections": {
-    "slideshow": {
-      "pause_slideshow": "Pause slideshow",
-      "play_slideshow": "Play slideshow"
-    },
-    "cart": {
-      "cart_error": "There was an error while updating your cart. Please try again.",
-      "quantity_error": "You can only add {{ quantity }} of this item to your cart."
-    }
+  "slideshow": {
+    "pause_slideshow": "Pause slideshow",
+    "play_slideshow": "Play slideshow"
+  },
+  "cart_section": {
+    "cart_error": "There was an error while updating your cart. Please try again.",
+    "quantity_error": "You can only add {{ quantity }} of this item to your cart."
   }
 } 
