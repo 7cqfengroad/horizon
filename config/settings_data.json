@@ -249,6 +249,12 @@
       "collection-slider": {
         "type": "collection-slider",
         "blocks": {
+          "collection_DdH7bg": {
+            "type": "collection",
+            "settings": {
+              "collection": "男装"
+            }
+          },
           "collection_7caDTf": {
             "type": "collection",
             "settings": {
@@ -263,6 +269,7 @@
           }
         },
         "block_order": [
+          "collection_DdH7bg",
           "collection_7caDTf",
           "collection_dGWfKV"
         ],
