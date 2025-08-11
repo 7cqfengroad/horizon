@@ -62,6 +62,9 @@
     },
     "image_with_text": {
       "image_placeholder": "Image placeholder"
+    },
+    "zodiac": {
+      "image_placeholder": "Image placeholder"
     }
   },
   "footer": {
