@@ -1,0 +1,157 @@
+{% comment %}
+  404 Error Page Template
+  当用户访问不存在的页面时显示
+{% endcomment %}
+
+<div class="error-404">
+  <div class="error-content">
+    <h1 class="error-title">{{ 'general.404.title' | t }}</h1>
+    <p class="error-message">{{ 'general.404.subtext' | t }}</p>
+    
+    <div class="error-search">
+      <p>{{ 'general.404.search_suggestion' | t: search_url: routes.search_url }}</p>
+      <form action="{{ routes.search_url }}" method="get" role="search">
+        <input 
+          type="search" 
+          name="q" 
+          placeholder="{{ 'general.search_placeholder' | t }}"
+          aria-label="{{ 'general.search' | t }}">
+        <button type="submit">{{ 'general.search' | t }}</button>
+      </form>
+    </div>
+
+    <div class="error-actions">
+      <a href="{{ routes.root_url }}" class="btn btn-primary">
+        {{ 'general.404.link' | t }}
+      </a>
+      <button type="button" onclick="history.back()" class="btn btn-secondary">
+        {{ 'general.previous_page' | t: previous_page: 'previous page' }}
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .error-404 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    padding: 60px 20px;
+  }
+
+  .error-content {
+    text-align: center;
+    max-width: 500px;
+  }
+
+  .error-title {
+    font-size: 48px;
+    font-weight: 400;
+    margin: 0 0 20px;
+    color: #000000;
+  }
+
+  .error-message {
+    font-size: 18px;
+    margin: 0 0 40px;
+    color: #666666;
+  }
+
+  .error-search {
+    margin-bottom: 40px;
+  }
+
+  .error-search p {
+    margin: 0 0 20px;
+    font-size: 16px;
+  }
+
+  .error-search form {
+    display: flex;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .error-search input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #ddd;
+    font-size: 16px;
+  }
+
+  .error-search button {
+    padding: 12px 24px;
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .error-search button:hover {
+    background: #333333;
+  }
+
+  .error-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-block;
+  }
+
+  .btn-primary {
+    background: #000000;
+    color: #ffffff;
+    border-color: #000000;
+  }
+
+  .btn-primary:hover {
+    background: #333333;
+    border-color: #333333;
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: #000000;
+    border-color: #000000;
+  }
+
+  .btn-secondary:hover {
+    background: #000000;
+    color: #ffffff;
+  }
+
+  @media (max-width: 768px) {
+    .error-title {
+      font-size: 36px;
+    }
+
+    .error-search form {
+      flex-direction: column;
+    }
+
+    .error-actions {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn {
+      width: 100%;
+      max-width: 200px;
+    }
+  }
+</style> 

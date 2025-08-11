@@ -1,0 +1,91 @@
+{
+  "general": {
+    "meta": {
+      "page": "Page {{ page }}"
+    },
+    "search": "Search",
+    "search_placeholder": "Search for products...",
+    "close": "Close",
+    "read_more": "Read More",
+    "404": {
+      "title": "Page Not Found",
+      "subtext": "The page you were looking for does not exist.",
+      "search_suggestion": "Maybe you want to try the search instead?",
+      "link": "Continue shopping"
+    },
+    "previous_page": "Go back to {{ previous_page }}",
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page {{ page }} of {{ pages }}"
+    },
+    "share": {
+      "success_message": "Link copied to clipboard!"
+    }
+  },
+  "accessibility": {
+    "skip_to_text": "Skip to content",
+    "refresh_page": "Choosing a selection results in a full page refresh.",
+    "link_messages": {
+      "new_window": "Opens in a new window."
+    }
+  },
+  "sections": {
+    "header": {
+      "name": "Header",
+      "menu": "Menu",
+      "cart": "Cart",
+      "close": "Close",
+      "search": "Search"
+    },
+    "footer": {
+      "name": "Footer"
+    }
+  },
+  "footer": {
+    "phone_label": "Call us",
+    "email_label": "Email us",
+    "copyright": "All rights reserved"
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Add to cart",
+      "sold_out": "Sold out",
+      "unavailable": "Unavailable",
+      "value_unavailable": "{{ option_value }} - Unavailable"
+    },
+    "price_range": "From {{ min }} to {{ max }}"
+  },
+  "cart": {
+    "title": "Cart",
+    "cart_error": "There was an error while updating your cart. Please try again.",
+    "quantity_error": "You can only add {{ quantity }} of this item to your cart."
+  },
+  "blogs": {
+    "article": {
+      "tagged": "Tagged"
+    }
+  },
+  "recipient": {
+    "form": {
+      "expanded": "Gift message form expanded",
+      "collapsed": "Gift message form collapsed"
+    }
+  },
+  "localization": {
+    "country_results_count": {
+      "one": "{{ count }} country/region found",
+      "other": "{{ count }} countries/regions found"
+    }
+  },
+  "sections": {
+    "slideshow": {
+      "pause_slideshow": "Pause slideshow",
+      "play_slideshow": "Play slideshow"
+    },
+    "cart": {
+      "cart_error": "There was an error while updating your cart. Please try again.",
+      "quantity_error": "You can only add {{ quantity }} of this item to your cart."
+    }
+  }
+} 

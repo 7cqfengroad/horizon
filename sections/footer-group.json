@@ -1,0 +1,64 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "settings": {
+        "footer_logo": "",
+        "contact_address": "745 Fifth Avenue, Suite 1205 New York, NY 10151",
+        "contact_phone": "+1 (212) 758-3388",
+        "contact_email": "info@verdura.com",
+        "website_credit_text": "Website by The Beaux Arts",
+        "website_credit_url": "https://www.thebeauxartsdigital.com/"
+      },
+      "blocks": [
+        {
+          "type": "social_link",
+          "settings": {
+            "platform": "facebook",
+            "url": "https://www.facebook.com/verdura/"
+          }
+        },
+        {
+          "type": "social_link",
+          "settings": {
+            "platform": "instagram",
+            "url": "https://www.instagram.com/verdurajewelry/"
+          }
+        },
+        {
+          "type": "social_link",
+          "settings": {
+            "platform": "youtube",
+            "url": "https://youtube.com/@verdurajewelry"
+          }
+        },
+        {
+          "type": "footer_link",
+          "settings": {
+            "title": "Online Accessibility Statement",
+            "url": "/pages/online-accessibility-statement"
+          }
+        },
+        {
+          "type": "footer_link",
+          "settings": {
+            "title": "Catalogues",
+            "url": "/pages/catalogues"
+          }
+        },
+        {
+          "type": "footer_link",
+          "settings": {
+            "title": "Customer Service / FAQ",
+            "url": "/pages/customer-service"
+          }
+        }
+      ]
+    }
+  },
+  "order": [
+    "footer"
+  ]
+} 
