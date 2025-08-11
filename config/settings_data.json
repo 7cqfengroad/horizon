@@ -249,6 +249,12 @@
       "collection-slider": {
         "type": "collection-slider",
         "blocks": {
+          "collection_7caDTf": {
+            "type": "collection",
+            "settings": {
+              "collection": "女装"
+            }
+          },
           "collection_dGWfKV": {
             "type": "collection",
             "settings": {
@@ -257,6 +263,7 @@
           }
         },
         "block_order": [
+          "collection_7caDTf",
           "collection_dGWfKV"
         ],
         "settings": {
