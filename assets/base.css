@@ -644,6 +644,32 @@ table {
   outline-offset: 2px;
 }
 
+.btn--secondary {
+  background: transparent;
+  border: 2px solid #000;
+  color: #000;
+  padding: 12px 24px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus {
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn--secondary:focus-visible {
+  outline: 3px solid #0056b3;
+  outline-offset: 2px;
+}
+
 /* 减少动画模式 */
 @media (prefers-reduced-motion: reduce) {
   .btn--primary {
