@@ -245,6 +245,26 @@
           "link_url": "shopify://collections/all",
           "height": "large"
         }
+      },
+      "collection-slider": {
+        "type": "collection-slider",
+        "blocks": {
+          "collection_dGWfKV": {
+            "type": "collection",
+            "settings": {
+              "collection": "bracelets"
+            }
+          }
+        },
+        "block_order": [
+          "collection_dGWfKV"
+        ],
+        "settings": {
+          "products_to_show": 4,
+          "show_price": true,
+          "section_padding_top": 60,
+          "section_padding_bottom": 60
+        }
       }
     },
     "content_for_index": []
