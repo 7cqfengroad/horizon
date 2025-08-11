@@ -233,7 +233,9 @@
         "type": "hero-video",
         "settings": {
           "desktop_video": "https://pixabay.com/zh/videos/diamonds-jewels-rain-falling-3122/",
+          "desktop_poster": "shopify://shop_images/03f5a3bcbea15ed03a7a15e1a6877fff.webp",
           "mobile_video": "https://pixabay.com/zh/videos/diamonds-jewels-rain-falling-3122/",
+          "mobile_poster": "shopify://shop_images/03f5a3bcbea15ed03a7a15e1a6877fff.webp",
           "title": "Heritage of Style",
           "subtitle": "Explore the Collection",
           "text_color": "#f7f7f7",
