@@ -123,7 +123,7 @@
 
 /* 子导航覆盖层 - 默认完全隐藏 */
 .subnav {
-  position: fixed;
+  position: fixed !important;
   top: 0;
   left: 0;
   width: 100vw;
@@ -131,18 +131,18 @@
   background: rgba(220, 220, 220, 0.95);
   z-index: 999;
   overflow-y: auto;
-  opacity: 0;
-  visibility: hidden;
+  opacity: 0 !important;
+  visibility: hidden !important;
   transform: translateX(-100%);
   transition: all 0.3s ease;
-  display: none; /* 默认完全隐藏 */
+  display: none !important; /* 强制隐藏 */
   flex-direction: column;
 }
 
 .subnav.is-open {
-  display: flex; /* 打开时显示flex布局 */
-  opacity: 1;
-  visibility: visible;
+  display: flex !important; /* 强制显示flex布局 */
+  opacity: 1 !important;
+  visibility: visible !important;
   transform: translateX(0);
 }
 
@@ -263,16 +263,16 @@
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   z-index: 998;
-  opacity: 0;
-  visibility: hidden;
-  display: none; /* 默认完全隐藏 */
+  opacity: 0 !important;
+  visibility: hidden !important;
+  display: none !important; /* 强制隐藏 */
   transition: all 0.3s ease;
 }
 
 .overlay.is-open {
-  display: block; /* 打开时显示 */
-  opacity: 1;
-  visibility: visible;
+  display: block !important; /* 强制显示 */
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 /* 搜索功能 */
@@ -529,6 +529,27 @@ body.js-menu-open {
   overflow: hidden;
   position: fixed;
   width: 100%;
+}
+
+/* 强制重置 - 确保默认状态下元素隐藏 */
+.subnav:not(.is-open) {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.overlay:not(.is-open) {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.search:not(.is-open) {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
 /* JavaScript状态类 */

@@ -145,6 +145,43 @@
   <div class="overlay" aria-hidden="true"></div>
 </header>
 
+<script>
+// 临时修复脚本 - 确保header默认状态正确
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('Header 临时修复脚本加载');
+  
+  // 强制隐藏subnav
+  const subnav = document.querySelector('.subnav');
+  if (subnav && !subnav.classList.contains('is-open')) {
+    subnav.style.display = 'none';
+    subnav.style.opacity = '0';
+    subnav.style.visibility = 'hidden';
+    subnav.style.transform = 'translateX(-100%)';
+    console.log('Subnav已强制隐藏');
+  }
+  
+  // 强制隐藏overlay
+  const overlay = document.querySelector('.overlay');
+  if (overlay && !overlay.classList.contains('is-open')) {
+    overlay.style.display = 'none';
+    overlay.style.opacity = '0';
+    overlay.style.visibility = 'hidden';
+    console.log('Overlay已强制隐藏');
+  }
+  
+  // 强制隐藏search（如果没有is-open类）
+  const search = document.querySelector('.search');
+  if (search && !search.classList.contains('is-open')) {
+    search.style.opacity = '0';
+    search.style.visibility = 'hidden';
+    search.style.transform = 'translateY(-10px)';
+    console.log('Search已强制隐藏');
+  }
+  
+  console.log('Header状态检查完成');
+});
+</script>
+
 {% schema %}
 {
   "name": "Header",

@@ -586,4 +586,29 @@ table {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+}
+
+/* Header特殊重置 - 确保导航菜单默认隐藏 */
+.site-header .subnav {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.site-header .subnav.is-open {
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.site-header .overlay {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.site-header .overlay.is-open {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 } 
