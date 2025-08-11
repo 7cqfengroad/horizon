@@ -249,6 +249,12 @@
       "collection-slider": {
         "type": "collection-slider",
         "blocks": {
+          "collection_9yYbbF": {
+            "type": "collection",
+            "settings": {
+              "collection": "童装"
+            }
+          },
           "collection_DdH7bg": {
             "type": "collection",
             "settings": {
@@ -269,6 +275,7 @@
           }
         },
         "block_order": [
+          "collection_9yYbbF",
           "collection_DdH7bg",
           "collection_7caDTf",
           "collection_dGWfKV"
