@@ -1,0 +1,142 @@
+<header>
+  <nav class="">
+    <ul role="list">
+      <li><button class="btn subnav-toggle" type="button">Menu</button></li>
+      <li>
+        <a class="logo btn" href="/">
+          <img src="//verdura.com/cdn/shop/files/logo_verdura_bfd624c2-a3b0-405d-8194-899695e10580.png?v=1710363737&amp;width=750" alt="" srcset="//verdura.com/cdn/shop/files/logo_verdura_bfd624c2-a3b0-405d-8194-899695e10580.png?v=1710363737&amp;width=375 375w, //verdura.com/cdn/shop/files/logo_verdura_bfd624c2-a3b0-405d-8194-899695e10580.png?v=1710363737&amp;width=550 550w, //verdura.com/cdn/shop/files/logo_verdura_bfd624c2-a3b0-405d-8194-899695e10580.png?v=1710363737&amp;width=750 750w" width="750" height="260" sizes="100vw" fetchpriority="high">
+        </a>
+      </li>
+      <li><button class="btn open-slideover" type="button" data-slideover="cart">Cart (<span class="cartQuantity">0</span>)</button></li>
+    </ul>
+  </nav>
+
+  <div class="subnav">
+    <div class="close"><button type="button" class="label subnav-toggle btn"><span>Close</span></button></div>
+    <menu>
+      <li>
+        <a href="" class="h2 large the-collection">The Collection</a>
+        <div class="collections mobile">
+          <ul role="list">
+            <li class="label">Shop by Category</li>
+            
+              <li><a href="/collections/bracelets-watches">Bracelets &amp; Watches</a></li>
+            
+              <li><a href="/collections/cuffs">Cuffs</a></li>
+            
+              <li><a href="/collections/earclips">Earclips</a></li>
+            
+              <li><a href="/collections/rings">Rings</a></li>
+            
+              <li><a href="/collections/necklaces">Necklaces</a></li>
+            
+              <li><a href="/collections/brooches">Brooches</a></li>
+            
+              <li><a href="/collections/mens">Men's</a></li>
+            
+              <li><a href="/collections/zodiac-pendant-necklaces">Zodiac Pendant Necklaces</a></li>
+            
+              <li><a href="/collections/all-products">All</a></li>
+            
+          </ul>
+          <ul role="list">
+            <li class="label">Shop by Collection</li>
+            
+              <li><a href="/collections/featured-in-feud">Featured in Feud</a></li>
+            
+              <li><a href="/collections/off-season-collection">Off-Season Collection</a></li>
+            
+              <li><a href="/collections/byzantine-collection">Byzantine Collection</a></li>
+            
+              <li><a href="/collections/caged-collection">Caged Collection</a></li>
+            
+              <li><a href="/collections/constellation-collection">Constellation Collection</a></li>
+            
+              <li><a href="/collections/curb-link-collection">Curb-Link Collection</a></li>
+            
+              <li><a href="/collections/night-day-collection">Night &amp; Day Collection</a></li>
+            
+              <li><a href="/collections/stardust-collection">Stardust Collection</a></li>
+            
+              <li><a href="/collections/vintage-verdura">Vintage Verdura</a></li>
+            
+              <li><a href="/collections/very-verdura-gifts-under-15-000">Very Verdura Gifts Under $20,000</a></li>
+            
+          </ul>
+        </div>
+      </li>
+      
+        <li class="label"><a href="/pages/the-story">The Story</a></li>
+      
+        <li class="label"><a href="/pages/visit">Visit</a></li>
+      
+        <li class="label"><a href="/pages/contact">Contact</a></li>
+      
+        <li class="label"><a href="/pages/customer-service">At Your Service</a></li>
+      
+        <li class="label"><a href="/blogs/news">News</a></li>
+      
+        <li class="label"><a href="/pages/catalogues">Catalogues</a></li>
+      
+    </menu>
+    <div class="collections desktop">
+      <ul role="list">
+        <li class="label">Category</li>
+        
+          <li><a href="/collections/bracelets-watches">Bracelets &amp; Watches</a></li>
+        
+          <li><a href="/collections/cuffs">Cuffs</a></li>
+        
+          <li><a href="/collections/earclips">Earclips</a></li>
+        
+          <li><a href="/collections/rings">Rings</a></li>
+        
+          <li><a href="/collections/necklaces">Necklaces</a></li>
+        
+          <li><a href="/collections/brooches">Brooches</a></li>
+        
+          <li><a href="/collections/mens">Men's</a></li>
+        
+          <li><a href="/collections/zodiac-pendant-necklaces">Zodiac Pendant Necklaces</a></li>
+        
+          <li><a href="/collections/all-products">All</a></li>
+        
+      </ul>
+      <ul role="list">
+        <li class="label">Collection</li>
+        
+          <li><a href="/collections/featured-in-feud">Featured in Feud</a></li>
+        
+          <li><a href="/collections/off-season-collection">Off-Season Collection</a></li>
+        
+          <li><a href="/collections/byzantine-collection">Byzantine Collection</a></li>
+        
+          <li><a href="/collections/caged-collection">Caged Collection</a></li>
+        
+          <li><a href="/collections/constellation-collection">Constellation Collection</a></li>
+        
+          <li><a href="/collections/curb-link-collection">Curb-Link Collection</a></li>
+        
+          <li><a href="/collections/night-day-collection">Night &amp; Day Collection</a></li>
+        
+          <li><a href="/collections/stardust-collection">Stardust Collection</a></li>
+        
+          <li><a href="/collections/vintage-verdura">Vintage Verdura</a></li>
+        
+          <li><a href="/collections/very-verdura-gifts-under-15-000">Very Verdura Gifts Under $20,000</a></li>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="search is-open">
+    <button class="btn" type="button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.966 56.966" xml:space="preserve"><path fill="#fff" d="M55.146 51.887 41.588 37.786c3.486-4.144 5.396-9.358 5.396-14.786 0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837 1.192-1.147 1.23-3.049.083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z"></path></svg>
+    </button>
+    <form action="/search" method="get" novalidate="">
+      <input class="p" type="search" name="q" placeholder="Search" value="" required="" aria-label="Search for a product">
+    </form>
+  </div>
+
+  <div class="overlay"></div>
+</header>

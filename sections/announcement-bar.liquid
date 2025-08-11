@@ -1,0 +1,124 @@
+{{ 'component-announcement-bar.css' | asset_url | stylesheet_tag }}
+
+{%- if section.settings.show_announcement and section.settings.text != blank -%}
+  <div class="announcement-bar color-{{ section.settings.color_scheme }}" role="region" aria-label="{{ 'sections.header.announcement' | t }}">
+    <div class="page-width announcement-bar__grid">
+      <div class="announcement-bar__message">
+        <p class="announcement-bar__text h5">
+          <span>{{ section.settings.text | escape }}</span>
+        </p>
+      </div>
+      
+      {%- if section.settings.show_localization -%}
+        <div class="localization-wrapper">
+          {%- render 'localization-form' -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+{%- endif -%}
+
+<style>
+  .announcement-bar {
+    padding: 1rem 0;
+    text-align: center;
+    background: var(--color-base-background-2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .announcement-bar__grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .announcement-bar__message {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .announcement-bar__text {
+    margin: 0;
+    font-family: var(--font-body-family);
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: var(--color-base-text);
+  }
+  
+  .localization-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  @media screen and (max-width: 749px) {
+    .announcement-bar__grid {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 0 1.5rem;
+    }
+    
+    .announcement-bar__text {
+      font-size: 1.2rem;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Announcement bar",
+  "max_blocks": 1,
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_announcement",
+      "label": "Show announcement",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "Welcome to our store"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "background-1",
+          "label": "Background 1"
+        },
+        {
+          "value": "background-2",
+          "label": "Background 2"
+        },
+        {
+          "value": "accent-1",
+          "label": "Accent 1"
+        },
+        {
+          "value": "accent-2",
+          "label": "Accent 2"
+        }
+      ],
+      "default": "background-2",
+      "label": "Color scheme"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_localization",
+      "label": "Show country/region selector",
+      "default": false
+    }
+  ]
+}
+{% endschema %} 

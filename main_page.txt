@@ -1,0 +1,1544 @@
+<html class="js" lang="en" style="--header-height: 54.0859375px;"><head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="">
+    <link rel="canonical" href="https://verdura.com/">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff"><link rel="icon" type="image/png" href="//verdura.com/cdn/shop/files/verdura-favicon.png?crop=center&amp;height=32&amp;v=1710888558&amp;width=32"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+
+    
+
+    <title>
+      Verdura Fine Jewelry | New York
+</title>
+
+    
+      <meta name="description" content="Welcome to Verdura fine jewelry. Founded in 1939 by Duke Fulco di Verdura, the jeweler is known for its timeless, elegant and distinctly original designs.">
+    
+
+    
+
+<meta property="og:site_name" content="Verdura">
+<meta property="og:url" content="https://verdura.com/">
+<meta property="og:title" content="Verdura Fine Jewelry | New York">
+<meta property="og:type" content="website">
+<meta property="og:description" content="Welcome to Verdura fine jewelry. Founded in 1939 by Duke Fulco di Verdura, the jeweler is known for its timeless, elegant and distinctly original designs."><meta property="og:image" content="http://verdura.com/cdn/shop/files/logo_verdura.png?height=628&amp;pad_color=ffffff&amp;v=1613181010&amp;width=1200">
+  <meta property="og:image:secure_url" content="https://verdura.com/cdn/shop/files/logo_verdura.png?height=628&amp;pad_color=ffffff&amp;v=1613181010&amp;width=1200">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="628"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Verdura Fine Jewelry | New York">
+<meta name="twitter:description" content="Welcome to Verdura fine jewelry. Founded in 1939 by Duke Fulco di Verdura, the jeweler is known for its timeless, elegant and distinctly original designs.">
+
+
+    <script type="text/javascript" async="" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=Ymv3Ms&amp;shop=fulcoverdura.myshopify.com"></script><script type="text/javascript" async="" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=Ymv3Ms&amp;shop=fulcoverdura.myshopify.com"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=AW-792235578&amp;cx=c&amp;gtm=45je5861v9108114536za200&amp;tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~105033763~105033765~105103161~105103163~105135708~105135710"></script><script src="https://connect.facebook.net/signals/config/312632636161310?v=2.9.223&amp;r=stable&amp;domain=verdura.com&amp;hme=2e9ee56babe122798b967566f46100108daa710154b06378259c746cb66ac325&amp;ex_m=83%2C143%2C124%2C18%2C117%2C58%2C40%2C118%2C64%2C57%2C131%2C72%2C13%2C82%2C26%2C112%2C103%2C62%2C65%2C111%2C128%2C91%2C133%2C7%2C3%2C4%2C6%2C5%2C2%2C73%2C81%2C134%2C208%2C155%2C52%2C213%2C210%2C211%2C45%2C170%2C25%2C61%2C217%2C216%2C158%2C28%2C51%2C8%2C54%2C77%2C78%2C79%2C84%2C107%2C27%2C24%2C110%2C106%2C105%2C125%2C63%2C127%2C126%2C41%2C108%2C50%2C100%2C12%2C130%2C37%2C199%2C201%2C165%2C21%2C22%2C23%2C15%2C16%2C36%2C33%2C34%2C68%2C74%2C76%2C89%2C116%2C119%2C38%2C90%2C19%2C17%2C94%2C59%2C31%2C121%2C120%2C122%2C113%2C20%2C30%2C49%2C88%2C129%2C29%2C180%2C151%2C86%2C109%2C67%2C98%2C44%2C39%2C96%2C97%2C102%2C48%2C14%2C104%2C95%2C55%2C43%2C46%2C0%2C80%2C132%2C1%2C101%2C11%2C99%2C257%2C197%2C141%2C183%2C176%2C9%2C47%2C75%2C53%2C123%2C56%2C93%2C71%2C70%2C42%2C114%2C69%2C66%2C60%2C92%2C85%2C35%2C115%2C32%2C87%2C10%2C135" async=""></script><script async="true" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="//verdura.com/cdn/s/trekkie.storefront.5a4f78eb26ea594ba1b5d72f179d68114c7cf8ca.min.js"></script><script async="" src="https://fullstory.com/s/fs.js"></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script src="//verdura.com/cdn/shop/t/4/assets/constants.js?v=58251544750838685771709583257" defer="defer"></script>
+    <script src="//verdura.com/cdn/shop/t/4/assets/pubsub.js?v=158357773527763999511709583258" defer="defer"></script>
+    <script src="//verdura.com/cdn/shop/t/4/assets/global.js?v=106116626045777747121709583258" defer="defer"></script>
+    <script src="//verdura.com/cdn/shop/t/4/assets/verdura.js?v=90446259584726971981754487614" defer="defer"></script>
+
+    <!-- Klaviyo -->
+		<script type="text/javascript" async="" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=Ymv3Ms"></script>
+
+		<!-- AdWords Purchase -->
+		<!-- Global site tag (gtag.js) - Google Ads: 792235578 -->
+		<script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-792235578"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'AW-792235578');
+		</script>
+		<!-- End AdWords Purchase -->
+
+		<!-- Facebook Pixel Code -->
+		<script>
+			!function(f,b,e,v,n,t,s)
+			{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+			if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+			n.queue=[];t=b.createElement(e);t.async=!0;
+			t.src=v;s=b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t,s)}(window, document,'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+			fbq('init', '312632636161310');
+			fbq('track', 'PageView');
+		</script>
+		<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=312632636161310&ev=PageView&noscript=1" /></noscript>
+		<!-- End Facebook Pixel Code -->
+
+		<!-- GOOGLE ANALYTIC CODE -->
+		<!-- Google tag (gtag.js) -->
+		<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-0Z7HXRZLFQ"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-0Z7HXRZLFQ');
+		</script>
+		<!-- GOOGLE ANALYTIC END -->
+
+		<!-- FullStory | www.fullstory.com -->
+		<script> window['_fs_debug'] = false; window['_fs_host'] = 'fullstory.com'; window['_fs_org'] = 'FMQFP'; window['_fs_namespace'] = 'FS'; (function(m,n,e,t,l,o,g,y){ if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;} g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[]; o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js'; y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y); g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};g.event=function(i,v,s){g('event',{n:i,p:v,s:s})}; g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)}; g.consent=function(a){g("consent",!arguments.length||a)}; g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)}; g.clearUserCookie=function(){}; })(window,document,window['_fs_namespace'],'script','user'); </script>
+		<!-- End FullStory -->
+		<script> (function(){ var s = document.createElement('script'); var h = document.querySelector('head') || document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function(){ acsbJS.init({ statementLink : '', footerHtml : '', hideMobile : false, hideTrigger : false, disableBgProcess : false, language : 'en', position : 'right', leadColor : '#146FF8', triggerColor : '#146FF8', triggerRadius : '50%', triggerPositionX : 'right', triggerPositionY : 'bottom', triggerIcon : 'people', triggerSize : 'bottom', triggerOffsetX : 20, triggerOffsetY : 20, mobile : { triggerSize : 'small', triggerPositionX : 'right', triggerPositionY : 'bottom', triggerOffsetX : 20, triggerOffsetY : 100, triggerRadius : '20' } }); }; h.appendChild(s); })();</script><script src="https://acsbapp.com/apps/app/dist/js/app.js" async=""></script>
+		
+		<style>
+			body .acsb-trigger .acsb-trigger-icon svg path,
+			body .acsb-trigger .acsb-trigger-icon svg circle { fill: #ffffff !important }
+			body .acsb-trigger.acsb-trigger { background-color: #000000 !important }
+		</style>
+
+    <script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script><meta name="google-site-verification" content="CLiUUMKsE6XUXdMjsmEClorgEUkuL9-yA_hxxEPRdHE">
+<meta name="google-site-verification" content="-3fITfCWvJjMtmptykSc2LHBV9JAmrmatLocNuCFLHM">
+<meta name="facebook-domain-verification" content="lqzplaocj1nz7pwz2jn011qw9sg0k5">
+<meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/21571483/digital_wallets/dialog">
+<meta name="shopify-checkout-api-token" content="3b14c3bbe901e928c476aa702a4d56f4">
+<script async="async" src="/checkouts/internal/preloads.js?locale=en-US"></script>
+<link rel="preconnect" href="https://shop.app" crossorigin="anonymous">
+<script async="async" src="https://shop.app/checkouts/internal/preloads.js?locale=en-US&amp;shop_id=21571483" crossorigin="anonymous"></script>
+<script id="apple-pay-shop-capabilities" type="application/json">{"shopId":21571483,"countryCode":"US","currencyCode":"USD","merchantCapabilities":["supports3DS"],"merchantId":"gid:\/\/shopify\/Shop\/21571483","merchantName":"Verdura","requiredBillingContactFields":["postalAddress","email","phone"],"requiredShippingContactFields":["postalAddress","email","phone"],"shippingType":"shipping","supportedNetworks":["visa","masterCard","amex","discover","elo","jcb"],"total":{"type":"pending","label":"Verdura","amount":"1.00"},"shopifyPaymentsEnabled":true,"supportsSubscriptions":true}</script>
+<script id="shopify-features" type="application/json">{"accessToken":"3b14c3bbe901e928c476aa702a4d56f4","betas":["rich-media-storefront-analytics"],"domain":"verdura.com","predictiveSearch":true,"shopId":21571483,"locale":"en"}</script>
+<script>var Shopify = Shopify || {};
+Shopify.shop = "fulcoverdura.myshopify.com";
+Shopify.locale = "en";
+Shopify.currency = {"active":"USD","rate":"1.0"};
+Shopify.country = "US";
+Shopify.theme = {"name":"verdura","id":125988962406,"schema_name":"Verdura","schema_version":"1.0.0","theme_store_id":null,"role":"main"};
+Shopify.theme.handle = "null";
+Shopify.theme.style = {"id":null,"handle":null};
+Shopify.cdnHost = "verdura.com/cdn";
+Shopify.routes = Shopify.routes || {};
+Shopify.routes.root = "/";</script>
+<script type="module">!function(o){(o.Shopify=o.Shopify||{}).modules=!0}(window);</script>
+<script>!function(o){function n(){var o=[];function n(){o.push(Array.prototype.slice.apply(arguments))}return n.q=o,n}var t=o.Shopify=o.Shopify||{};t.loadFeatures=n(),t.autoloadFeatures=n()}(window);</script>
+<script>window.ShopifyPay = window.ShopifyPay || {};
+window.ShopifyPay.apiHost = "shop.app\/pay";</script>
+<script id="shop-js-analytics" type="application/json">{"pageType":"index"}</script>
+<script defer="defer" async="" type="module" src="//verdura.com/cdn/shopifycloud/shop-js/modules/v2/client.init-shop-cart-sync_DMhwnj0d.en.esm.js"></script>
+<script defer="defer" async="" type="module" src="//verdura.com/cdn/shopifycloud/shop-js/modules/v2/chunk.common_zpuuaMLp.esm.js"></script>
+<script type="module">
+  await import("//verdura.com/cdn/shopifycloud/shop-js/modules/v2/client.init-shop-cart-sync_DMhwnj0d.en.esm.js");
+await import("//verdura.com/cdn/shopifycloud/shop-js/modules/v2/chunk.common_zpuuaMLp.esm.js");
+
+  window.Shopify.SignInWithShop?.initShopCartSync?.({"fedCMEnabled":true,"windoidEnabled":true});
+
+</script>
+<script>
+  window.Shopify = window.Shopify || {};
+  if (!window.Shopify.featureAssets) window.Shopify.featureAssets = {};
+  window.Shopify.featureAssets['shop-js'] = {"shop-cart-sync":["modules/v2/client.shop-cart-sync_6RE2XiPT.en.esm.js","modules/v2/chunk.common_zpuuaMLp.esm.js"],"init-shop-cart-sync":["modules/v2/client.init-shop-cart-sync_DMhwnj0d.en.esm.js","modules/v2/chunk.common_zpuuaMLp.esm.js"],"shop-cash-offers":["modules/v2/client.shop-cash-offers_EMdEtY6N.en.esm.js","modules/v2/chunk.common_zpuuaMLp.esm.js","modules/v2/chunk.modal_BhWf-Xv9.esm.js"],"avatar":["modules/v2/client.avatar_BTnouDA3.en.esm.js"],"init-customer-accounts-sign-up":["modules/v2/client.init-customer-accounts-sign-up_DDjUybxX.en.esm.js","modules/v2/client.shop-login-button_D-X5HJtB.en.esm.js","modules/v2/chunk.common_zpuuaMLp.esm.js","modules/v2/chunk.modal_BhWf-Xv9.esm.js"],"shop-toast-manager":["modules/v2/client.shop-toast-manager_RpuacfF1.en.esm.js","modules/v2/chunk.common_zpuuaMLp.esm.js"],"pay-button":["modules/v2/client.pay-button_CzEW_428.en.esm.js","modules/v2/chunk.common_zpuuaMLp.esm.js"],"shop-button":["modules/v2/client.shop-button_8Y-mfTcn.en.esm.js","modules/v2/chunk.common_zpuuaMLp.esm.js"],"init-shop-email-lookup-coordinator":["modules/v2/client.init-shop-email-lookup-coordinator_DWlPFgut.en.esm.js","modules/v2/chunk.common_zpuuaMLp.esm.js"],"init-fed-cm":["modules/v2/client.init-fed-cm_fj_41QLE.en.esm.js","modules/v2/chunk.common_zpuuaMLp.esm.js"],"init-customer-accounts":["modules/v2/client.init-customer-accounts_C4JnBi92.en.esm.js","modules/v2/client.shop-login-button_D-X5HJtB.en.esm.js","modules/v2/chunk.common_zpuuaMLp.esm.js","modules/v2/chunk.modal_BhWf-Xv9.esm.js"],"shop-login-button":["modules/v2/client.shop-login-button_D-X5HJtB.en.esm.js","modules/v2/chunk.common_zpuuaMLp.esm.js","modules/v2/chunk.modal_BhWf-Xv9.esm.js"],"shop-follow-button":["modules/v2/client.shop-follow-button_DiY1OGVp.en.esm.js","modules/v2/chunk.common_zpuuaMLp.esm.js","modules/v2/chunk.modal_BhWf-Xv9.esm.js"],"init-windoid":["modules/v2/client.init-windoid_CgyBOdT5.en.esm.js","modules/v2/chunk.common_zpuuaMLp.esm.js"],"init-shop-for-new-customer-accounts":["modules/v2/client.init-shop-for-new-customer-accounts_Cnsq46SX.en.esm.js","modules/v2/client.shop-login-button_D-X5HJtB.en.esm.js","modules/v2/chunk.common_zpuuaMLp.esm.js","modules/v2/chunk.modal_BhWf-Xv9.esm.js"],"checkout-modal":["modules/v2/client.checkout-modal_72syvOek.en.esm.js","modules/v2/chunk.common_zpuuaMLp.esm.js","modules/v2/chunk.modal_BhWf-Xv9.esm.js"],"lead-capture":["modules/v2/client.lead-capture_C_SdKmTg.en.esm.js","modules/v2/chunk.common_zpuuaMLp.esm.js","modules/v2/chunk.modal_BhWf-Xv9.esm.js"],"payment-terms":["modules/v2/client.payment-terms_B8zRAcZP.en.esm.js","modules/v2/chunk.common_zpuuaMLp.esm.js","modules/v2/chunk.modal_BhWf-Xv9.esm.js"]};
+</script>
+<script>(function() {
+  var isLoaded = false;
+  function asyncLoad() {
+    if (isLoaded) return;
+    isLoaded = true;
+    var urls = ["https:\/\/static.klaviyo.com\/onsite\/js\/klaviyo.js?company_id=Ymv3Ms\u0026shop=fulcoverdura.myshopify.com","https:\/\/static.klaviyo.com\/onsite\/js\/klaviyo.js?company_id=Ymv3Ms\u0026shop=fulcoverdura.myshopify.com"];
+    for (var i = 0; i < urls.length; i++) {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = urls[i];
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    }
+  };
+  if(window.attachEvent) {
+    window.attachEvent('onload', asyncLoad);
+  } else {
+    window.addEventListener('load', asyncLoad, false);
+  }
+})();</script>
+<script id="__st">var __st={"a":21571483,"offset":-14400,"reqid":"08fd1481-b13f-49e5-97f4-2b726506b385-1754728935","pageurl":"verdura.com\/","u":"39f35dd9f095","p":"home"};</script>
+<script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
+<script id="captcha-bootstrap">!function(){'use strict';const t='contact',e='account',n='new_comment',o=[[t,t],['blogs',n],['comments',n],[t,'customer']],c=[[e,'customer_login'],[e,'guest_login'],[e,'recover_customer_password'],[e,'create_customer']],r=t=>t.map((([t,e])=>`form[action*='/${t}']:not([data-nocaptcha='true']) input[name='form_type'][value='${e}']`)).join(','),a=t=>()=>t?[...document.querySelectorAll(t)].map((t=>t.form)):[];function s(){const t=[...o],e=r(t);return a(e)}const i='password',u='form_key',d=['recaptcha-v3-token','g-recaptcha-response','h-captcha-response',i],f=()=>{try{return window.sessionStorage}catch{return}},m='__shopify_v',_=t=>t.elements[u];function p(t,e,n=!1){try{const o=window.sessionStorage,c=JSON.parse(o.getItem(e)),{data:r}=function(t){const{data:e,action:n}=t;return t[m]||n?{data:e,action:n}:{data:t,action:n}}(c);for(const[e,n]of Object.entries(r))t.elements[e]&&(t.elements[e].value=n);n&&o.removeItem(e)}catch(o){console.error('form repopulation failed',{error:o})}}const l='form_type',E='cptcha';function T(t){t.dataset[E]=!0}const w=window,h=w.document,L='Shopify',v='ce_forms',y='captcha';let A=!1;((t,e)=>{const n=(g='f06e6c50-85a8-45c8-87d0-21a2b65856fe',I='https://cdn.shopify.com/shopifycloud/storefront-forms-hcaptcha/ce_storefront_forms_captcha_hcaptcha.v1.5.2.iife.js',D={infoText:'Protected by hCaptcha',privacyText:'Privacy',termsText:'Terms'},(t,e,n)=>{const o=w[L][v],c=o.bindForm;if(c)return c(t,g,e,D).then(n);var r;o.q.push([[t,g,e,D],n]),r=I,A||(h.body.append(Object.assign(h.createElement('script'),{id:'captcha-provider',async:!0,src:r})),A=!0)});var g,I,D;w[L]=w[L]||{},w[L][v]=w[L][v]||{},w[L][v].q=[],w[L][y]=w[L][y]||{},w[L][y].protect=function(t,e){n(t,void 0,e),T(t)},Object.freeze(w[L][y]),function(t,e,n,w,h,L){const[v,y,A,g]=function(t,e,n){const i=e?o:[],u=t?c:[],d=[...i,...u],f=r(d),m=r(i),_=r(d.filter((([t,e])=>n.includes(e))));return[a(f),a(m),a(_),s()]}(w,h,L),I=t=>{const e=t.target;return e instanceof HTMLFormElement?e:e&&e.form},D=t=>v().includes(t);t.addEventListener('submit',(t=>{const e=I(t);if(!e)return;const n=D(e)&&!e.dataset.hcaptchaBound&&!e.dataset.recaptchaBound,o=_(e),c=g().includes(e)&&(!o||!o.value);(n||c)&&t.preventDefault(),c&&!n&&(function(t){try{if(!f())return;!function(t){const e=f();if(!e)return;const n=_(t);if(!n)return;const o=n.value;o&&e.removeItem(o)}(t);const e=Array.from(Array(32),(()=>Math.random().toString(36)[2])).join('');!function(t,e){_(t)||t.append(Object.assign(document.createElement('input'),{type:'hidden',name:u})),t.elements[u].value=e}(t,e),function(t,e){const n=f();if(!n)return;const o=[...t.querySelectorAll(`input[type='${i}']`)].map((({name:t})=>t)),c=[...d,...o],r={};for(const[a,s]of new FormData(t).entries())c.includes(a)||(r[a]=s);n.setItem(e,JSON.stringify({[m]:1,action:t.action,data:r}))}(t,e)}catch(e){console.error('failed to persist form',e)}}(e),e.submit())}));const S=(t,e)=>{t&&!t.dataset[E]&&(n(t,e.some((e=>e===t))),T(t))};for(const o of['focusin','change'])t.addEventListener(o,(t=>{const e=I(t);D(e)&&S(e,y())}));const B=e.get('form_key'),M=e.get(l),P=B&&M;t.addEventListener('DOMContentLoaded',(()=>{const t=y();if(P)for(const e of t)e.elements[l].value===M&&p(e,B);[...new Set([...A(),...v().filter((t=>'true'===t.dataset.shopifyCaptcha))])].forEach((e=>S(e,t)))}))}(h,new URLSearchParams(w.location.search),n,t,e,['guest_login'])})(!0,!0)}();</script>
+<script integrity="sha256-52AcMU7V7pcBOXWImdc/TAGTFKeNjmkeM1Pvks/DTgc=" data-source-attribution="shopify.loadfeatures" defer="defer" src="//verdura.com/cdn/shopifycloud/storefront/assets/storefront/load_feature-81c60534.js" crossorigin="anonymous"></script>
+<script crossorigin="anonymous" defer="defer" src="//verdura.com/cdn/shopifycloud/storefront/assets/shopify_pay/storefront-d21ba94d.js?v=20220906"></script>
+<script data-source-attribution="shopify.dynamic_checkout.dynamic.init">var Shopify=Shopify||{};Shopify.PaymentButton=Shopify.PaymentButton||{isStorefrontPortableWallets:!0,init:function(){window.Shopify.PaymentButton.init=function(){};var t=document.createElement("script");t.src="https://verdura.com/cdn/shopifycloud/portable-wallets/latest/portable-wallets.en.js",t.type="module",document.head.appendChild(t)}};
+</script>
+<script data-source-attribution="shopify.dynamic_checkout.buyer_consent">
+  function portableWalletsHideBuyerConsent(e){var t=document.getElementById("shopify-buyer-consent"),n=document.getElementById("shopify-subscription-policy-button");t&&n&&(t.classList.add("hidden"),t.setAttribute("aria-hidden","true"),n.removeEventListener("click",e))}function portableWalletsShowBuyerConsent(e){var t=document.getElementById("shopify-buyer-consent"),n=document.getElementById("shopify-subscription-policy-button");t&&n&&(t.classList.remove("hidden"),t.removeAttribute("aria-hidden"),n.addEventListener("click",e))}window.Shopify?.PaymentButton&&(window.Shopify.PaymentButton.hideBuyerConsent=portableWalletsHideBuyerConsent,window.Shopify.PaymentButton.showBuyerConsent=portableWalletsShowBuyerConsent);
+</script>
+<script data-source-attribution="shopify.dynamic_checkout.cart.bootstrap">document.addEventListener("DOMContentLoaded",(function(){function t(){return document.querySelector("shopify-accelerated-checkout-cart, shopify-accelerated-checkout")}if(t())Shopify.PaymentButton.init();else{new MutationObserver((function(e,n){t()&&(Shopify.PaymentButton.init(),n.disconnect())})).observe(document.body,{childList:!0,subtree:!0})}}));
+</script>
+
+<link rel="stylesheet" media="screen" href="https://verdura.com/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css" crossorigin="anonymous">
+
+<style id="shopify-accelerated-checkout-cart">
+        #shopify-buyer-consent {
+  margin-top: 1em;
+  display: inline-block;
+  width: 100%;
+}
+
+#shopify-buyer-consent.hidden {
+  display: none;
+}
+
+#shopify-subscription-policy-button {
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+#shopify-subscription-policy-button::before {
+  box-shadow: none;
+}
+
+      </style>
+<script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script>
+
+    <link href="//verdura.com/cdn/shop/t/4/assets/style.css?v=102773216950280533121723132239" rel="stylesheet" type="text/css" media="all">
+
+    
+
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+      if (Shopify.designMode) {
+        document.documentElement.classList.add('shopify-design-mode');
+      }
+    </script>
+  <link href="https://monorail-edge.shopifysvc.com" rel="dns-prefetch">
+<script>(function(){if ("sendBeacon" in navigator && "performance" in window) {try {var session_token_from_headers = performance.getEntriesByType('navigation')[0].serverTiming.find(x => x.name == '_s').description;} catch {var session_token_from_headers = undefined;}var session_cookie_matches = document.cookie.match(/_shopify_s=([^;]*)/);var session_token_from_cookie = session_cookie_matches && session_cookie_matches.length === 2 ? session_cookie_matches[1] : "";var session_token = session_token_from_headers || session_token_from_cookie || "";function handle_abandonment_event(e) {var entries = performance.getEntries().filter(function(entry) {return /monorail-edge.shopifysvc.com/.test(entry.name);});if (!window.abandonment_tracked && entries.length === 0) {window.abandonment_tracked = true;var currentMs = Date.now();var navigation_start = performance.timing.navigationStart;var payload = {shop_id: 21571483,url: window.location.href,navigation_start,duration: currentMs - navigation_start,session_token,page_type: "index"};window.navigator.sendBeacon("https://monorail-edge.shopifysvc.com/v1/produce", JSON.stringify({schema_id: "online_store_buyer_site_abandonment/1.1",payload: payload,metadata: {event_created_at_ms: currentMs,event_sent_at_ms: currentMs}}));}}window.addEventListener('pagehide', handle_abandonment_event);}}());</script>
+<script id="web-pixels-manager-setup">(function e(e,d,r,n,o,i){if(void 0===i&&(i={}),!Boolean(null===(t=null===(a=window.Shopify)||void 0===a?void 0:a.analytics)||void 0===t?void 0:t.replayQueue)){var a,t;window.Shopify=window.Shopify||{};var s=window.Shopify;s.analytics=s.analytics||{};var l=s.analytics;l.replayQueue=[],l.publish=function(e,d,r){return l.replayQueue.push([e,d,r]),!0};try{self.performance.mark("wpm:start")}catch(e){}var u=function(){var e={modern:/Edge?\/(1{2}[4-9]|1[2-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Firefox\/(1{2}[4-9]|1[2-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Chrom(ium|e)\/(9{2}|\d{3,})\.\d+(\.\d+|)|(Maci|X1{2}).+ Version\/(15\.\d+|(1[6-9]|[2-9]\d|\d{3,})\.\d+)([,.]\d+|)( \(\w+\)|)( Mobile\/\w+|) Safari\/|Chrome.+OPR\/(9{2}|\d{3,})\.\d+\.\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(15[._]\d+|(1[6-9]|[2-9]\d|\d{3,})[._]\d+)([._]\d+|)|Android:?[ /-](13[3-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})(\.\d+|)(\.\d+|)|Android.+Firefox\/(13[5-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+Chrom(ium|e)\/(13[3-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|SamsungBrowser\/([2-9]\d|\d{3,})\.\d+/,legacy:/Edge?\/(1[6-9]|[2-9]\d|\d{3,})\.\d+(\.\d+|)|Firefox\/(5[4-9]|[6-9]\d|\d{3,})\.\d+(\.\d+|)|Chrom(ium|e)\/(5[1-9]|[6-9]\d|\d{3,})\.\d+(\.\d+|)([\d.]+$|.*Safari\/(?![\d.]+ Edge\/[\d.]+$))|(Maci|X1{2}).+ Version\/(10\.\d+|(1[1-9]|[2-9]\d|\d{3,})\.\d+)([,.]\d+|)( \(\w+\)|)( Mobile\/\w+|) Safari\/|Chrome.+OPR\/(3[89]|[4-9]\d|\d{3,})\.\d+\.\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(10[._]\d+|(1[1-9]|[2-9]\d|\d{3,})[._]\d+)([._]\d+|)|Android:?[ /-](13[3-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})(\.\d+|)(\.\d+|)|Mobile Safari.+OPR\/([89]\d|\d{3,})\.\d+\.\d+|Android.+Firefox\/(13[5-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+Chrom(ium|e)\/(13[3-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+(UC? ?Browser|UCWEB|U3)[ /]?(15\.([5-9]|\d{2,})|(1[6-9]|[2-9]\d|\d{3,})\.\d+)\.\d+|SamsungBrowser\/(5\.\d+|([6-9]|\d{2,})\.\d+)|Android.+MQ{2}Browser\/(14(\.(9|\d{2,})|)|(1[5-9]|[2-9]\d|\d{3,})(\.\d+|))(\.\d+|)|K[Aa][Ii]OS\/(3\.\d+|([4-9]|\d{2,})\.\d+)(\.\d+|)/},d=e.modern,r=e.legacy,n=navigator.userAgent;return n.match(d)?"modern":n.match(r)?"legacy":"unknown"}(),c="modern"===u?"modern":"legacy",f=(null!=o?o:{modern:"",legacy:""})[c],m=function(e){return[e.baseUrl,"/wpm","/b",e.hashVersion,"modern"===e.buildTarget?"m":"l",".js"].join("")}({baseUrl:r,hashVersion:n,buildTarget:c}),p=function(e){var d=e.version,r=e.bundleTarget,n=e.surface,o=e.pageUrl,i=e.monorailEndpoint;return{emit:function(e){var a=e.status,t=e.errorMsg,s=(new Date).getTime(),l=JSON.stringify({metadata:{event_sent_at_ms:s},events:[{schema_id:"web_pixels_manager_load/3.1",payload:{version:d,bundle_target:r,page_url:o,status:a,surface:n,error_msg:t},metadata:{event_created_at_ms:s}}]});if(!i)return console&&console.warn&&console.warn("[Web Pixels Manager] No Monorail endpoint provided, skipping logging."),!1;try{return self.navigator.sendBeacon.bind(self.navigator)(i,l)}catch(e){}var u=new XMLHttpRequest;try{return u.open("POST",i,!0),u.setRequestHeader("Content-Type","text/plain"),u.send(l),!0}catch(e){return console&&console.warn&&console.warn("[Web Pixels Manager] Got an unhandled error while logging to Monorail."),!1}}}}({version:n,bundleTarget:u,surface:e.surface,pageUrl:self.location.href,monorailEndpoint:e.monorailEndpoint});try{i.browserTarget=u,function(e){var d=e.src,r=e.async,n=void 0===r||r,o=e.onload,i=e.onerror,a=e.sri,t=e.scriptDataAttributes,s=void 0===t?{}:t,l=document.createElement("script"),u=document.querySelector("head"),c=document.querySelector("body");if(l.async=n,l.src=d,a&&(l.integrity=a,l.crossOrigin="anonymous"),s)for(var f in s)if(Object.prototype.hasOwnProperty.call(s,f))try{l.dataset[f]=s[f]}catch(e){}if(o&&l.addEventListener("load",o),i&&l.addEventListener("error",i),u)u.appendChild(l);else{if(!c)throw new Error("Did not find a head or body element to append the script");c.appendChild(l)}}({src:m,async:!0,onload:function(){if(!function(){var e,d;return Boolean(null===(d=null===(e=window.Shopify)||void 0===e?void 0:e.analytics)||void 0===d?void 0:d.initialized)}()){var r=window.webPixelsManager.init(e)||void 0;if(r){d(r);var n=window.Shopify.analytics;n.replayQueue.forEach((function(e){var d=e[0],n=e[1],o=e[2];r.publishCustomEvent(d,n,o)})),n.replayQueue=[],n.publish=r.publishCustomEvent,n.visitor=r.visitor,n.initialized=!0}}},onerror:function(){return p.emit({status:"failed",errorMsg:"".concat(m," has failed to load")})},sri:function(e){var d=/^sha384-[A-Za-z0-9+/=]+$/;return"string"==typeof e&&d.test(e)}(f)?f:"",scriptDataAttributes:i}),p.emit({status:"loading"})}catch(e){p.emit({status:"failed",errorMsg:(null==e?void 0:e.message)||"Unknown error"})}}})({shopId: 21571483,storefrontBaseUrl: "https://verdura.com",extensionsBaseUrl: "https://extensions.shopifycdn.com/cdn/shopifycloud/web-pixels-manager",monorailEndpoint: "https://monorail-edge.shopifysvc.com/unstable/produce_batch",surface: "storefront-renderer",enabledBetaFlags: ["ac843a20","c2aeb305"],webPixelsConfigList: [{"id":"681934950","configuration":"{\"config\":\"{\\\"google_tag_ids\\\":[\\\"G-0Z7HXRZLFQ\\\"],\\\"target_country\\\":\\\"ZZ\\\",\\\"gtag_events\\\":[{\\\"type\\\":\\\"begin_checkout\\\",\\\"action_label\\\":\\\"G-0Z7HXRZLFQ\\\"},{\\\"type\\\":\\\"search\\\",\\\"action_label\\\":\\\"G-0Z7HXRZLFQ\\\"},{\\\"type\\\":\\\"view_item\\\",\\\"action_label\\\":\\\"G-0Z7HXRZLFQ\\\"},{\\\"type\\\":\\\"purchase\\\",\\\"action_label\\\":\\\"G-0Z7HXRZLFQ\\\"},{\\\"type\\\":\\\"page_view\\\",\\\"action_label\\\":\\\"G-0Z7HXRZLFQ\\\"},{\\\"type\\\":\\\"add_payment_info\\\",\\\"action_label\\\":\\\"G-0Z7HXRZLFQ\\\"},{\\\"type\\\":\\\"add_to_cart\\\",\\\"action_label\\\":\\\"G-0Z7HXRZLFQ\\\"}],\\\"enable_monitoring_mode\\\":false}\"}","eventPayloadVersion":"v1","runtimeContext":"OPEN","scriptVersion":"b2a88bafab3e21179ed38636efcd8a93","type":"APP","apiClientId":1780363,"privacyPurposes":[]},{"id":"158826598","configuration":"{\"pixel_id\":\"312632636161310\",\"pixel_type\":\"facebook_pixel\",\"metaapp_system_user_token\":\"-\"}","eventPayloadVersion":"v1","runtimeContext":"OPEN","scriptVersion":"6d8c3ef0426b37b2a9b717daeb719f58","type":"APP","apiClientId":2329312,"privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"]},{"id":"130744422","configuration":"{\"tagID\":\"2613370630598\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"a89c2bcc8138c8634a19a76241c7876a","type":"APP","apiClientId":3009811,"privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"]},{"id":"shopify-app-pixel","configuration":"{}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"0440","apiClientId":"shopify-pixel","type":"APP","privacyPurposes":["ANALYTICS","MARKETING"]},{"id":"shopify-custom-pixel","eventPayloadVersion":"v1","runtimeContext":"LAX","scriptVersion":"0440","apiClientId":"shopify-pixel","type":"CUSTOM","privacyPurposes":["ANALYTICS","MARKETING"]}],isMerchantRequest: false,initData: {"shop":{"name":"Verdura","paymentSettings":{"currencyCode":"USD"},"myshopifyDomain":"fulcoverdura.myshopify.com","countryCode":"US","storefrontUrl":"https://verdura.com"},"customer":null,"cart":null,"checkout":null,"productVariants":[],"purchasingCompany":null},},function pageEvents(webPixelsManagerAPI) {webPixelsManagerAPI.publish("page_viewed", {});},"https://verdura.com/cdn","73b305c4w82c1918fpb7086179m603a4010",{"modern":"","legacy":""},{"shopId":"21571483","storefrontBaseUrl":"https://verdura.com","extensionBaseUrl":"https://extensions.shopifycdn.com/cdn/shopifycloud/web-pixels-manager","surface":"storefront-renderer","enabledBetaFlags":"[\"ac843a20\", \"c2aeb305\"]","isMerchantRequest":"false","hashVersion":"73b305c4w82c1918fpb7086179m603a4010","publish":"custom"});</script><script async="" src="https://verdura.com/cdn/wpm/b73b305c4w82c1918fpb7086179m603a4010m.js" data-shop-id="21571483" data-storefront-base-url="https://verdura.com" data-extension-base-url="https://extensions.shopifycdn.com/cdn/shopifycloud/web-pixels-manager" data-surface="storefront-renderer" data-enabled-beta-flags="[&quot;ac843a20&quot;, &quot;c2aeb305&quot;]" data-is-merchant-request="false" data-hash-version="73b305c4w82c1918fpb7086179m603a4010" data-publish="custom" data-browser-target="modern"></script><script>
+  window.ShopifyAnalytics = window.ShopifyAnalytics || {};
+  window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
+  window.ShopifyAnalytics.meta.currency = 'USD';
+  var meta = {"page":{"pageType":"home"}};
+  for (var attr in meta) {
+    window.ShopifyAnalytics.meta[attr] = meta[attr];
+  }
+</script>
+<script class="analytics">
+  (function () {
+    var customDocumentWrite = function(content) {
+      var jquery = null;
+
+      if (window.jQuery) {
+        jquery = window.jQuery;
+      } else if (window.Checkout && window.Checkout.$) {
+        jquery = window.Checkout.$;
+      }
+
+      if (jquery) {
+        jquery('body').append(content);
+      }
+    };
+
+    var hasLoggedConversion = function(token) {
+      if (token) {
+        return document.cookie.indexOf('loggedConversion=' + token) !== -1;
+      }
+      return false;
+    }
+
+    var setCookieIfConversion = function(token) {
+      if (token) {
+        var twoMonthsFromNow = new Date(Date.now());
+        twoMonthsFromNow.setMonth(twoMonthsFromNow.getMonth() + 2);
+
+        document.cookie = 'loggedConversion=' + token + '; expires=' + twoMonthsFromNow;
+      }
+    }
+
+    var trekkie = window.ShopifyAnalytics.lib = window.trekkie = window.trekkie || [];
+    if (trekkie.integrations) {
+      return;
+    }
+    trekkie.methods = [
+      'identify',
+      'page',
+      'ready',
+      'track',
+      'trackForm',
+      'trackLink'
+    ];
+    trekkie.factory = function(method) {
+      return function() {
+        var args = Array.prototype.slice.call(arguments);
+        args.unshift(method);
+        trekkie.push(args);
+        return trekkie;
+      };
+    };
+    for (var i = 0; i < trekkie.methods.length; i++) {
+      var key = trekkie.methods[i];
+      trekkie[key] = trekkie.factory(key);
+    }
+    trekkie.load = function(config) {
+      trekkie.config = config || {};
+      trekkie.config.initialDocumentCookie = document.cookie;
+      var first = document.getElementsByTagName('script')[0];
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.onerror = function(e) {
+        var scriptFallback = document.createElement('script');
+        scriptFallback.type = 'text/javascript';
+        scriptFallback.onerror = function(error) {
+                var Monorail = {
+      produce: function produce(monorailDomain, schemaId, payload) {
+        var currentMs = new Date().getTime();
+        var event = {
+          schema_id: schemaId,
+          payload: payload,
+          metadata: {
+            event_created_at_ms: currentMs,
+            event_sent_at_ms: currentMs
+          }
+        };
+        return Monorail.sendRequest("https://" + monorailDomain + "/v1/produce", JSON.stringify(event));
+      },
+      sendRequest: function sendRequest(endpointUrl, payload) {
+        // Try the sendBeacon API
+        if (window && window.navigator && typeof window.navigator.sendBeacon === 'function' && typeof window.Blob === 'function' && !Monorail.isIos12()) {
+          var blobData = new window.Blob([payload], {
+            type: 'text/plain'
+          });
+
+          if (window.navigator.sendBeacon(endpointUrl, blobData)) {
+            return true;
+          } // sendBeacon was not successful
+
+        } // XHR beacon
+
+        var xhr = new XMLHttpRequest();
+
+        try {
+          xhr.open('POST', endpointUrl);
+          xhr.setRequestHeader('Content-Type', 'text/plain');
+          xhr.send(payload);
+        } catch (e) {
+          console.log(e);
+        }
+
+        return false;
+      },
+      isIos12: function isIos12() {
+        return window.navigator.userAgent.lastIndexOf('iPhone; CPU iPhone OS 12_') !== -1 || window.navigator.userAgent.lastIndexOf('iPad; CPU OS 12_') !== -1;
+      }
+    };
+    Monorail.produce('monorail-edge.shopifysvc.com',
+      'trekkie_storefront_load_errors/1.1',
+      {shop_id: 21571483,
+      theme_id: 125988962406,
+      app_name: "storefront",
+      context_url: window.location.href,
+      source_url: "//verdura.com/cdn/s/trekkie.storefront.5a4f78eb26ea594ba1b5d72f179d68114c7cf8ca.min.js"});
+
+        };
+        scriptFallback.async = true;
+        scriptFallback.src = '//verdura.com/cdn/s/trekkie.storefront.5a4f78eb26ea594ba1b5d72f179d68114c7cf8ca.min.js';
+        first.parentNode.insertBefore(scriptFallback, first);
+      };
+      script.async = true;
+      script.src = '//verdura.com/cdn/s/trekkie.storefront.5a4f78eb26ea594ba1b5d72f179d68114c7cf8ca.min.js';
+      first.parentNode.insertBefore(script, first);
+    };
+    trekkie.load(
+      {"Trekkie":{"appName":"storefront","development":false,"defaultAttributes":{"shopId":21571483,"isMerchantRequest":null,"themeId":125988962406,"themeCityHash":"14983738670946381568","contentLanguage":"en","currency":"USD","eventMetadataId":"ea1a6177-d071-4b64-a6aa-af0160fd6eac"},"isServerSideCookieWritingEnabled":true,"monorailRegion":"shop_domain"},"Session Attribution":{},"S2S":{"facebookCapiEnabled":false,"source":"trekkie-storefront-renderer","apiClientId":580111}}
+    );
+
+    var loaded = false;
+    trekkie.ready(function() {
+      if (loaded) return;
+      loaded = true;
+
+      window.ShopifyAnalytics.lib = window.trekkie;
+
+      var originalDocumentWrite = document.write;
+      document.write = customDocumentWrite;
+      try { window.ShopifyAnalytics.merchantGoogleAnalytics.call(this); } catch(error) {};
+      document.write = originalDocumentWrite;
+
+      window.ShopifyAnalytics.lib.page(null,{"pageType":"home","shopifyEmitted":true});
+
+      var match = window.location.pathname.match(/checkouts\/(.+)\/(thank_you|post_purchase)/)
+      var token = match? match[1]: undefined;
+      if (!hasLoggedConversion(token)) {
+        setCookieIfConversion(token);
+        
+      }
+    });
+
+
+        var eventsListenerScript = document.createElement('script');
+        eventsListenerScript.async = true;
+        eventsListenerScript.src = "//verdura.com/cdn/shopifycloud/storefront/assets/shop_events_listener-8675b082.js";
+        document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
+
+})();</script><script async="" src="//verdura.com/cdn/shopifycloud/storefront/assets/shop_events_listener-8675b082.js"></script>
+  <script>
+  if (!window.ga || (window.ga && typeof window.ga !== 'function')) {
+    window.ga = function ga() {
+      (window.ga.q = window.ga.q || []).push(arguments);
+      if (window.Shopify && window.Shopify.analytics && typeof window.Shopify.analytics.publish === 'function') {
+        window.Shopify.analytics.publish("ga_stub_called", {}, {sendTo: "google_osp_migration"});
+      }
+      console.error("Shopify's Google Analytics stub called with:", Array.from(arguments), "\nSee https://help.shopify.com/manual/promoting-marketing/pixels/pixel-migration#google for more information.");
+    };
+    if (window.Shopify && window.Shopify.analytics && typeof window.Shopify.analytics.publish === 'function') {
+      window.Shopify.analytics.publish("ga_stub_initialized", {}, {sendTo: "google_osp_migration"});
+    }
+  }
+</script>
+<script defer="" src="https://verdura.com/cdn/shopifycloud/perf-kit/shopify-perf-kit-2.0.0.min.js" data-application="storefront-renderer" data-shop-id="21571483" data-render-region="gcp-asia-southeast1" data-page-type="index" data-theme-instance-id="125988962406" data-theme-name="Verdura" data-theme-version="1.0.0" data-monorail-region="shop_domain" data-resource-timing-sampling-rate="10" data-shs="true"></script>
+<script src="https://verdura.com/web-pixels@73b305c4w82c1918fpb7086179m603a4010/app/web-pixel-681934950@b2a88bafab3e21179ed38636efcd8a93/pixel.modern.js" async="" data-pixel-id="681934950" data-pixel-type="APP"></script><script src="https://verdura.com/web-pixels@73b305c4w82c1918fpb7086179m603a4010/app/web-pixel-158826598@6d8c3ef0426b37b2a9b717daeb719f58/pixel.modern.js" async="" data-pixel-id="158826598" data-pixel-type="APP"></script><style data-description="gravity-font-faces">
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('https://cdn.shopify.com/shop-assets/static_uploads/shoplift/SuisseIntl-Book.otf')
+    format('opentype');
+  font-style: normal;
+  font-weight: 450;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('https://cdn.shopify.com/shop-assets/static_uploads/shoplift/SuisseIntl-Medium.otf')
+    format('opentype');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('https://cdn.shopify.com/shop-assets/static_uploads/shoplift/SuisseIntl-SemiBold.otf')
+    format('opentype');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}</style><script type="text/javascript" async="" src="https://static-tracking.klaviyo.com/onsite/js/fender_analytics.bf2596cb078079363d8f.js?cb=2" crossorigin="anonymous"></script><script type="text/javascript" async="" src="https://static-tracking.klaviyo.com/onsite/js/static.45264a1e53c737929610.js?cb=2" crossorigin="anonymous"></script><script type="text/javascript" async="" src="https://static.klaviyo.com/onsite/js/runtime.b098c40e6c6b49e640c1.js?cb=2" crossorigin="anonymous"></script><script type="text/javascript" async="" src="https://static.klaviyo.com/onsite/js/sharedUtils.7be1d23f3ff13b2a2b07.js?cb=2" crossorigin="anonymous"></script><script src="https://maps.googleapis.com/maps-api-v3/api/js/61/14/intl/zh_cn/main.js"></script><script type="module" defer="" src="https://verdura.com/cdn/shopifycloud/consent-tracking-api/v0.1/consent-tracking-api.js"></script><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/792235578/?random=1754728936652&amp;cv=11&amp;fst=1754728936652&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be5861za200zb9108114536zd9108114536xec&amp;gcd=13t3t3t3t5l1&amp;dma=0&amp;tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104782879~104948813~105033763~105033765~105103161~105103163~105113532~105135708~105135710~105231380~105231382&amp;u_w=1512&amp;u_h=982&amp;url=https%3A%2F%2Fverdura.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Verdura%20Fine%20Jewelry%20%7C%20New%20York&amp;did=dN2ZkMj%2CdNTU0Yz&amp;gdid=dN2ZkMj.dNTU0Yz&amp;npa=0&amp;pscdl=noapi&amp;auid=2052660394.1754637944&amp;uaa=arm&amp;uab=64&amp;uafvl=Not%253BA%253DBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B139.0.7258.66%7CChromium%3B139.0.7258.66&amp;uamb=0&amp;uam=&amp;uap=macOS&amp;uapv=15.3.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script><link rel="dns-prefetch preconnect" href="https://cdn.shopify.com" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/polyfills.i4n1wfLs.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/app.UfTD5a3T.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/en.DYQnO5kM.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/page-OnePage.B37LSwY3.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/DeliveryMethodSelectorSection.CtZlb2jd.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/useUiComponentsColorContrast.BKk5iqGc.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/VaultedPayment.oNpwvgci.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/LocalizationExtensionField.DJdQAAjz.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/ShopPayOptInDisclaimer.Czqy39Rf.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/ShipmentBreakdown.Cn-BIaou.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/MerchandiseModal.BkFCrGOV.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/StackedMerchandisePreview.CA0SbQmq.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/PayButtonSection.DYT0ytdA.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/component-ShopPayVerificationSwitch.CrZa5kru.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/useSubscribeMessenger.C0DiRYS4.js" crossorigin=""><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/index.ApPOcoYS.js" crossorigin=""><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/61/14/intl/zh_cn/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/61/14/intl/zh_cn/util.js"></script><link rel="prefetch" fetchpriority="low" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/assets/app.ABuRGI7x.css" crossorigin=""><link rel="prefetch" fetchpriority="low" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/assets/OnePage.PMX4OSBO.css" crossorigin=""><link rel="prefetch" fetchpriority="low" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/assets/DeliveryMethodSelectorSection.Cx21oFfE.css" crossorigin=""><link rel="prefetch" fetchpriority="low" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/assets/VaultedPayment.OxMVm7u-.css" crossorigin=""><link rel="prefetch" fetchpriority="low" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/assets/StackedMerchandisePreview.CKAakmU8.css" crossorigin=""><link rel="prefetch" fetchpriority="low" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/assets/ShopPayVerificationSwitch.DW7NMDXG.css" crossorigin=""><link rel="prefetch" fetchpriority="low" as="font" type="font/woff2" href="https://fonts.shopifycdn.com/montserrat/montserrat_n4.81949fa0ac9fd2021e16436151e8eaa539321637.woff2?h1=dmVyZHVyYS5jb20&amp;hmac=aabc8bf3c4cf9039d1300fe4c0a9128530cf3762351fa3e1decf91f1c7df13ca" crossorigin=""><link rel="prefetch" fetchpriority="low" as="font" type="font/woff2" href="https://fonts.shopifycdn.com/montserrat/montserrat_n7.3c434e22befd5c18a6b4afadb1e3d77c128c7939.woff2?h1=dmVyZHVyYS5jb20&amp;hmac=12392ee234479b210b7edeac4ff38a71989be6d8a1cc5065a891fdbc989f6624" crossorigin=""><link rel="prefetch" fetchpriority="low" as="font" type="font/woff2" href="https://fonts.shopifycdn.com/playfair_display/playfairdisplay_n4.9980f3e16959dc89137cc1369bfc3ae98af1deb9.woff2?h1=dmVyZHVyYS5jb20&amp;hmac=29043944ea3b596fb154bb91a87c324f93eda5124a50a0c5a6caef0a3e845618" crossorigin=""><link rel="prefetch" fetchpriority="low" as="font" type="font/woff2" href="https://fonts.shopifycdn.com/playfair_display/playfairdisplay_n7.592b3435e0fff3f50b26d410c73ae7ec893f6910.woff2?h1=dmVyZHVyYS5jb20&amp;hmac=cfc70c469d3fcb1e6c86456d334c29915376b273384dd85aa006211b443bec8d" crossorigin=""><link rel="prefetch" fetchpriority="low" as="image" href="https://cdn.shopify.com/s/files/1/2157/1483/files/logo_verdura_bfd624c2-a3b0-405d-8194-899695e10580_x320.png?v=1710363737" crossorigin=""><link rel="prefetch" fetchpriority="low" as="image" href="https://cdn.shopify.com/s/files/1/2157/1483/files/Verdura-Pink_2000x.png?v=1721846274" crossorigin=""></head>
+
+  <body data-template="index" data-template-type="index"><access-widget-ui data-acsb="" class="notranslate"></access-widget-ui><a href="https://accessibe.com/blog/knowledgebase/screen-reader-guide" target="_blank" rel="noopener" tabindex="-1" data-acsb="sr-trigger" data-acsb-sr-only="true" class="acsb-sr-only" style="position: absolute; width: 200px; height: 1px; margin-top: -1px; z-index: -1; border: 0px; top: 0px; left: 0px; overflow: hidden; outline: 0px;">Accessibility Screen-Reader Guide, Feedback, and Issue Reporting | New window</a><access-widget-ui data-acsb="skipLinks" class="notranslate"></access-widget-ui><access-widget-ui data-acsb="" class="notranslate"></access-widget-ui>
+    <a class="skip-to-content-link button visually-hidden btn" href="#MainContent">Skip to content</a><!-- BEGIN sections: header-group -->
+<div id="shopify-section-sections--15323283161190__announcement-bar" class="shopify-section shopify-section-group-header-group announcement-bar-section"><link href="//verdura.com/cdn/shop/t/4/assets/component-slideshow.css?v=107725913939919748051709583258" rel="stylesheet" type="text/css" media="all">
+<link href="//verdura.com/cdn/shop/t/4/assets/component-slider.css?v=142503135496229589681709583257" rel="stylesheet" type="text/css" media="all">
+
+
+<div class="utility-bar color-scheme-4 gradient utility-bar--bottom-border">
+  <div class="page-width utility-bar__grid"><div class="announcement-bar" role="region" aria-label="Announcement"><p class="announcement-bar__message h5">
+            <span>Welcome to our store</span></p></div><div class="localization-wrapper">
+</div>
+  </div>
+</div>
+
+
+</div><div id="shopify-section-sections--15323283161190__header" class="shopify-section shopify-section-group-header-group section-header"><header>
+  <nav class="is-stuck">
+    <ul role="list">
+      <li><button class="btn subnav-toggle" type="button">Menu</button></li>
+      <li>
+        <a class="logo btn" href="/">
+          <img src="//verdura.com/cdn/shop/files/logo_verdura_bfd624c2-a3b0-405d-8194-899695e10580.png?v=1710363737&amp;width=750" alt="" srcset="//verdura.com/cdn/shop/files/logo_verdura_bfd624c2-a3b0-405d-8194-899695e10580.png?v=1710363737&amp;width=375 375w, //verdura.com/cdn/shop/files/logo_verdura_bfd624c2-a3b0-405d-8194-899695e10580.png?v=1710363737&amp;width=550 550w, //verdura.com/cdn/shop/files/logo_verdura_bfd624c2-a3b0-405d-8194-899695e10580.png?v=1710363737&amp;width=750 750w" width="750" height="260" sizes="100vw" fetchpriority="high">
+        </a>
+      </li>
+      <li><button class="btn open-slideover" type="button" data-slideover="cart">Cart (<span class="cartQuantity">0</span>)</button></li>
+    </ul>
+  </nav>
+
+  <div class="subnav">
+    <div class="close"><button type="button" class="label subnav-toggle btn"><span>Close</span></button></div>
+    <menu>
+      <li>
+        <a href="" class="h2 large the-collection">The Collection</a>
+        <div class="collections mobile">
+          <ul role="list">
+            <li class="label">Shop by Category</li>
+            
+              <li><a href="/collections/bracelets-watches">Bracelets &amp; Watches</a></li>
+            
+              <li><a href="/collections/cuffs">Cuffs</a></li>
+            
+              <li><a href="/collections/earclips">Earclips</a></li>
+            
+              <li><a href="/collections/rings">Rings</a></li>
+            
+              <li><a href="/collections/necklaces">Necklaces</a></li>
+            
+              <li><a href="/collections/brooches">Brooches</a></li>
+            
+              <li><a href="/collections/mens">Men's</a></li>
+            
+              <li><a href="/collections/zodiac-pendant-necklaces">Zodiac Pendant Necklaces</a></li>
+            
+              <li><a href="/collections/all-products">All</a></li>
+            
+          </ul>
+          <ul role="list">
+            <li class="label">Shop by Collection</li>
+            
+              <li><a href="/collections/featured-in-feud">Featured in Feud</a></li>
+            
+              <li><a href="/collections/off-season-collection">Off-Season Collection</a></li>
+            
+              <li><a href="/collections/byzantine-collection">Byzantine Collection</a></li>
+            
+              <li><a href="/collections/caged-collection">Caged Collection</a></li>
+            
+              <li><a href="/collections/constellation-collection">Constellation Collection</a></li>
+            
+              <li><a href="/collections/curb-link-collection">Curb-Link Collection</a></li>
+            
+              <li><a href="/collections/night-day-collection">Night &amp; Day Collection</a></li>
+            
+              <li><a href="/collections/stardust-collection">Stardust Collection</a></li>
+            
+              <li><a href="/collections/vintage-verdura">Vintage Verdura</a></li>
+            
+              <li><a href="/collections/very-verdura-gifts-under-15-000">Very Verdura Gifts Under $20,000</a></li>
+            
+          </ul>
+        </div>
+      </li>
+      
+        <li class="label"><a href="/pages/the-story">The Story</a></li>
+      
+        <li class="label"><a href="/pages/visit">Visit</a></li>
+      
+        <li class="label"><a href="/pages/contact">Contact</a></li>
+      
+        <li class="label"><a href="/pages/customer-service">At Your Service</a></li>
+      
+        <li class="label"><a href="/blogs/news">News</a></li>
+      
+        <li class="label"><a href="/pages/catalogues">Catalogues</a></li>
+      
+    </menu>
+    <div class="collections desktop">
+      <ul role="list">
+        <li class="label">Category</li>
+        
+          <li><a href="/collections/bracelets-watches">Bracelets &amp; Watches</a></li>
+        
+          <li><a href="/collections/cuffs">Cuffs</a></li>
+        
+          <li><a href="/collections/earclips">Earclips</a></li>
+        
+          <li><a href="/collections/rings">Rings</a></li>
+        
+          <li><a href="/collections/necklaces">Necklaces</a></li>
+        
+          <li><a href="/collections/brooches">Brooches</a></li>
+        
+          <li><a href="/collections/mens">Men's</a></li>
+        
+          <li><a href="/collections/zodiac-pendant-necklaces">Zodiac Pendant Necklaces</a></li>
+        
+          <li><a href="/collections/all-products">All</a></li>
+        
+      </ul>
+      <ul role="list">
+        <li class="label">Collection</li>
+        
+          <li><a href="/collections/featured-in-feud">Featured in Feud</a></li>
+        
+          <li><a href="/collections/off-season-collection">Off-Season Collection</a></li>
+        
+          <li><a href="/collections/byzantine-collection">Byzantine Collection</a></li>
+        
+          <li><a href="/collections/caged-collection">Caged Collection</a></li>
+        
+          <li><a href="/collections/constellation-collection">Constellation Collection</a></li>
+        
+          <li><a href="/collections/curb-link-collection">Curb-Link Collection</a></li>
+        
+          <li><a href="/collections/night-day-collection">Night &amp; Day Collection</a></li>
+        
+          <li><a href="/collections/stardust-collection">Stardust Collection</a></li>
+        
+          <li><a href="/collections/vintage-verdura">Vintage Verdura</a></li>
+        
+          <li><a href="/collections/very-verdura-gifts-under-15-000">Very Verdura Gifts Under $20,000</a></li>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="search">
+    <button class="btn" type="button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.966 56.966" xml:space="preserve"><path fill="#fff" d="M55.146 51.887 41.588 37.786c3.486-4.144 5.396-9.358 5.396-14.786 0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837 1.192-1.147 1.23-3.049.083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z"></path></svg>
+    </button>
+    <form action="/search" method="get" novalidate="">
+      <input class="p" type="search" name="q" placeholder="Search" value="" required="" aria-label="Search for a product">
+    </form>
+  </div>
+
+  <div class="overlay"></div>
+</header>
+
+<div class="slideover" tabindex="0" data-slideover="cart">
+  <div class="panel">
+    <div class="inner">
+      <button class="close close-slideover" data-slideover="cart" tabindex="0" type="button" aria-label="Close cart form"></button>
+      <div class="text">
+        <h2 class="large fader" style="translate: none; rotate: none; scale: none; transform: translate(0px, 20px); opacity: 0;">Cart</h2>
+        
+      </div>
+        <div class="cart empty"><div class="empty fader" style="translate: none; rotate: none; scale: none; transform: translate(0px, 20px); opacity: 0;"><p>Your cart is empty.</p></div></div>
+      <div class="checkout">
+        
+        <div class="subtotal fader" style="translate: none; rotate: none; scale: none; transform: translate(0px, 20px); opacity: 0;">
+          <p class="label">Subtotal</p>
+          <p class="price h2"></p>
+        </div>
+      <div class="button fader" style="translate: none; rotate: none; scale: none; transform: translate(0px, 20px); opacity: 0;">
+          <a href="/checkout" class="btn">Proceed to payment</a>
+        </div></div>
+      
+        <div class="text">
+          <div class="p fader" style="translate: none; rotate: none; scale: none; transform: translate(0px, 20px); opacity: 0;">
+            <p>Delivery times are subject to several factors, including availability, shipping partner schedules, and weather conditions. If you wish to discuss the details of your order before purchasing, please email <a href="mailto:info@verdura.com">info@verdura.com</a> or call (212) 758-3388.</p>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+  <div class="overlay"></div>
+</div>
+
+
+</div>
+<!-- END sections: header-group -->
+
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      <div class="page-home"><section id="shopify-section-template--15323282800742__hero_full_screen" class="shopify-section section"><section id="HeroFullScreen-template--15323282800742__hero_full_screen" class="section-HeroFullScreen animator animator-ready" data-index="1" data-animator="hero-video" data-animator-id="f31i">
+  <div class="content">
+    <div class="inner">
+      <a href="/collections/all-products">
+      <div class="background" style="opacity: 1;">
+        <div class="video">
+          <div class="desktop">
+            
+              <video playsinline="true" autoplay="autoplay" loop="loop" muted="muted" preload="auto"><source src="//verdura.com/cdn/shop/videos/c/vp/6c82f86bf3fe4fdfbf72fe5c1c5299ba/6c82f86bf3fe4fdfbf72fe5c1c5299ba.HD-1080p-7.2Mbps-38836980.mp4?v=0" type="video/mp4"><img src="//verdura.com/cdn/shop/files/preview_images/6c82f86bf3fe4fdfbf72fe5c1c5299ba.thumbnail.0000000000_small.jpg?v=1732722976"></video>
+            
+          </div>
+          <div class="mobile">
+            
+              
+              <video playsinline="true" loop="loop" muted="muted" poster="//verdura.com/cdn/shop/files/06-18-24-VERDURA_GJ3202_1_for_web.jpg?v=1732723199&amp;width=1400" preload="metadata"><source src="//verdura.com/cdn/shop/videos/c/vp/7e686613a57d4a53be041af83d0a41c4/7e686613a57d4a53be041af83d0a41c4.HD-1080p-7.2Mbps-38836989.mp4?v=0" type="video/mp4"><img src="//verdura.com/cdn/shop/files/preview_images/7e686613a57d4a53be041af83d0a41c4.thumbnail.0000000000_small.jpg?v=1732722982"></video>
+              
+            
+          </div>
+        </div>
+      </div>
+      <div class="text">
+        <h1 style="color: #f7f7f7">
+          
+            <span class="h1"><div style="position:relative;display:inline-block;"><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">H</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">e</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">r</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">i</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">t</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">a</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">g</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">e</div></div> <div style="position:relative;display:inline-block;"><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">o</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">f</div></div> <div style="position:relative;display:inline-block;"><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">S</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">t</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">y</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">l</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">e</div></div></span>
+          
+          
+            <span class="h3">  <div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">E</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">x</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">p</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">l</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">o</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">r</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">e</div> <div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">t</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">h</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">e</div> <div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">C</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">o</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">l</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">l</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">e</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">c</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">t</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">i</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">o</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">n</div></span>
+          
+        </h1>
+      </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  (() => { 
+    if (window.innerWidth < 768) {
+      const video = document.querySelector('.section-HeroFullScreen .video .mobile video');
+      if (video) video.play();
+    }
+  })();
+</script>
+
+</section><section id="shopify-section-template--15323282800742__collection_selector_slider" class="shopify-section section"><section id="CollectionSelectorSlider-template--15323282800742__collection_selector_slider" class="section-CollectionSelectorSlider animator animator-ready" data-index="2" data-animator="collection-selector" data-animator-id="28e4">
+  <div class="content">
+    <div class="inner">
+      <div class="collections">
+        <div class="leftside">
+          <ul role="list" class="legend">
+            
+              <li class="is-active" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                <a href="/collections/bracelets-watches">
+                  Bracelets
+                </a>
+              </li>
+            
+              <li style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                <a href="/collections/earclips">
+                  Earclips
+                </a>
+              </li>
+            
+              <li style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                <a href="/collections/cuffs">
+                  Cuffs
+                </a>
+              </li>
+            
+              <li style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                <a href="/collections/rings">
+                  Rings
+                </a>
+              </li>
+            
+              <li style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                <a href="/collections/necklaces">
+                  Necklaces
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+        
+        
+          <div class="rightside is-active">
+            
+            <div class="slider" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+              <div class="swiper shopslider-0 swiper-initialized swiper-horizontal swiper-backface-hidden">
+                <ul role="list" class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-507px, 0px, 0px); transition-delay: 0ms;">
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
+                <li class="swiper-slide" data-swiper-slide-index="1">
+                      <div class="image">
+                        <a href="/products/curb-link-bracelet-yellow-gold">
+                          <img src="//verdura.com/cdn/shop/files/verdura-curb-link-bracelet-web_ba2f13eb-3913-4739-8428-3f279ca73e7e.jpg?v=1711132581&amp;width=750" alt="verdura curb-link bracelet in gold" srcset="//verdura.com/cdn/shop/files/verdura-curb-link-bracelet-web_ba2f13eb-3913-4739-8428-3f279ca73e7e.jpg?v=1711132581&amp;width=375 375w, //verdura.com/cdn/shop/files/verdura-curb-link-bracelet-web_ba2f13eb-3913-4739-8428-3f279ca73e7e.jpg?v=1711132581&amp;width=550 550w, //verdura.com/cdn/shop/files/verdura-curb-link-bracelet-web_ba2f13eb-3913-4739-8428-3f279ca73e7e.jpg?v=1711132581&amp;width=750 750w" width="750" height="750" sizes="100vw" fetchpriority="auto">
+                        </a>
+                      </div>
+                      <div class="hover">
+                        <div class="inner">
+                          <h4 class="h2 small">Curb-Link Bracelet</h4>
+                        </div>
+                      </div>
+                    </li><li class="swiper-slide swiper-slide-prev" data-swiper-slide-index="2">
+                      <div class="image">
+                        <a href="/products/oval-link-bracelet">
+                          <img src="//verdura.com/cdn/shop/files/Verdura-Oval-Link-Bracelet_Gold_1.png?v=1717616019&amp;width=750" alt="Verdura Oval Link Bracelet in Gold" srcset="//verdura.com/cdn/shop/files/Verdura-Oval-Link-Bracelet_Gold_1.png?v=1717616019&amp;width=375 375w, //verdura.com/cdn/shop/files/Verdura-Oval-Link-Bracelet_Gold_1.png?v=1717616019&amp;width=550 550w, //verdura.com/cdn/shop/files/Verdura-Oval-Link-Bracelet_Gold_1.png?v=1717616019&amp;width=750 750w" width="750" height="750" sizes="100vw" fetchpriority="auto">
+                        </a>
+                      </div>
+                      <div class="hover">
+                        <div class="inner">
+                          <h4 class="h2 small">Oval Link Bracelet</h4>
+                        </div>
+                      </div>
+                    </li><li class="swiper-slide swiper-slide-active" data-swiper-slide-index="3">
+                      <div class="image">
+                        <a href="/products/stirrup-bracelet">
+                          <img src="//verdura.com/cdn/shop/files/Verdura-Stirrup-Bracelet_Gold_1.png?v=1717615859&amp;width=750" alt="Verdura Stirrup Bracelet in Gold" srcset="//verdura.com/cdn/shop/files/Verdura-Stirrup-Bracelet_Gold_1.png?v=1717615859&amp;width=375 375w, //verdura.com/cdn/shop/files/Verdura-Stirrup-Bracelet_Gold_1.png?v=1717615859&amp;width=550 550w, //verdura.com/cdn/shop/files/Verdura-Stirrup-Bracelet_Gold_1.png?v=1717615859&amp;width=750 750w" width="750" height="750" sizes="100vw" fetchpriority="auto">
+                        </a>
+                      </div>
+                      <div class="hover">
+                        <div class="inner">
+                          <h4 class="h2 small">Stirrup Bracelet</h4>
+                        </div>
+                      </div>
+                    </li><li class="swiper-slide swiper-slide-next" data-swiper-slide-index="0">
+                      <div class="image">
+                        <a href="/products/twenty-buck-bracelet">
+                          <img src="//verdura.com/cdn/shop/files/Untitled-1_2000x2000_acf_cropped_94b0f842-c959-4489-9a98-0359f529c3f3.png?v=1711132317&amp;width=750" alt="Twenty Buck Bracelet" srcset="//verdura.com/cdn/shop/files/Untitled-1_2000x2000_acf_cropped_94b0f842-c959-4489-9a98-0359f529c3f3.png?v=1711132317&amp;width=375 375w, //verdura.com/cdn/shop/files/Untitled-1_2000x2000_acf_cropped_94b0f842-c959-4489-9a98-0359f529c3f3.png?v=1711132317&amp;width=550 550w, //verdura.com/cdn/shop/files/Untitled-1_2000x2000_acf_cropped_94b0f842-c959-4489-9a98-0359f529c3f3.png?v=1711132317&amp;width=750 750w" width="750" height="750" sizes="100vw" fetchpriority="auto">
+                        </a>
+                      </div>
+                      <div class="hover">
+                        <div class="inner">
+                          <h4 class="h2 small">"Twenty Buck" Bracelet</h4>
+                        </div>
+                      </div>
+                    </li></ul>
+              </div>
+              <div class="sliderButtons">
+                <button class="swiper-button swiper-button-prev swiper-button-prev-0 btn" aria-label="Previous product"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 42"><path d="M.4853 22.1525 20.183 41.525c.6454.6344 1.6903.6333 2.3346-.0032a1.6123 1.6123 0 0 0-.0033-2.3024L3.9889 21 22.515 2.7805a1.6118 1.6118 0 0 0 .0034-2.3018C22.1953.1596 21.7722 0 21.349 0c-.422 0-.8435.1585-1.1659.4754L.4853 19.8474c-.3109.305-.4853.72-.4853 1.1525 0 .4325.175.847.4853 1.1526Z" fill="#000" fill-rule="nonzero"></path></svg></button>
+                <button class="swiper-button swiper-button-next swiper-button-next-0 btn" aria-label="Next product"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 42"><path d="M.4853 22.1525 20.183 41.525c.6454.6344 1.6903.6333 2.3346-.0032a1.6123 1.6123 0 0 0-.0033-2.3024L3.9889 21 22.515 2.7805a1.6118 1.6118 0 0 0 .0034-2.3018C22.1953.1596 21.7722 0 21.349 0c-.422 0-.8435.1585-1.1659.4754L.4853 19.8474c-.3109.305-.4853.72-.4853 1.1525 0 .4325.175.847.4853 1.1526Z" fill="#000" fill-rule="nonzero"></path></svg></button>
+              </div>
+            </div>
+          <div class="cta" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+              
+                <a href="/collections/bracelets-watches" class="btn">
+                  <span>View Collection</span>
+                  <span class="underline"></span>
+                </a>
+              
+            </div></div>
+        
+          <div class="rightside">
+            
+            <div class="slider" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+              <div class="swiper shopslider-1 swiper-initialized swiper-horizontal">
+                <ul role="list" class="swiper-wrapper" style="transition-duration: 0ms; transition-delay: 0ms;">
+                  
+                    <li class="swiper-slide" data-swiper-slide-index="0">
+                      <div class="image">
+                        <a href="/products/pinwheel-earclips">
+                          <img src="//verdura.com/cdn/shop/files/Artboard-1-25_fe2afd28-a37f-46fd-b49c-7f8d151234b7.png?v=1711132047&amp;width=750" alt="Pinwheel earclips in gold and diamond" srcset="//verdura.com/cdn/shop/files/Artboard-1-25_fe2afd28-a37f-46fd-b49c-7f8d151234b7.png?v=1711132047&amp;width=375 375w, //verdura.com/cdn/shop/files/Artboard-1-25_fe2afd28-a37f-46fd-b49c-7f8d151234b7.png?v=1711132047&amp;width=550 550w, //verdura.com/cdn/shop/files/Artboard-1-25_fe2afd28-a37f-46fd-b49c-7f8d151234b7.png?v=1711132047&amp;width=750 750w" width="750" height="750" sizes="100vw" fetchpriority="auto">
+                        </a>
+                      </div>
+                      <div class="hover">
+                        <div class="inner">
+                          <h4 class="h2 small">Pinwheel Earclips</h4>
+                        </div>
+                      </div>
+                    </li>
+                  
+                    <li class="swiper-slide" data-swiper-slide-index="1">
+                      <div class="image">
+                        <a href="/products/caged-earclips">
+                          <img src="//verdura.com/cdn/shop/files/Verdura-Caged-Earclips_Pearl_1.png?v=1717609364&amp;width=750" alt="Verdura Caged Earclips in Pearl and Gold" srcset="//verdura.com/cdn/shop/files/Verdura-Caged-Earclips_Pearl_1.png?v=1717609364&amp;width=375 375w, //verdura.com/cdn/shop/files/Verdura-Caged-Earclips_Pearl_1.png?v=1717609364&amp;width=550 550w, //verdura.com/cdn/shop/files/Verdura-Caged-Earclips_Pearl_1.png?v=1717609364&amp;width=750 750w" width="750" height="750" sizes="100vw" fetchpriority="auto">
+                        </a>
+                      </div>
+                      <div class="hover">
+                        <div class="inner">
+                          <h4 class="h2 small">Caged Earclips</h4>
+                        </div>
+                      </div>
+                    </li>
+                  
+                    <li class="swiper-slide" data-swiper-slide-index="2">
+                      <div class="image">
+                        <a href="/products/sea-foam-earclips">
+                          <img src="//verdura.com/cdn/shop/files/Sea-Foam-Earclips_Diamond_PUPA_23_baef1d0c-53c6-4044-8d66-f3ac7a28ecc3.jpg?v=1711131247&amp;width=750" alt="Verdura Sea Foam Earclips in diamond " srcset="//verdura.com/cdn/shop/files/Sea-Foam-Earclips_Diamond_PUPA_23_baef1d0c-53c6-4044-8d66-f3ac7a28ecc3.jpg?v=1711131247&amp;width=375 375w, //verdura.com/cdn/shop/files/Sea-Foam-Earclips_Diamond_PUPA_23_baef1d0c-53c6-4044-8d66-f3ac7a28ecc3.jpg?v=1711131247&amp;width=550 550w, //verdura.com/cdn/shop/files/Sea-Foam-Earclips_Diamond_PUPA_23_baef1d0c-53c6-4044-8d66-f3ac7a28ecc3.jpg?v=1711131247&amp;width=750 750w" width="750" height="750" sizes="100vw" fetchpriority="auto">
+                        </a>
+                      </div>
+                      <div class="hover">
+                        <div class="inner">
+                          <h4 class="h2 small">Sea Foam Earclips</h4>
+                        </div>
+                      </div>
+                    </li>
+                  
+                    <li class="swiper-slide" data-swiper-slide-index="3">
+                      <div class="image">
+                        <a href="/products/piccolo-rope-earclips">
+                          <img src="//verdura.com/cdn/shop/files/Verdura_Piccolo_Rope_Earclips.png?v=1728075335&amp;width=750" alt="Verdura Piccolo Rope Earclips" srcset="//verdura.com/cdn/shop/files/Verdura_Piccolo_Rope_Earclips.png?v=1728075335&amp;width=375 375w, //verdura.com/cdn/shop/files/Verdura_Piccolo_Rope_Earclips.png?v=1728075335&amp;width=550 550w, //verdura.com/cdn/shop/files/Verdura_Piccolo_Rope_Earclips.png?v=1728075335&amp;width=750 750w" width="750" height="750" sizes="100vw" fetchpriority="auto">
+                        </a>
+                      </div>
+                      <div class="hover">
+                        <div class="inner">
+                          <h4 class="h2 small">Piccolo Rope Earclips</h4>
+                        </div>
+                      </div>
+                    </li>
+                  
+                </ul>
+              </div>
+              <div class="sliderButtons">
+                <button class="swiper-button swiper-button-prev swiper-button-prev-1 btn" aria-label="Previous product"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 42"><path d="M.4853 22.1525 20.183 41.525c.6454.6344 1.6903.6333 2.3346-.0032a1.6123 1.6123 0 0 0-.0033-2.3024L3.9889 21 22.515 2.7805a1.6118 1.6118 0 0 0 .0034-2.3018C22.1953.1596 21.7722 0 21.349 0c-.422 0-.8435.1585-1.1659.4754L.4853 19.8474c-.3109.305-.4853.72-.4853 1.1525 0 .4325.175.847.4853 1.1526Z" fill="#000" fill-rule="nonzero"></path></svg></button>
+                <button class="swiper-button swiper-button-next swiper-button-next-1 btn" aria-label="Next product"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 42"><path d="M.4853 22.1525 20.183 41.525c.6454.6344 1.6903.6333 2.3346-.0032a1.6123 1.6123 0 0 0-.0033-2.3024L3.9889 21 22.515 2.7805a1.6118 1.6118 0 0 0 .0034-2.3018C22.1953.1596 21.7722 0 21.349 0c-.422 0-.8435.1585-1.1659.4754L.4853 19.8474c-.3109.305-.4853.72-.4853 1.1525 0 .4325.175.847.4853 1.1526Z" fill="#000" fill-rule="nonzero"></path></svg></button>
+              </div>
+            </div>
+          <div class="cta" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+              
+                <a href="/collections/earclips" class="btn">
+                  <span>View Collection</span>
+                  <span class="underline"></span>
+                </a>
+              
+            </div></div>
+        
+          <div class="rightside">
+            
+            <div class="slider" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+              <div class="swiper shopslider-2 swiper-initialized swiper-horizontal">
+                <ul role="list" class="swiper-wrapper" style="transition-duration: 0ms; transition-delay: 0ms;">
+                  
+                    <li class="swiper-slide" data-swiper-slide-index="0">
+                      <div class="image">
+                        <a href="/products/sun-cuff-in-diamond">
+                          <img src="//verdura.com/cdn/shop/files/Sun-Cuff_Diamond-Gold_V3_PUPA_23_d196454f-8565-4bca-b514-ae591d6c0857.jpg?v=1711131243&amp;width=750" alt="Verdura Sun Cuff in diamond and gold" srcset="//verdura.com/cdn/shop/files/Sun-Cuff_Diamond-Gold_V3_PUPA_23_d196454f-8565-4bca-b514-ae591d6c0857.jpg?v=1711131243&amp;width=375 375w, //verdura.com/cdn/shop/files/Sun-Cuff_Diamond-Gold_V3_PUPA_23_d196454f-8565-4bca-b514-ae591d6c0857.jpg?v=1711131243&amp;width=550 550w, //verdura.com/cdn/shop/files/Sun-Cuff_Diamond-Gold_V3_PUPA_23_d196454f-8565-4bca-b514-ae591d6c0857.jpg?v=1711131243&amp;width=750 750w" width="750" height="750" sizes="100vw" fetchpriority="auto">
+                        </a>
+                      </div>
+                      <div class="hover">
+                        <div class="inner">
+                          <h4 class="h2 small">Sun Cuff in Diamond</h4>
+                        </div>
+                      </div>
+                    </li>
+                  
+                    <li class="swiper-slide" data-swiper-slide-index="1">
+                      <div class="image">
+                        <a href="/products/woven-knot-stone-cuff">
+                          <img src="//verdura.com/cdn/shop/files/Woven-Knot-Stone-Cuff_V2_PUPA_23_72c5a328-c609-42da-ad48-aae0708475a6.jpg?v=1711131237&amp;width=750" alt="Woven Knot Stone Cuff_V2_PUPA_23" srcset="//verdura.com/cdn/shop/files/Woven-Knot-Stone-Cuff_V2_PUPA_23_72c5a328-c609-42da-ad48-aae0708475a6.jpg?v=1711131237&amp;width=375 375w, //verdura.com/cdn/shop/files/Woven-Knot-Stone-Cuff_V2_PUPA_23_72c5a328-c609-42da-ad48-aae0708475a6.jpg?v=1711131237&amp;width=550 550w, //verdura.com/cdn/shop/files/Woven-Knot-Stone-Cuff_V2_PUPA_23_72c5a328-c609-42da-ad48-aae0708475a6.jpg?v=1711131237&amp;width=750 750w" width="750" height="750" sizes="100vw" fetchpriority="auto">
+                        </a>
+                      </div>
+                      <div class="hover">
+                        <div class="inner">
+                          <h4 class="h2 small">Woven Knot Stone Cuff</h4>
+                        </div>
+                      </div>
+                    </li>
+                  
+                    <li class="swiper-slide" data-swiper-slide-index="2">
+                      <div class="image">
+                        <a href="/products/criss-cross-cuff">
+                          <img src="//verdura.com/cdn/shop/files/Verdura-Criss-Cross-Cuffs_Gold_1.png?v=1719241222&amp;width=750" alt="Verdura Criss-Cross Cuffs in Gold" srcset="//verdura.com/cdn/shop/files/Verdura-Criss-Cross-Cuffs_Gold_1.png?v=1719241222&amp;width=375 375w, //verdura.com/cdn/shop/files/Verdura-Criss-Cross-Cuffs_Gold_1.png?v=1719241222&amp;width=550 550w, //verdura.com/cdn/shop/files/Verdura-Criss-Cross-Cuffs_Gold_1.png?v=1719241222&amp;width=750 750w" width="750" height="750" sizes="100vw" fetchpriority="auto">
+                        </a>
+                      </div>
+                      <div class="hover">
+                        <div class="inner">
+                          <h4 class="h2 small">Criss Cross Cuff</h4>
+                        </div>
+                      </div>
+                    </li>
+                  
+                    <li class="swiper-slide" data-swiper-slide-index="3">
+                      <div class="image">
+                        <a href="/products/maltese-cross-cuff-2">
+                          <img src="//verdura.com/cdn/shop/files/verdura-maltese-cross-cuff-black-and-white-diamond-web_b53737bb-f35e-4950-a8ea-8478849f329c.jpg?v=1711132384&amp;width=750" alt="verdura maltese cross cuff black and white diamond" srcset="//verdura.com/cdn/shop/files/verdura-maltese-cross-cuff-black-and-white-diamond-web_b53737bb-f35e-4950-a8ea-8478849f329c.jpg?v=1711132384&amp;width=375 375w, //verdura.com/cdn/shop/files/verdura-maltese-cross-cuff-black-and-white-diamond-web_b53737bb-f35e-4950-a8ea-8478849f329c.jpg?v=1711132384&amp;width=550 550w, //verdura.com/cdn/shop/files/verdura-maltese-cross-cuff-black-and-white-diamond-web_b53737bb-f35e-4950-a8ea-8478849f329c.jpg?v=1711132384&amp;width=750 750w" width="750" height="750" sizes="100vw" fetchpriority="auto">
+                        </a>
+                      </div>
+                      <div class="hover">
+                        <div class="inner">
+                          <h4 class="h2 small">Maltese Cross Cuff</h4>
+                        </div>
+                      </div>
+                    </li>
+                  
+                </ul>
+              </div>
+              <div class="sliderButtons">
+                <button class="swiper-button swiper-button-prev swiper-button-prev-2 btn" aria-label="Previous product"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 42"><path d="M.4853 22.1525 20.183 41.525c.6454.6344 1.6903.6333 2.3346-.0032a1.6123 1.6123 0 0 0-.0033-2.3024L3.9889 21 22.515 2.7805a1.6118 1.6118 0 0 0 .0034-2.3018C22.1953.1596 21.7722 0 21.349 0c-.422 0-.8435.1585-1.1659.4754L.4853 19.8474c-.3109.305-.4853.72-.4853 1.1525 0 .4325.175.847.4853 1.1526Z" fill="#000" fill-rule="nonzero"></path></svg></button>
+                <button class="swiper-button swiper-button-next swiper-button-next-2 btn" aria-label="Next product"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 42"><path d="M.4853 22.1525 20.183 41.525c.6454.6344 1.6903.6333 2.3346-.0032a1.6123 1.6123 0 0 0-.0033-2.3024L3.9889 21 22.515 2.7805a1.6118 1.6118 0 0 0 .0034-2.3018C22.1953.1596 21.7722 0 21.349 0c-.422 0-.8435.1585-1.1659.4754L.4853 19.8474c-.3109.305-.4853.72-.4853 1.1525 0 .4325.175.847.4853 1.1526Z" fill="#000" fill-rule="nonzero"></path></svg></button>
+              </div>
+            </div>
+          <div class="cta" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+              
+                <a href="/collections/cuffs" class="btn">
+                  <span>View Collection</span>
+                  <span class="underline"></span>
+                </a>
+              
+            </div></div>
+        
+          <div class="rightside">
+            
+            <div class="slider" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+              <div class="swiper shopslider-3 swiper-initialized swiper-horizontal">
+                <ul role="list" class="swiper-wrapper" style="transition-duration: 0ms; transition-delay: 0ms;">
+                  
+                    <li class="swiper-slide" data-swiper-slide-index="0">
+                      <div class="image">
+                        <a href="/products/copa-ring-in-turquoise">
+                          <img src="//verdura.com/cdn/shop/files/Copa-Rings_Turquoise_PUPA_23_6d3a3b88-2784-42ae-bacf-3b687e0de924.jpg?v=1711131273&amp;width=750" alt="Verdura Copa Ring in turquoise" srcset="//verdura.com/cdn/shop/files/Copa-Rings_Turquoise_PUPA_23_6d3a3b88-2784-42ae-bacf-3b687e0de924.jpg?v=1711131273&amp;width=375 375w, //verdura.com/cdn/shop/files/Copa-Rings_Turquoise_PUPA_23_6d3a3b88-2784-42ae-bacf-3b687e0de924.jpg?v=1711131273&amp;width=550 550w, //verdura.com/cdn/shop/files/Copa-Rings_Turquoise_PUPA_23_6d3a3b88-2784-42ae-bacf-3b687e0de924.jpg?v=1711131273&amp;width=750 750w" width="750" height="750" sizes="100vw" fetchpriority="auto">
+                        </a>
+                      </div>
+                      <div class="hover">
+                        <div class="inner">
+                          <h4 class="h2 small">Copa Ring in Turquoise</h4>
+                        </div>
+                      </div>
+                    </li>
+                  
+                    <li class="swiper-slide" data-swiper-slide-index="1">
+                      <div class="image">
+                        <a href="/products/midas-band-ring">
+                          <img src="//verdura.com/cdn/shop/files/Midas-Band-Ring_Gold_PUPA_V2-ON-SIDE_23_c599a734-9632-46cb-b7b9-8fd2f36afac4.jpg?v=1711131304&amp;width=750" alt="Midas Band Ring_Gold" srcset="//verdura.com/cdn/shop/files/Midas-Band-Ring_Gold_PUPA_V2-ON-SIDE_23_c599a734-9632-46cb-b7b9-8fd2f36afac4.jpg?v=1711131304&amp;width=375 375w, //verdura.com/cdn/shop/files/Midas-Band-Ring_Gold_PUPA_V2-ON-SIDE_23_c599a734-9632-46cb-b7b9-8fd2f36afac4.jpg?v=1711131304&amp;width=550 550w, //verdura.com/cdn/shop/files/Midas-Band-Ring_Gold_PUPA_V2-ON-SIDE_23_c599a734-9632-46cb-b7b9-8fd2f36afac4.jpg?v=1711131304&amp;width=750 750w" width="750" height="750" sizes="100vw" fetchpriority="auto">
+                        </a>
+                      </div>
+                      <div class="hover">
+                        <div class="inner">
+                          <h4 class="h2 small">Midas Band Ring</h4>
+                        </div>
+                      </div>
+                    </li>
+                  
+                    <li class="swiper-slide" data-swiper-slide-index="2">
+                      <div class="image">
+                        <a href="/products/kaleidoscope-ring-4">
+                          <img src="//verdura.com/cdn/shop/files/Kaleidoscope-Ring_All-Gold_O-V1-Side_PUPA_23_d39baa8d-300a-4e16-a3a8-649fae9b1aed.jpg?v=1711131259&amp;width=750" alt="Kaleidoscope Ring. in gold" srcset="//verdura.com/cdn/shop/files/Kaleidoscope-Ring_All-Gold_O-V1-Side_PUPA_23_d39baa8d-300a-4e16-a3a8-649fae9b1aed.jpg?v=1711131259&amp;width=375 375w, //verdura.com/cdn/shop/files/Kaleidoscope-Ring_All-Gold_O-V1-Side_PUPA_23_d39baa8d-300a-4e16-a3a8-649fae9b1aed.jpg?v=1711131259&amp;width=550 550w, //verdura.com/cdn/shop/files/Kaleidoscope-Ring_All-Gold_O-V1-Side_PUPA_23_d39baa8d-300a-4e16-a3a8-649fae9b1aed.jpg?v=1711131259&amp;width=750 750w" width="750" height="750" sizes="100vw" fetchpriority="auto">
+                        </a>
+                      </div>
+                      <div class="hover">
+                        <div class="inner">
+                          <h4 class="h2 small">Kaleidoscope Ring</h4>
+                        </div>
+                      </div>
+                    </li>
+                  
+                    <li class="swiper-slide" data-swiper-slide-index="3">
+                      <div class="image">
+                        <a href="/products/constellation-band-ring">
+                          <img src="//verdura.com/cdn/shop/files/Verdura-Constellation-Band-Ring_Gold-Diamond_1.png?v=1717603114&amp;width=750" alt="Verdura Constellation Band Ring in Gold and Diamond" srcset="//verdura.com/cdn/shop/files/Verdura-Constellation-Band-Ring_Gold-Diamond_1.png?v=1717603114&amp;width=375 375w, //verdura.com/cdn/shop/files/Verdura-Constellation-Band-Ring_Gold-Diamond_1.png?v=1717603114&amp;width=550 550w, //verdura.com/cdn/shop/files/Verdura-Constellation-Band-Ring_Gold-Diamond_1.png?v=1717603114&amp;width=750 750w" width="750" height="750" sizes="100vw" fetchpriority="auto">
+                        </a>
+                      </div>
+                      <div class="hover">
+                        <div class="inner">
+                          <h4 class="h2 small">Constellation Band Ring</h4>
+                        </div>
+                      </div>
+                    </li>
+                  
+                    <li class="swiper-slide" data-swiper-slide-index="4">
+                      <div class="image">
+                        <a href="/products/caged-ring">
+                          <img src="//verdura.com/cdn/shop/files/Verdura-Caged-Ring-Gold-Rock-Crystal_1.png?v=1717700785&amp;width=750" alt="Verdura Caged Ring in Rock Crystal and Gold" srcset="//verdura.com/cdn/shop/files/Verdura-Caged-Ring-Gold-Rock-Crystal_1.png?v=1717700785&amp;width=375 375w, //verdura.com/cdn/shop/files/Verdura-Caged-Ring-Gold-Rock-Crystal_1.png?v=1717700785&amp;width=550 550w, //verdura.com/cdn/shop/files/Verdura-Caged-Ring-Gold-Rock-Crystal_1.png?v=1717700785&amp;width=750 750w" width="750" height="750" sizes="100vw" fetchpriority="auto">
+                        </a>
+                      </div>
+                      <div class="hover">
+                        <div class="inner">
+                          <h4 class="h2 small">Caged Ring</h4>
+                        </div>
+                      </div>
+                    </li>
+                  
+                    <li class="swiper-slide" data-swiper-slide-index="5">
+                      <div class="image">
+                        <a href="/products/whisk-ring-in-amethyst">
+                          <img src="//verdura.com/cdn/shop/files/Whisk-Ring_Amethyst_V5_PUPA_23_4e12c56b-1a46-463f-9cfa-2587302ed3ab.jpg?v=1711131234&amp;width=750" alt="Verdura whisk ring in amethyst" srcset="//verdura.com/cdn/shop/files/Whisk-Ring_Amethyst_V5_PUPA_23_4e12c56b-1a46-463f-9cfa-2587302ed3ab.jpg?v=1711131234&amp;width=375 375w, //verdura.com/cdn/shop/files/Whisk-Ring_Amethyst_V5_PUPA_23_4e12c56b-1a46-463f-9cfa-2587302ed3ab.jpg?v=1711131234&amp;width=550 550w, //verdura.com/cdn/shop/files/Whisk-Ring_Amethyst_V5_PUPA_23_4e12c56b-1a46-463f-9cfa-2587302ed3ab.jpg?v=1711131234&amp;width=750 750w" width="750" height="750" sizes="100vw" fetchpriority="auto">
+                        </a>
+                      </div>
+                      <div class="hover">
+                        <div class="inner">
+                          <h4 class="h2 small">Whisk Ring in Amethyst</h4>
+                        </div>
+                      </div>
+                    </li>
+                  
+                </ul>
+              </div>
+              <div class="sliderButtons">
+                <button class="swiper-button swiper-button-prev swiper-button-prev-3 btn" aria-label="Previous product"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 42"><path d="M.4853 22.1525 20.183 41.525c.6454.6344 1.6903.6333 2.3346-.0032a1.6123 1.6123 0 0 0-.0033-2.3024L3.9889 21 22.515 2.7805a1.6118 1.6118 0 0 0 .0034-2.3018C22.1953.1596 21.7722 0 21.349 0c-.422 0-.8435.1585-1.1659.4754L.4853 19.8474c-.3109.305-.4853.72-.4853 1.1525 0 .4325.175.847.4853 1.1526Z" fill="#000" fill-rule="nonzero"></path></svg></button>
+                <button class="swiper-button swiper-button-next swiper-button-next-3 btn" aria-label="Next product"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 42"><path d="M.4853 22.1525 20.183 41.525c.6454.6344 1.6903.6333 2.3346-.0032a1.6123 1.6123 0 0 0-.0033-2.3024L3.9889 21 22.515 2.7805a1.6118 1.6118 0 0 0 .0034-2.3018C22.1953.1596 21.7722 0 21.349 0c-.422 0-.8435.1585-1.1659.4754L.4853 19.8474c-.3109.305-.4853.72-.4853 1.1525 0 .4325.175.847.4853 1.1526Z" fill="#000" fill-rule="nonzero"></path></svg></button>
+              </div>
+            </div>
+          <div class="cta" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+              
+                <a href="/collections/rings" class="btn">
+                  <span>View Collection</span>
+                  <span class="underline"></span>
+                </a>
+              
+            </div></div>
+        
+          <div class="rightside">
+            
+            <div class="slider" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+              <div class="swiper shopslider-4 swiper-initialized swiper-horizontal">
+                <ul role="list" class="swiper-wrapper" style="transition-duration: 0ms; transition-delay: 0ms;">
+                  
+                    <li class="swiper-slide" data-swiper-slide-index="0">
+                      <div class="image">
+                        <a href="/products/wrapped-heart-pendant-necklace">
+                          <img src="//verdura.com/cdn/shop/files/Verdura_Wrapped_Heart_Pendant_Necklace_Product.png?v=1727917678&amp;width=750" alt="Verdura Wrapped Heart Pendant Necklace Product" srcset="//verdura.com/cdn/shop/files/Verdura_Wrapped_Heart_Pendant_Necklace_Product.png?v=1727917678&amp;width=375 375w, //verdura.com/cdn/shop/files/Verdura_Wrapped_Heart_Pendant_Necklace_Product.png?v=1727917678&amp;width=550 550w, //verdura.com/cdn/shop/files/Verdura_Wrapped_Heart_Pendant_Necklace_Product.png?v=1727917678&amp;width=750 750w" width="750" height="750" sizes="100vw" fetchpriority="auto">
+                        </a>
+                      </div>
+                      <div class="hover">
+                        <div class="inner">
+                          <h4 class="h2 small">Wrapped Heart Pendant Necklace</h4>
+                        </div>
+                      </div>
+                    </li>
+                  
+                    <li class="swiper-slide" data-swiper-slide-index="1">
+                      <div class="image">
+                        <a href="/products/double-wrap-curb-link-necklace">
+                          <img src="//verdura.com/cdn/shop/files/Verdura-Double-Wrap-Curb-Link-Necklace_Gold_1.png?v=1717600088&amp;width=750" alt="Verdura Double Wrap Curb-Link Necklace in Gold" srcset="//verdura.com/cdn/shop/files/Verdura-Double-Wrap-Curb-Link-Necklace_Gold_1.png?v=1717600088&amp;width=375 375w, //verdura.com/cdn/shop/files/Verdura-Double-Wrap-Curb-Link-Necklace_Gold_1.png?v=1717600088&amp;width=550 550w, //verdura.com/cdn/shop/files/Verdura-Double-Wrap-Curb-Link-Necklace_Gold_1.png?v=1717600088&amp;width=750 750w" width="750" height="750" sizes="100vw" fetchpriority="auto">
+                        </a>
+                      </div>
+                      <div class="hover">
+                        <div class="inner">
+                          <h4 class="h2 small">Double Wrap Curb-Link Necklace</h4>
+                        </div>
+                      </div>
+                    </li>
+                  
+                    <li class="swiper-slide" data-swiper-slide-index="2">
+                      <div class="image">
+                        <a href="/products/candy-lariat-necklace">
+                          <img src="//verdura.com/cdn/shop/files/Candy-Lariat_Blue-Topaz-Chrome-Tourmaline_V4_PUPA_23_33c172ef-7b18-40d3-9897-3e9e0059aeaf.png?v=1711131325&amp;width=750" alt="Verdura Candy Lariat_Blue Topaz-Chrome Tourmaline" srcset="//verdura.com/cdn/shop/files/Candy-Lariat_Blue-Topaz-Chrome-Tourmaline_V4_PUPA_23_33c172ef-7b18-40d3-9897-3e9e0059aeaf.png?v=1711131325&amp;width=375 375w, //verdura.com/cdn/shop/files/Candy-Lariat_Blue-Topaz-Chrome-Tourmaline_V4_PUPA_23_33c172ef-7b18-40d3-9897-3e9e0059aeaf.png?v=1711131325&amp;width=550 550w, //verdura.com/cdn/shop/files/Candy-Lariat_Blue-Topaz-Chrome-Tourmaline_V4_PUPA_23_33c172ef-7b18-40d3-9897-3e9e0059aeaf.png?v=1711131325&amp;width=750 750w" width="750" height="750" sizes="100vw" fetchpriority="auto">
+                        </a>
+                      </div>
+                      <div class="hover">
+                        <div class="inner">
+                          <h4 class="h2 small">Candy Lariat Necklace</h4>
+                        </div>
+                      </div>
+                    </li>
+                  
+                    <li class="swiper-slide" data-swiper-slide-index="3">
+                      <div class="image">
+                        <a href="/products/zodiac-pendant-necklace-sagittarius">
+                          <img src="//verdura.com/cdn/shop/files/Verdura-Zodiac-Pendant-Necklace_Sagittarius_1.png?v=1719238738&amp;width=750" alt="Verdura Sagittarius Zodiac Pendant Necklace" srcset="//verdura.com/cdn/shop/files/Verdura-Zodiac-Pendant-Necklace_Sagittarius_1.png?v=1719238738&amp;width=375 375w, //verdura.com/cdn/shop/files/Verdura-Zodiac-Pendant-Necklace_Sagittarius_1.png?v=1719238738&amp;width=550 550w, //verdura.com/cdn/shop/files/Verdura-Zodiac-Pendant-Necklace_Sagittarius_1.png?v=1719238738&amp;width=750 750w" width="750" height="750" sizes="100vw" fetchpriority="auto">
+                        </a>
+                      </div>
+                      <div class="hover">
+                        <div class="inner">
+                          <h4 class="h2 small">Zodiac Pendant Necklace - Sagittarius</h4>
+                        </div>
+                      </div>
+                    </li>
+                  
+                    <li class="swiper-slide" data-swiper-slide-index="4">
+                      <div class="image">
+                        <a href="/products/etoile-mini-pendant-necklace">
+                          <img src="//verdura.com/cdn/shop/files/Etoile-Pendant_SMALL_Diamond-Gold_PUPA_23_1080x1080_acf_cropped_7350d99f-0902-484a-ac4f-d28446bd5325.png?v=1711131321&amp;width=750" alt="Verdura mini Etoile pendant necklace" srcset="//verdura.com/cdn/shop/files/Etoile-Pendant_SMALL_Diamond-Gold_PUPA_23_1080x1080_acf_cropped_7350d99f-0902-484a-ac4f-d28446bd5325.png?v=1711131321&amp;width=375 375w, //verdura.com/cdn/shop/files/Etoile-Pendant_SMALL_Diamond-Gold_PUPA_23_1080x1080_acf_cropped_7350d99f-0902-484a-ac4f-d28446bd5325.png?v=1711131321&amp;width=550 550w, //verdura.com/cdn/shop/files/Etoile-Pendant_SMALL_Diamond-Gold_PUPA_23_1080x1080_acf_cropped_7350d99f-0902-484a-ac4f-d28446bd5325.png?v=1711131321&amp;width=750 750w" width="750" height="750" sizes="100vw" fetchpriority="auto">
+                        </a>
+                      </div>
+                      <div class="hover">
+                        <div class="inner">
+                          <h4 class="h2 small">Etoile Mini Pendant Necklace</h4>
+                        </div>
+                      </div>
+                    </li>
+                  
+                </ul>
+              </div>
+              <div class="sliderButtons">
+                <button class="swiper-button swiper-button-prev swiper-button-prev-4 btn" aria-label="Previous product"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 42"><path d="M.4853 22.1525 20.183 41.525c.6454.6344 1.6903.6333 2.3346-.0032a1.6123 1.6123 0 0 0-.0033-2.3024L3.9889 21 22.515 2.7805a1.6118 1.6118 0 0 0 .0034-2.3018C22.1953.1596 21.7722 0 21.349 0c-.422 0-.8435.1585-1.1659.4754L.4853 19.8474c-.3109.305-.4853.72-.4853 1.1525 0 .4325.175.847.4853 1.1526Z" fill="#000" fill-rule="nonzero"></path></svg></button>
+                <button class="swiper-button swiper-button-next swiper-button-next-4 btn" aria-label="Next product"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 42"><path d="M.4853 22.1525 20.183 41.525c.6454.6344 1.6903.6333 2.3346-.0032a1.6123 1.6123 0 0 0-.0033-2.3024L3.9889 21 22.515 2.7805a1.6118 1.6118 0 0 0 .0034-2.3018C22.1953.1596 21.7722 0 21.349 0c-.422 0-.8435.1585-1.1659.4754L.4853 19.8474c-.3109.305-.4853.72-.4853 1.1525 0 .4325.175.847.4853 1.1526Z" fill="#000" fill-rule="nonzero"></path></svg></button>
+              </div>
+            </div>
+          <div class="cta" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+              
+                <a href="/collections/necklaces" class="btn">
+                  <span>View Collection</span>
+                  <span class="underline"></span>
+                </a>
+              
+            </div></div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+</section><section id="shopify-section-template--15323282800742__double_image_banner" class="shopify-section section"><section id="DoubleImageBanner-template--15323282800742__double_image_banner" class="section-DoubleImageBanner animator animator-ready" style="background-color: #f7f7f7" data-index="3" data-animator="double-image-banner" data-animator-id="05g5">
+	<div class="content">
+		<div class="inner">
+			<div class="images">
+        
+          <div class="image" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><img src="//verdura.com/cdn/shop/files/Verdura-Jewelry-Zodiac-Pendant-Necklace-Capricorn-Gold-Diamond-1.jpg?v=1709064598&amp;width=750" alt="" srcset="//verdura.com/cdn/shop/files/Verdura-Jewelry-Zodiac-Pendant-Necklace-Capricorn-Gold-Diamond-1.jpg?v=1709064598&amp;width=375 375w, //verdura.com/cdn/shop/files/Verdura-Jewelry-Zodiac-Pendant-Necklace-Capricorn-Gold-Diamond-1.jpg?v=1709064598&amp;width=550 550w, //verdura.com/cdn/shop/files/Verdura-Jewelry-Zodiac-Pendant-Necklace-Capricorn-Gold-Diamond-1.jpg?v=1709064598&amp;width=750 750w" width="750" height="750" sizes="100vw" fetchpriority="auto"></div>
+        
+        
+          <div class="image" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><img src="//verdura.com/cdn/shop/files/Verdura-Jewelry-Zodiac-Pendant-Necklace-Pisces-Gold-Diamond-1.jpg?v=1709064608&amp;width=750" alt="" srcset="//verdura.com/cdn/shop/files/Verdura-Jewelry-Zodiac-Pendant-Necklace-Pisces-Gold-Diamond-1.jpg?v=1709064608&amp;width=375 375w, //verdura.com/cdn/shop/files/Verdura-Jewelry-Zodiac-Pendant-Necklace-Pisces-Gold-Diamond-1.jpg?v=1709064608&amp;width=550 550w, //verdura.com/cdn/shop/files/Verdura-Jewelry-Zodiac-Pendant-Necklace-Pisces-Gold-Diamond-1.jpg?v=1709064608&amp;width=750 750w" width="750" height="750" sizes="100vw" fetchpriority="auto"></div>
+        
+			</div>
+			<div class="text">
+        <h2 class="large"><div style="position:relative;display:inline-block;"><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Z</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">o</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">d</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">i</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">a</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">c</div></div></h2>
+        <h3 style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Pendant Necklaces</h3>
+        <p style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Using archival postcards Fulco di Verdura purchased at the Museum of Natural History, Verdura sets diamonds as stars and engraves constellations in gold</p>
+        
+          <div class="cta" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+            <a href="/collections/zodiac-pendant-necklaces"><span class="btn"><span>View Collection</span></span></a>
+          </div>
+        
+			</div>
+		</div>
+	</div>
+</section>
+
+</section><section id="shopify-section-template--15323282800742__three_square_layout" class="shopify-section section"><section id="ThreeSquareLayout-template--15323282800742__three_square_layout" class="section-ThreeSquareLayout" style="--shape-color: #934c4c;" data-index="4">
+	<div class="content">
+		<div class="inner">
+			<div class="leftside">
+        <div class="media animator animator-ready" data-animator="simple-fadein" data-animator-id="0hg4" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+          
+            <div class="image"><img src="//verdura.com/cdn/shop/files/Sequence-01-square.jpg?v=1709065746&amp;width=750" alt="" srcset="//verdura.com/cdn/shop/files/Sequence-01-square.jpg?v=1709065746&amp;width=375 375w, //verdura.com/cdn/shop/files/Sequence-01-square.jpg?v=1709065746&amp;width=550 550w, //verdura.com/cdn/shop/files/Sequence-01-square.jpg?v=1709065746&amp;width=750 750w" width="750" height="750" loading="lazy" sizes="100vw" fetchpriority="auto"></div>
+          
+          
+            <div class="video">
+              <video playsinline="true" autoplay="autoplay" loop="loop" muted="muted" preload="auto"><source src="//verdura.com/cdn/shop/videos/c/vp/904052fe8ee24998a0768d662c4b3978/904052fe8ee24998a0768d662c4b3978.HD-720p-3.0Mbps-26472619.mp4?v=0" type="video/mp4"><img src="//verdura.com/cdn/shop/files/preview_images/904052fe8ee24998a0768d662c4b3978.thumbnail.0000000000_small.jpg?v=1711641012"></video>
+            </div>
+          
+        </div>
+        <div class="text">
+          <h3 class="animator animator-ready" data-animator="simple-fadein" data-animator-id="ch21" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">The Off-Season Collection</h3>
+          <p class="animator animator-ready" data-animator="simple-fadein" data-animator-id="6jhj" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">We are delighted to introduce the Off-Season Collection - over a dozen new archival pieces that we feel captures this paradox of American style. These bangles, lariats, hoops and pendants are meant to be as relevant to your wardrobe in high season as well as off season, whether you don them for an audience or a solo stroll down an empty beach.</p>
+          <div class="cta animator animator-ready" data-animator="simple-fadein" data-animator-id="abia" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+            
+              <a href="/collections/off-season-collection"><span class="btn"><span>View</span></span></a>
+            
+          </div>
+        </div>
+			</div>
+			<div class="rightside">
+				<div class="images">
+          <div class="media animator animator-ready" data-animator="simple-fadein" data-animator-id="510j" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+            
+              <div class="image"><img src="//verdura.com/cdn/shop/files/Q449_MPI_230505_VERDURA_MP_SH10_1869-V1_FNL.jpg?v=1709065746&amp;width=750" alt="" srcset="//verdura.com/cdn/shop/files/Q449_MPI_230505_VERDURA_MP_SH10_1869-V1_FNL.jpg?v=1709065746&amp;width=375 375w, //verdura.com/cdn/shop/files/Q449_MPI_230505_VERDURA_MP_SH10_1869-V1_FNL.jpg?v=1709065746&amp;width=550 550w, //verdura.com/cdn/shop/files/Q449_MPI_230505_VERDURA_MP_SH10_1869-V1_FNL.jpg?v=1709065746&amp;width=750 750w" width="750" height="750" loading="lazy" sizes="100vw" fetchpriority="auto"></div>
+            
+            
+          </div>
+          <div class="media animator animator-ready" data-animator="simple-fadein" data-animator-id="3hjg" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+            
+              <div class="image"><img src="//verdura.com/cdn/shop/files/Q449_MPI_230505_VERDURA_MP_SH3_556-V1_FNL.jpg?v=1709065747&amp;width=750" alt="" srcset="//verdura.com/cdn/shop/files/Q449_MPI_230505_VERDURA_MP_SH3_556-V1_FNL.jpg?v=1709065747&amp;width=375 375w, //verdura.com/cdn/shop/files/Q449_MPI_230505_VERDURA_MP_SH3_556-V1_FNL.jpg?v=1709065747&amp;width=550 550w, //verdura.com/cdn/shop/files/Q449_MPI_230505_VERDURA_MP_SH3_556-V1_FNL.jpg?v=1709065747&amp;width=750 750w" width="750" height="750" loading="lazy" sizes="100vw" fetchpriority="auto"></div>
+            
+            
+          </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+</section><section id="shopify-section-template--15323282800742__double_image_banner_2" class="shopify-section section"><section id="DoubleImageBanner-template--15323282800742__double_image_banner_2" class="section-DoubleImageBanner animator animator-ready" style="background-color: #f7f7f7" data-index="5" data-animator="double-image-banner" data-animator-id="fh8b">
+	<div class="content">
+		<div class="inner">
+			<div class="images">
+        
+          <div class="image" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><img src="//verdura.com/cdn/shop/files/Verdura-Jewelry-Three-Stone-Ring-Gold-Amethyst-Peridot_36943ab0-a9c2-41b9-9267-49e23c11b06e.jpg?v=1709066479&amp;width=750" alt="" srcset="//verdura.com/cdn/shop/files/Verdura-Jewelry-Three-Stone-Ring-Gold-Amethyst-Peridot_36943ab0-a9c2-41b9-9267-49e23c11b06e.jpg?v=1709066479&amp;width=375 375w, //verdura.com/cdn/shop/files/Verdura-Jewelry-Three-Stone-Ring-Gold-Amethyst-Peridot_36943ab0-a9c2-41b9-9267-49e23c11b06e.jpg?v=1709066479&amp;width=550 550w, //verdura.com/cdn/shop/files/Verdura-Jewelry-Three-Stone-Ring-Gold-Amethyst-Peridot_36943ab0-a9c2-41b9-9267-49e23c11b06e.jpg?v=1709066479&amp;width=750 750w" width="750" height="750" loading="lazy" sizes="100vw" fetchpriority="auto"></div>
+        
+        
+          <div class="image" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><img src="//verdura.com/cdn/shop/files/Artboard-1-20.png?v=1709066479&amp;width=750" alt="" srcset="//verdura.com/cdn/shop/files/Artboard-1-20.png?v=1709066479&amp;width=375 375w, //verdura.com/cdn/shop/files/Artboard-1-20.png?v=1709066479&amp;width=550 550w, //verdura.com/cdn/shop/files/Artboard-1-20.png?v=1709066479&amp;width=750 750w" width="750" height="750" loading="lazy" sizes="100vw" fetchpriority="auto"></div>
+        
+			</div>
+			<div class="text">
+        <h2 class="large"><div style="position:relative;display:inline-block;"><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">V</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">e</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">r</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">y</div></div> <div style="position:relative;display:inline-block;"><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">V</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">e</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">r</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">d</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">u</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">r</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">a</div></div></h2>
+        <h3 style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Gifts Under $20,000</h3>
+        <p style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">A collection of pieces perfect for gifting and receiving</p>
+        
+          <div class="cta" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+            <a href="/collections/very-verdura-gifts-under-15-000"><span class="btn"><span>Shop</span></span></a>
+          </div>
+        
+			</div>
+		</div>
+	</div>
+</section>
+
+</section><section id="shopify-section-template--15323282800742__image_with_text" class="shopify-section section"><section id="ImageWithText-template--15323282800742__image_with_text" class="section-ImageWithText section-ImageWithText--alt" style="--shape-color: #934c4c;" data-index="6">
+	<div class="content">
+		<div class="inner">
+      <div class="leftside">
+        
+          <div class="text">
+            <h2 class="large animator animator-ready" data-animator="char-fadein" data-animator-id="7jb0"><div style="position:relative;display:inline-block;"><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">V</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">i</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">s</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">i</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">t</div></div></h2>
+            <h3 class="animator animator-ready" data-animator="simple-fadein" data-animator-id="c785" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">The Gallery</h3>
+            <p class="animator animator-ready" data-animator="simple-fadein" data-animator-id="5c0g" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">The Verdura gallery is open 10 AM – 5 PM, Monday – Friday. Arrange your visit below</p>
+            
+              <div class="cta animator animator-ready" data-animator="simple-fadein" data-animator-id="1ej2" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                <a href="/pages/contact"><span class="btn"><span>Arrange Visit</span></span></a>
+              </div>
+            
+          </div>
+        
+      </div>
+      <div class="rightside">
+        
+          <div class="media animator animator-ready" data-animator="simple-fadein" data-animator-id="7f7g" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+            
+              <div class="image"><img src="//verdura.com/cdn/shop/files/Verdura-Salon_PinkRoom_058_ret_cropped-for-web.jpg?v=1709152819&amp;width=750" alt="" srcset="//verdura.com/cdn/shop/files/Verdura-Salon_PinkRoom_058_ret_cropped-for-web.jpg?v=1709152819&amp;width=375 375w, //verdura.com/cdn/shop/files/Verdura-Salon_PinkRoom_058_ret_cropped-for-web.jpg?v=1709152819&amp;width=550 550w, //verdura.com/cdn/shop/files/Verdura-Salon_PinkRoom_058_ret_cropped-for-web.jpg?v=1709152819&amp;width=750 750w" width="750" height="750" loading="lazy" sizes="100vw" fetchpriority="auto"></div>
+            
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+</section><section id="shopify-section-template--15323282800742__product_slider" class="shopify-section section"><section id="ProductSlider-template--15323282800742__product_slider" class="section-ProductSlider" data-index="7">
+	<div class="content">
+		<div class="inner">
+      <h2 class="large animator animator-ready" data-animator="char-fadein" data-animator-id="6dig"><div style="position:relative;display:inline-block;"><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">N</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">e</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">w</div></div> <div style="position:relative;display:inline-block;"><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">A</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">r</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">r</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">i</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">v</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">a</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">l</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">s</div></div></h2>
+      <div class="slider animator animator-ready" data-animator="simple-fadein" data-animator-id="gd26" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+        <div class="swiper productSlider swiper-initialized swiper-horizontal swiper-backface-hidden">
+          <ul role="list" class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+          <li class="swiper-slide swiper-slide-active" data-swiper-slide-index="0">
+                <div class="image">
+                  <a href="/products/mondello-bangle">
+                    <img src="//verdura.com/cdn/shop/files/Mondello-Bangle_Black-Ceramic-Gold_O-V2_PUPA_23_7303adb2-5f58-4d22-8f2a-9ab1bab92ef4.jpg?v=1711131367&amp;width=750" alt="Mondello Bangle_Black Ceramic-Gold_O-V2_PUPA_23" srcset="//verdura.com/cdn/shop/files/Mondello-Bangle_Black-Ceramic-Gold_O-V2_PUPA_23_7303adb2-5f58-4d22-8f2a-9ab1bab92ef4.jpg?v=1711131367&amp;width=375 375w, //verdura.com/cdn/shop/files/Mondello-Bangle_Black-Ceramic-Gold_O-V2_PUPA_23_7303adb2-5f58-4d22-8f2a-9ab1bab92ef4.jpg?v=1711131367&amp;width=550 550w, //verdura.com/cdn/shop/files/Mondello-Bangle_Black-Ceramic-Gold_O-V2_PUPA_23_7303adb2-5f58-4d22-8f2a-9ab1bab92ef4.jpg?v=1711131367&amp;width=750 750w" width="750" height="750" loading="lazy" sizes="100vw" fetchpriority="auto">
+                  </a>
+                </div>
+                <div class="hover">
+                  <div class="inner">
+                    <h4 class="h2 small">Mondello Bangle</h4>
+                  </div>
+                </div>
+              </li><li class="swiper-slide swiper-slide-next" data-swiper-slide-index="1">
+                <div class="image">
+                  <a href="/products/sun-cuff-in-diamond">
+                    <img src="//verdura.com/cdn/shop/files/Sun-Cuff_Diamond-Gold_V3_PUPA_23_d196454f-8565-4bca-b514-ae591d6c0857.jpg?v=1711131243&amp;width=750" alt="Verdura Sun Cuff in diamond and gold" srcset="//verdura.com/cdn/shop/files/Sun-Cuff_Diamond-Gold_V3_PUPA_23_d196454f-8565-4bca-b514-ae591d6c0857.jpg?v=1711131243&amp;width=375 375w, //verdura.com/cdn/shop/files/Sun-Cuff_Diamond-Gold_V3_PUPA_23_d196454f-8565-4bca-b514-ae591d6c0857.jpg?v=1711131243&amp;width=550 550w, //verdura.com/cdn/shop/files/Sun-Cuff_Diamond-Gold_V3_PUPA_23_d196454f-8565-4bca-b514-ae591d6c0857.jpg?v=1711131243&amp;width=750 750w" width="750" height="750" loading="lazy" sizes="100vw" fetchpriority="auto">
+                  </a>
+                </div>
+                <div class="hover">
+                  <div class="inner">
+                    <h4 class="h2 small">Sun Cuff in Diamond</h4>
+                  </div>
+                </div>
+              </li><li class="swiper-slide" data-swiper-slide-index="2">
+                <div class="image">
+                  <a href="/products/whisk-ring-in-topaz">
+                    <img src="//verdura.com/cdn/shop/files/Whisk-Ring_White-Topaz_V6_PUPA_23_08e48d4c-ebe3-4c85-8f5f-1f2158b34c9c.jpg?v=1711131315&amp;width=750" alt="Whisk Ring_White Topaz" srcset="//verdura.com/cdn/shop/files/Whisk-Ring_White-Topaz_V6_PUPA_23_08e48d4c-ebe3-4c85-8f5f-1f2158b34c9c.jpg?v=1711131315&amp;width=375 375w, //verdura.com/cdn/shop/files/Whisk-Ring_White-Topaz_V6_PUPA_23_08e48d4c-ebe3-4c85-8f5f-1f2158b34c9c.jpg?v=1711131315&amp;width=550 550w, //verdura.com/cdn/shop/files/Whisk-Ring_White-Topaz_V6_PUPA_23_08e48d4c-ebe3-4c85-8f5f-1f2158b34c9c.jpg?v=1711131315&amp;width=750 750w" width="750" height="750" loading="lazy" sizes="100vw" fetchpriority="auto">
+                  </a>
+                </div>
+                <div class="hover">
+                  <div class="inner">
+                    <h4 class="h2 small">Whisk Ring in Topaz</h4>
+                  </div>
+                </div>
+              </li><li class="swiper-slide" data-swiper-slide-index="3">
+                <div class="image">
+                  <a href="/products/midas-fleuron-bangle">
+                    <img src="//verdura.com/cdn/shop/files/Midas-Fleuron-Bracelet_Gold_O-V1_PUPA_23_Rotated_103e889d-3b8a-4abe-b622-511326b1901f.jpg?v=1711131300&amp;width=750" alt="Verdura Midas Fleuron bracelet" srcset="//verdura.com/cdn/shop/files/Midas-Fleuron-Bracelet_Gold_O-V1_PUPA_23_Rotated_103e889d-3b8a-4abe-b622-511326b1901f.jpg?v=1711131300&amp;width=375 375w, //verdura.com/cdn/shop/files/Midas-Fleuron-Bracelet_Gold_O-V1_PUPA_23_Rotated_103e889d-3b8a-4abe-b622-511326b1901f.jpg?v=1711131300&amp;width=550 550w, //verdura.com/cdn/shop/files/Midas-Fleuron-Bracelet_Gold_O-V1_PUPA_23_Rotated_103e889d-3b8a-4abe-b622-511326b1901f.jpg?v=1711131300&amp;width=750 750w" width="750" height="750" loading="lazy" sizes="100vw" fetchpriority="auto">
+                  </a>
+                </div>
+                <div class="hover">
+                  <div class="inner">
+                    <h4 class="h2 small">Midas Fleuron Bangle</h4>
+                  </div>
+                </div>
+              </li><li class="swiper-slide" data-swiper-slide-index="4">
+                <div class="image">
+                  <a href="/products/bubbles-cuff">
+                    <img src="//verdura.com/cdn/shop/files/Bubbles-Cuff_Moonstone-White-Gold_V1_PUPA_23_040a7955-ce51-4066-ba6c-31765515daa4.jpg?v=1711131230&amp;width=750" alt="Verdura Bubbles Moonstone Cuff" srcset="//verdura.com/cdn/shop/files/Bubbles-Cuff_Moonstone-White-Gold_V1_PUPA_23_040a7955-ce51-4066-ba6c-31765515daa4.jpg?v=1711131230&amp;width=375 375w, //verdura.com/cdn/shop/files/Bubbles-Cuff_Moonstone-White-Gold_V1_PUPA_23_040a7955-ce51-4066-ba6c-31765515daa4.jpg?v=1711131230&amp;width=550 550w, //verdura.com/cdn/shop/files/Bubbles-Cuff_Moonstone-White-Gold_V1_PUPA_23_040a7955-ce51-4066-ba6c-31765515daa4.jpg?v=1711131230&amp;width=750 750w" width="750" height="750" loading="lazy" sizes="100vw" fetchpriority="auto">
+                  </a>
+                </div>
+                <div class="hover">
+                  <div class="inner">
+                    <h4 class="h2 small">Bubbles Cuff</h4>
+                  </div>
+                </div>
+              </li><li class="swiper-slide" data-swiper-slide-index="5">
+                <div class="image">
+                  <a href="/products/candy-lariat-necklace">
+                    <img src="//verdura.com/cdn/shop/files/Candy-Lariat_Blue-Topaz-Chrome-Tourmaline_V4_PUPA_23_33c172ef-7b18-40d3-9897-3e9e0059aeaf.png?v=1711131325&amp;width=750" alt="Verdura Candy Lariat_Blue Topaz-Chrome Tourmaline" srcset="//verdura.com/cdn/shop/files/Candy-Lariat_Blue-Topaz-Chrome-Tourmaline_V4_PUPA_23_33c172ef-7b18-40d3-9897-3e9e0059aeaf.png?v=1711131325&amp;width=375 375w, //verdura.com/cdn/shop/files/Candy-Lariat_Blue-Topaz-Chrome-Tourmaline_V4_PUPA_23_33c172ef-7b18-40d3-9897-3e9e0059aeaf.png?v=1711131325&amp;width=550 550w, //verdura.com/cdn/shop/files/Candy-Lariat_Blue-Topaz-Chrome-Tourmaline_V4_PUPA_23_33c172ef-7b18-40d3-9897-3e9e0059aeaf.png?v=1711131325&amp;width=750 750w" width="750" height="750" loading="lazy" sizes="100vw" fetchpriority="auto">
+                  </a>
+                </div>
+                <div class="hover">
+                  <div class="inner">
+                    <h4 class="h2 small">Candy Lariat Necklace</h4>
+                  </div>
+                </div>
+              </li><li class="swiper-slide" data-swiper-slide-index="6">
+                <div class="image">
+                  <a href="/products/whisk-ring-in-amethyst">
+                    <img src="//verdura.com/cdn/shop/files/Whisk-Ring_Amethyst_V5_PUPA_23_4e12c56b-1a46-463f-9cfa-2587302ed3ab.jpg?v=1711131234&amp;width=750" alt="Verdura whisk ring in amethyst" srcset="//verdura.com/cdn/shop/files/Whisk-Ring_Amethyst_V5_PUPA_23_4e12c56b-1a46-463f-9cfa-2587302ed3ab.jpg?v=1711131234&amp;width=375 375w, //verdura.com/cdn/shop/files/Whisk-Ring_Amethyst_V5_PUPA_23_4e12c56b-1a46-463f-9cfa-2587302ed3ab.jpg?v=1711131234&amp;width=550 550w, //verdura.com/cdn/shop/files/Whisk-Ring_Amethyst_V5_PUPA_23_4e12c56b-1a46-463f-9cfa-2587302ed3ab.jpg?v=1711131234&amp;width=750 750w" width="750" height="750" loading="lazy" sizes="100vw" fetchpriority="auto">
+                  </a>
+                </div>
+                <div class="hover">
+                  <div class="inner">
+                    <h4 class="h2 small">Whisk Ring in Amethyst</h4>
+                  </div>
+                </div>
+              </li><li class="swiper-slide" data-swiper-slide-index="7">
+                <div class="image">
+                  <a href="/products/south-sea-pearl-lariat-necklace">
+                    <img src="//verdura.com/cdn/shop/files/Pearl-Lariet-Necklace_South-Sea-Pearl_V5A_PUPA_23_NEW-PEARLS_c111856d-735b-4458-95b1-2b604dc9f253.png?v=1711131340&amp;width=750" alt="Verdura Lariat South Sea Pearl Necklace" srcset="//verdura.com/cdn/shop/files/Pearl-Lariet-Necklace_South-Sea-Pearl_V5A_PUPA_23_NEW-PEARLS_c111856d-735b-4458-95b1-2b604dc9f253.png?v=1711131340&amp;width=375 375w, //verdura.com/cdn/shop/files/Pearl-Lariet-Necklace_South-Sea-Pearl_V5A_PUPA_23_NEW-PEARLS_c111856d-735b-4458-95b1-2b604dc9f253.png?v=1711131340&amp;width=550 550w, //verdura.com/cdn/shop/files/Pearl-Lariet-Necklace_South-Sea-Pearl_V5A_PUPA_23_NEW-PEARLS_c111856d-735b-4458-95b1-2b604dc9f253.png?v=1711131340&amp;width=750 750w" width="750" height="750" loading="lazy" sizes="100vw" fetchpriority="auto">
+                  </a>
+                </div>
+                <div class="hover">
+                  <div class="inner">
+                    <h4 class="h2 small">South Sea Pearl Lariat Necklace</h4>
+                  </div>
+                </div>
+              </li></ul>
+        </div>
+        <div class="sliderButtons">
+          <button class="swiper-button swiper-button-prev productSlider-button-prev btn" aria-label="Previous product in slider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 42"><path d="M.4853 22.1525 20.183 41.525c.6454.6344 1.6903.6333 2.3346-.0032a1.6123 1.6123 0 0 0-.0033-2.3024L3.9889 21 22.515 2.7805a1.6118 1.6118 0 0 0 .0034-2.3018C22.1953.1596 21.7722 0 21.349 0c-.422 0-.8435.1585-1.1659.4754L.4853 19.8474c-.3109.305-.4853.72-.4853 1.1525 0 .4325.175.847.4853 1.1526Z" fill="#000" fill-rule="nonzero"></path></svg></button>
+          <button class="swiper-button swiper-button-next productSlider-button-next btn" aria-label="Next product in slider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 42"><path d="M.4853 22.1525 20.183 41.525c.6454.6344 1.6903.6333 2.3346-.0032a1.6123 1.6123 0 0 0-.0033-2.3024L3.9889 21 22.515 2.7805a1.6118 1.6118 0 0 0 .0034-2.3018C22.1953.1596 21.7722 0 21.349 0c-.422 0-.8435.1585-1.1659.4754L.4853 19.8474c-.3109.305-.4853.72-.4853 1.1525 0 .4325.175.847.4853 1.1526Z" fill="#000" fill-rule="nonzero"></path></svg></button>
+        </div>
+      </div>
+		</div>
+	</div>
+</section>
+
+</section><section id="shopify-section-template--15323282800742__image_with_text_2" class="shopify-section section"><section id="ImageWithText-template--15323282800742__image_with_text_2" class="section-ImageWithText section-ImageWithText--reg" style="--shape-color: #d4d4d4;" data-index="8">
+	<div class="content">
+		<div class="inner">
+      <div class="leftside">
+        
+          <div class="media animator animator-ready" data-animator="simple-fadein" data-animator-id="j6fc" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+            
+              <div class="image"><img src="//verdura.com/cdn/shop/files/home_heritage_img1_v2.jpg?v=1709152818&amp;width=750" alt="" srcset="//verdura.com/cdn/shop/files/home_heritage_img1_v2.jpg?v=1709152818&amp;width=375 375w, //verdura.com/cdn/shop/files/home_heritage_img1_v2.jpg?v=1709152818&amp;width=550 550w, //verdura.com/cdn/shop/files/home_heritage_img1_v2.jpg?v=1709152818&amp;width=750 750w" width="750" height="968" loading="lazy" sizes="100vw" fetchpriority="auto"></div>
+            
+            
+          </div>
+        
+      </div>
+      <div class="rightside">
+        
+          <div class="text">
+            <h2 class="large animator animator-ready" data-animator="char-fadein" data-animator-id="1c25"><div style="position:relative;display:inline-block;"><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">H</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">e</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">r</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">i</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">t</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">a</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">g</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">e</div></div></h2>
+            <h3 class="animator animator-ready" data-animator="simple-fadein" data-animator-id="21h8" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">About Fulco Di Verdura</h3>
+            <p class="animator animator-ready" data-animator="simple-fadein" data-animator-id="fd7d" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Born into Sicilian aristocracy in 1898, Verdura’s founder, Duke Fulco di Verdura, began his extraordinary career in Paris as a designer for Coco Chanel. After eight years with Chanel where he, most notably, created the Maltese Cross cuffs that became his signature, Verdura followed his passion for design to America in 1934.</p>
+            
+              <div class="cta animator animator-ready" data-animator="simple-fadein" data-animator-id="3ced" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                <a href="/pages/the-story"><span class="btn"><span>Discover our Heritage</span></span></a>
+              </div>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+</section></div>
+      
+    </main>
+
+    <!-- BEGIN sections: footer-group -->
+<section id="shopify-section-sections--15323283193958__newsletter_signup" class="shopify-section shopify-section-group-footer-group section"><section id="NewsletterSignup-sections--15323283193958__newsletter_signup" class="section-NewsletterSignup" style="--shape-color: #262626;" aria-label="Sign up for the Verdura newsletter" data-index="1">
+  <div class="left">
+    <h2 class="h1 animator animator-ready" data-animator="char-fadein" data-animator-id="7i66"><div style="position:relative;display:inline-block;"><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">S</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">i</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">g</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">n</div></div> <div style="position:relative;display:inline-block;"><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">u</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">p</div></div> <div style="position:relative;display:inline-block;"><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">n</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">o</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">w</div></div></h2>
+  </div>
+  <div class="right animator animator-ready" data-animator="simple-fadein" data-animator-id="2927" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+    <div class="inner">
+      <h3>Welcome to Verdura</h3>
+      <div class="p">
+        Please join our email list for updates about new collections and special events
+      </div>
+      <form class="newsletterForm" action="" method="post" enctype="multipart/form-data" novalidate="">
+        <div class="row">
+          <input type="email" value="" name="newsletter_email" class="p" placeholder="Enter Email Address Here" required="" aria-required="true" aria-label="Enter your email address to sign up for the Verdura newsletter">
+          <button type="submit" class="btn" aria-label="Submit form">Submit</button>
+        </div>
+        <div class="success"><p class="p">Thank you!</p></div>
+      </form>
+    </div>
+	</div>
+</section>
+
+</section><section id="shopify-section-sections--15323283193958__instagram_feed" class="shopify-section shopify-section-group-footer-group section"><section id="InstagramFeed-sections--15323283193958__instagram_feed" class="section-InstagramFeed" aria-label="Follow us on Instagram" data-index="2">
+  <h2 class="animator animator-ready" data-animator="simple-fadein" data-animator-id="e810" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><a class="btn" href="https://www.instagram.com/verdurajewelry/" target="_blank" rel="noopener">Find us on Instagram</a></h2>
+  <ul role="list">
+    
+      <li class="animator animator-ready" data-animator="simple-fadein" data-animator-id="j32a" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+        <a href="https://www.instagram.com/p/DNDjfrKtO-m/" target="_blank" rel="noreferrer">
+          <img src="https://scontent.cdninstagram.com/v/t51.82787-15/528151597_18522161371028664_4152581695940912644_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=108&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=U1Ku1dLTzAAQ7kNvwHpKZgl&amp;_nc_oc=AdmMC_L-3BDknjtLXz3RoxZjpzICPNgpoQN_UsMw3yTN1Nwc-V6TTVTym1Do_KlMpqE&amp;_nc_zt=23&amp;_nc_ht=scontent.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;_nc_gid=XZmF90cYkVMQY1Wk4AAejw&amp;oh=00_AfV3sRvPWNmiruUB5bfaqcJHFZ2j7-3QSP8fdJV7oihfpw&amp;oe=689CEF18" alt="Named for the designer himself, the Fulco Earclips capture one of Fulco di Verdura’s favorite design contradictions: the striking interplay of richly hued precious and semi-precious stones. Set against crisp white enamel, these classic earclips are bold yet balanced, joyful yet refined, and—of course—very Verdura." width="600" height="600">
+        </a>
+      </li>
+    
+      <li class="animator animator-ready" data-animator="simple-fadein" data-animator-id="2ha6" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+        <a href="https://www.instagram.com/p/DM-kW1StNh6/" target="_blank" rel="noreferrer">
+          <img src="https://scontent.cdninstagram.com/v/t51.82787-15/528325695_18521833180028664_3938257601700160429_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=8tYjJAyQaA4Q7kNvwH5aXWd&amp;_nc_oc=AdnjO18nIwdtPd1Gc4WEA8feHTjAAmNO7KPdf2OKAikDcKHTiLpbse69lhBMfBzWYWQ&amp;_nc_zt=23&amp;_nc_ht=scontent.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;_nc_gid=XZmF90cYkVMQY1Wk4AAejw&amp;oh=00_AfWZp5oT2QEBS38VHHvv8sU2YAGfbPRuDSNmEtJCqJH5hA&amp;oe=689CC3A4" alt="Vivid, vibrant, and made for long summer days, turquoise is the season’s perfect stone. Culled from Verdura’s rich archives, the Beaded Hoop Earclips have never felt more modern, proving that true style transcends time." width="600" height="600">
+        </a>
+      </li>
+    
+      <li class="animator animator-ready" data-animator="simple-fadein" data-animator-id="69ab" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+        <a href="https://www.instagram.com/p/DMxh8u5MMOk/" target="_blank" rel="noreferrer">
+          <img src="https://scontent.cdninstagram.com/v/t51.82787-15/525865851_18520941796028664_5308452548988783428_n.jpg?stp=dst-jpg_e35_tt6&amp;_nc_cat=110&amp;ccb=1-7&amp;_nc_sid=18de74&amp;_nc_ohc=SLMA19JNSP0Q7kNvwFwj7_7&amp;_nc_oc=Adm2-pIL32FKlnEScTMdDvoItT_b4TKQkpZMEblk6JUsfKRLNCvZu8ERaNDtonuaSMQ&amp;_nc_zt=23&amp;_nc_ht=scontent.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;_nc_gid=XZmF90cYkVMQY1Wk4AAejw&amp;oh=00_AfV_Z210DOt7EbWOLDQInE6ahY8x-_ELaVNTEIe6eVyTjQ&amp;oe=689CD16C" alt="Unmistakable Verdura style. The Maltese Cross motif has been at the heart of Verdura’s design language since the 1930s, when Coco Chanel commissioned Fulco di Verdura to create a pair of cuffs that would become icons of fashion history. Today, the tradition continues in bold bracelets that marry Verdura’s signature of vibrantly hued precious and semi-precious stones with rich yellow gold. A piece instantly recognized (and remembered) as “very Verdura.”" width="600" height="600">
+        </a>
+      </li>
+    
+      <li class="animator animator-ready" data-animator="simple-fadein" data-animator-id="gf97" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+        <a href="https://www.instagram.com/reel/DMsi1BlMEUc/" target="_blank" rel="noreferrer">
+          <img src="https://scontent.cdninstagram.com/o1/v/t2/f2/m86/AQPa5aYeix39syZwp6G52HHWUtrV7nicFoSkjVSTqAhUW9aW8fjo8Hi-8HxWYM1T_6-ITyDo8kKrztFU8UHOOUwwyOJlbKVqxyNIwHU.mp4?_nc_cat=104&amp;_nc_sid=5e9851&amp;_nc_ht=scontent.cdninstagram.com&amp;_nc_ohc=sIZo84p1TB4Q7kNvwEg2fE7&amp;efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6OTI5OTA2NTk1OTYyMDc4LCJ2aV91c2VjYXNlX2lkIjoxMDA5OSwiZHVyYXRpb25fcyI6NywidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&amp;ccb=17-1&amp;vs=e4e7702d9ca42dc4&amp;_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9FNTQ4NjcxNjJFRTY2N0MyODc5RjM3NjgyRkEyNTJCMl92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYOnBhc3N0aHJvdWdoX2V2ZXJzdG9yZS9HQVdjVmgtTWg4eGpOY01IQVB1Q1Y1dWlRWTR5YnFfRUFBQUYVAgLIARIAKAAYABsCiAd1c2Vfb2lsATEScHJvZ3Jlc3NpdmVfcmVjaXBlATEVAAAmvPOchdjvpgMVAigCQzMsF0Addsi0OVgQGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX-B2XmnQEA&amp;_nc_zt=28&amp;oh=00_AfVPoGulyisyOfmAtA-7o8SJYm-9xNtj2ODVz-rpsEilwg&amp;oe=6898EF49" alt="Originally designed in the 1940s, this golden creature has crawled up from the deep—and the archives—as an elegantly playful twist on seaside style. With swirling golden tentacles and South Sea cultured pearls, Verdura’s Octopus Pendant Brooch is reimagined for today’s collector as a convertible pendant necklace with a splash of seaside charm." width="600" height="600">
+        </a>
+      </li>
+    
+  </ul>
+</section>
+
+</section><div id="shopify-section-sections--15323283193958__footer" class="shopify-section shopify-section-group-footer-group"><footer>
+  <div class="left">
+    <div class="row">
+      <div class="logo">
+        <a href="/" title="Back to homepage">
+          <img src="//verdura.com/cdn/shop/files/logo_verdura_white.png?v=1709924632&amp;width=750" alt="" srcset="//verdura.com/cdn/shop/files/logo_verdura_white.png?v=1709924632&amp;width=375 375w, //verdura.com/cdn/shop/files/logo_verdura_white.png?v=1709924632&amp;width=550 550w, //verdura.com/cdn/shop/files/logo_verdura_white.png?v=1709924632&amp;width=750 750w" width="750" height="260" sizes="100vw">
+        </a>
+      </div>
+      <ul class="social" aria-label="Social links" role="list">
+        <a href="https://www.facebook.com/verdura/" target="_blank" rel="noreferrer" class="icon-social facebook" aria-label="Share on Facebook"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="enable-background:new 0 0 49.7 49.7" viewBox="0 0 49.7 49.7"><path fill="currentColor" d="M24.8 0C11.1 0 0 11.1 0 24.8c0 13.7 11.1 24.8 24.8 24.8 13.7 0 24.8-11.1 24.8-24.8C49.7 11.1 38.5 0 24.8 0zM31 25.7h-4v14.4h-6V25.7h-2.8v-5.1H21v-3.3c0-2.4 1.1-6 6-6h4.4v4.9h-3.2c-.5 0-1.2.3-1.2 1.4v3h4.6l-.6 5.1z"></path></svg></a>
+        <a href="https://www.instagram.com/verdurajewelry/" target="_blank" rel="noreferrer" class="icon-social instagram" aria-label="Share on Instagram"><svg xmlns="http://www.w3.org/2000/svg" data-name="Instagram w/circle" viewBox="0 0 19.2 19.2"><path fill="currentColor" d="M13.498 6.651a1.656 1.656 0 0 0-.95-.949 2.766 2.766 0 0 0-.928-.172c-.527-.024-.685-.03-2.02-.03s-1.493.006-2.02.03a2.766 2.766 0 0 0-.929.172 1.656 1.656 0 0 0-.949.95 2.766 2.766 0 0 0-.172.928c-.024.527-.03.685-.03 2.02s.006 1.493.03 2.02a2.766 2.766 0 0 0 .172.929 1.656 1.656 0 0 0 .95.949 2.766 2.766 0 0 0 .928.172c.527.024.685.029 2.02.029s1.493-.005 2.02-.03a2.766 2.766 0 0 0 .929-.171 1.656 1.656 0 0 0 .949-.95 2.766 2.766 0 0 0 .172-.928c.024-.527.029-.685.029-2.02s-.005-1.493-.03-2.02a2.766 2.766 0 0 0-.171-.929zM9.6 12.168A2.568 2.568 0 1 1 12.168 9.6 2.568 2.568 0 0 1 9.6 12.168zm2.669-4.637a.6.6 0 1 1 .6-.6.6.6 0 0 1-.6.6zM11.267 9.6A1.667 1.667 0 1 1 9.6 7.933 1.667 1.667 0 0 1 11.267 9.6zM9.6 0a9.6 9.6 0 1 0 9.6 9.6A9.6 9.6 0 0 0 9.6 0zm4.97 11.661a3.67 3.67 0 0 1-.233 1.214 2.556 2.556 0 0 1-1.462 1.462 3.67 3.67 0 0 1-1.213.233c-.534.024-.704.03-2.062.03s-1.528-.006-2.062-.03a3.67 3.67 0 0 1-1.213-.233 2.556 2.556 0 0 1-1.462-1.462 3.67 3.67 0 0 1-.233-1.213c-.024-.534-.03-.704-.03-2.062s.006-1.528.03-2.062a3.67 3.67 0 0 1 .232-1.213 2.556 2.556 0 0 1 1.463-1.463 3.67 3.67 0 0 1 1.213-.232c.534-.024.704-.03 2.062-.03s1.528.006 2.062.03a3.67 3.67 0 0 1 1.213.232 2.556 2.556 0 0 1 1.462 1.463 3.67 3.67 0 0 1 .233 1.213c.024.534.03.704.03 2.062s-.006 1.528-.03 2.062z"></path></svg></a>
+        <a href="https://youtube.com/@verdurajewelry?si=BOfTr1DI5V-1ryqu" target="_blank" rel="noreferrer" class="icon-social youtube" aria-label="Share on YouTube"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="-143 145 512 512">
+  <path fill="#fff" d="m78.9 450.3 83.8-49.2-83.8-49.2z"></path>
+  <path fill="currentColor" d="M113 145c-141.4 0-256 114.6-256 256s114.6 256 256 256 256-114.6 256-256-114.6-256-256-256zm128 301.8c0 44.1-44.1 44.1-44.1 44.1H29.1c-44.1 0-44.1-44.1-44.1-44.1v-91.5c0-44.1 44.1-44.1 44.1-44.1h167.8c44.1 0 44.1 44.1 44.1 44.1v91.5z"></path>
+</svg></a>
+      </ul>
+    </div>
+    <div class="row">
+      <ul class="contact" role="list">
+        <li class="p">745 Fifth Avenue, Suite 1205 New York, NY 10151</li>
+        <li class="p"><a href="tel:+1 (212) 758-3388">Call us: +1 (212) 758-3388</a></li>
+        <li class="p"><a href="mailto:info@verdura.com">Email us: info@verdura.com</a></li>
+      </ul>
+      <ul class="nav" role="list">
+        
+          <li class="p"><a href="/pages/online-accessibility-statement">Online Accessibility Statement</a></li>
+        
+          <li class="p"><a href="/pages/catalogues">Catalogues</a></li>
+        
+          <li class="p"><a href="/pages/customer-service">Customer Service / FAQ</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  <div class="right">
+    <div class="copyright">
+      <p>Copyright © 2025 Verdura</p>
+      <a class="btn" href="https://www.thebeauxartsdigital.com/" target="_blank" rel="noreferrer">Website by The Beaux Arts</a>
+    </div>
+  </div>
+</footer>
+
+
+</div>
+<!-- END sections: footer-group -->
+
+    <ul hidden="">
+      <li id="a11y-refresh-page-message">Choosing a selection results in a full page refresh.</li>
+      <li id="a11y-new-window-message">Opens in a new window.</li>
+    </ul>
+
+    <script async="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1KVzK-G5jvwHCd5m_ovTueFAvNJYK3lc&amp;loading=async"></script>
+
+    <script>
+      window.shopUrl = 'https://verdura.com';
+      window.routes = {
+        cart_add_url: '/cart/add',
+        cart_change_url: '/cart/change',
+        cart_update_url: '/cart/update',
+        cart_url: '/cart',
+        predictive_search_url: '/search/suggest',
+      };
+
+      window.cartStrings = {
+        error: `There was an error while updating your cart. Please try again.`,
+        quantityError: `You can only add [quantity] of this item to your cart.`,
+      };
+
+      window.variantStrings = {
+        addToCart: `Add to cart`,
+        soldOut: `Sold out`,
+        unavailable: `Unavailable`,
+        unavailable_with_option: `[value] - Unavailable`,
+      };
+
+      window.quickOrderListStrings = {
+        itemsAdded: `[quantity] items added`,
+        itemAdded: `[quantity] item added`,
+        itemsRemoved: `[quantity] items removed`,
+        itemRemoved: `[quantity] item removed`,
+        viewCart: `View cart`,
+        each: `[money]/ea`,
+      };
+
+      window.accessibilityStrings = {
+        imageAvailable: `Image [index] is now available in gallery view`,
+        shareSuccess: `Link copied to clipboard`,
+        pauseSlideshow: `Pause slideshow`,
+        playSlideshow: `Play slideshow`,
+        recipientFormExpanded: `Gift card recipient form expanded`,
+        recipientFormCollapsed: `Gift card recipient form collapsed`,
+        countrySelectorSearchCount: `[count] countries/regions found`,
+      };
+    </script>
+
+    
+  
+<div tabindex="-1" aria-hidden="true" id="web-pixels-manager-sandbox-container" data-shopify-privacy="exclude" style="height: 0px !important; width: 0px !important; position: fixed !important; visibility: hidden !important; overflow: hidden !important; z-index: -100 !important; margin: 0px !important; padding: 0px !important; border: 0px !important;"><iframe tabindex="-1" aria-hidden="true" name="web-pixel-sandbox-CUSTOM-shopify-custom-pixel-LAX-73b305c4w82c1918fpb7086179m603a4010" src="https://verdura.com/web-pixels@73b305c4w82c1918fpb7086179m603a4010/custom/web-pixel-shopify-custom-pixel@0440/sandbox/modern/" id="web-pixel-sandbox-CUSTOM-shopify-custom-pixel-LAX-73b305c4w82c1918fpb7086179m603a4010" sandbox="allow-scripts allow-forms" style="height: 0px !important; width: 0px !important; visibility: hidden !important;"></iframe></div><script src="https://www.googletagmanager.com/gtag/js?id=G-0Z7HXRZLFQ"></script><shop-cart-sync experiments="{}" data-instance-id="bf61ce15-e009-4fdb-a17a-c931e3b09540"></shop-cart-sync><iframe allow="join-ad-interest-group" data-tagging-id="AW-792235578" data-load-time="1754728936657" height="0" width="0" src="https://td.doubleclick.net/td/rul/792235578?random=1754728936652&amp;cv=11&amp;fst=1754728936652&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be5861za200zb9108114536zd9108114536xec&amp;gcd=13t3t3t3t5l1&amp;dma=0&amp;tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104782879~104948813~105033763~105033765~105103161~105103163~105113532~105135708~105135710~105231380~105231382&amp;u_w=1512&amp;u_h=982&amp;url=https%3A%2F%2Fverdura.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Verdura%20Fine%20Jewelry%20%7C%20New%20York&amp;did=dN2ZkMj%2CdNTU0Yz&amp;gdid=dN2ZkMj.dNTU0Yz&amp;npa=0&amp;pscdl=noapi&amp;auid=2052660394.1754637944&amp;uaa=arm&amp;uab=64&amp;uafvl=Not%253BA%253DBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B139.0.7258.66%7CChromium%3B139.0.7258.66&amp;uamb=0&amp;uam=&amp;uap=macOS&amp;uapv=15.3.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config" style="display: none; visibility: hidden;"></iframe><iframe height="0" width="0" style="display: none; visibility: hidden;"></iframe><iframe role="presentation" srcdoc="&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;title&gt;apiSanitizer&lt;/title&gt;&lt;/head&gt;&lt;/body&gt;&lt;/html&gt;" style="visibility: hidden; pointer-events: none; position: fixed;"></iframe><div class="acsb-trigger acsb-widget" tabindex="0" role="button"></div></body></html>
